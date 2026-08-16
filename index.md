@@ -18,8 +18,12 @@ I create practical resources about email marketing, automation, digital marketin
 
 ### My Website & Services
 
-[Visit My Website & Services](https://nasirportfolio.github.io/my-website-repository/)
+<a href="https://nasirportfolio.github.io/my-website-repository/" target="_blank" rel="noopener">
+Visit My Website &amp; Services
+</a>
 
 ### Contact
 
-[Email Me: nasirslec@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=nasirslec@gmail.com)
+<a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=nasirslec@gmail.com" target="_blank" rel="noopener">
+Email Me: nasirslec@gmail.com
+</a>
