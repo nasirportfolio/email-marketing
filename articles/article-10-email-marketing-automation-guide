@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Email Marketing Automation: A Beginner's Guide to Automated Email Campaigns</title>
+
+    <meta name="description"
+          content="Learn email marketing automation for beginners, including triggers, workflows, welcome emails, abandoned cart emails, post-purchase campaigns, segmentation, testing, and best practices.">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="https://nasirportfolio.github.io/email-marketing/articles/article-10-email-marketing-automation-guide/">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #222;
+            background: #f7f9fc;
+        }
+
+        header {
+            background: #17365d;
+            color: #fff;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        header h1 {
+            max-width: 900px;
+            margin: 0 auto 18px;
+            font-size: 2.5rem;
+            line-height: 1.25;
+        }
+
+        header p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        article {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+
+        h2 {
+            color: #17365d;
+            margin-top: 35px;
+            line-height: 1.3;
+        }
+
+        h3 {
+            color: #234f7d;
+            margin-top: 28px;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        ul,
+        ol {
+            padding-left: 28px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .example {
+            background: #f0f4f8;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #17365d;
+            border-radius: 6px;
+        }
+
+        .affiliate-box {
+            margin-top: 30px;
+            padding: 24px;
+            background: #f0f4f8;
+            border-radius: 8px;
+        }
+
+        .website-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 11px 18px;
+            background: #17365d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #17365d;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 38px 18px;
+            }
+
+            header h1 {
+                font-size: 1.9rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            main {
+                margin: 20px auto;
+                padding: 0 12px;
+            }
+
+            article {
+                padding: 22px;
+            }
+
+            h2 {
+                font-size: 1.55rem;
+            }
+
+            .website-link {
+                max-width: 100%;
+                overflow-wrap: anywhere;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Email Marketing Automation: A Beginner's Guide to Automated Email Campaigns</h1>
+
+    <p>
+        Learn how email marketing automation works and how beginners
+        can create useful automated email campaigns.
+    </p>
+
+</header>
+
+<main>
+
+<article>
+
+    <h2>What Is Email Marketing Automation?</h2>
+
+    <p>
+        Email marketing automation is the process of using software
+        to send email messages automatically when specific conditions,
+        actions, or events occur.
+    </p>
+
+    <p>
+        Instead of manually sending every message, marketers can create
+        automated workflows that respond to subscriber behavior and
+        deliver relevant messages at the appropriate stage of the
+        customer journey.
+    </p>
+
+    <h2>Why Is Email Automation Important?</h2>
+
+    <p>
+        Email automation can save time and help businesses communicate
+        with subscribers consistently.
+    </p>
+
+    <ul>
+        <li>Save time on repetitive email tasks</li>
+        <li>Send timely messages automatically</li>
+        <li>Improve subscriber communication</li>
+        <li>Support customer journeys</li>
+        <li>Deliver relevant content based on behavior</li>
+        <li>Scale email marketing campaigns more efficiently</li>
+    </ul>
+
+    <h2>How Email Marketing Automation Works</h2>
+
+    <p>
+        Most automated email workflows contain three basic components:
+        a trigger, one or more actions, and conditions or rules.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br>
+        A visitor subscribes to an email list → the subscription
+        triggers a welcome email → the subscriber receives additional
+        educational emails according to the workflow.
+    </div>
+
+    <h3>Trigger</h3>
+
+    <p>
+        A trigger is the event that starts an automated workflow.
+        Examples include subscribing to a list, completing a purchase,
+        abandoning a cart, or reaching a particular condition.
+    </p>
+
+    <h3>Action</h3>
+
+    <p>
+        An action is something the automation performs after the trigger.
+        Sending an email, waiting for a period of time, updating a
+        subscriber field, or moving a subscriber into a segment are
+        examples of actions.
+    </p>
+
+    <h3>Condition</h3>
+
+    <p>
+        Conditions allow a workflow to respond differently depending
+        on subscriber information or behavior.
+    </p>
+
+    <h2>1. Welcome Email Automation</h2>
+
+    <p>
+        A welcome automation can send a message shortly after someone
+        subscribes to an email list.
+    </p>
+
+    <p>
+        A welcome series can introduce a business, explain what
+        subscribers can expect, provide useful resources, and gradually
+        build a relationship with new subscribers.
+    </p>
+
+    <div class="example">
+        <strong>Example workflow:</strong><br>
+        Signup → Welcome Email → Wait → Educational Email → Wait →
+        Helpful Resource
+    </div>
+
+    <h2>2. Abandoned Cart Automation</h2>
+
+    <p>
+        E-commerce businesses can use abandoned cart automation to
+        remind customers about products they added to their cart but
+        did not purchase.
+    </p>
+
+    <p>
+        A useful abandoned cart sequence should provide a clear reminder
+        without becoming excessive or misleading.
+    </p>
+
+    <h2>3. Post-Purchase Automation</h2>
+
+    <p>
+        Post-purchase emails can help businesses communicate with
+        customers after a transaction.
+    </p>
+
+    <ul>
+        <li>Order-related information</li>
+        <li>Product usage guidance</li>
+        <li>Helpful resources</li>
+        <li>Customer support information</li>
+        <li>Relevant product recommendations</li>
+        <li>Feedback or review requests</li>
+    </ul>
+
+    <h2>4. Re-Engagement Automation</h2>
+
+    <p>
+        Re-engagement workflows can target subscribers who have not
+        interacted with recent emails for a defined period.
+    </p>
+
+    <p>
+        A re-engagement campaign can provide useful content, ask
+        subscribers to update their preferences, or give them an
+        opportunity to remain subscribed.
+    </p>
+
+    <h2>5. Educational Email Automation</h2>
+
+    <p>
+        Businesses and creators can use automated educational sequences
+        to deliver useful information over time.
+    </p>
+
+    <p>
+        For example, an email marketing website could create a sequence
+        that introduces subscribers to segmentation, automation,
+        campaign creation, and analytics.
+    </p>
+
+    <h2>Email Marketing Automation and Segmentation</h2>
+
+    <p>
+        Segmentation allows marketers to organize subscribers into
+        groups according to relevant characteristics or behavior.
+    </p>
+
+    <p>
+        Automation can then use these segments to deliver more relevant
+        messages.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br>
+        Subscribers interested in email automation → automation-focused
+        educational emails.
+    </div>
+
+    <h2>How to Create an Automated Email Workflow</h2>
+
+    <ol>
+        <li>Define the goal of the workflow.</li>
+        <li>Identify the audience.</li>
+        <li>Choose the appropriate trigger.</li>
+        <li>Create useful email content.</li>
+        <li>Add appropriate delays between messages.</li>
+        <li>Use conditions or segmentation when necessary.</li>
+        <li>Test the complete workflow.</li>
+        <li>Activate the automation.</li>
+        <li>Review performance regularly.</li>
+    </ol>
+
+    <h2>Best Practices for Email Automation</h2>
+
+    <h3>Keep Your Content Relevant</h3>
+
+    <p>
+        Every automated message should have a clear purpose and provide
+        value to the recipient.
+    </p>
+
+    <h3>Use Reasonable Timing</h3>
+
+    <p>
+        Avoid sending too many automated messages in a short period.
+        Give subscribers enough time to read and respond to your emails.
+    </p>
+
+    <h3>Test Before Activating</h3>
+
+    <p>
+        Test triggers, links, personalization fields, delays, and
+        conditions before activating a workflow.
+    </p>
+
+    <h3>Monitor Your Results</h3>
+
+    <p>
+        Review campaign performance and subscriber behavior to identify
+        opportunities for improvement.
+    </p>
+
+    <h3>Respect Subscriber Preferences</h3>
+
+    <p>
+        Automated email marketing should respect applicable privacy
+        requirements, subscriber preferences, and unsubscribe requests.
+    </p>
+
+    <h2>Common Email Automation Mistakes</h2>
+
+    <ul>
+        <li>Creating workflows without a clear goal</li>
+        <li>Sending too many emails</li>
+        <li>Using irrelevant content</li>
+        <li>Failing to test automation rules</li>
+        <li>Using incorrect personalization data</li>
+        <li>Ignoring inactive subscribers</li>
+        <li>Never reviewing workflow performance</li>
+        <li>Forgetting to update outdated content</li>
+    </ul>
+
+    <h2>Email Automation Metrics to Monitor</h2>
+
+    <p>
+        The metrics you monitor should depend on the goal of the
+        automation.
+    </p>
+
+    <ul>
+        <li>Email delivery</li>
+        <li>Open rate where meaningful and available</li>
+        <li>Click-through rate</li>
+        <li>Conversion rate</li>
+        <li>Unsubscribe rate</li>
+        <li>Bounce rate</li>
+        <li>Revenue or other business outcomes when applicable</li>
+    </ul>
+
+    <h2>Email Automation for Beginners</h2>
+
+    <p>
+        Beginners should start with one simple workflow rather than
+        creating many complex automations at once.
+    </p>
+
+    <ol>
+        <li>Build a permission-based email list.</li>
+        <li>Choose one clear automation goal.</li>
+        <li>Create a simple trigger.</li>
+        <li>Write useful email content.</li>
+        <li>Add appropriate delays.</li>
+        <li>Test the workflow carefully.</li>
+        <li>Monitor the results.</li>
+        <li>Improve the workflow over time.</li>
+    </ol>
+
+    <h2>Recommended Email Marketing Platform</h2>
+
+    <div class="affiliate-box">
+
+        <p>
+            MailerLite provides tools for creating email campaigns,
+            managing subscribers, building automated workflows,
+            segmentation, and analyzing campaign performance.
+        </p>
+
+        <p>
+            <strong>MailerLite affiliate placeholder:</strong><br>
+            Your approved MailerLite affiliate link will be added here
+            after the affiliate program provides the affiliate URL.
+        </p>
+
+        <p>
+            <strong>Affiliate disclosure:</strong><br>
+            If an affiliate link is added to this article, it will be
+            clearly identified as an affiliate link.
+        </p>
+
+    </div>
+
+    <h2>Conclusion</h2>
+
+    <p>
+        Email marketing automation allows businesses to send relevant
+        messages automatically based on subscriber actions, conditions,
+        and events.
+    </p>
+
+    <p>
+        Beginners can start with simple workflows such as welcome
+        sequences, educational campaigns, abandoned cart reminders,
+        post-purchase emails, and re-engagement campaigns.
+    </p>
+
+    <p>
+        The key to successful automation is to provide useful content,
+        use appropriate timing, test workflows carefully, respect
+        subscriber preferences, and regularly review performance.
+    </p>
+
+    <h2>About the Author</h2>
+
+    <p>
+        Muhammad Nasir Uddin creates practical resources about email
+        marketing, digital marketing tools, HTML email, automation,
+        segmentation, analytics, and related technologies.
+    </p>
+
+    <p>
+        <strong>Email Marketing Resource</strong>
+    </p>
+
+    <a class="website-link"
+       href="https://nasirportfolio.github.io/my-website-repository/"
+       target="_blank"
+       rel="noopener noreferrer">
+        Visit My Website &amp; Services
+    </a>
+
+</article>
+
+</main>
+
+<footer>
+
+    <p>
+        <strong>Email Marketing Resource</strong>
+    </p>
+
+    <p>
+        &copy; 2026 Muhammad Nasir Uddin. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+
+</html>
