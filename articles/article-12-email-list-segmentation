@@ -1,1 +1,630 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-3ZDJCJWX5F');
+    </script>
+
+    <title>Email List Segmentation: A Beginner's Guide</title>
+
+    <meta name="description"
+          content="Learn what email list segmentation is, why it matters, how to create useful segments, segmentation examples, best practices, common mistakes, and how beginners can get started.">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="https://nasirportfolio.github.io/email-marketing/articles/article-12-email-list-segmentation/">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #222;
+            background: #f7f9fc;
+        }
+
+        header {
+            background: #17365d;
+            color: #fff;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        header h1 {
+            max-width: 900px;
+            margin: 0 auto 18px;
+            font-size: 2.5rem;
+            line-height: 1.25;
+        }
+
+        header p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        article {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+
+        h2 {
+            color: #17365d;
+            margin-top: 35px;
+            line-height: 1.3;
+        }
+
+        h3 {
+            color: #234f7d;
+            margin-top: 28px;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        ul,
+        ol {
+            padding-left: 28px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .example {
+            background: #f0f4f8;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #17365d;
+            border-radius: 6px;
+        }
+
+        .tip-box {
+            background: #eef6ff;
+            padding: 20px;
+            margin: 25px 0;
+            border-left: 4px solid #234f7d;
+            border-radius: 6px;
+        }
+
+        .affiliate-box {
+            margin-top: 30px;
+            padding: 24px;
+            background: #f0f4f8;
+            border-radius: 8px;
+        }
+
+        .website-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 11px 18px;
+            background: #17365d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .website-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #17365d;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 38px 18px;
+            }
+
+            header h1 {
+                font-size: 1.9rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            main {
+                margin: 20px auto;
+                padding: 0 12px;
+            }
+
+            article {
+                padding: 22px;
+            }
+
+            h2 {
+                font-size: 1.55rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .website-link {
+                max-width: 100%;
+                overflow-wrap: anywhere;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Email List Segmentation: A Beginner's Guide</h1>
+
+    <p>
+        Learn what email list segmentation is, why it matters,
+        how to create useful segments, and how beginners can use
+        segmentation to send more relevant email campaigns.
+    </p>
+
+</header>
+
+<main>
+
+<article>
+
+    <h2>What Is Email List Segmentation?</h2>
+
+    <p>
+        Email list segmentation is the process of dividing subscribers
+        into smaller groups based on shared characteristics,
+        interests, actions, or other relevant information.
+    </p>
+
+    <p>
+        Instead of sending exactly the same message to every subscriber,
+        marketers can use segments to make their email communication
+        more relevant to different groups of people.
+    </p>
+
+    <h2>Why Is Email Segmentation Important?</h2>
+
+    <p>
+        Subscribers can have different interests, needs, purchase
+        histories, and levels of engagement. Sending every subscriber
+        the same message may not provide the most relevant experience.
+    </p>
+
+    <p>
+        Segmentation helps marketers organize their audience and create
+        campaigns that are better matched to specific subscriber groups.
+    </p>
+
+    <ul>
+        <li>Send more relevant content</li>
+        <li>Organize subscribers into useful groups</li>
+        <li>Improve targeting</li>
+        <li>Support personalized communication</li>
+        <li>Build better customer journeys</li>
+        <li>Improve email marketing strategy</li>
+    </ul>
+
+    <h2>How Does Email Segmentation Work?</h2>
+
+    <p>
+        An email marketing platform stores information about subscribers.
+        Marketers can use available information and subscriber behavior
+        to create groups called segments.
+    </p>
+
+    <ol>
+        <li>Collect relevant subscriber information.</li>
+        <li>Identify meaningful differences between subscribers.</li>
+        <li>Create appropriate groups or segments.</li>
+        <li>Send relevant campaigns to each group.</li>
+        <li>Monitor performance and improve the strategy.</li>
+    </ol>
+
+    <h2>Common Types of Email Segmentation</h2>
+
+    <h3>1. Demographic Segmentation</h3>
+
+    <p>
+        Demographic segmentation groups subscribers according to
+        information such as age range, location, occupation, or other
+        relevant demographic data when that information is legitimately
+        collected and useful.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br>
+        A business may create different campaigns for customers in
+        different geographic regions.
+    </div>
+
+    <h3>2. Geographic Segmentation</h3>
+
+    <p>
+        Geographic segmentation organizes subscribers according to
+        location. This can be useful when a business operates in
+        different cities, countries, or regions.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br>
+        A business could promote a local event only to subscribers
+        who live in the relevant area.
+    </div>
+
+    <h3>3. Interest-Based Segmentation</h3>
+
+    <p>
+        Interest-based segmentation groups subscribers according to
+        topics, products, or content they have shown interest in.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br>
+        Subscribers interested in email automation could receive
+        automation tutorials and related resources.
+    </div>
+
+    <h3>4. Behavioral Segmentation</h3>
+
+    <p>
+        Behavioral segmentation uses actions taken by subscribers.
+        Examples can include email engagement, website activity,
+        purchases, downloads, or other relevant interactions.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br>
+        Subscribers who downloaded an email marketing guide could
+        receive follow-up content related to that guide.
+    </div>
+
+    <h3>5. Purchase-Based Segmentation</h3>
+
+    <p>
+        Ecommerce businesses can create segments based on purchase
+        history, product category, order frequency, or other relevant
+        customer information.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br>
+        Customers who purchased a particular product category could
+        receive relevant product education or related offers.
+    </div>
+
+    <h3>6. Engagement-Based Segmentation</h3>
+
+    <p>
+        Engagement-based segmentation groups subscribers according
+        to how they interact with email campaigns.
+    </p>
+
+    <p>
+        For example, a marketer may distinguish between highly engaged
+        subscribers and subscribers who have not interacted with emails
+        for a long period.
+    </p>
+
+    <h2>Simple Email Segmentation Examples</h2>
+
+    <p>
+        Beginners do not need dozens of complicated segments. A few
+        useful groups can be enough to start.
+    </p>
+
+    <ul>
+        <li>New subscribers</li>
+        <li>Active subscribers</li>
+        <li>Less-engaged subscribers</li>
+        <li>Customers</li>
+        <li>Potential customers</li>
+        <li>Subscribers interested in a specific topic</li>
+        <li>Subscribers who downloaded a particular resource</li>
+    </ul>
+
+    <h2>Segmentation vs Personalization</h2>
+
+    <p>
+        Segmentation and personalization are related but different
+        concepts.
+    </p>
+
+    <p>
+        Segmentation divides subscribers into groups so marketers can
+        send appropriate messages to each group.
+    </p>
+
+    <p>
+        Personalization uses subscriber information to make an individual
+        message more relevant. A campaign can use both segmentation and
+        personalization at the same time.
+    </p>
+
+    <div class="tip-box">
+        <strong>Simple way to remember:</strong><br>
+        Segmentation decides <strong>who</strong> should receive a
+        message. Personalization can help determine <strong>how</strong>
+        the message is presented to that subscriber.
+    </div>
+
+    <h2>How to Create an Email Segment</h2>
+
+    <ol>
+        <li>Define the purpose of the segment.</li>
+        <li>Identify the information or behavior needed.</li>
+        <li>Choose the appropriate conditions.</li>
+        <li>Create the segment in your email marketing platform.</li>
+        <li>Review the subscribers included in the segment.</li>
+        <li>Send relevant content to that audience.</li>
+        <li>Monitor the results.</li>
+    </ol>
+
+    <h2>Example: Creating a Beginner Segment</h2>
+
+    <p>
+        Imagine that an email marketing website has subscribers who are
+        learning email marketing for the first time.
+    </p>
+
+    <p>
+        The website could create a segment called
+        <strong>Email Marketing Beginners</strong>.
+    </p>
+
+    <p>
+        The segment could be based on information collected through a
+        signup form, content interests, or subscriber actions.
+    </p>
+
+    <p>
+        The business could then send beginner-friendly tutorials,
+        definitions, practical guides, and introductory resources to
+        this group.
+    </p>
+
+    <h2>Using Segmentation With Email Automation</h2>
+
+    <p>
+        Segmentation becomes especially useful when combined with
+        automation.
+    </p>
+
+    <p>
+        An automated workflow can use subscriber information or behavior
+        to determine which message should be sent next.
+    </p>
+
+    <div class="example">
+        <strong>Example workflow:</strong><br><br>
+
+        Subscriber joins an email list
+        → receives a welcome email
+        → downloads an email marketing guide
+        → enters a relevant segment
+        → receives educational follow-up emails
+    </div>
+
+    <p>
+        This approach can create a more relevant customer journey than
+        sending the same automated sequence to everyone.
+    </p>
+
+    <h2>Segmentation for Ecommerce and Shopify</h2>
+
+    <p>
+        Ecommerce businesses can use segmentation to organize customers
+        based on purchases, products viewed, customer activity,
+        location, and other useful information.
+    </p>
+
+    <p>
+        For example, a Shopify store could create different customer
+        groups based on purchase history and send product education,
+        relevant recommendations, or post-purchase communication.
+    </p>
+
+    <p>
+        The exact segmentation capabilities depend on the email
+        marketing platform and its available integrations.
+    </p>
+
+    <h2>Email Segmentation Best Practices</h2>
+
+    <ol>
+        <li>Start with a small number of useful segments.</li>
+        <li>Create segments for a clear marketing purpose.</li>
+        <li>Use accurate subscriber information.</li>
+        <li>Avoid collecting unnecessary personal information.</li>
+        <li>Keep segment conditions understandable.</li>
+        <li>Review segments regularly.</li>
+        <li>Send content that matches the segment.</li>
+        <li>Respect subscriber preferences.</li>
+        <li>Test campaigns when appropriate.</li>
+        <li>Monitor results and improve your strategy.</li>
+    </ol>
+
+    <h2>Common Email Segmentation Mistakes</h2>
+
+    <ul>
+        <li>Creating too many unnecessary segments</li>
+        <li>Using inaccurate subscriber information</li>
+        <li>Creating segments without a clear purpose</li>
+        <li>Sending irrelevant content to a segment</li>
+        <li>Ignoring subscriber preferences</li>
+        <li>Failing to update outdated information</li>
+        <li>Making automation workflows unnecessarily complicated</li>
+        <li>Not reviewing campaign performance</li>
+    </ul>
+
+    <h2>How Beginners Can Start Using Segmentation</h2>
+
+    <p>
+        Beginners should avoid trying to build a highly complicated
+        segmentation system immediately.
+    </p>
+
+    <p>
+        Start with two or three useful groups and learn how they affect
+        your email campaigns.
+    </p>
+
+    <ol>
+        <li>Identify your main audience.</li>
+        <li>Choose one useful segmentation method.</li>
+        <li>Create a simple segment.</li>
+        <li>Prepare relevant content for that group.</li>
+        <li>Send or automate the campaign.</li>
+        <li>Review engagement and other relevant results.</li>
+        <li>Improve the segment based on what you learn.</li>
+    </ol>
+
+    <h2>Recommended Email Marketing Platforms</h2>
+
+    <p>
+        Many email marketing platforms provide segmentation features.
+        Popular platforms include MailerLite, Mailchimp, and Klaviyo.
+    </p>
+
+    <p>
+        The available segmentation conditions and integrations can
+        differ between platforms and plans, so beginners should choose
+        tools that match their specific needs.
+    </p>
+
+    <div class="affiliate-box">
+
+        <p>
+            MailerLite provides tools for managing subscribers,
+            creating groups and segments, sending campaigns, and
+            building automated email workflows.
+        </p>
+
+        <p>
+            <strong>MailerLite affiliate placeholder:</strong><br>
+            Your approved MailerLite affiliate link will be added here
+            after the affiliate program provides the affiliate URL.
+        </p>
+
+        <p>
+            <strong>Affiliate disclosure:</strong><br>
+            If an affiliate link is added to this article, it will be
+            clearly identified as an affiliate link.
+        </p>
+
+    </div>
+
+    <h2>How Segmentation Supports Better Email Marketing</h2>
+
+    <p>
+        Effective segmentation can help marketers move from broad
+        communication toward more relevant subscriber experiences.
+    </p>
+
+    <p>
+        When segmentation is based on meaningful information and used
+        for a clear purpose, it can support better content targeting,
+        automation, and customer communication.
+    </p>
+
+    <h2>Conclusion</h2>
+
+    <p>
+        Email list segmentation is the process of dividing subscribers
+        into useful groups based on characteristics, interests,
+        actions, or other relevant information.
+    </p>
+
+    <p>
+        Beginners can start with simple segments such as new subscribers,
+        engaged subscribers, customers, or people interested in a
+        particular topic.
+    </p>
+
+    <p>
+        As your email marketing skills improve, segmentation can be
+        combined with personalization and automation to create more
+        relevant customer journeys.
+    </p>
+
+    <h2>About the Author</h2>
+
+    <p>
+        Muhammad Nasir Uddin creates practical resources about email
+        marketing, digital marketing tools, HTML email, automation,
+        segmentation, analytics, and related technologies.
+    </p>
+
+    <p>
+        <strong>Email Marketing Resource</strong>
+    </p>
+
+    <a class="website-link"
+       href="https://nasirportfolio.github.io/my-website-repository/"
+       target="_blank"
+       rel="noopener noreferrer">
+        Visit My Website &amp; Services
+    </a>
+
+</article>
+
+</main>
+
+<footer>
+
+    <p>
+        <strong>Email Marketing Resource</strong>
+    </p>
+
+    <p>
+        &copy; 2026 Muhammad Nasir Uddin. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+
+</html>
+```
 
