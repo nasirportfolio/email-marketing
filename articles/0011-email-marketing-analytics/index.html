@@ -7,10 +7,9 @@
     <title>What Is Email Marketing Analytics? A Complete Beginner's Guide</title>
 
     <meta name="description"
-          content="Learn what email marketing analytics is, which metrics matter, how to measure campaign performance, and how to use email data to improve marketing results.">
+          content="Learn what email marketing analytics is, which metrics matter, how to measure campaign performance, and how to use data to improve your email marketing strategy.">
 
     <meta name="robots" content="index, follow">
-
     <link rel="canonical"
           href="https://nasirportfolio.github.io/email-marketing/articles/0011-email-marketing-analytics/">
 
@@ -20,7 +19,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-3ZDJCJWX5F');
     </script>
 
@@ -40,29 +38,28 @@
         header {
             background: #12355b;
             color: white;
-            padding: 20px;
+            padding: 22px 20px;
         }
 
-        .nav-container {
+        .header-inner {
             max-width: 1100px;
             margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
         }
 
-        .site-title {
-            font-size: 22px;
-            font-weight: bold;
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        nav {
+            margin-top: 12px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 8px;
-            font-size: 15px;
+            margin-right: 18px;
+            font-weight: bold;
         }
 
         nav a:hover {
@@ -82,58 +79,53 @@
             box-shadow: 0 2px 12px rgba(0,0,0,0.06);
         }
 
-        h1 {
-            font-size: 38px;
-            line-height: 1.25;
+        .article-number {
+            display: inline-block;
+            background: #eaf2fb;
             color: #12355b;
-            margin-top: 0;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 1.25;
+            margin-top: 5px;
+            color: #12355b;
         }
 
         h2 {
-            margin-top: 40px;
+            margin-top: 38px;
             color: #12355b;
-            font-size: 28px;
+            font-size: 27px;
         }
 
         h3 {
             margin-top: 28px;
-            color: #244f78;
+            color: #234f7d;
             font-size: 21px;
         }
 
         p {
-            margin: 15px 0;
-        }
-
-        ul,
-        ol {
-            padding-left: 25px;
-        }
-
-        li {
-            margin-bottom: 10px;
+            margin: 16px 0;
         }
 
         a {
-            color: #145da0;
-        }
-
-        .article-meta {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 25px;
+            color: #125ea8;
         }
 
         .quick-answer {
             background: #eef6ff;
-            border-left: 5px solid #145da0;
+            border-left: 5px solid #12355b;
             padding: 20px;
             margin: 25px 0;
         }
 
         .toc {
-            background: #f3f5f7;
-            padding: 22px;
+            background: #f5f7fa;
+            padding: 22px 28px;
             border-radius: 8px;
             margin: 30px 0;
         }
@@ -143,18 +135,8 @@
             font-size: 23px;
         }
 
-        .example {
-            background: #fff8e8;
-            border-left: 5px solid #d89b00;
-            padding: 20px;
-            margin: 25px 0;
-        }
-
-        .checklist {
-            background: #f1f8f4;
-            border-left: 5px solid #31845b;
-            padding: 20px;
-            margin: 25px 0;
+        .toc ul {
+            margin-bottom: 0;
         }
 
         table {
@@ -165,42 +147,69 @@
 
         th,
         td {
-            border: 1px solid #ddd;
+            border: 1px solid #d8dee6;
             padding: 12px;
             text-align: left;
             vertical-align: top;
         }
 
         th {
-            background: #eef2f6;
+            background: #eef3f8;
+            color: #12355b;
+        }
+
+        .example {
+            background: #fafafa;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .checklist {
+            background: #f7fbf7;
+            border-left: 5px solid #4b7f52;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .faq {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .affiliate-note {
-            background: #f8f1ff;
-            border-left: 5px solid #7b4bb7;
+            background: #fff8e8;
+            border: 1px solid #ead7a2;
             padding: 18px;
-            margin: 30px 0;
+            border-radius: 8px;
+            margin-top: 35px;
         }
 
         .author-box {
-            background: #f3f5f7;
+            background: #f1f4f8;
             padding: 22px;
-            margin-top: 40px;
             border-radius: 8px;
+            margin-top: 35px;
         }
 
         footer {
             background: #12355b;
             color: white;
-            text-align: center;
             padding: 25px 20px;
             margin-top: 40px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: auto;
         }
 
         footer a {
             color: white;
             text-decoration: none;
-            margin: 0 6px;
+            margin-right: 15px;
         }
 
         @media (max-width: 700px) {
@@ -209,16 +218,20 @@
             }
 
             h1 {
-                font-size: 30px;
+                font-size: 29px;
             }
 
             h2 {
                 font-size: 24px;
             }
 
+            header h1 {
+                font-size: 25px;
+            }
+
             nav a {
                 display: inline-block;
-                margin: 5px;
+                margin-bottom: 8px;
             }
 
             table {
@@ -231,11 +244,8 @@
 <body>
 
 <header>
-    <div class="nav-container">
-
-        <div class="site-title">
-            Email Marketing Resource
-        </div>
+    <div class="header-inner">
+        <h1>Email Marketing Resource</h1>
 
         <nav>
             <a href="../../index.html">Home</a>
@@ -243,7 +253,6 @@
             <a href="../../contact.html">Contact</a>
             <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
         </nav>
-
     </div>
 </header>
 
@@ -251,767 +260,709 @@
 
 <article>
 
-    <div class="article-meta">
-        ARTICLE 11 · Email Marketing
-    </div>
+    <div class="article-number">ARTICLE 11</div>
 
     <h1>What Is Email Marketing Analytics? A Complete Beginner's Guide</h1>
 
     <p>
-        Email marketing analytics is the process of collecting, measuring,
-        and interpreting data from email campaigns so marketers can understand
-        performance and make better decisions.
+        Email marketing analytics is the process of collecting and analyzing
+        data from email campaigns to understand what is working, what is not
+        working, and what should be improved.
     </p>
 
     <div class="quick-answer">
-
-        <strong>Quick Answer:</strong>
-
-        Email marketing analytics helps you understand what happens after you
-        send an email. It can include delivery, clicks, conversions,
-        unsubscribes, complaints, revenue, and other performance data. The
-        purpose is not simply to collect numbers, but to use those numbers to
-        improve future campaigns.
-
+        <strong>Quick answer:</strong>
+        Email marketing analytics helps you measure campaign performance
+        using data such as delivery rate, bounce rate, open rate, click-through
+        rate, conversion rate, unsubscribe rate, complaints, and revenue.
+        The goal is not simply to collect numbers, but to use those numbers
+        to make better email marketing decisions.
     </div>
 
-    <p>
-        If you are new to email marketing, it is useful to first understand
-        <a href="../0001-what-is-email-marketing/">
-        what email marketing is</a>.
-        Once you understand the foundation, analytics helps you measure whether
-        your email activity is actually producing useful results.
-    </p>
-
     <div class="toc">
-
         <h2>Table of Contents</h2>
 
-        <ol>
-            <li><a href="#what">What Is Email Marketing Analytics?</a></li>
-            <li><a href="#important">Why Is Email Marketing Analytics Important?</a></li>
-            <li><a href="#metrics">What Email Marketing Metrics Should You Track?</a></li>
+        <ul>
+            <li><a href="#what-is">What Is Email Marketing Analytics?</a></li>
+            <li><a href="#why-important">Why Is Email Marketing Analytics Important?</a></li>
+            <li><a href="#metrics">Important Email Marketing Metrics</a></li>
             <li><a href="#delivery">Delivery Rate</a></li>
             <li><a href="#bounce">Bounce Rate</a></li>
             <li><a href="#open">Open Rate</a></li>
-            <li><a href="#click">Click-Through Rate</a></li>
+            <li><a href="#ctr">Click-Through Rate</a></li>
             <li><a href="#ctor">Click-to-Open Rate</a></li>
             <li><a href="#conversion">Conversion Rate</a></li>
             <li><a href="#unsubscribe">Unsubscribe Rate</a></li>
-            <li><a href="#complaint">Spam Complaint Rate</a></li>
+            <li><a href="#complaints">Spam Complaints</a></li>
             <li><a href="#revenue">Revenue and ROI</a></li>
-            <li><a href="#strategy">Analytics and Email Marketing Strategy</a></li>
+            <li><a href="#strategy">Using Analytics to Improve Your Strategy</a></li>
             <li><a href="#segmentation">Analytics and Segmentation</a></li>
             <li><a href="#automation">Analytics and Automation</a></li>
-            <li><a href="#testing">Analytics and A/B Testing</a></li>
+            <li><a href="#ab-testing">Analytics and A/B Testing</a></li>
+            <li><a href="#personalization">Analytics and Personalization</a></li>
+            <li><a href="#copywriting">Analytics and Email Copywriting</a></li>
             <li><a href="#process">How to Analyze an Email Campaign</a></li>
-            <li><a href="#example">Email Analytics Example</a></li>
-            <li><a href="#mistakes">Common Email Analytics Mistakes</a></li>
+            <li><a href="#example">Practical Example</a></li>
+            <li><a href="#mistakes">Common Analytics Mistakes</a></li>
             <li><a href="#best-practices">Best Practices</a></li>
             <li><a href="#checklist">Email Analytics Checklist</a></li>
             <li><a href="#faq">Frequently Asked Questions</a></li>
-        </ol>
-
+        </ul>
     </div>
 
-    <h2 id="what">What Is Email Marketing Analytics?</h2>
+    <h2 id="what-is">What Is Email Marketing Analytics?</h2>
 
     <p>
-        Email marketing analytics is the systematic measurement and analysis
-        of data generated by email campaigns.
+        Email marketing analytics refers to the measurement and analysis of
+        data generated by email campaigns.
     </p>
 
     <p>
-        Every email campaign can generate information about delivery,
-        engagement, clicks, conversions, unsubscribes, complaints, and other
-        actions.
+        When you send an email, an email marketing platform can provide
+        information about delivery, engagement, clicks, conversions,
+        unsubscribes, and other actions.
     </p>
 
     <p>
-        Analytics turns that information into insights that can help marketers
-        understand what is working and what needs improvement.
+        Instead of guessing whether an email campaign was successful,
+        analytics allows marketers to examine measurable results.
     </p>
 
     <p>
-        For example, if many subscribers receive an email but very few click
-        its main link, the marketer may need to examine the message content,
-        offer, design, or call to action.
-    </p>
-
-    <h2 id="important">Why Is Email Marketing Analytics Important?</h2>
-
-    <p>
-        Sending emails without measuring the results makes it difficult to
-        know whether your efforts are helping you reach your goals.
+        Analytics therefore connects email marketing activity with actual
+        performance.
     </p>
 
     <p>
-        Analytics provides evidence that can support decisions about content,
-        audience targeting, sending frequency, subject lines, calls to action,
-        and campaign design.
+        If you are new to email marketing, it helps to first understand
+        <a href="../0001-what-is-email-marketing/">what email marketing is</a>
+        and how it works before studying campaign data.
     </p>
 
-    <h3>1. It Measures Performance</h3>
+    <h2 id="why-important">Why Is Email Marketing Analytics Important?</h2>
 
     <p>
-        Analytics shows how an email campaign performed against its intended
-        objective.
-    </p>
-
-    <h3>2. It Helps Find Problems</h3>
-
-    <p>
-        A campaign can perform well in one area and poorly in another.
-        Analytics helps identify where the problem occurs.
-    </p>
-
-    <h3>3. It Supports Better Decisions</h3>
-
-    <p>
-        Instead of relying entirely on assumptions, marketers can use campaign
-        data to make informed changes.
-    </p>
-
-    <h3>4. It Helps Improve Subscriber Experience</h3>
-
-    <p>
-        Engagement patterns can reveal whether subscribers find the content
-        relevant and useful.
-    </p>
-
-    <h3>5. It Connects Email With Business Goals</h3>
-
-    <p>
-        Conversion and revenue data can help businesses understand how email
-        contributes to their broader objectives.
-    </p>
-
-    <h2 id="metrics">What Email Marketing Metrics Should You Track?</h2>
-
-    <p>
-        You do not need to track every number available in an email platform.
-        The most useful metrics depend on your campaign objective.
+        Analytics is important because sending emails alone does not tell you
+        whether your marketing is effective.
     </p>
 
     <p>
-        A practical approach is to choose a small group of metrics that answer
-        the most important questions about your campaign.
+        A campaign may have been delivered successfully but generated very
+        few clicks. Another campaign may receive many clicks but produce few
+        sales.
+    </p>
+
+    <p>
+        Analytics helps identify these differences.
+    </p>
+
+    <p>
+        It can help you:
+    </p>
+
+    <ul>
+        <li>Understand subscriber engagement.</li>
+        <li>Identify weak campaigns.</li>
+        <li>Discover successful content.</li>
+        <li>Improve subject lines and calls to action.</li>
+        <li>Improve audience targeting.</li>
+        <li>Measure conversions.</li>
+        <li>Reduce unnecessary unsubscribes.</li>
+        <li>Understand revenue generated by email.</li>
+        <li>Make future campaigns more data-driven.</li>
+    </ul>
+
+    <p>
+        A strong
+        <a href="../0003-email-marketing-strategy/">email marketing strategy</a>
+        becomes more effective when campaign results are regularly measured
+        and used to guide future decisions.
+    </p>
+
+    <h2 id="metrics">Important Email Marketing Metrics</h2>
+
+    <p>
+        Different email marketing platforms provide different reports, but
+        several metrics are commonly used to evaluate campaign performance.
     </p>
 
     <table>
-
         <thead>
             <tr>
                 <th>Metric</th>
-                <th>What It Helps Measure</th>
+                <th>What It Helps You Understand</th>
             </tr>
         </thead>
-
         <tbody>
-
             <tr>
-                <td>Delivery Rate</td>
-                <td>Whether messages were accepted for delivery.</td>
+                <td>Delivery rate</td>
+                <td>How successfully emails reached receiving mail servers.</td>
             </tr>
-
             <tr>
-                <td>Bounce Rate</td>
-                <td>How many messages could not be delivered.</td>
+                <td>Bounce rate</td>
+                <td>How many emails could not be delivered.</td>
             </tr>
-
             <tr>
-                <td>Open Rate</td>
-                <td>Recorded email opens, with important measurement limitations.</td>
+                <td>Open rate</td>
+                <td>Reported email opens, where measurable.</td>
             </tr>
-
             <tr>
-                <td>Click-Through Rate</td>
-                <td>How many recipients clicked links or tracked elements.</td>
+                <td>Click-through rate</td>
+                <td>How many recipients clicked links.</td>
             </tr>
-
             <tr>
-                <td>Click-to-Open Rate</td>
-                <td>How many recorded openers clicked.</td>
+                <td>Click-to-open rate</td>
+                <td>How engaged reported openers were with the email content.</td>
             </tr>
-
             <tr>
-                <td>Conversion Rate</td>
+                <td>Conversion rate</td>
                 <td>How many recipients completed a desired action.</td>
             </tr>
-
             <tr>
-                <td>Unsubscribe Rate</td>
-                <td>How many recipients left the list.</td>
+                <td>Unsubscribe rate</td>
+                <td>How many recipients left the email list.</td>
             </tr>
-
             <tr>
-                <td>Spam Complaint Rate</td>
-                <td>How often recipients reported messages as spam.</td>
+                <td>Complaint rate</td>
+                <td>How many recipients reported messages as spam.</td>
             </tr>
-
             <tr>
                 <td>Revenue</td>
-                <td>The financial value attributed to email activity.</td>
+                <td>How much revenue can be attributed to email campaigns.</td>
             </tr>
-
         </tbody>
-
     </table>
 
     <h2 id="delivery">Delivery Rate</h2>
 
     <p>
-        Delivery rate measures the percentage of sent messages that were
-        accepted for delivery by receiving mail servers.
+        Delivery rate indicates how successfully an email campaign was
+        accepted by receiving mail servers.
     </p>
 
     <p>
-        A high delivery rate is important because recipients cannot engage
-        with an email that was never successfully delivered.
+        A high delivery rate is important because your message cannot
+        generate engagement if it cannot reach the recipient.
     </p>
 
     <p>
-        Delivery should not be confused with inbox placement. A message can
-        be accepted by the receiving mail server without necessarily reaching
-        the recipient's primary inbox.
-    </p>
-
-    <p>
-        This is one reason why
-        <a href="../0009-email-deliverability/">
-        email deliverability</a>
-        is an important part of email marketing performance.
+        Delivery should be considered together with
+        <a href="../0009-email-deliverability/">email deliverability</a>.
+        Deliverability involves the broader ability of emails to reach
+        recipients' inboxes rather than simply being accepted for delivery.
     </p>
 
     <h2 id="bounce">Bounce Rate</h2>
 
     <p>
-        Bounce rate measures messages that could not be delivered successfully.
+        A bounce occurs when an email cannot be delivered to the intended
+        recipient.
     </p>
 
     <p>
-        Bounces may occur because an email address is invalid, a mailbox is
-        unavailable, or another delivery problem prevents successful delivery.
+        Bounces are commonly divided into two broad categories:
+    </p>
+
+    <h3>Hard Bounces</h3>
+
+    <p>
+        A hard bounce generally indicates a permanent delivery problem, such
+        as an invalid or nonexistent email address.
+    </p>
+
+    <h3>Soft Bounces</h3>
+
+    <p>
+        A soft bounce generally indicates a temporary delivery problem,
+        such as a full mailbox or temporary server issue.
     </p>
 
     <p>
-        A consistently high bounce rate can indicate that a business should
-        review its list-building and list-maintenance practices.
-    </p>
-
-    <p>
-        Good
-        <a href="../0005-email-list-building/">
-        email list building</a>
-        practices can help create a healthier subscriber database.
+        Regularly monitoring bounces can help protect list quality and
+        contribute to better email deliverability.
     </p>
 
     <h2 id="open">Open Rate</h2>
 
     <p>
-        Open rate has traditionally been used to estimate how many recipients
-        opened an email.
+        Open rate attempts to measure how many recipients opened an email.
     </p>
 
     <p>
-        It can still provide useful directional information, but marketers
-        should not treat it as a perfect measurement of human attention.
-        Privacy features and changes in email-client behavior can affect open
-        tracking.
+        However, open-rate data is not always a perfect measurement of actual
+        human behavior because privacy technologies and email-client
+        behavior can affect how opens are recorded.
     </p>
 
     <p>
-        For this reason, open rate is best interpreted alongside stronger
-        action-based measurements such as clicks and conversions.
+        For that reason, open rate should not be treated as the only measure
+        of campaign success.
     </p>
 
-    <h2 id="click">Click-Through Rate</h2>
+    <p>
+        Subject lines can influence reported opens, which is why analytics
+        becomes particularly useful when combined with
+        <a href="../0010-email-marketing-ab-testing/">email marketing A/B testing</a>.
+    </p>
+
+    <h2 id="ctr">Click-Through Rate</h2>
 
     <p>
         Click-through rate, commonly called CTR, measures the percentage of
-        recipients who clicked one or more tracked links or elements.
+        recipients who clicked a link or other clickable element in an email.
     </p>
 
     <p>
-        Clicks are valuable because they represent an active interaction with
-        the email.
+        CTR can help you understand whether recipients found the email
+        content and call to action useful enough to take the next step.
     </p>
 
     <p>
-        For example, if an email promotes a guide and includes a
-        "Read the Guide" button, clicks on that button can help show whether
-        the message encouraged subscribers to continue.
+        For example, an email might have a reasonable reported open rate but
+        a very low CTR. This may indicate that the subject line attracted
+        attention but the email content or CTA did not create enough
+        motivation to click.
     </p>
 
     <h2 id="ctor">Click-to-Open Rate</h2>
 
     <p>
-        Click-to-open rate, or CTOR, compares unique clicks with unique
-        recorded opens.
+        Click-to-open rate, or CTOR, compares clicks with reported opens.
     </p>
 
     <p>
-        It can help marketers evaluate how effectively the email content
-        encourages action among people who interacted with the message.
+        This metric can provide additional insight into the effectiveness of
+        the content after someone has opened the email.
     </p>
 
     <p>
-        Because open measurement has limitations, CTOR should also be treated
-        as a directional metric rather than an absolute measure of content
-        quality.
+        Like open rate, CTOR should be interpreted carefully because the
+        underlying open data can be affected by privacy and tracking
+        limitations.
     </p>
 
     <h2 id="conversion">Conversion Rate</h2>
 
     <p>
-        Conversion rate measures the percentage of recipients who complete a
-        desired action.
+        Conversion rate measures how many recipients completed a desired
+        action after interacting with an email.
     </p>
 
     <p>
-        The conversion depends on the campaign goal.
-    </p>
-
-    <p>
-        Examples include:
+        Depending on the campaign, a conversion could be:
     </p>
 
     <ul>
-        <li>Making a purchase</li>
-        <li>Registering for an event</li>
-        <li>Downloading a resource</li>
-        <li>Starting a free trial</li>
-        <li>Submitting a form</li>
-        <li>Booking an appointment</li>
+        <li>Making a purchase.</li>
+        <li>Submitting a form.</li>
+        <li>Booking a consultation.</li>
+        <li>Registering for an event.</li>
+        <li>Downloading a resource.</li>
+        <li>Starting a trial.</li>
     </ul>
 
-    <div class="example">
-
-        <strong>Example:</strong>
-
-        A company sends an email to promote a free consultation. If
-        subscribers click the email and complete the consultation request
-        form, those completed forms can be measured as conversions.
-
-    </div>
+    <p>
+        Conversion data is often more valuable for business decisions than
+        engagement metrics alone because it connects email activity with a
+        specific business objective.
+    </p>
 
     <h2 id="unsubscribe">Unsubscribe Rate</h2>
 
     <p>
-        Unsubscribe rate measures how many recipients choose to leave an email
-        list after receiving a message.
+        Unsubscribe rate measures how many recipients chose to leave an email
+        list after receiving a campaign.
     </p>
 
     <p>
-        Unsubscribes are not automatically a sign of failure. Removing people
-        who no longer want messages can improve list quality.
+        A sudden increase in unsubscribes may indicate problems with content,
+        frequency, audience targeting, expectations, or relevance.
     </p>
 
     <p>
-        However, a sudden increase in unsubscribes can indicate that the
-        content, frequency, targeting, or subscriber expectations need review.
+        Good
+        <a href="../0005-email-list-building/">email list building</a>
+        should focus on attracting people who genuinely want to receive the
+        type of content being offered.
     </p>
 
-    <h2 id="complaint">Spam Complaint Rate</h2>
+    <h2 id="complaints">Spam Complaints</h2>
 
     <p>
-        Spam complaint rate measures how often recipients report an email as
-        spam through their email provider.
-    </p>
-
-    <p>
-        High complaint levels can create problems for sender reputation and
-        future deliverability.
+        Spam complaints occur when recipients report an email as spam or
+        unwanted mail.
     </p>
 
     <p>
-        Permission-based list building, relevant content, clear expectations,
-        and an easy unsubscribe process can help reduce unwanted complaints.
+        Complaints are an important warning signal because repeated negative
+        recipient behavior can harm sender reputation and deliverability.
+    </p>
+
+    <p>
+        Permission-based list building, relevant content, appropriate sending
+        frequency, and clear expectations can help reduce complaints.
     </p>
 
     <h2 id="revenue">Revenue and ROI</h2>
 
     <p>
-        Revenue is particularly important for businesses that use email to
-        generate sales.
+        For businesses that sell products or services, revenue can be one of
+        the most important email marketing measurements.
     </p>
 
     <p>
-        Revenue-related analytics can help connect email campaigns with
-        financial outcomes.
+        Revenue tracking attempts to connect email campaigns with purchases
+        or other monetary outcomes.
     </p>
 
     <p>
-        Return on investment, or ROI, compares the value generated by marketing
-        activity with the costs associated with that activity.
+        Return on investment, or ROI, goes one step further by comparing the
+        value generated with the cost of producing and sending the campaigns.
     </p>
 
     <p>
-        The exact calculation can vary depending on which costs and revenue
-        sources a business includes.
+        For example, if an email campaign costs money to create and send but
+        generates significantly more attributable revenue, the campaign may
+        have a positive return.
     </p>
 
-    <h2 id="strategy">Analytics and Email Marketing Strategy</h2>
+    <h2 id="strategy">Using Analytics to Improve Your Strategy</h2>
 
     <p>
-        Analytics should be connected to your overall
-        <a href="../0003-email-marketing-strategy/">
-        email marketing strategy</a>.
-    </p>
-
-    <p>
-        Your strategy defines what you want email to accomplish. Analytics then
-        helps you determine whether your campaigns are moving toward those
-        objectives.
+        Analytics should not be treated as a report that you look at once and
+        then ignore.
     </p>
 
     <p>
-        For example, if your goal is to generate website traffic, clicks may
-        be more useful than simply looking at opens.
+        The real value comes from turning observations into decisions.
     </p>
 
     <p>
-        If your goal is to generate sales, conversions and revenue may deserve
-        greater attention.
+        Suppose your campaign receives strong clicks but weak conversions.
+        You might investigate the landing page, offer, pricing, or checkout
+        process rather than simply sending more emails.
+    </p>
+
+    <p>
+        Similarly, if engagement falls over several campaigns, you might
+        review your audience segments, content quality, sending frequency,
+        and overall strategy.
     </p>
 
     <h2 id="segmentation">Analytics and Segmentation</h2>
 
     <p>
-        Analytics becomes more useful when performance can be examined across
-        different groups of subscribers.
+        Analytics becomes more useful when you analyze groups of subscribers
+        rather than treating your entire audience as one group.
     </p>
 
     <p>
-        <a href="../0006-email-marketing-segmentation/">
-        Email marketing segmentation</a>
-        allows marketers to divide subscribers based on characteristics,
-        interests, behavior, engagement, or customer status.
+        <a href="../0006-email-marketing-segmentation/">Email marketing segmentation</a>
+        allows marketers to divide subscribers according to characteristics,
+        interests, behavior, engagement, customer status, or other useful
+        criteria.
     </p>
 
     <p>
-        For example, a business may discover that existing customers click
-        promotional emails more frequently than new subscribers.
+        For example, you could compare campaign performance between:
     </p>
 
+    <ul>
+        <li>New subscribers.</li>
+        <li>Highly engaged subscribers.</li>
+        <li>Inactive subscribers.</li>
+        <li>Existing customers.</li>
+        <li>Potential customers.</li>
+    </ul>
+
     <p>
-        This type of information can help marketers create more relevant
-        campaigns for different audiences.
+        This can reveal patterns that are hidden when all subscribers are
+        analyzed together.
     </p>
 
     <h2 id="automation">Analytics and Automation</h2>
 
     <p>
-        Email analytics is also important for
-        <a href="../0004-email-marketing-automation/">
-        email marketing automation</a>.
+        Analytics can also be used to evaluate automated email sequences.
     </p>
 
     <p>
-        Automated workflows can contain multiple emails and different
-        subscriber actions.
+        In
+        <a href="../0004-email-marketing-automation/">email marketing automation</a>,
+        messages can be triggered by events such as subscribing, purchasing,
+        abandoning a process, or reaching a particular stage of a customer
+        journey.
     </p>
 
     <p>
-        Analytics can help marketers identify where subscribers engage,
-        continue, convert, or stop interacting with an automated sequence.
+        Instead of measuring only one campaign, you can examine how the
+        complete workflow performs.
     </p>
 
     <p>
-        This makes it possible to improve individual steps within a workflow
-        instead of evaluating the entire automation as one unit.
+        For example, if the first welcome email receives good engagement but
+        later messages receive very little interaction, the later messages
+        may need improvement.
     </p>
 
-    <h2 id="testing">Analytics and A/B Testing</h2>
+    <h2 id="ab-testing">Analytics and A/B Testing</h2>
 
     <p>
-        Analytics provides the measurements needed to evaluate
-        <a href="../0010-email-marketing-ab-testing/">
-        email marketing A/B testing</a>.
-    </p>
-
-    <p>
-        For example, a marketer may test two subject lines and compare their
-        results.
+        Analytics provides the evidence needed to evaluate A/B tests.
     </p>
 
     <p>
-        Other tests can compare calls to action, content, offers, designs, or
-        other elements.
+        You might test two subject lines, two CTAs, or two versions of an
+        email message.
     </p>
 
     <p>
-        The important principle is to define the metric that will determine the
-        test result before running the experiment.
-    </p>
-
-    <h2>Analytics and Email Personalization</h2>
-
-    <p>
-        Analytics can also help evaluate
-        <a href="../0007-email-personalization/">
-        email personalization</a>.
+        The objective is to determine which version performs better according
+        to a predefined metric.
     </p>
 
     <p>
-        If a business uses personalized content, it can compare relevant
-        performance data to understand whether personalization is helping
-        achieve the campaign objective.
+        For example:
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Version</th>
+                <th>Subject Line</th>
+                <th>Reported Open Rate</th>
+                <th>CTR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>Learn the Basics of Email Marketing</td>
+                <td>35%</td>
+                <td>3.1%</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>5 Email Marketing Tips for Beginners</td>
+                <td>39%</td>
+                <td>3.8%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        In this example, Version B produced stronger reported engagement.
+        However, the final decision should depend on the campaign objective
+        and the quality of the test, not just one number.
+    </p>
+
+    <h2 id="personalization">Analytics and Personalization</h2>
+
+    <p>
+        <a href="../0007-email-personalization/">Email personalization</a>
+        uses relevant subscriber information to make messages more
+        individually relevant.
     </p>
 
     <p>
-        Personalization should not be used simply because a tool makes it
-        possible. The goal is to make messages more relevant and useful to the
-        recipient.
-    </p>
-
-    <h2>Analytics and Email Copywriting</h2>
-
-    <p>
-        Good
-        <a href="../0008-email-marketing-copywriting/">
-        email marketing copywriting</a>
-        can influence whether subscribers understand and act on a message.
+        Analytics can help determine whether personalization improves
+        engagement or conversions.
     </p>
 
     <p>
-        Analytics can reveal whether the copy is generating the desired
-        response.
+        For example, you could compare a generic campaign with a personalized
+        campaign and measure clicks or conversions.
     </p>
 
     <p>
-        For example, strong delivery combined with weak clicks may suggest
-        that the email needs a clearer offer or stronger call to action.
+        Personalization should always have a useful purpose rather than being
+        added simply because the technology is available.
+    </p>
+
+    <h2 id="copywriting">Analytics and Email Copywriting</h2>
+
+    <p>
+        Good analytics can also help improve email copy.
+    </p>
+
+    <p>
+        If recipients open an email but rarely click, the problem may be in
+        the body copy, offer, structure, or CTA.
+    </p>
+
+    <p>
+        This connects directly with
+        <a href="../0008-email-marketing-copywriting/">email marketing copywriting</a>.
+    </p>
+
+    <p>
+        Instead of guessing what type of copy works, marketers can examine
+        campaign data and use the results to improve future messages.
     </p>
 
     <h2 id="process">How to Analyze an Email Campaign</h2>
 
-    <h3>Step 1: Define the Goal</h3>
-
     <p>
-        Start by identifying what the campaign was designed to accomplish.
+        A simple analysis process can help beginners avoid becoming
+        overwhelmed by large amounts of data.
     </p>
 
-    <h3>Step 2: Select the Important Metrics</h3>
+    <h3>Step 1: Define the Campaign Goal</h3>
 
     <p>
-        Choose metrics that directly relate to the campaign goal.
+        First, identify what the campaign was designed to achieve.
     </p>
-
-    <h3>Step 3: Review Delivery</h3>
 
     <p>
-        Examine delivery and bounce information to determine whether the
-        campaign reached its intended audience.
+        The goal could be sales, registrations, downloads, website visits,
+        engagement, or another measurable action.
     </p>
 
-    <h3>Step 4: Review Engagement</h3>
+    <h3>Step 2: Check Delivery</h3>
 
     <p>
-        Examine clicks and other available engagement signals.
+        Review delivery and bounce information before evaluating engagement.
+        There is little value in comparing clicks if a significant number of
+        messages were not successfully delivered.
     </p>
 
-    <h3>Step 5: Review Conversions</h3>
+    <h3>Step 3: Review Engagement</h3>
 
     <p>
-        Determine how many recipients completed the desired action.
+        Examine reported opens, clicks, and other engagement measurements.
+        Remember that some tracking metrics have limitations.
     </p>
 
-    <h3>Step 6: Compare With Previous Campaigns</h3>
+    <h3>Step 4: Review Conversions</h3>
 
     <p>
-        Trends over time can be more informative than looking at a single
-        campaign.
+        Determine whether recipients completed the campaign's main objective.
     </p>
 
-    <h3>Step 7: Identify an Improvement</h3>
+    <h3>Step 5: Compare With Previous Results</h3>
 
     <p>
-        Choose one or two areas to improve and test rather than changing
-        everything simultaneously.
+        One campaign rarely tells the complete story. Compare results over
+        time to identify trends.
     </p>
 
-    <h2 id="example">Email Analytics Example</h2>
+    <h3>Step 6: Identify One or Two Improvements</h3>
 
     <p>
-        Imagine that an online store sends an email campaign to 10,000
-        subscribers.
+        Do not change everything at once. Choose specific areas for
+        improvement and measure the results of those changes.
     </p>
 
-    <table>
+    <h2 id="example">Practical Example</h2>
 
-        <thead>
-            <tr>
-                <th>Result</th>
-                <th>Example</th>
-                <th>Possible Interpretation</th>
-            </tr>
-        </thead>
+    <div class="example">
 
-        <tbody>
+        <p>
+            Imagine an online store sends an email promoting a new product.
+        </p>
 
-            <tr>
-                <td>Emails Sent</td>
-                <td>10,000</td>
-                <td>The initial campaign audience.</td>
-            </tr>
+        <p>
+            The campaign receives strong reported opens but relatively few
+            clicks.
+        </p>
 
-            <tr>
-                <td>Delivered</td>
-                <td>9,700</td>
-                <td>Some messages were not successfully delivered.</td>
-            </tr>
+        <p>
+            The marketer could investigate whether the email copy clearly
+            explains the product, whether the CTA is visible, and whether the
+            offer is relevant to the audience.
+        </p>
 
-            <tr>
-                <td>Recorded Opens</td>
-                <td>3,000</td>
-                <td>A directional engagement signal with measurement limitations.</td>
-            </tr>
+        <p>
+            The marketer could then test a clearer CTA or revised email copy
+            and compare the results with the original campaign.
+        </p>
 
-            <tr>
-                <td>Clicks</td>
-                <td>450</td>
-                <td>Recipients actively interacted with the email.</td>
-            </tr>
-
-            <tr>
-                <td>Purchases</td>
-                <td>90</td>
-                <td>Tracked conversions from the campaign.</td>
-            </tr>
-
-            <tr>
-                <td>Unsubscribes</td>
-                <td>25</td>
-                <td>Subscribers who chose to leave the list.</td>
-            </tr>
-
-        </tbody>
-
-    </table>
+    </div>
 
     <p>
-        The marketer should not judge this campaign using only one number.
-        Looking at delivery, engagement, conversions, and negative signals
-        together provides a more useful picture.
+        This demonstrates the basic analytics cycle:
+        <strong>measure → understand → improve → measure again.</strong>
     </p>
 
-    <h2 id="mistakes">Common Email Analytics Mistakes</h2>
+    <h2 id="mistakes">Common Email Marketing Analytics Mistakes</h2>
 
-    <h3>1. Focusing Only on Open Rate</h3>
+    <h3>1. Focusing on One Metric</h3>
 
     <p>
-        Open rate can be useful for directional comparison, but privacy
-        technologies can affect how opens are measured.
+        Looking only at open rate or CTR can create an incomplete picture.
+        Campaign objectives should determine which measurements matter most.
     </p>
 
-    <h3>2. Ignoring the Campaign Goal</h3>
+    <h3>2. Ignoring Conversions</h3>
 
     <p>
-        A campaign should be evaluated according to what it was designed to
-        accomplish.
+        High engagement does not automatically mean business success.
+        Whenever possible, connect email activity with the desired outcome.
     </p>
 
-    <h3>3. Tracking Too Many Metrics</h3>
+    <h3>3. Comparing Unrelated Campaigns</h3>
 
     <p>
-        A dashboard full of numbers can make it harder to identify the metrics
-        that actually matter.
+        A welcome email and a promotional sales email may have completely
+        different purposes. Comparing them without considering context can
+        produce misleading conclusions.
     </p>
 
-    <h3>4. Looking at Only One Campaign</h3>
+    <h3>4. Treating Tracking Data as Perfect</h3>
 
     <p>
-        A single campaign may produce unusual results. Comparing multiple
-        campaigns can reveal more reliable trends.
+        Email tracking is not perfect. Privacy features, email clients,
+        technical configurations, and attribution limitations can affect
+        reported results.
     </p>
 
-    <h3>5. Changing Everything at Once</h3>
+    <h3>5. Changing Too Many Things at Once</h3>
 
     <p>
-        If the audience, subject line, content, design, and sending time all
-        change together, it becomes difficult to understand what caused a
-        performance change.
+        If you change the subject line, content, audience, offer, CTA, and
+        sending time simultaneously, it becomes difficult to determine what
+        caused the improvement or decline.
     </p>
 
-    <h3>6. Ignoring Negative Signals</h3>
+    <h3>6. Ignoring List Quality</h3>
 
     <p>
-        Bounces, unsubscribes, and spam complaints can provide important
-        information about list health and subscriber expectations.
+        Analytics should be considered alongside list-building practices,
+        engagement, and deliverability.
     </p>
 
-    <h2 id="best-practices">Email Marketing Analytics Best Practices</h2>
+    <h2 id="best-practices">Best Practices for Email Marketing Analytics</h2>
 
     <ul>
-
-        <li>
-            Define the campaign goal before sending.
-        </li>
-
-        <li>
-            Select metrics that match the goal.
-        </li>
-
-        <li>
-            Use several meaningful metrics instead of one number.
-        </li>
-
-        <li>
-            Pay attention to trends over time.
-        </li>
-
-        <li>
-            Compare relevant subscriber segments.
-        </li>
-
-        <li>
-            Use A/B testing when appropriate.
-        </li>
-
-        <li>
-            Keep tracking methods consistent when comparing campaigns.
-        </li>
-
-        <li>
-            Monitor delivery and list-health signals.
-        </li>
-
-        <li>
-            Connect email activity with business outcomes where possible.
-        </li>
-
-        <li>
-            Turn analytics into specific actions.
-        </li>
-
+        <li>Define the campaign goal before sending the email.</li>
+        <li>Choose metrics that match the goal.</li>
+        <li>Monitor delivery and bounce information.</li>
+        <li>Analyze clicks and conversions, not only opens.</li>
+        <li>Compare campaigns over time.</li>
+        <li>Use segmentation to discover audience differences.</li>
+        <li>Use A/B testing when appropriate.</li>
+        <li>Track meaningful business outcomes.</li>
+        <li>Consider privacy and tracking limitations.</li>
+        <li>Make gradual, measurable improvements.</li>
     </ul>
 
-    <h2 id="checklist">Email Analytics Checklist</h2>
+    <h2 id="checklist">Email Marketing Analytics Checklist</h2>
 
     <div class="checklist">
 
-        <p><strong>Before sending:</strong></p>
+        <p>Before analyzing a campaign, ask:</p>
 
         <ul>
-            <li>Define the campaign objective.</li>
-            <li>Identify the target audience.</li>
-            <li>Select the most important metrics.</li>
-            <li>Check links and tracking.</li>
-        </ul>
-
-        <p><strong>After sending:</strong></p>
-
-        <ul>
-            <li>Review delivery.</li>
-            <li>Review bounce data.</li>
-            <li>Review engagement.</li>
-            <li>Review clicks.</li>
-            <li>Review conversions.</li>
-            <li>Review unsubscribes.</li>
-            <li>Review spam complaints.</li>
-            <li>Compare with previous campaigns.</li>
-            <li>Record lessons for the next campaign.</li>
+            <li>What was the main campaign goal?</li>
+            <li>Was the email successfully delivered?</li>
+            <li>Were there unusual bounce levels?</li>
+            <li>How was reported engagement?</li>
+            <li>How many recipients clicked?</li>
+            <li>Did recipients complete the desired action?</li>
+            <li>Were there unusual unsubscribes?</li>
+            <li>Were there spam complaints?</li>
+            <li>How did the campaign compare with previous campaigns?</li>
+            <li>What one improvement should be tested next?</li>
         </ul>
 
     </div>
@@ -1019,177 +970,156 @@
     <h2>How the Earlier Articles Fit Together</h2>
 
     <p>
-        Email marketing analytics becomes easier to understand when viewed as
-        part of the larger email marketing system.
+        Email marketing analytics works best when it is viewed as part of the
+        larger email marketing system.
     </p>
 
     <p>
-        <a href="../0001-what-is-email-marketing/">
-        Article 1: What Is Email Marketing?</a>
-        explains the basic concept.
+        You can start with
+        <a href="../0001-what-is-email-marketing/">what email marketing is</a>,
+        understand the
+        <a href="../0002-email-marketing-benefits/">benefits of email marketing</a>,
+        and then develop an
+        <a href="../0003-email-marketing-strategy/">email marketing strategy</a>.
     </p>
 
     <p>
-        <a href="../0002-email-marketing-benefits/">
-        Article 2: Email Marketing Benefits</a>
-        explains why businesses use email marketing.
+        Once your strategy is established, you can use
+        <a href="../0004-email-marketing-automation/">email marketing automation</a>
+        to create repeatable workflows and
+        <a href="../0005-email-list-building/">email list building</a>
+        to develop a permission-based audience.
     </p>
 
     <p>
-        <a href="../0003-email-marketing-strategy/">
-        Article 3: Email Marketing Strategy</a>
-        explains how to build a structured approach.
+        You can then use
+        <a href="../0006-email-marketing-segmentation/">email marketing segmentation</a>
+        and
+        <a href="../0007-email-personalization/">email personalization</a>
+        to make messages more relevant.
     </p>
 
     <p>
-        <a href="../0004-email-marketing-automation/">
-        Article 4: Email Marketing Automation</a>
-        explains how automated email workflows operate.
+        Strong
+        <a href="../0008-email-marketing-copywriting/">email marketing copywriting</a>
+        helps communicate the message, while
+        <a href="../0009-email-deliverability/">email deliverability</a>
+        helps ensure your messages have a better chance of reaching
+        recipients.
     </p>
 
     <p>
-        <a href="../0005-email-list-building/">
-        Article 5: Email List Building</a>
-        explains how businesses build an email audience.
-    </p>
-
-    <p>
-        <a href="../0006-email-marketing-segmentation/">
-        Article 6: Email Marketing Segmentation</a>
-        explains how subscribers can be organized into relevant groups.
-    </p>
-
-    <p>
-        <a href="../0007-email-personalization/">
-        Article 7: Email Personalization</a>
-        explains how messages can be made more relevant to individual
-        subscribers.
-    </p>
-
-    <p>
-        <a href="../0008-email-marketing-copywriting/">
-        Article 8: Email Marketing Copywriting</a>
-        explains how email copy influences subscriber action.
-    </p>
-
-    <p>
-        <a href="../0009-email-deliverability/">
-        Article 9: Email Deliverability</a>
-        explains the factors involved in getting emails successfully delivered.
-    </p>
-
-    <p>
-        <a href="../0010-email-marketing-ab-testing/">
-        Article 10: Email Marketing A/B Testing</a>
-        explains how marketers can compare different versions of an email.
+        Finally,
+        <a href="../0010-email-marketing-ab-testing/">email marketing A/B testing</a>
+        can help you compare different versions of campaigns, while analytics
+        provides the data needed to understand those results.
     </p>
 
     <h2 id="faq">Frequently Asked Questions</h2>
 
-    <h3>What is email marketing analytics in simple terms?</h3>
+    <div class="faq">
+        <h3>What is email marketing analytics?</h3>
+        <p>
+            Email marketing analytics is the process of measuring and
+            analyzing email campaign data to understand performance and make
+            better marketing decisions.
+        </p>
+    </div>
 
-    <p>
-        Email marketing analytics means collecting and studying email campaign
-        data to understand performance and make better marketing decisions.
-    </p>
+    <div class="faq">
+        <h3>What is the most important email marketing metric?</h3>
+        <p>
+            There is no single most important metric for every campaign.
+            The right metric depends on the campaign goal. For a sales
+            campaign, conversions and revenue may matter more than reported
+            opens.
+        </p>
+    </div>
 
-    <h3>What is the most important email marketing metric?</h3>
+    <div class="faq">
+        <h3>Is open rate still useful?</h3>
+        <p>
+            Reported open rate can provide some directional information, but
+            it should be interpreted carefully because privacy technologies
+            and email-client behavior can affect open tracking.
+        </p>
+    </div>
 
-    <p>
-        There is no single metric that is most important for every campaign.
-        The appropriate metric depends on the campaign goal. For example,
-        conversions may be more important than opens for a sales campaign.
-    </p>
+    <div class="faq">
+        <h3>Why is click-through rate important?</h3>
+        <p>
+            CTR helps indicate whether recipients clicked links or calls to
+            action in an email. It can provide useful information about
+            engagement with the email content.
+        </p>
+    </div>
 
-    <h3>Is open rate enough to measure email success?</h3>
+    <div class="faq">
+        <h3>Why should I track conversions?</h3>
+        <p>
+            Conversions help connect email activity with a specific business
+            objective, such as a purchase, registration, download, or booking.
+        </p>
+    </div>
 
-    <p>
-        No. Open rate alone does not provide a complete picture. Marketers
-        should consider clicks, conversions, delivery information, revenue
-        where applicable, and negative signals such as unsubscribes and
-        complaints.
-    </p>
-
-    <h3>How can analytics improve email marketing?</h3>
-
-    <p>
-        Analytics can reveal what is working and where improvements are
-        needed. Marketers can use those insights to improve content, targeting,
-        timing, calls to action, segmentation, automation, and testing.
-    </p>
-
-    <h3>Can analytics help with email segmentation?</h3>
-
-    <p>
-        Yes. Engagement and behavioral data can help marketers identify groups
-        of subscribers with different interests or activity levels.
-    </p>
-
-    <h3>Can analytics measure email marketing ROI?</h3>
-
-    <p>
-        Yes, when revenue and campaign costs can be tracked appropriately.
-        Businesses can use those figures to evaluate the financial performance
-        of email marketing activity.
-    </p>
+    <div class="faq">
+        <h3>How often should email analytics be reviewed?</h3>
+        <p>
+            Campaigns can be reviewed after sending and then compared with
+            previous campaigns over time. The exact schedule depends on the
+            type and frequency of email marketing activity.
+        </p>
+    </div>
 
     <h2>Conclusion</h2>
 
     <p>
-        Email marketing analytics helps turn campaign activity into useful
-        information. Instead of simply sending emails, marketers can examine
-        delivery, engagement, clicks, conversions, list health, and business
-        outcomes.
+        Email marketing analytics turns campaign activity into useful
+        information for decision-making.
+    </p>
+
+    <p>
+        By monitoring delivery, bounces, engagement, clicks, conversions,
+        unsubscribes, complaints, and revenue, marketers can understand what
+        is working and where improvements may be needed.
     </p>
 
     <p>
         The most effective approach is not to chase every available metric.
-        Start with the campaign goal, select the metrics that matter for that
-        goal, study the results, and use the findings to make specific
-        improvements.
+        Instead, start with the campaign objective, choose relevant
+        measurements, analyze the results, and make controlled improvements.
     </p>
 
     <p>
-        When analytics is combined with strategy, segmentation,
-        personalization, automation, deliverability, copywriting, and A/B
-        testing, it becomes a powerful part of a complete email marketing
-        system.
+        Over time, this creates a more informed and measurable email marketing
+        process.
     </p>
 
     <div class="affiliate-note">
-
         <strong>Affiliate Disclosure:</strong>
-
-        This website may contain affiliate links in the future. If you purchase
-        a product or service through an affiliate link, we may receive a
-        commission at no additional cost to you. Recommendations will be based
-        on relevance and usefulness.
-
-        <br><br>
-
+        This website may contain affiliate links in some articles. If you
+        purchase a product or service through an affiliate link, the website
+        may earn a commission at no additional cost to you. Recommendations
+        are intended to be useful and relevant to the topic.
         <a href="../../affiliate-disclosure.html">
-            Read our full Affiliate Disclosure
-        </a>.
-
+            Read the full affiliate disclosure.
+        </a>
     </div>
 
     <div class="author-box">
-
-        <h3>About the Author</h3>
+        <h2>About the Author</h2>
 
         <p>
-            <strong>Muhammad Nasir Uddin</strong> is an Assistant Professor of
-            English at Zirabo Dewan Idris College, Savar, Dhaka, Bangladesh.
-            He has more than 20 years of teaching experience and practical
-            knowledge of web technologies and digital marketing.
+            <strong>Muhammad Nasir Uddin</strong> is an Assistant Professor
+            of English at Zirabo Dewan Idris College, Savar, Dhaka,
+            Bangladesh.
         </p>
 
         <p>
-            This website is being developed as a structured educational resource
-            covering email marketing concepts, strategies, tools, analytics,
-            automation, and related topics.
+            He creates educational resources about email marketing,
+            digital marketing, websites, and related technologies with a
+            focus on clear explanations and practical learning.
         </p>
-
     </div>
 
 </article>
@@ -1197,18 +1127,20 @@
 </main>
 
 <footer>
+    <div class="footer-inner">
 
-    <p>
-        &copy; 2026 Email Marketing Resource. All rights reserved.
-    </p>
+        <p>
+            &copy; 2026 Email Marketing Resource. All rights reserved.
+        </p>
 
-    <p>
-        <a href="../../index.html">Home</a> |
-        <a href="../../about.html">About</a> |
-        <a href="../../contact.html">Contact</a> |
-        <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
-    </p>
+        <p>
+            <a href="../../index.html">Home</a>
+            <a href="../../about.html">About</a>
+            <a href="../../contact.html">Contact</a>
+            <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
+        </p>
 
+    </div>
 </footer>
 
 </body>
