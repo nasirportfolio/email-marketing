@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>What Is Email Personalization? A Complete Beginner's Guide</title>
+
+    <meta name="description"
+          content="Learn what email personalization is, why it matters, common personalization techniques, examples, best practices, and how beginners can create more relevant email campaigns.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://nasirportfolio.github.io/email-marketing/articles/0007-email-personalization/">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3ZDJCJWX5F');
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #222;
+            background: #f7f9fc;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            padding: 18px 20px;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #174ea6;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        article {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .article-number {
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.25;
+            margin-top: 10px;
+            margin-bottom: 18px;
+            color: #111;
+        }
+
+        h2 {
+            margin-top: 38px;
+            font-size: 28px;
+            color: #111;
+        }
+
+        h3 {
+            margin-top: 28px;
+            font-size: 21px;
+            color: #222;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        ul,
+        ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 9px;
+        }
+
+        .quick-answer {
+            background: #eef5ff;
+            border-left: 5px solid #174ea6;
+            padding: 18px 20px;
+            margin: 25px 0;
+        }
+
+        .toc {
+            background: #f3f5f7;
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .toc ul {
+            margin-bottom: 0;
+        }
+
+        .toc a {
+            color: #174ea6;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f0f3f7;
+        }
+
+        .example {
+            background: #fafafa;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .checklist {
+            background: #f8fbf8;
+            border: 1px solid #d9e8d9;
+            padding: 20px 25px;
+            border-radius: 8px;
+        }
+
+        .affiliate-note {
+            background: #fff8e8;
+            border-left: 5px solid #d99a00;
+            padding: 18px 20px;
+            margin-top: 35px;
+        }
+
+        .author-box {
+            margin-top: 40px;
+            padding: 22px;
+            background: #f3f5f7;
+            border-radius: 8px;
+        }
+
+        .author-box strong {
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        .article-links {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #ddd;
+        }
+
+        .article-links a {
+            color: #174ea6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #174ea6;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        @media (max-width: 700px) {
+            article {
+                padding: 22px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 19px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="../../index.html">Home</a>
+        <a href="../../about.html">About</a>
+        <a href="../../contact.html">Contact</a>
+        <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
+    </nav>
+</header>
+
+<main>
+
+<article>
+
+    <div class="article-number">Article 7</div>
+
+    <h1>What Is Email Personalization? A Complete Beginner's Guide</h1>
+
+    <p>
+        Email personalization is the practice of adapting an email to make it
+        more relevant to the person receiving it. Instead of sending exactly
+        the same message to every subscriber, marketers can use information
+        such as a subscriber's name, interests, location, previous purchases,
+        or email behavior.
+    </p>
+
+    <div class="quick-answer">
+        <strong>Quick Answer:</strong>
+        Email personalization means using subscriber data, preferences, and
+        behavior to make email content, offers, timing, or messaging more
+        relevant to each recipient.
+    </div>
+
+    <p>
+        Personalization can be simple, such as using a subscriber's first name,
+        or more advanced, such as recommending products based on previous
+        purchases or changing email content according to subscriber behavior.
+        Effective personalization focuses on relevance rather than simply
+        inserting a name into an email.
+    </p>
+
+    <div class="toc">
+        <h2>Table of Contents</h2>
+
+        <ul>
+            <li><a href="#what">What Is Email Personalization?</a></li>
+            <li><a href="#important">Why Is Email Personalization Important?</a></li>
+            <li><a href="#personalize">What Can You Personalize?</a></li>
+            <li><a href="#types">Common Types of Email Personalization</a></li>
+            <li><a href="#data">What Data Can Be Used?</a></li>
+            <li><a href="#segmentation">Email Personalization and Segmentation</a></li>
+            <li><a href="#automation">Email Personalization and Automation</a></li>
+            <li><a href="#steps">How to Personalize Emails</a></li>
+            <li><a href="#examples">Email Personalization Examples</a></li>
+            <li><a href="#best-practices">Best Practices</a></li>
+            <li><a href="#mistakes">Common Mistakes</a></li>
+            <li><a href="#checklist">Personalization Checklist</a></li>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </div>
+
+    <h2 id="what">What Is Email Personalization?</h2>
+
+    <p>
+        Email personalization is the process of customizing email messages
+        according to information about individual subscribers or groups of
+        subscribers.
+    </p>
+
+    <p>
+        The information may include a person's name, location, interests,
+        purchase history, website activity, email engagement, preferences,
+        customer status, or other relevant information that the business has
+        permission to use.
+    </p>
+
+    <p>
+        The goal is not to make an email appear complicated. The goal is to
+        make the message more useful and relevant to the recipient.
+    </p>
+
+    <h2 id="important">Why Is Email Personalization Important?</h2>
+
+    <p>
+        People receive many marketing emails. A generic message that does not
+        match a subscriber's needs may be ignored.
+    </p>
+
+    <p>
+        Personalization can help businesses create more relevant communication
+        by matching messages with subscriber information and behavior.
+    </p>
+
+    <p>
+        When personalization is used correctly, it can support:
+    </p>
+
+    <ul>
+        <li>More relevant email content.</li>
+        <li>Better subscriber engagement.</li>
+        <li>More useful product or content recommendations.</li>
+        <li>Improved customer experiences.</li>
+        <li>More targeted email campaigns.</li>
+        <li>Better use of customer and subscriber data.</li>
+    </ul>
+
+    <p>
+        Personalization does not guarantee better results. The quality of the
+        data, relevance of the message, timing, offer, and overall campaign
+        strategy still matter.
+    </p>
+
+    <h2 id="personalize">What Can You Personalize in an Email?</h2>
+
+    <p>
+        Many parts of an email can be personalized. Beginners should start
+        with useful and reliable information instead of trying to personalize
+        everything.
+    </p>
+
+    <h3>1. Recipient Name</h3>
+
+    <p>
+        A subscriber's first name can be used in the greeting or, when
+        appropriate, in the subject line.
+    </p>
+
+    <p>
+        Example:
+    </p>
+
+    <div class="example">
+        <strong>Generic:</strong> Welcome to our newsletter.<br><br>
+        <strong>Personalized:</strong> Welcome, Sarah. Here is your beginner's guide.
+    </div>
+
+    <h3>2. Email Content</h3>
+
+    <p>
+        Different subscribers can receive different content according to
+        their interests or customer status.
+    </p>
+
+    <h3>3. Product Recommendations</h3>
+
+    <p>
+        An online store can recommend products related to a subscriber's
+        previous purchases or interests.
+    </p>
+
+    <h3>4. Offers</h3>
+
+    <p>
+        Businesses can provide different offers to different customer groups
+        when there is a legitimate reason to do so.
+    </p>
+
+    <h3>5. Location</h3>
+
+    <p>
+        Location information can be used to make an email more relevant,
+        such as promoting an event available in a subscriber's area.
+    </p>
+
+    <h3>6. Timing</h3>
+
+    <p>
+        Email systems can sometimes use engagement information or subscriber
+        preferences to determine more suitable delivery times.
+    </p>
+
+    <h3>7. Behavioral Messages</h3>
+
+    <p>
+        An email can respond to an action, such as signing up for a newsletter,
+        purchasing a product, or abandoning a shopping cart.
+    </p>
+
+    <h2 id="types">Common Types of Email Personalization</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>How It Works</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Name personalization</td>
+                <td>Uses the subscriber's name.</td>
+                <td>Welcome, James.</td>
+            </tr>
+
+            <tr>
+                <td>Interest-based</td>
+                <td>Uses known interests.</td>
+                <td>Articles about SEO for SEO-interested subscribers.</td>
+            </tr>
+
+            <tr>
+                <td>Location-based</td>
+                <td>Uses relevant location information.</td>
+                <td>An event invitation for a subscriber's city.</td>
+            </tr>
+
+            <tr>
+                <td>Purchase-based</td>
+                <td>Uses previous purchases.</td>
+                <td>Recommendations related to a previous order.</td>
+            </tr>
+
+            <tr>
+                <td>Behavior-based</td>
+                <td>Uses recent subscriber actions.</td>
+                <td>A reminder after an abandoned cart.</td>
+            </tr>
+
+            <tr>
+                <td>Engagement-based</td>
+                <td>Uses email interaction.</td>
+                <td>A re-engagement email for inactive subscribers.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="data">What Data Can Be Used for Email Personalization?</h2>
+
+    <p>
+        Personalization depends on useful and accurate data. Common data
+        categories include:
+    </p>
+
+    <ul>
+        <li><strong>Name:</strong> First or last name when provided.</li>
+        <li><strong>Location:</strong> Country, region, or city where appropriate.</li>
+        <li><strong>Preferences:</strong> Topics, products, or content selected by the subscriber.</li>
+        <li><strong>Purchase history:</strong> Products or services previously purchased.</li>
+        <li><strong>Website behavior:</strong> Relevant pages, products, or actions.</li>
+        <li><strong>Email engagement:</strong> Interactions with previous emails.</li>
+        <li><strong>Customer status:</strong> New customer, existing customer, or inactive customer.</li>
+    </ul>
+
+    <p>
+        Businesses should collect only information that has a legitimate
+        purpose and should handle subscriber information responsibly.
+    </p>
+
+    <h2 id="segmentation">Email Personalization and Segmentation</h2>
+
+    <p>
+        Personalization and segmentation are closely connected, but they are
+        not the same thing.
+    </p>
+
+    <p>
+        <strong>Segmentation</strong> divides subscribers into groups based on
+        shared characteristics or behavior.
+    </p>
+
+    <p>
+        <strong>Personalization</strong> adapts the message using information
+        about the recipient or their group.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        A clothing store may segment subscribers into people interested in
+        men's clothing and women's clothing. It can then personalize the
+        email content so each group sees products that are more relevant to
+        its interests.
+    </div>
+
+    <p>
+        Learn more about segmentation in
+        <a href="../0006-email-marketing-segmentation/">
+            Article 6: What Is Email Marketing Segmentation?
+        </a>
+    </p>
+
+    <h2 id="automation">Email Personalization and Automation</h2>
+
+    <p>
+        Email automation makes it possible to deliver personalized messages
+        automatically when specific conditions or actions occur.
+    </p>
+
+    <p>
+        For example, when someone joins an email list, an automated welcome
+        email can use the subscriber's name and provide content relevant to
+        the signup source.
+    </p>
+
+    <p>
+        Other examples include:
+    </p>
+
+    <ul>
+        <li>Welcome emails.</li>
+        <li>Abandoned cart emails.</li>
+        <li>Post-purchase emails.</li>
+        <li>Re-engagement campaigns.</li>
+        <li>Renewal reminders.</li>
+        <li>Product recommendation emails.</li>
+    </ul>
+
+    <p>
+        Read more about automation in
+        <a href="../0004-email-marketing-automation/">
+            Article 4: What Is Email Marketing Automation?
+        </a>
+    </p>
+
+    <h2 id="steps">How to Personalize Email Marketing: Step by Step</h2>
+
+    <h3>Step 1: Define Your Goal</h3>
+
+    <p>
+        Decide what you want personalization to accomplish. Your goal might
+        be improving engagement, increasing purchases, helping customers,
+        or delivering more relevant educational content.
+    </p>
+
+    <h3>Step 2: Identify Useful Data</h3>
+
+    <p>
+        Determine which information can genuinely improve the email.
+        Do not collect unnecessary information simply because your email
+        platform allows it.
+    </p>
+
+    <h3>Step 3: Keep Your Data Accurate</h3>
+
+    <p>
+        Incorrect names, outdated information, or incorrect customer status
+        can make personalization look careless and reduce trust.
+    </p>
+
+    <h3>Step 4: Create Relevant Segments</h3>
+
+    <p>
+        Group subscribers according to meaningful characteristics or behavior.
+        Segmentation can make personalization more manageable as your list
+        grows.
+    </p>
+
+    <h3>Step 5: Choose the Personalization Element</h3>
+
+    <p>
+        Decide whether to personalize the subject line, greeting, content,
+        recommendation, offer, timing, or another part of the email.
+    </p>
+
+    <h3>Step 6: Add a Fallback</h3>
+
+    <p>
+        If a personalization field is missing, the email should still make
+        sense.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        Instead of relying on a first name that may be missing, make sure the
+        email has a natural alternative greeting.
+    </div>
+
+    <h3>Step 7: Test Before Sending</h3>
+
+    <p>
+        Test personalization fields, links, content variations, mobile
+        layouts, and different subscriber conditions before launching a
+        campaign.
+    </p>
+
+    <h3>Step 8: Measure the Results</h3>
+
+    <p>
+        Measure the outcome that matters to your goal. Depending on the
+        campaign, this could include clicks, purchases, registrations,
+        downloads, replies, or other meaningful actions.
+    </p>
+
+    <h2 id="examples">Email Personalization Examples</h2>
+
+    <h3>Example 1: Welcome Email</h3>
+
+    <p>
+        A new subscriber joins a newsletter and receives a welcome email that
+        uses their name and provides information related to the content they
+        requested.
+    </p>
+
+    <h3>Example 2: Abandoned Cart Email</h3>
+
+    <p>
+        A customer adds a product to a shopping cart but does not complete the
+        purchase. An automated email reminds the customer about the product.
+    </p>
+
+    <h3>Example 3: Post-Purchase Email</h3>
+
+    <p>
+        After purchasing a product, a customer receives useful information
+        about using or maintaining that product.
+    </p>
+
+    <h3>Example 4: Content Recommendation</h3>
+
+    <p>
+        A subscriber who regularly reads articles about SEO can receive
+        recommendations for additional SEO-related content.
+    </p>
+
+    <h3>Example 5: Re-Engagement Email</h3>
+
+    <p>
+        Subscribers who have not interacted with recent emails can receive
+        a message designed to encourage them to return or update their
+        preferences.
+    </p>
+
+    <h2 id="best-practices">Email Personalization Best Practices</h2>
+
+    <h3>1. Focus on Relevance</h3>
+
+    <p>
+        Personalization should make the email more useful. Adding personal
+        information without a meaningful purpose does not automatically
+        improve the message.
+    </p>
+
+    <h3>2. Use Reliable Data</h3>
+
+    <p>
+        Check your data before using it. A wrong name or incorrect product
+        recommendation can damage trust.
+    </p>
+
+    <h3>3. Start Simple</h3>
+
+    <p>
+        Beginners do not need sophisticated personalization immediately.
+        Start with reliable information and gradually build more advanced
+        campaigns.
+    </p>
+
+    <h3>4. Combine Personalization With Segmentation</h3>
+
+    <p>
+        Use meaningful subscriber groups to make personalized communication
+        easier and more relevant.
+    </p>
+
+    <h3>5. Use Automation Carefully</h3>
+
+    <p>
+        Automated personalization can save time, but every automated path
+        should be tested regularly.
+    </p>
+
+    <h3>6. Respect Privacy</h3>
+
+    <p>
+        Personalization requires subscriber data. Businesses should collect
+        and use information responsibly, transparently, and according to
+        applicable privacy and email marketing requirements.
+    </p>
+
+    <h3>7. Test Different Approaches</h3>
+
+    <p>
+        Test subject lines, content, offers, timing, and other relevant
+        elements to understand what works best for your audience.
+    </p>
+
+    <h2 id="mistakes">Common Email Personalization Mistakes</h2>
+
+    <ul>
+        <li>Using incorrect or outdated subscriber data.</li>
+        <li>Personalizing only the subscriber's first name.</li>
+        <li>Collecting unnecessary personal information.</li>
+        <li>Sending overly personal messages that feel intrusive.</li>
+        <li>Forgetting fallback text for missing data.</li>
+        <li>Failing to test personalized content.</li>
+        <li>Using automation without reviewing the customer experience.</li>
+        <li>Ignoring privacy and consent requirements.</li>
+        <li>Sending too many automated messages.</li>
+    </ul>
+
+    <h2 id="checklist">Email Personalization Checklist</h2>
+
+    <div class="checklist">
+        <ul>
+            <li>☐ Define the purpose of personalization.</li>
+            <li>☐ Identify useful subscriber data.</li>
+            <li>☐ Check data accuracy.</li>
+            <li>☐ Create meaningful audience segments.</li>
+            <li>☐ Select the right personalization element.</li>
+            <li>☐ Add fallback content.</li>
+            <li>☐ Test every personalization field.</li>
+            <li>☐ Check the email on mobile devices.</li>
+            <li>☐ Review links and calls to action.</li>
+            <li>☐ Measure meaningful campaign results.</li>
+            <li>☐ Review privacy and consent practices.</li>
+        </ul>
+    </div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is email personalization?</h3>
+
+    <p>
+        Email personalization is the practice of tailoring email content,
+        messaging, offers, or timing using information about subscribers.
+    </p>
+
+    <h3>Is using a subscriber's first name personalization?</h3>
+
+    <p>
+        Yes, using a subscriber's first name is a basic form of personalization.
+        However, effective personalization can go beyond a name by considering
+        interests, behavior, preferences, purchases, or customer status.
+    </p>
+
+    <h3>What is the difference between personalization and segmentation?</h3>
+
+    <p>
+        Segmentation divides subscribers into groups based on shared
+        characteristics or behavior. Personalization uses relevant information
+        to tailor the message delivered to those subscribers.
+    </p>
+
+    <h3>Can email personalization be automated?</h3>
+
+    <p>
+        Yes. Email marketing platforms can use automation rules, subscriber
+        data, segmentation, and behavioral triggers to send personalized
+        messages automatically.
+    </p>
+
+    <h3>What data is commonly used for personalization?</h3>
+
+    <p>
+        Common information includes names, preferences, location, purchase
+        history, website activity, email engagement, and customer status.
+    </p>
+
+    <h3>Can too much personalization be a problem?</h3>
+
+    <p>
+        Yes. Personalization can become uncomfortable when it uses information
+        in a way that feels unexpected, unnecessary, or intrusive. Relevance,
+        transparency, and responsible data use are important.
+    </p>
+
+    <h3>How should beginners start with email personalization?</h3>
+
+    <p>
+        Beginners should start with reliable data, simple personalization,
+        meaningful segmentation, and a small number of useful use cases.
+        Test the results before introducing more advanced techniques.
+    </p>
+
+    <h2 id="conclusion">Conclusion</h2>
+
+    <p>
+        Email personalization helps businesses make their email communication
+        more relevant by using subscriber information, preferences, and
+        behavior.
+    </p>
+
+    <p>
+        The best personalization is not simply about adding a person's name.
+        It can involve relevant content, product recommendations, timing,
+        offers, segmentation, and behavior-based communication.
+    </p>
+
+    <p>
+        If you are new to email marketing, start with accurate data and simple
+        personalization. Then combine personalization with segmentation and
+        automation as your email marketing program becomes more mature.
+    </p>
+
+    <div class="affiliate-note">
+        <strong>Affiliate Disclosure:</strong>
+        This website may contain affiliate links in some articles. If you
+        purchase a product or service through an affiliate link, we may earn
+        a commission at no additional cost to you. Our editorial content is
+        intended to provide useful and informative guidance.
+        See our
+        <a href="../../affiliate-disclosure.html">
+            Affiliate Disclosure
+        </a>
+        for more information.
+    </div>
+
+    <div class="article-links">
+
+        <h2>Related Email Marketing Articles</h2>
+
+        <ul>
+            <li>
+                <a href="../0001-what-is-email-marketing/">
+                    Article 1: What Is Email Marketing?
+                </a>
+            </li>
+
+            <li>
+                <a href="../0002-email-marketing-benefits/">
+                    Article 2: What Are the Benefits of Email Marketing?
+                </a>
+            </li>
+
+            <li>
+                <a href="../0003-email-marketing-strategy/">
+                    Article 3: What Is an Email Marketing Strategy?
+                </a>
+            </li>
+
+            <li>
+                <a href="../0004-email-marketing-automation/">
+                    Article 4: What Is Email Marketing Automation?
+                </a>
+            </li>
+
+            <li>
+                <a href="../0005-email-list-building/">
+                    Article 5: What Is Email List Building?
+                </a>
+            </li>
+
+            <li>
+                <a href="../0006-email-marketing-segmentation/">
+                    Article 6: What Is Email Marketing Segmentation?
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="author-box">
+
+        <strong>About the Author</strong>
+
+        <p>
+            Muhammad Nasir Uddin is an Assistant Professor of English at
+            Zirabo Dewan Idris College, Savar, Dhaka, Bangladesh. He has
+            more than 20 years of teaching experience and creates educational
+            resources about email marketing, digital marketing, and related
+            technologies.
+        </p>
+
+        <p>
+            This website focuses on practical, beginner-friendly explanations
+            designed to help readers understand email marketing concepts and
+            apply them effectively.
+        </p>
+
+    </div>
+
+</article>
+
+</main>
+
+<footer>
+
+    <div>
+        <a href="../../index.html">Home</a>
+        <a href="../../about.html">About</a>
+        <a href="../../contact.html">Contact</a>
+        <a href="../../affiliate-disclosure.html">
+            Affiliate Disclosure
+        </a>
+    </div>
+
+    <p>
+        © 2026 Email Marketing Resource. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
