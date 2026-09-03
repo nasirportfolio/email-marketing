@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>What Is Email Deliverability? A Complete Beginner's Guide</title>
+
+    <meta name="description"
+          content="Learn what email deliverability is, why it matters, what affects it, and how businesses can improve email delivery and inbox placement.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://nasirportfolio.github.io/email-marketing/articles/0009-email-deliverability/">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3ZDJCJWX5F');
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #222;
+            background: #f7f9fc;
+        }
+
+        header {
+            background: #12355b;
+            color: white;
+            padding: 28px 20px;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+            font-size: 34px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 17px;
+        }
+
+        nav {
+            background: #0d2945;
+            padding: 12px 20px;
+        }
+
+        nav .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        article {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .article-number {
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .intro {
+            font-size: 18px;
+        }
+
+        .quick-answer {
+            background: #eef5fb;
+            border-left: 5px solid #12355b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .toc {
+            background: #f3f5f7;
+            padding: 22px 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+        }
+
+        .toc ul {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            margin-top: 38px;
+            color: #12355b;
+            font-size: 27px;
+        }
+
+        h3 {
+            margin-top: 28px;
+            color: #244a6b;
+            font-size: 21px;
+        }
+
+        p {
+            margin: 14px 0;
+        }
+
+        ul,
+        ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            overflow-x: auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #d7dce2;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #eef2f6;
+        }
+
+        .example-box {
+            background: #fafafa;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 7px;
+        }
+
+        .checklist {
+            background: #f5f8fa;
+            padding: 20px 25px;
+            border-radius: 8px;
+        }
+
+        .affiliate-note {
+            background: #fff8e8;
+            border-left: 5px solid #d89b00;
+            padding: 18px;
+            margin-top: 35px;
+            border-radius: 5px;
+        }
+
+        .author-box {
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+            padding-top: 25px;
+        }
+
+        .author-box strong {
+            font-size: 18px;
+        }
+
+        .article-links {
+            background: #f3f5f7;
+            padding: 20px 25px;
+            margin-top: 35px;
+            border-radius: 8px;
+        }
+
+        a {
+            color: #145da0;
+        }
+
+        footer {
+            background: #12355b;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            article {
+                padding: 22px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            nav .nav-container {
+                gap: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <h1>Email Marketing</h1>
+        <p>Practical guides to email marketing, automation, strategy, and customer communication.</p>
+    </div>
+</header>
+
+<nav>
+    <div class="nav-container">
+        <a href="../../index.html">Home</a>
+        <a href="../../about.html">About</a>
+        <a href="../../contact.html">Contact</a>
+        <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
+    </div>
+</nav>
+
+<main>
+    <article>
+
+        <div class="article-number">ARTICLE 9</div>
+
+        <h1>What Is Email Deliverability? A Complete Beginner's Guide</h1>
+
+        <p class="intro">
+            Email deliverability is one of the most important concepts in email marketing.
+            If your emails are not reaching subscribers' inboxes, even a well-written email
+            campaign may fail to produce results.
+        </p>
+
+        <div class="quick-answer">
+            <strong>Quick answer:</strong>
+            Email deliverability is the ability of an email sender to successfully deliver
+            messages to recipients' mail servers and give those messages a good chance of
+            reaching the inbox rather than being rejected, blocked, or filtered into spam.
+            Good deliverability depends on factors such as sender reputation, permission-based
+            list building, email engagement, authentication, content quality, and sending practices.
+        </div>
+
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#what-is-deliverability">What Is Email Deliverability?</a></li>
+                <li><a href="#why-important">Why Is Email Deliverability Important?</a></li>
+                <li><a href="#delivery-vs-deliverability">Email Delivery vs. Email Deliverability</a></li>
+                <li><a href="#factors">What Affects Email Deliverability?</a></li>
+                <li><a href="#sender-reputation">Sender Reputation</a></li>
+                <li><a href="#permission">Permission and Consent</a></li>
+                <li><a href="#list-quality">Email List Quality</a></li>
+                <li><a href="#engagement">Subscriber Engagement</a></li>
+                <li><a href="#authentication">Email Authentication</a></li>
+                <li><a href="#content">Email Content and Spam Signals</a></li>
+                <li><a href="#frequency">Sending Frequency</a></li>
+                <li><a href="#improve">How to Improve Email Deliverability</a></li>
+                <li><a href="#examples">Email Deliverability Examples</a></li>
+                <li><a href="#mistakes">Common Email Deliverability Mistakes</a></li>
+                <li><a href="#checklist">Email Deliverability Checklist</a></li>
+                <li><a href="#faq">Frequently Asked Questions</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </div>
+
+        <h2 id="what-is-deliverability">What Is Email Deliverability?</h2>
+
+        <p>
+            Email deliverability refers to how effectively an email sender gets messages
+            delivered to recipients' mail systems and, ultimately, into the inbox.
+        </p>
+
+        <p>
+            A message can be accepted by the receiving mail server without necessarily
+            appearing in the primary inbox. It may instead be filtered into spam or another
+            folder. This is why deliverability involves more than simply sending an email.
+        </p>
+
+        <p>
+            Businesses need good deliverability because their email marketing depends on
+            subscribers actually receiving and seeing their messages.
+        </p>
+
+        <h2 id="why-important">Why Is Email Deliverability Important?</h2>
+
+        <p>
+            Good deliverability helps businesses communicate consistently with subscribers.
+            Poor deliverability can reduce the number of people who see campaigns, promotions,
+            newsletters, and automated messages.
+        </p>
+
+        <p>Email deliverability matters because it can affect:</p>
+
+        <ul>
+            <li>How many subscribers receive your messages</li>
+            <li>How many emails reach the inbox</li>
+            <li>Open and click activity</li>
+            <li>Customer communication</li>
+            <li>Lead nurturing</li>
+            <li>Sales and conversions</li>
+            <li>The reputation of your sending domain</li>
+        </ul>
+
+        <h2 id="delivery-vs-deliverability">Email Delivery vs. Email Deliverability</h2>
+
+        <p>
+            Email delivery and email deliverability are related, but they are not exactly
+            the same concept.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Concept</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Email delivery</td>
+                    <td>
+                        Whether the receiving mail server accepts the email message.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email deliverability</td>
+                    <td>
+                        How successfully emails are delivered and reach the intended inbox
+                        instead of being rejected or filtered as spam.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            For example, if an email campaign has a very high delivery rate but many messages
+            are placed in spam, the sender may still have a deliverability problem.
+        </p>
+
+        <h2 id="factors">What Affects Email Deliverability?</h2>
+
+        <p>
+            Email deliverability is influenced by several factors rather than one single
+            setting. Common factors include:
+        </p>
+
+        <ul>
+            <li>Sender reputation</li>
+            <li>Domain reputation</li>
+            <li>Permission and consent</li>
+            <li>Email list quality</li>
+            <li>Subscriber engagement</li>
+            <li>Email authentication</li>
+            <li>Email content</li>
+            <li>Sending frequency</li>
+            <li>Bounce rates</li>
+            <li>Spam complaints</li>
+            <li>Sudden changes in sending behavior</li>
+        </ul>
+
+        <h2 id="sender-reputation">What Is Sender Reputation?</h2>
+
+        <p>
+            Sender reputation is the reputation associated with an email sender based on
+            signals that mailbox providers can use when deciding how to handle incoming mail.
+        </p>
+
+        <p>
+            Sending useful messages to people who requested them can support healthier
+            sending practices. High complaint rates, poor list quality, and problematic
+            sending behavior can create deliverability challenges.
+        </p>
+
+        <p>
+            Businesses should therefore treat their sending reputation as a long-term asset
+            rather than something to improve with a single technical change.
+        </p>
+
+        <h2 id="permission">Why Is Permission Important for Deliverability?</h2>
+
+        <p>
+            Permission-based email marketing means sending messages to people who have
+            willingly provided their email address or otherwise given appropriate permission
+            to receive communications.
+        </p>
+
+        <p>
+            Permission helps create a healthier relationship between the sender and the
+            subscriber. Subscribers who expect your emails are generally less likely to mark
+            unexpected messages as spam.
+        </p>
+
+        <p>
+            Avoid purchasing random email lists or sending marketing messages to people who
+            did not request them. Poor targeting and unwanted email can harm both engagement
+            and sender reputation.
+        </p>
+
+        <h2 id="list-quality">Why Does Email List Quality Matter?</h2>
+
+        <p>
+            An email list is valuable only when it contains relevant and reachable subscribers.
+            Old, invalid, duplicate, or unengaged addresses can reduce the quality of your
+            campaigns.
+        </p>
+
+        <h3>Good list-building practices</h3>
+
+        <ul>
+            <li>Use clear signup forms.</li>
+            <li>Explain what subscribers will receive.</li>
+            <li>Use permission-based signup methods.</li>
+            <li>Keep subscriber information organized.</li>
+            <li>Remove invalid addresses when appropriate.</li>
+            <li>Monitor inactive subscribers.</li>
+        </ul>
+
+        <p>
+            List building is covered in more detail in
+            <a href="../0005-email-list-building/">
+                What Is Email List Building?
+            </a>.
+        </p>
+
+        <h2 id="engagement">How Does Subscriber Engagement Affect Deliverability?</h2>
+
+        <p>
+            Subscriber engagement provides useful feedback about whether recipients find
+            your emails relevant. Opens, clicks, replies, conversions, unsubscribes, and
+            spam complaints can all provide information about audience response.
+        </p>
+
+        <p>
+            A healthy email strategy focuses on sending useful content to the right audience
+            instead of simply trying to maximize the number of emails sent.
+        </p>
+
+        <p>
+            Segmentation can help businesses send more relevant messages. Learn more in
+            <a href="../0006-email-marketing-segmentation/">
+                What Is Email Marketing Segmentation?
+            </a>.
+        </p>
+
+        <h2 id="authentication">What Is Email Authentication?</h2>
+
+        <p>
+            Email authentication consists of technical standards that help verify that
+            email messages are authorized to be sent from a domain.
+        </p>
+
+        <p>
+            Common email authentication technologies include:
+        </p>
+
+        <ul>
+            <li><strong>SPF:</strong> Helps specify which servers are authorized to send email
+                for a domain.</li>
+            <li><strong>DKIM:</strong> Uses a digital signature to help verify that an email
+                was authorized by the sending domain and was not improperly altered.</li>
+            <li><strong>DMARC:</strong> Builds on authentication mechanisms such as SPF and
+                DKIM and allows domain owners to publish instructions for handling messages
+                that fail authentication checks.</li>
+        </ul>
+
+        <p>
+            Correct authentication is an important part of responsible email sending.
+            Businesses should follow the requirements and technical documentation of their
+            email service provider and domain provider.
+        </p>
+
+        <h2 id="content">How Does Email Content Affect Deliverability?</h2>
+
+        <p>
+            Email content can influence how recipients respond to messages and how mailbox
+            systems evaluate them.
+        </p>
+
+        <p>Good email content should be:</p>
+
+        <ul>
+            <li>Relevant to the recipient</li>
+            <li>Clear and understandable</li>
+            <li>Consistent with the signup expectation</li>
+            <li>Useful rather than misleading</li>
+            <li>Easy to read on mobile devices</li>
+        </ul>
+
+        <p>
+            Avoid deceptive subject lines, misleading claims, and practices designed only
+            to manipulate recipients into opening an email.
+        </p>
+
+        <p>
+            Good copywriting is also important. See
+            <a href="../0008-email-marketing-copywriting/">
+                What Is Email Marketing Copywriting?
+            </a>
+            for more information.
+        </p>
+
+        <h2 id="frequency">How Does Sending Frequency Affect Deliverability?</h2>
+
+        <p>
+            Sending frequency should match what subscribers expect and what your business
+            can consistently support.
+        </p>
+
+        <p>
+            Sending too many irrelevant messages may increase unsubscribes or spam complaints.
+            On the other hand, communicating too rarely can cause subscribers to forget why
+            they joined your list.
+        </p>
+
+        <p>
+            A consistent schedule can help businesses establish predictable communication
+            with their audience.
+        </p>
+
+        <h2 id="improve">How to Improve Email Deliverability</h2>
+
+        <p>
+            Improving deliverability is an ongoing process. There is no single button that
+            guarantees inbox placement for every email.
+        </p>
+
+        <h3>1. Build a permission-based email list</h3>
+
+        <p>
+            Start with subscribers who have a legitimate reason to receive your emails.
+            Explain the value of joining your list and set clear expectations.
+        </p>
+
+        <h3>2. Send relevant content</h3>
+
+        <p>
+            Create content that matches subscriber interests, needs, and expectations.
+            Relevance can help encourage useful engagement.
+        </p>
+
+        <h3>3. Segment your audience</h3>
+
+        <p>
+            Different subscribers may have different interests or customer journeys.
+            Use appropriate segments to avoid sending every message to everyone.
+        </p>
+
+        <h3>4. Use email authentication</h3>
+
+        <p>
+            Configure appropriate authentication records for your sending domain and follow
+            the requirements of your email service provider.
+        </p>
+
+        <h3>5. Monitor bounces</h3>
+
+        <p>
+            Pay attention to bounced emails. Repeatedly sending to invalid addresses can
+            indicate poor list hygiene.
+        </p>
+
+        <h3>6. Monitor spam complaints</h3>
+
+        <p>
+            Spam complaints are an important warning signal. Review your signup process,
+            content, targeting, and sending frequency when complaint levels increase.
+        </p>
+
+        <h3>7. Give subscribers an easy unsubscribe option</h3>
+
+        <p>
+            Make it reasonably easy for subscribers to stop receiving marketing emails.
+            This is better than forcing uninterested subscribers to remain on a list.
+        </p>
+
+        <h3>8. Maintain a consistent sending pattern</h3>
+
+        <p>
+            Avoid sudden unexplained changes in sending volume when possible. Plan campaigns
+            and automated emails carefully.
+        </p>
+
+        <h3>9. Re-engage or manage inactive subscribers</h3>
+
+        <p>
+            If subscribers have not interacted with your emails for a long time, consider
+            a thoughtful re-engagement strategy or an appropriate process for managing
+            inactive contacts.
+        </p>
+
+        <h3>10. Monitor your results</h3>
+
+        <p>
+            Track important email metrics and look for changes over time. Use the data to
+            improve your email strategy rather than focusing on one campaign in isolation.
+        </p>
+
+        <h2 id="examples">Email Deliverability Examples</h2>
+
+        <div class="example-box">
+            <h3>Example 1: Healthy email list</h3>
+
+            <p>
+                A business collects subscribers through its website, explains what the
+                newsletter contains, sends useful content, monitors engagement, and removes
+                invalid addresses when necessary.
+            </p>
+
+            <p>
+                This approach supports responsible email marketing and can contribute to
+                healthier deliverability.
+            </p>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 2: Purchased email list</h3>
+
+            <p>
+                Another business obtains a large list from an unrelated source and sends
+                promotional emails without a clear relationship with the recipients.
+            </p>
+
+            <p>
+                Recipients may ignore the messages, unsubscribe, or report them as spam.
+                This can create serious deliverability challenges.
+            </p>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 3: Poorly managed inactive subscribers</h3>
+
+            <p>
+                A company continues sending frequent promotional emails to a large number
+                of subscribers who have not engaged for a very long time.
+            </p>
+
+            <p>
+                The business should review its segmentation, content, frequency, and
+                inactive-subscriber strategy rather than simply increasing sending volume.
+            </p>
+        </div>
+
+        <h2 id="mistakes">Common Email Deliverability Mistakes</h2>
+
+        <p>
+            Beginners often focus heavily on creating emails while overlooking the systems
+            and practices that determine whether those emails are successfully received.
+        </p>
+
+        <h3>Mistake 1: Buying email lists</h3>
+
+        <p>
+            Purchased lists can contain irrelevant, outdated, or unwanted contacts and may
+            lead to poor engagement and complaints.
+        </p>
+
+        <h3>Mistake 2: Ignoring authentication</h3>
+
+        <p>
+            Failing to configure appropriate email authentication can create technical
+            challenges and reduce trust in email messages.
+        </p>
+
+        <h3>Mistake 3: Sending irrelevant emails</h3>
+
+        <p>
+            Sending the same message to every subscriber regardless of their interests can
+            reduce engagement.
+        </p>
+
+        <h3>Mistake 4: Sending too frequently</h3>
+
+        <p>
+            Excessive messaging can annoy subscribers and increase unsubscribes or complaints.
+        </p>
+
+        <h3>Mistake 5: Ignoring bounce rates</h3>
+
+        <p>
+            A high number of failed deliveries may indicate problems with list quality or
+            data collection.
+        </p>
+
+        <h3>Mistake 6: Using misleading content</h3>
+
+        <p>
+            Misleading subject lines or deceptive email content can damage trust and cause
+            negative recipient reactions.
+        </p>
+
+        <h3>Mistake 7: Never reviewing inactive subscribers</h3>
+
+        <p>
+            Treating every contact as equally engaged can make it harder to maintain a
+            healthy and relevant email program.
+        </p>
+
+        <h2 id="checklist">Email Deliverability Checklist</h2>
+
+        <div class="checklist">
+            <p>Before sending an important campaign, ask:</p>
+
+            <ul>
+                <li>Did subscribers give appropriate permission to receive the email?</li>
+                <li>Is the email relevant to the intended audience?</li>
+                <li>Is the sending domain properly authenticated?</li>
+                <li>Is the email content clear and honest?</li>
+                <li>Is the subject line accurate?</li>
+                <li>Is the sending frequency reasonable?</li>
+                <li>Are invalid addresses being managed?</li>
+                <li>Are spam complaints being monitored?</li>
+                <li>Is there a clear unsubscribe option?</li>
+                <li>Are inactive subscribers being reviewed?</li>
+                <li>Are important email metrics being monitored?</li>
+            </ul>
+        </div>
+
+        <h2 id="faq">Frequently Asked Questions</h2>
+
+        <h3>What is email deliverability in simple words?</h3>
+
+        <p>
+            Email deliverability is the ability to successfully send emails to recipients
+            and have those messages reach the intended inbox rather than being rejected or
+            filtered as spam.
+        </p>
+
+        <h3>What is a good email deliverability rate?</h3>
+
+        <p>
+            There is no single universal percentage that guarantees good inbox placement.
+            Businesses should monitor delivery failures, bounces, spam complaints, engagement,
+            and other relevant indicators over time.
+        </p>
+
+        <h3>What is the difference between email delivery and deliverability?</h3>
+
+        <p>
+            Delivery generally describes whether a receiving mail server accepts a message.
+            Deliverability is broader and concerns how successfully messages reach the intended
+            inbox rather than being rejected or filtered.
+        </p>
+
+        <h3>Does email authentication improve deliverability?</h3>
+
+        <p>
+            Proper email authentication helps receiving systems verify that messages are
+            authorized to use a domain. It is an important technical part of responsible
+            email sending, although authentication alone does not guarantee inbox placement.
+        </p>
+
+        <h3>Can a purchased email list hurt deliverability?</h3>
+
+        <p>
+            Yes. Purchased lists may contain people who did not expect your messages,
+            invalid addresses, or low-quality contacts. This can contribute to poor
+            engagement and spam complaints.
+        </p>
+
+        <h3>How can I improve email deliverability?</h3>
+
+        <p>
+            Build a permission-based list, send relevant content, authenticate your domain,
+            maintain list quality, monitor bounces and complaints, manage inactive contacts,
+            and maintain responsible sending practices.
+        </p>
+
+        <h3>Does email automation affect deliverability?</h3>
+
+        <p>
+            Automation itself does not automatically create good or bad deliverability.
+            Automated campaigns should still use appropriate permission, targeting,
+            frequency, content, and list-management practices.
+        </p>
+
+        <p>
+            Learn more about automation in
+            <a href="../0004-email-marketing-automation/">
+                What Is Email Marketing Automation?
+            </a>.
+        </p>
+
+        <h2 id="conclusion">Conclusion</h2>
+
+        <p>
+            Email deliverability is a fundamental part of successful email marketing.
+            Creating a great campaign is not enough if the message does not successfully
+            reach the people who should receive it.
+        </p>
+
+        <p>
+            The best approach is to build a permission-based audience, maintain good list
+            quality, send relevant content, use appropriate authentication, monitor important
+            email metrics, and continuously improve your sending practices.
+        </p>
+
+        <p>
+            Deliverability should be treated as an ongoing process. Healthy email marketing
+            comes from consistently providing value while respecting subscriber expectations.
+        </p>
+
+        <div class="article-links">
+            <h2>Continue Learning About Email Marketing</h2>
+
+            <ul>
+                <li>
+                    <a href="../0001-what-is-email-marketing/">
+                        What Is Email Marketing?
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../0002-email-marketing-benefits/">
+                        What Are the Benefits of Email Marketing?
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../0003-email-marketing-strategy/">
+                        What Is an Email Marketing Strategy?
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../0004-email-marketing-automation/">
+                        What Is Email Marketing Automation?
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../0005-email-list-building/">
+                        What Is Email List Building?
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../0006-email-marketing-segmentation/">
+                        What Is Email Marketing Segmentation?
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../0007-email-personalization/">
+                        What Is Email Personalization?
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../0008-email-marketing-copywriting/">
+                        What Is Email Marketing Copywriting?
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="affiliate-note">
+            <strong>Affiliate Disclosure:</strong>
+            This website may contain affiliate links in some articles. If you purchase
+            a product or service through an affiliate link, we may receive a commission
+            at no additional cost to you. Recommendations are intended to be useful and
+            informative. Read our
+            <a href="../../affiliate-disclosure.html">
+                full Affiliate Disclosure
+            </a>
+            for more information.
+        </div>
+
+        <div class="author-box">
+            <strong>About the Author</strong>
+
+            <p>
+                <strong>Muhammad Nasir Uddin</strong> is an Assistant Professor of English
+                at Zirabo Dewan Idris College, Savar, Dhaka, Bangladesh. He has more than
+                20 years of teaching experience and creates practical educational resources
+                about email marketing, digital marketing, websites, and related technologies.
+            </p>
+
+            <p>
+                This website is designed to explain email marketing concepts in a clear,
+                practical, and beginner-friendly way.
+            </p>
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2026 Email Marketing Resource. All rights reserved.</p>
+
+    <p>
+        <a href="../../index.html">Home</a> |
+        <a href="../../about.html">About</a> |
+        <a href="../../contact.html">Contact</a> |
+        <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
+    </p>
+</footer>
+
+</body>
+</html>
