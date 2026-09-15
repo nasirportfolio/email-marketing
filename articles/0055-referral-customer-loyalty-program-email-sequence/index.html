@@ -120,6 +120,7 @@
       border-left: 5px solid #2563eb;
       padding: 20px;
       margin: 25px 0;
+      border-radius: 6px;
     }
 
     .toc {
@@ -143,6 +144,24 @@
       padding: 22px;
       border-radius: 8px;
       margin: 25px 0;
+    }
+
+    .timing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+    }
+
+    .timing-table th,
+    .timing-table td {
+      border: 1px solid #dbe3ec;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .timing-table th {
+      background: #f1f5f9;
     }
 
     .author-box {
@@ -189,6 +208,12 @@
 
       nav {
         gap: 12px;
+      }
+
+      .timing-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
       }
     }
   </style>
@@ -476,39 +501,47 @@
       A possible sequence is:
     </p>
 
-    <table style="width:100%; border-collapse:collapse; margin:25px 0;">
-      <tr>
-        <th style="border:1px solid #dbe3ec; padding:12px; text-align:left;">Email</th>
-        <th style="border:1px solid #dbe3ec; padding:12px; text-align:left;">Purpose</th>
-        <th style="border:1px solid #dbe3ec; padding:12px; text-align:left;">Possible Timing</th>
-      </tr>
-      <tr>
-        <td style="border:1px solid #dbe3ec; padding:12px;">1</td>
-        <td style="border:1px solid #dbe3ec; padding:12px;">Program invitation</td>
-        <td style="border:1px solid #dbe3ec; padding:12px;">After a meaningful positive customer moment</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #dbe3ec; padding:12px;">2</td>
-        <td style="border:1px solid #dbe3ec; padding:12px;">Reminder</td>
-        <td style="border:1px solid #dbe3ec; padding:12px;">Several days later if no action</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #dbe3ec; padding:12px;">3</td>
-        <td style="border:1px solid #dbe3ec; padding:12px;">Progress encouragement</td>
-        <td style="border:1px solid #dbe3ec; padding:12px;">After meaningful engagement</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #dbe3ec; padding:12px;">4</td>
-        <td style="border:1px solid #dbe3ec; padding:12px;">Reward confirmation</td>
-        <td style="border:1px solid #dbe3ec; padding:12px;">Immediately after qualification</td>
-      </tr>
+    <table class="timing-table">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Purpose</th>
+          <th>Possible Timing</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Program invitation</td>
+          <td>After a meaningful positive customer moment</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Reminder</td>
+          <td>Several days later if no action</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>Progress encouragement</td>
+          <td>After meaningful engagement</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>Reward confirmation</td>
+          <td>Immediately after qualification</td>
+        </tr>
+      </tbody>
     </table>
 
     <p>
       A useful principle is to ask for a referral after the customer has experienced enough value
-      to feel comfortable recommending the product or service. Referral-email guidance similarly
-      emphasizes identifying satisfied customers and using meaningful customer moments as triggers.
-      :contentReference[oaicite:1]{index=1}
+      to feel comfortable recommending the product or service. Timing should reflect customer
+      satisfaction, engagement, and the specific customer journey rather than relying on one
+      universal schedule.
     </p>
 
     <h2 id="automation">How to Automate the Sequence</h2>
