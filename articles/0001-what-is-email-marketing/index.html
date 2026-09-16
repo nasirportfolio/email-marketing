@@ -63,8 +63,13 @@ header {
     margin: 0;
 }
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
 nav a {
-    margin-left: 18px;
     font-weight: bold;
 }
 
@@ -134,7 +139,8 @@ table {
     margin: 20px 0;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
@@ -163,15 +169,28 @@ footer {
     background: white;
     border-top: 1px solid #ddd;
     text-align: center;
-    padding: 25px;
+    padding: 30px 20px;
     margin-top: 40px;
 }
 
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
 footer a {
-    margin: 0 10px;
+    font-weight: 500;
+}
+
+footer p {
+    margin: 8px 0;
 }
 
 @media (max-width: 700px) {
+
     .header-inner {
         flex-direction: column;
         align-items: flex-start;
@@ -179,11 +198,7 @@ footer a {
 
     nav {
         margin-top: 12px;
-    }
-
-    nav a {
-        margin-left: 0;
-        margin-right: 12px;
+        gap: 10px 14px;
     }
 
     .container {
@@ -201,6 +216,10 @@ footer a {
     h2 {
         font-size: 26px;
     }
+
+    h3 {
+        font-size: 21px;
+    }
 }
 </style>
 </head>
@@ -208,6 +227,7 @@ footer a {
 <body>
 
 <header>
+
 <div class="header-inner">
 
 <p class="site-title">Email Marketing Resource</p>
@@ -220,6 +240,7 @@ footer a {
 </nav>
 
 </div>
+
 </header>
 
 <main class="container">
@@ -316,6 +337,7 @@ increase website traffic, promote products, and encourage repeat purchases.
 <h2 id="types">Types of Email Marketing</h2>
 
 <table>
+
 <tr>
 <th>Email Type</th>
 <th>Main Purpose</th>
@@ -355,6 +377,7 @@ increase website traffic, promote products, and encourage repeat purchases.
 <td>Re-engagement Email</td>
 <td>Reconnect with inactive subscribers.</td>
 </tr>
+
 </table>
 
 <h2 id="examples">Email Marketing Examples</h2>
@@ -494,6 +517,7 @@ asking subscribers to purchase something.
 <h2 id="metrics">Important Email Marketing Metrics</h2>
 
 <table>
+
 <tr>
 <th>Metric</th>
 <th>What It Measures</th>
@@ -523,6 +547,7 @@ asking subscribers to purchase something.
 <td>Unsubscribe Rate</td>
 <td>How often recipients unsubscribed.</td>
 </tr>
+
 </table>
 
 <h2 id="start">How to Get Started With Email Marketing</h2>
@@ -658,12 +683,29 @@ email automation, CRM, and related digital marketing topics.
 
 <footer>
 
+<div class="footer-links">
+
 <a href="../../index.html">Home</a>
+
 <a href="../../about.html">About</a>
-<a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
+
 <a href="../../contact.html">Contact</a>
 
-<p>© 2026 Email Marketing Resource. All rights reserved.</p>
+<a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
+
+<a href="../../privacy-policy.html">Privacy Policy</a>
+
+<a href="../../disclaimer.html">Disclaimer</a>
+
+<a href="../../terms-and-conditions.html">Terms &amp; Conditions</a>
+
+<a href="../../advertise.html">Advertise</a>
+
+</div>
+
+<p>
+© 2026 Email Marketing Resource. All rights reserved.
+</p>
 
 </footer>
 
