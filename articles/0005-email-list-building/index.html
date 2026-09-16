@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,7 @@
           content="Learn what email list building is, why it matters, how to build an email list, effective signup methods, common mistakes, and best practices for beginners.">
 
     <meta name="robots" content="index, follow">
+
     <link rel="canonical"
           href="https://nasirportfolio.github.io/email-marketing/articles/0005-email-list-building/">
 
@@ -19,7 +21,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-3ZDJCJWX5F');
     </script>
 
@@ -197,22 +198,39 @@
         footer {
             background: #17365d;
             color: white;
-            text-align: center;
-            padding: 25px 20px;
             margin-top: 50px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 18px;
         }
 
         footer a {
             color: white;
             text-decoration: none;
-            margin: 0 8px;
         }
 
         footer a:hover {
             text-decoration: underline;
         }
 
+        footer p {
+            margin: 8px 0;
+        }
+
         @media (max-width: 700px) {
+
             .header-container {
                 flex-direction: column;
                 align-items: flex-start;
@@ -254,7 +272,7 @@
             <a href="../../index.html">Home</a>
             <a href="../../about.html">About</a>
             <a href="../../contact.html">Contact</a>
-            <a href="../../affiliate-disclosure.html">Disclosure</a>
+            <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
         </nav>
 
     </div>
@@ -450,6 +468,7 @@
     <p>For example:</p>
 
     <div class="checklist">
+
         <strong>Example Signup Form:</strong>
 
         <p>
@@ -468,6 +487,7 @@
         <p>
             <strong>Button:</strong> Subscribe
         </p>
+
     </div>
 
     <p>
@@ -862,18 +882,36 @@
 
 <footer>
 
-    <p>
-        &copy; 2026 Email Marketing Resource
-    </p>
+    <div class="footer-container">
 
-    <p>
-        <a href="../../index.html">Home</a> |
-        <a href="../../about.html">About</a> |
-        <a href="../../contact.html">Contact</a> |
-        <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
-    </p>
+        <div class="footer-links">
+
+            <a href="../../index.html">Home</a>
+
+            <a href="../../about.html">About</a>
+
+            <a href="../../contact.html">Contact</a>
+
+            <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
+
+            <a href="../../privacy-policy.html">Privacy Policy</a>
+
+            <a href="../../disclaimer.html">Disclaimer</a>
+
+            <a href="../../terms-and-conditions.html">Terms &amp; Conditions</a>
+
+            <a href="../../advertise.html">Advertise</a>
+
+        </div>
+
+        <p>
+            &copy; 2026 Email Marketing Resource. All rights reserved.
+        </p>
+
+    </div>
 
 </footer>
 
 </body>
 </html>
+```
