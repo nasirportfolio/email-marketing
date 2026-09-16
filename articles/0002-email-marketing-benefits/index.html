@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +21,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-3ZDJCJWX5F');
     </script>
 
@@ -58,10 +58,15 @@
             color: #222;
         }
 
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
         nav a {
             color: #1557b0;
             text-decoration: none;
-            margin-left: 18px;
             font-weight: 600;
         }
 
@@ -201,8 +206,15 @@
             text-align: center;
         }
 
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
         footer a {
-            margin: 0 8px;
             text-decoration: none;
         }
 
@@ -210,15 +222,20 @@
             text-decoration: underline;
         }
 
+        footer p {
+            margin: 8px 0;
+        }
+
         @media (max-width: 700px) {
+
             .nav-container {
                 flex-direction: column;
                 align-items: flex-start;
             }
 
-            nav a {
-                margin-left: 0;
-                margin-right: 15px;
+            nav {
+                margin-top: 12px;
+                gap: 10px 14px;
             }
 
             article {
@@ -252,8 +269,12 @@
 <body>
 
 <header>
+
     <div class="nav-container">
-        <div class="site-name">Email Marketing Resource</div>
+
+        <div class="site-name">
+            Email Marketing Resource
+        </div>
 
         <nav>
             <a href="../../index.html">Home</a>
@@ -261,7 +282,9 @@
             <a href="../../contact.html">Contact</a>
             <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
         </nav>
+
     </div>
+
 </header>
 
 <main>
@@ -788,16 +811,20 @@
     </p>
 
     <div class="affiliate-note">
+
         <strong>Affiliate Disclosure:</strong>
+
         This website may contain affiliate links in some articles. If you use an affiliate
         link and make a purchase or sign up for a service, we may receive a commission at
         no additional cost to you. Our recommendations are intended to be useful and
         relevant to the topic. Read our
         <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
         for more information.
+
     </div>
 
     <div class="author-box">
+
         <h2>About the Author</h2>
 
         <p>
@@ -816,6 +843,7 @@
             or
             <a href="../../contact.html">Contact page</a>.
         </p>
+
     </div>
 
 </article>
@@ -823,24 +851,37 @@
 </main>
 
 <footer>
+
     <div class="footer-container">
 
-        <p>
+        <div class="footer-links">
+
             <a href="../../index.html">Home</a>
-            |
+
             <a href="../../about.html">About</a>
-            |
-            <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
-            |
+
             <a href="../../contact.html">Contact</a>
-        </p>
+
+            <a href="../../affiliate-disclosure.html">Affiliate Disclosure</a>
+
+            <a href="../../privacy-policy.html">Privacy Policy</a>
+
+            <a href="../../disclaimer.html">Disclaimer</a>
+
+            <a href="../../terms-and-conditions.html">Terms &amp; Conditions</a>
+
+            <a href="../../advertise.html">Advertise</a>
+
+        </div>
 
         <p>
             © 2026 Email Marketing Resource. All rights reserved.
         </p>
 
     </div>
+
 </footer>
 
 </body>
 </html>
+```
