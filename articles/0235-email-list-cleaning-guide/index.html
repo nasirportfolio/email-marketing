@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,7 @@
     <title>How to Clean an Email List Before a Campaign</title>
 
     <meta name="description"
-          content="Learn how to clean an email list before a campaign by reviewing invalid, duplicate, inactive, and problematic contacts with a practical workflow.">
+          content="Learn how to clean an email list before a campaign by reviewing invalid, duplicate, inactive, and problematic contacts carefully.">
 
     <meta name="robots" content="index, follow">
     <meta name="author" content="Muhammad Nasir Uddin">
@@ -20,7 +19,7 @@
     <meta property="og:title"
           content="How to Clean an Email List Before a Campaign">
     <meta property="og:description"
-          content="A practical guide to reviewing invalid, duplicate, inactive, and problematic email contacts before an important campaign.">
+          content="Learn how to clean an email list before a campaign by reviewing invalid, duplicate, inactive, and problematic contacts carefully.">
     <meta property="og:type" content="article">
     <meta property="og:url"
           content="https://nasirportfolio.github.io/email-marketing/articles/0235-email-list-cleaning-guide/">
@@ -41,13 +40,31 @@
         });
     </script>
 
+    <!-- Article Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Clean an Email List Before a Campaign",
+        "description": "Learn how to clean an email list before a campaign by reviewing invalid, duplicate, inactive, and problematic contacts carefully.",
+        "author": {
+            "@type": "Person",
+            "name": "Muhammad Nasir Uddin"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Muhammad Nasir Uddin"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://nasirportfolio.github.io/email-marketing/articles/0235-email-list-cleaning-guide/"
+        }
+    }
+    </script>
+
     <style>
         * {
             box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
@@ -74,19 +91,15 @@
         nav {
             max-width: 900px;
             margin: 18px auto 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
         }
 
         nav a {
-            color: #0645ad;
+            color: #0066cc;
             text-decoration: none;
-            font-weight: 600;
+            margin-right: 18px;
         }
 
-        nav a:hover,
-        nav a:focus {
+        nav a:hover {
             text-decoration: underline;
         }
 
@@ -98,60 +111,28 @@
 
         .article-label {
             display: inline-block;
-            margin-bottom: 12px;
             font-size: 14px;
             font-weight: bold;
-            letter-spacing: 0.5px;
             color: #555;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
         }
 
-        main > h1 {
+        main h1 {
+            font-size: 34px;
+            line-height: 1.3;
             margin-top: 0;
-            margin-bottom: 22px;
-            font-size: 36px;
-            line-height: 1.25;
-        }
-
-        .quick-answer {
-            margin: 25px 0;
-            padding: 18px 20px;
-            background: #f7f7f7;
-            border-left: 4px solid #333;
-        }
-
-        .toc {
-            margin: 30px 0;
-            padding: 20px;
-            background: #fafafa;
-            border: 1px solid #ddd;
-        }
-
-        .toc h2 {
-            margin-top: 0;
-        }
-
-        .toc ol {
-            margin-bottom: 0;
-        }
-
-        a {
-            color: #0645ad;
-        }
-
-        section {
-            margin-top: 42px;
         }
 
         h2 {
-            margin-bottom: 14px;
-            font-size: 27px;
+            margin-top: 42px;
+            font-size: 25px;
             line-height: 1.35;
         }
 
         h3 {
             margin-top: 28px;
-            margin-bottom: 10px;
-            font-size: 21px;
+            font-size: 20px;
             line-height: 1.4;
         }
 
@@ -161,32 +142,59 @@
 
         ul,
         ol {
-            margin-top: 0;
-            margin-bottom: 20px;
-            padding-left: 25px;
+            margin-bottom: 22px;
         }
 
         li {
             margin-bottom: 8px;
         }
 
-        .example,
-        .checklist {
-            margin: 24px 0;
+        a {
+            color: #0066cc;
+        }
+
+        .quick-answer {
+            background: #f7f9fc;
+            border-left: 4px solid #0066cc;
             padding: 18px 20px;
-            background: #f8f8f8;
+            margin: 25px 0;
+        }
+
+        .toc {
+            background: #fafafa;
             border: 1px solid #ddd;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            font-size: 21px;
+        }
+
+        .example {
+            background: #fff8e8;
+            border-left: 4px solid #d89b00;
+            padding: 18px 20px;
+            margin: 25px 0;
+        }
+
+        .checklist {
+            background: #f7f7f7;
+            border: 1px solid #ddd;
+            padding: 18px 20px;
+            margin: 25px 0;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 24px 0;
+            margin: 25px 0;
         }
 
         th,
         td {
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             padding: 12px;
             text-align: left;
             vertical-align: top;
@@ -197,7 +205,7 @@
         }
 
         .author-box {
-            margin-top: 40px;
+            margin-top: 45px;
             padding: 22px;
             background: #f7f7f7;
             border: 1px solid #ddd;
@@ -208,88 +216,56 @@
         }
 
         .disclosure {
-            margin-top: 24px;
-            padding: 18px 20px;
-            background: #fafafa;
-            border: 1px solid #ddd;
-            font-size: 15px;
+            margin-top: 25px;
+            padding: 18px;
+            background: #fffaf0;
+            border: 1px solid #ead9b8;
+            font-size: 14px;
         }
 
         footer {
             border-top: 1px solid #ddd;
             background: #f5f5f5;
-            padding: 28px 20px;
+            padding: 25px 20px;
             text-align: center;
             font-size: 14px;
         }
 
         footer a {
-            margin: 0 7px;
-            color: #0645ad;
+            margin: 0 8px;
+            color: #0066cc;
             text-decoration: none;
         }
 
-        footer a:hover,
-        footer a:focus {
+        footer a:hover {
             text-decoration: underline;
         }
 
         @media (max-width: 700px) {
-            header h1 {
-                font-size: 26px;
-            }
-
-            main > h1 {
-                font-size: 30px;
+            main h1 {
+                font-size: 27px;
             }
 
             h2 {
-                font-size: 24px;
+                font-size: 23px;
             }
 
-            h3 {
-                font-size: 20px;
-            }
-
-            nav {
-                gap: 10px;
+            nav a {
+                display: inline-block;
+                margin-bottom: 8px;
             }
 
             table {
-                display: block;
-                overflow-x: auto;
-                white-space: normal;
+                font-size: 14px;
             }
         }
     </style>
-
-    <!-- Article Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "How to Clean an Email List Before a Campaign",
-        "description": "A practical guide to reviewing invalid, duplicate, inactive, and problematic email contacts before an important campaign.",
-        "author": {
-            "@type": "Person",
-            "name": "Muhammad Nasir Uddin"
-        },
-        "publisher": {
-            "@type": "Person",
-            "name": "Muhammad Nasir Uddin"
-        },
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://nasirportfolio.github.io/email-marketing/articles/0235-email-list-cleaning-guide/"
-        }
-    }
-    </script>
 </head>
 
 <body>
 
 <header>
-    <h1>Email Marketing + List Building + Blogging for Audience Growth</h1>
+    <h1>How to Clean an Email List Before a Campaign</h1>
 
     <nav aria-label="Main navigation">
         <a href="https://nasirportfolio.github.io/email-marketing/">Home</a>
@@ -315,6 +291,7 @@
 
     <div class="toc">
         <h2>Table of Contents</h2>
+
         <ol>
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#why-clean">Why Clean an Email List?</a></li>
@@ -379,10 +356,10 @@
 
         <div class="example">
             <strong>Simple example:</strong>
-            Suppose a business has several thousand contacts. Some may be active
+            Imagine a list containing several thousand contacts. Some may be active
             customers, some may have never engaged, some may have duplicate records,
-            and others may have outdated addresses. Treating every contact exactly
-            the same can hide important differences between audience groups.
+            and others may have outdated addresses. Treating all contacts exactly
+            the same can hide important differences between them.
         </div>
 
         <p>
@@ -413,7 +390,7 @@
         <p>
             Do not start deleting contacts before understanding these categories.
             A contact that appears inactive may still have business value or may
-            belong to a segment that should be handled separately.
+            belong to a group that should be handled separately.
         </p>
     </section>
 
@@ -466,6 +443,7 @@
 
         <div class="checklist">
             <strong>Duplicate review checklist:</strong>
+
             <ul>
                 <li>Compare the email addresses.</li>
                 <li>Check whether names and customer details match.</li>
@@ -509,8 +487,8 @@
         </ol>
 
         <p>
-            This approach is safer than using one arbitrary rule such as "delete
-            everyone who did not open the last email."
+            This approach is safer than using one arbitrary rule such as
+            "delete everyone who did not open the last email."
         </p>
     </section>
 
@@ -531,12 +509,12 @@
         </p>
 
         <p>
-            If your audience includes customers, prospects, or referral participants,
-            review those groups separately before making list-wide changes. A broader
+            If you are working with customers or referral audiences, the
             <a href="https://nasirportfolio.github.io/email-marketing/articles/0027-email-marketing-referral-program/">
                 email marketing referral program guide
             </a>
-            can also help when referral contacts form a distinct audience segment.
+            provides another example of how audience relationships can be considered
+            when planning email communication.
         </p>
 
         <p>
@@ -682,27 +660,33 @@
                     <th>Review action</th>
                 </tr>
             </thead>
+
             <tbody>
                 <tr>
                     <td>Active subscribers</td>
                     <td>Keep in the appropriate campaign segment</td>
                 </tr>
+
                 <tr>
                     <td>Unsubscribed contacts</td>
                     <td>Respect the subscription status</td>
                 </tr>
+
                 <tr>
                     <td>Repeatedly failed addresses</td>
                     <td>Review the platform's bounce or suppression status</td>
                 </tr>
+
                 <tr>
                     <td>Duplicate records</td>
                     <td>Review and consolidate where appropriate</td>
                 </tr>
+
                 <tr>
                     <td>Long-term inactive subscribers</td>
                     <td>Review separately rather than deleting automatically</td>
                 </tr>
+
                 <tr>
                     <td>Important customers</td>
                     <td>Check customer status before changing their records</td>
@@ -731,6 +715,7 @@
                     Email marketing referral program guide
                 </a>
             </li>
+
             <li>
                 <a href="https://nasirportfolio.github.io/email-marketing/articles/0054-referral-customer-loyalty-program-email/">
                     Referral customer loyalty program email guide
@@ -739,8 +724,8 @@
         </ul>
 
         <p>
-            These resources cover related audience and email communication topics
-            that may be useful when organizing contacts for different campaigns.
+            These resources cover related customer and audience communication
+            topics that can help you build a more structured email marketing workflow.
         </p>
     </section>
 
@@ -751,7 +736,7 @@
             Cleaning an email list before a campaign is not simply a matter of
             deleting old contacts. The useful process is to review contact status,
             identify duplicates and invalid records, examine inactive subscribers,
-            understand important segments, and make changes carefully.
+            understand important groups, and make changes carefully.
         </p>
 
         <p>
@@ -787,7 +772,6 @@
             an affiliate link and make a purchase or sign up for a service, the
             website owner may receive a commission at no additional cost to you.
         </div>
-
     </section>
 
 </main>
@@ -797,29 +781,28 @@
         <a href="https://nasirportfolio.github.io/email-marketing/privacy-policy.html">
             Privacy Policy
         </a>
-        |
+
         <a href="https://nasirportfolio.github.io/email-marketing/disclaimer.html">
             Disclaimer
         </a>
-        |
+
         <a href="https://nasirportfolio.github.io/email-marketing/terms-and-conditions.html">
             Terms and Conditions
         </a>
-        |
+
         <a href="https://nasirportfolio.github.io/email-marketing/affiliate-disclosure.html">
             Affiliate Disclosure
         </a>
-        |
+
         <a href="https://nasirportfolio.github.io/email-marketing/contact.html">
             Contact
         </a>
     </p>
 
     <p>
-        &copy; 2026 Muhammad Nasir Uddin. All rights reserved.
+        © 2026 Muhammad Nasir Uddin. All rights reserved.
     </p>
 </footer>
 
 </body>
 </html>
-```
