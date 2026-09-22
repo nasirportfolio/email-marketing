@@ -77,10 +77,23 @@ header {
   text-align: center;
 }
 
-header h1 {
+header .site-title {
   margin: 0;
   font-size: 30px;
 }
+
+ .site-nav {
+  background: #0b1220;
+  padding: 12px;
+  text-align: center;
+}
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+.site-nav a:hover { text-decoration: underline; }
 
 header p {
   margin: 10px 0 0;
@@ -197,7 +210,7 @@ a {
     padding: 22px;
   }
 
-  header h1 {
+  header .site-title {
     font-size: 24px;
   }
 
@@ -215,9 +228,15 @@ a {
 <body>
 
 <header>
-  <h1>Email Marketing Resource</h1>
+  <div class="site-title">Email Marketing Resource</div>
   <p>Email Marketing + List Building + Blogging for Audience Growth</p>
 </header>
+
+<nav class="site-nav">
+  <a href="https://nasirportfolio.github.io/email-marketing/">Home</a>
+  <a href="https://nasirportfolio.github.io/email-marketing/about.html">About</a>
+  <a href="https://nasirportfolio.github.io/email-marketing/contact.html">Contact</a>
+</nav>
 
 <div class="container">
 
