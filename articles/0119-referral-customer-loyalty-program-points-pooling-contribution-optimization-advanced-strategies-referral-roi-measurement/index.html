@@ -66,7 +66,7 @@ header {
   text-align: center;
 }
 
-header h1 {
+header .site-title {
   margin: 0;
   font-size: 28px;
   color: #1d3557;
@@ -166,7 +166,7 @@ footer {
     padding: 22px;
   }
 
-  header h1 {
+  header .site-title {
     font-size: 23px;
   }
 
@@ -177,6 +177,38 @@ footer {
 }
 
 .toc a { color: #0645ad; text-decoration: underline; }
+
+    /* Consistent blue links */
+    nav a,
+    nav a:visited,
+    .toc a,
+    .toc a:visited,
+    .related a,
+    .related a:visited,
+    .disclosure a,
+    .disclosure a:visited,
+    article a,
+    article a:visited,
+    footer a,
+    footer a:visited {
+      color: #0000EE !important;
+    }
+
+    nav a:hover,
+    nav a:focus,
+    .toc a:hover,
+    .toc a:focus,
+    .related a:hover,
+    .related a:focus,
+    .disclosure a:hover,
+    .disclosure a:focus,
+    article a:hover,
+    article a:focus,
+    footer a:hover,
+    footer a:focus {
+      color: #0000EE !important;
+      text-decoration: underline;
+    }
 </style>
 </head>
 <body>
