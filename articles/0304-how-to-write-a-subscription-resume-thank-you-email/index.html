@@ -76,6 +76,15 @@
       padding: 18px 20px;
     }
 
+
+    .site-title {
+      max-width: 1000px;
+      margin: 0 auto 12px;
+      font-size: 21px;
+      font-weight: 700;
+      color: #111827;
+    }
+
     nav {
       max-width: 1000px;
       margin: 0 auto;
@@ -240,6 +249,35 @@
       font-size: 0.95rem;
     }
 
+
+    /* Consistent blue links */
+    nav a,
+    nav a:visited,
+    .toc a,
+    .toc a:visited,
+    article a,
+    article a:visited,
+    .disclosure-box a,
+    .disclosure-box a:visited,
+    footer a,
+    footer a:visited {
+      color: #0000EE !important;
+    }
+
+    nav a:hover,
+    nav a:focus,
+    .toc a:hover,
+    .toc a:focus,
+    article a:hover,
+    article a:focus,
+    .disclosure-box a:hover,
+    .disclosure-box a:focus,
+    footer a:hover,
+    footer a:focus {
+      color: #0000EE !important;
+      text-decoration: underline;
+    }
+
     @media (max-width: 700px) {
       main {
         padding: 22px 15px 40px;
@@ -267,6 +305,7 @@
 <body>
 
 <header>
+  <div class="site-title">Email Marketing + List Building + Blogging for Audience Growth</div>
   <nav aria-label="Main navigation">
     <a href="https://nasirportfolio.github.io/email-marketing/">Home</a>
     <a href="https://nasirportfolio.github.io/email-marketing/about.html">About</a>
