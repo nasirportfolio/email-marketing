@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nasirportfolio.github.io/email-marketing/sitemap.xml
+Sitemap: https://nasiremailmarketing.com/sitemap.xml
