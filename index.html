@@ -2,446 +2,695 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Advertise With Us | Email Marketing Resource</title>
+<title>Email Marketing Resource | Practical Guides & Tutorials</title>
 
-<meta name="description" content="Advertise with Email Marketing Resource through sponsored articles, sponsored placements, and relevant brand promotion opportunities for email marketing, SaaS, ecommerce, CRM, SEO, and digital marketing.">
+<meta name="description" content="Explore practical email marketing guides, tutorials, customer retention strategies, automation, list building, and email campaign resources.">
+
+<meta name="author" content="Muhammad Nasir Uddin">
 
 <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://nasiremailmarketing.com/advertise.html">
+<!-- Google Search Console Verification -->
+<meta name="google-site-verification" content="LviZ4BhfKcX1otA4BRb0jt0-qgJhL0Z7nDXqKQmO0II">
 
-<!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734"
-     crossorigin="anonymous"></script>
+<!-- Canonical -->
+<link rel="canonical" href="https://nasiremailmarketing.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Email Marketing Resource | Practical Guides & Tutorials">
+<meta property="og:description" content="Practical email marketing guides, tutorials, automation, customer retention, list building, and audience growth resources.">
+<meta property="og:url" content="https://nasiremailmarketing.com/">
+<meta property="og:site_name" content="Email Marketing Resource">
 
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+
 <script>
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+
+function gtag(){
+  dataLayer.push(arguments);
+}
+
 gtag('js', new Date());
 gtag('config', 'G-3ZDJCJWX5F');
 </script>
 
 <style>
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f7fb;
-    color: #222;
-    line-height: 1.7;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  color: #222;
+  background: #ffffff;
 }
 
+a {
+  color: #0759a8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADER */
+
 header {
-    background: #111827;
-    color: #ffffff;
-    padding: 55px 20px;
-    text-align: center;
+  background: #123b63;
+  color: white;
+  padding: 20px 0;
 }
 
 header h1 {
-    margin: 0 0 12px;
-    font-size: 38px;
+  margin: 0;
+  font-size: 30px;
 }
 
 header p {
-    max-width: 720px;
-    margin: 0 auto;
-    font-size: 18px;
-    color: #dbeafe;
+  margin: 6px 0 15px;
+  font-size: 16px;
 }
 
-main {
-    max-width: 950px;
-    margin: 40px auto;
-    padding: 0 20px;
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
 }
+
+nav a {
+  color: white;
+  font-weight: bold;
+}
+
+/* HERO */
+
+.hero {
+  background: #f1f6fa;
+  padding: 55px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 34px;
+  margin: 0 0 15px;
+  color: #123b63;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 0 auto 20px;
+  font-size: 18px;
+}
+
+/* BUTTON */
+
+.button {
+  display: inline-block;
+  background: #0759a8;
+  color: white;
+  padding: 11px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #063f78;
+  text-decoration: none;
+}
+
+/* SECTIONS */
 
 section {
-    background: #ffffff;
-    margin-bottom: 25px;
-    padding: 32px;
-    border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 45px 0;
 }
 
-h2 {
-    margin-top: 0;
-    color: #111827;
-    font-size: 28px;
+section h2 {
+  color: #123b63;
+  margin-bottom: 15px;
+  font-size: 28px;
 }
 
-h3 {
-    color: #1f2937;
-    margin-top: 0;
+/* ARTICLE GRID */
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 25px;
 }
 
-p {
-    margin-bottom: 16px;
+.article-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 22px;
+  background: #fff;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.05);
 }
 
-ul,
-ol {
-    padding-left: 25px;
+.article-card h3 {
+  margin-top: 0;
+  font-size: 20px;
 }
 
-li {
-    margin-bottom: 9px;
+.article-number {
+  font-size: 13px;
+  font-weight: bold;
+  color: #777;
+  margin-bottom: 8px;
 }
 
-.offer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 18px;
+/* TOPICS */
+
+.topic-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
-.offer {
-    background: #f8fafc;
-    border: 1px solid #e5e7eb;
-    padding: 22px;
-    border-radius: 8px;
+.topic {
+  background: #f7f9fb;
+  padding: 20px;
+  border-radius: 7px;
+  border: 1px solid #e1e5e8;
 }
 
-.offer p {
-    margin-bottom: 0;
+.topic h3 {
+  margin-top: 0;
+  color: #123b63;
 }
 
-.highlight {
-    background: #eff6ff;
-    border-left: 5px solid #2563eb;
-    padding: 22px;
-    margin-top: 20px;
+/* ABOUT */
+
+.about-box {
+  background: #f7f9fb;
+  padding: 25px;
+  border-left: 5px solid #0759a8;
 }
 
-.price {
-    font-size: 28px;
-    font-weight: bold;
-    color: #2563eb;
-}
-
-.note {
-    color: #64748b;
-    font-size: 14px;
-}
-
-.cta {
-    background: #111827;
-    color: #ffffff;
-    text-align: center;
-}
-
-.cta h2 {
-    color: #ffffff;
-}
-
-.cta a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 13px 26px;
-    background: #2563eb;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
-
-.cta a:hover {
-    background: #1d4ed8;
-}
-
-.business-email {
-    margin-top: 18px;
-}
-
-.business-email a {
-    color: #93c5fd;
-    font-weight: bold;
-}
+/* FOOTER */
 
 footer {
-    background: #111827;
-    color: #cbd5e1;
-    text-align: center;
-    padding: 30px 20px;
+  background: #123b63;
+  color: white;
+  margin-top: 35px;
+  padding: 35px 0;
 }
 
 footer a {
-    color: #93c5fd;
-    text-decoration: none;
-    margin: 0 7px;
+  color: white;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 18px;
 }
 
-@media (max-width: 600px) {
-
-    header {
-        padding: 42px 18px;
-    }
-
-    header h1 {
-        font-size: 30px;
-    }
-
-    header p {
-        font-size: 16px;
-    }
-
-    section {
-        padding: 23px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
+footer p {
+  margin: 7px 0;
 }
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  .hero h2 {
+    font-size: 27px;
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-list {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+}
+
 </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-<header>
+<!-- HEADER -->
 
-    <h1>Advertise With Us</h1>
+<header>
+  <div class="container">
+
+    <h1>Email Marketing Resource</h1>
 
     <p>
-        Connect your brand with readers interested in email marketing,
-        audience growth, digital marketing, ecommerce, SEO, and online business.
+      Practical Email Marketing + List Building + Blogging for Audience Growth
     </p>
 
+    <nav>
+      <a href="https://nasiremailmarketing.com/">Home</a>
+      <a href="https://nasiremailmarketing.com/about.html">About</a>
+      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+    </nav>
+
+  </div>
 </header>
 
-<main>
 
-<section>
+<!-- HERO -->
 
-    <h2>Reach a Relevant Marketing Audience</h2>
+<section class="hero">
 
-    <p>
-        Email Marketing Resource publishes practical and educational
-        content for marketers, entrepreneurs, ecommerce businesses,
-        SaaS companies, and professionals interested in growing their
-        online audiences.
-    </p>
+  <div class="container">
+
+    <h2>Learn Email Marketing Step by Step</h2>
 
     <p>
-        We consider selected advertising and sponsored opportunities
-        that are relevant to our content and useful to our readers.
+      Explore practical guides and tutorials about email marketing,
+      customer communication, automation, list building, retention,
+      and audience growth.
     </p>
+
+    <a class="button" href="#latest-articles">
+      Read Latest Articles
+    </a>
+
+  </div>
 
 </section>
 
+
+<!-- INTRODUCTION -->
+
 <section>
 
-    <h2>Sponsored &amp; Advertising Opportunities</h2>
+  <div class="container">
 
-    <div class="offer-grid">
+    <h2>Welcome to Email Marketing Resource</h2>
 
-        <div class="offer">
-            <h3>Sponsored Articles</h3>
-            <p>
-                Publish useful, original content related to our audience
-                and introduce your brand, product, service, or expertise.
-                Sponsored content must meet our editorial standards.
-            </p>
-        </div>
+    <p>
+      Email Marketing Resource is an educational website focused on
+      practical email marketing knowledge for marketers, creators,
+      businesses, and anyone who wants to build stronger relationships
+      with an email audience.
+    </p>
 
-        <div class="offer">
-            <h3>Sponsored Placements</h3>
-            <p>
-                Promote a relevant brand, product, service, or resource
-                through a clearly identified sponsored placement that
-                provides value to our readers.
-            </p>
-        </div>
+    <p>
+      The goal is simple: provide useful, understandable, and practical
+      information that readers can apply to their own email marketing
+      activities.
+    </p>
 
-        <div class="offer">
-            <h3>Relevant Editorial Placements</h3>
-            <p>
-                Request consideration for a relevant contextual link
-                within an existing article when the destination genuinely
-                adds useful information for readers.
-            </p>
-        </div>
-
-        <div class="offer">
-            <h3>Brand Promotion</h3>
-            <p>
-                Promote a useful marketing resource, tool, product,
-                or service to a relevant audience.
-            </p>
-        </div>
-
-    </div>
+  </div>
 
 </section>
 
-<section>
 
-    <h2>Our Main Topics</h2>
+<!-- LATEST ARTICLES -->
 
-    <p>
-        We primarily consider opportunities related to:
-    </p>
+<section id="latest-articles">
 
-    <ul>
-        <li>Email marketing</li>
-        <li>Email marketing automation</li>
-        <li>Lead generation</li>
-        <li>List building</li>
-        <li>CRM and customer relationship management</li>
-        <li>Marketing automation</li>
-        <li>SaaS and marketing software</li>
-        <li>SEO and content marketing</li>
-        <li>Ecommerce marketing</li>
-        <li>Shopify and online stores</li>
-        <li>Digital marketing</li>
-        <li>Audience growth</li>
-    </ul>
+  <div class="container">
 
-</section>
-
-<section>
-
-    <h2>Starting Price</h2>
+    <h2>Latest Email Marketing Articles</h2>
 
     <p>
-        Advertising requests are reviewed individually. Pricing depends
-        on the type of placement, topic, content requirements, and
-        relevance to our audience.
+      Explore the latest articles in the Email Marketing Resource library.
     </p>
 
-    <div class="highlight">
+    <div class="article-grid">
+
+
+      <!-- ARTICLE 0312 -->
+
+      <article class="article-card">
+
+        <div class="article-number">
+          ARTICLE 0312
+        </div>
+
+        <h3>
+          <a href="https://nasiremailmarketing.com/articles/0312-how-to-write-a-subscription-resume-confirmation-email/">
+            How to Write a Subscription Resume Confirmation Email
+          </a>
+        </h3>
 
         <p>
-            <strong>Selected sponsored content and relevant advertising placements</strong>
+          Learn how to create a clear subscription resume confirmation
+          email that confirms the customer's return and provides useful
+          next steps.
         </p>
 
-        <div class="price">
-            Starting from $50
+        <a href="https://nasiremailmarketing.com/articles/0312-how-to-write-a-subscription-resume-confirmation-email/">
+          Read Article →
+        </a>
+
+      </article>
+
+
+      <!-- ARTICLE 0311 -->
+
+      <article class="article-card">
+
+        <div class="article-number">
+          ARTICLE 0311
         </div>
 
-        <p class="note">
-            Final pricing is determined after reviewing the campaign requirements.
+        <h3>
+          <a href="https://nasiremailmarketing.com/articles/0311-how-to-write-a-subscription-resume-benefits-reminder-email/">
+            How to Write a Subscription Resume Benefits Reminder Email
+          </a>
+        </h3>
+
+        <p>
+          Discover how to write a useful benefits reminder email for
+          customers who have resumed a subscription.
         </p>
+
+        <a href="https://nasiremailmarketing.com/articles/0311-how-to-write-a-subscription-resume-benefits-reminder-email/">
+          Read Article →
+        </a>
+
+      </article>
+
+
+      <!-- ARTICLE 0310 -->
+
+      <article class="article-card">
+
+        <div class="article-number">
+          ARTICLE 0310
+        </div>
+
+        <h3>
+          <a href="https://nasiremailmarketing.com/articles/0310-how-to-write-a-subscription-resume-reminder-email/">
+            How to Write a Subscription Resume Reminder Email
+          </a>
+        </h3>
+
+        <p>
+          Learn how to create a helpful subscription resume reminder
+          that keeps customer communication clear and relevant.
+        </p>
+
+        <a href="https://nasiremailmarketing.com/articles/0310-how-to-write-a-subscription-resume-reminder-email/">
+          Read Article →
+        </a>
+
+      </article>
+
+
+      <!-- ARTICLE 0309 -->
+
+      <article class="article-card">
+
+        <div class="article-number">
+          ARTICLE 0309
+        </div>
+
+        <h3>
+          <a href="https://nasiremailmarketing.com/articles/0309-how-to-write-a-subscription-resume-confirmation-email/">
+            How to Write a Subscription Resume Confirmation Email
+          </a>
+        </h3>
+
+        <p>
+          Explore practical guidance for writing a clear and useful
+          confirmation email after a customer resumes a subscription.
+        </p>
+
+        <a href="https://nasiremailmarketing.com/articles/0309-how-to-write-a-subscription-resume-confirmation-email/">
+          Read Article →
+        </a>
+
+      </article>
+
+
+      <!-- ARTICLE 0308 -->
+
+      <article class="article-card">
+
+        <div class="article-number">
+          ARTICLE 0308
+        </div>
+
+        <h3>
+          <a href="https://nasiremailmarketing.com/articles/0308-how-to-write-a-subscription-resume-support-email/">
+            How to Write a Subscription Resume Support Email
+          </a>
+        </h3>
+
+        <p>
+          Learn how to write a customer-focused support email for
+          subscribers who have resumed their subscription.
+        </p>
+
+        <a href="https://nasiremailmarketing.com/articles/0308-how-to-write-a-subscription-resume-support-email/">
+          Read Article →
+        </a>
+
+      </article>
+
+
+      <!-- ARTICLE 0307 -->
+
+      <article class="article-card">
+
+        <div class="article-number">
+          ARTICLE 0307
+        </div>
+
+        <h3>
+          <a href="https://nasiremailmarketing.com/articles/0307-how-to-write-a-subscription-resume-support-email/">
+            How to Write a Subscription Resume Support Email
+          </a>
+        </h3>
+
+        <p>
+          Discover practical ways to create a helpful support email
+          for customers returning to a subscription.
+        </p>
+
+        <a href="https://nasiremailmarketing.com/articles/0307-how-to-write-a-subscription-resume-support-email/">
+          Read Article →
+        </a>
+
+      </article>
+
+
+      <!-- ARTICLE 0306 -->
+
+      <article class="article-card">
+
+        <div class="article-number">
+          ARTICLE 0306
+        </div>
+
+        <h3>
+          <a href="https://nasiremailmarketing.com/articles/0306-how-to-write-a-subscription-resume-check-in-email/">
+            How to Write a Subscription Resume Check-In Email
+          </a>
+        </h3>
+
+        <p>
+          Learn how to create a useful check-in email after a customer
+          resumes a subscription, with practical support and follow-up
+          guidance.
+        </p>
+
+        <a href="https://nasiremailmarketing.com/articles/0306-how-to-write-a-subscription-resume-check-in-email/">
+          Read Article →
+        </a>
+
+      </article>
 
     </div>
 
+  </div>
+
 </section>
+
+
+<!-- MAIN TOPICS -->
 
 <section>
 
-    <h2>Editorial Standards</h2>
+  <div class="container">
 
-    <p>
-        We care about maintaining the quality and usefulness of our
-        content. Every advertising request is subject to editorial review.
-    </p>
+    <h2>What You Can Learn</h2>
 
-    <ul>
-        <li>Content must be original and useful to readers.</li>
-        <li>The subject must be relevant to our website.</li>
-        <li>Links must be relevant to the surrounding content.</li>
-        <li>We do not accept spammy or manipulative anchor text.</li>
-        <li>We may edit content for clarity, formatting, and quality.</li>
-        <li>We may reject requests that do not fit our editorial standards.</li>
-        <li>Paid placements do not guarantee search-engine rankings or traffic.</li>
-        <li>Sponsored content will be identified appropriately where required.</li>
-        <li>Where applicable, paid links will use appropriate link attributes such as <code>rel="sponsored"</code>.</li>
-    </ul>
+    <div class="topic-list">
+
+      <div class="topic">
+        <h3>Email Marketing</h3>
+        <p>
+          Learn email campaign planning, customer communication,
+          email strategy, and practical campaign techniques.
+        </p>
+      </div>
+
+      <div class="topic">
+        <h3>Email Automation</h3>
+        <p>
+          Understand automated email sequences, customer journeys,
+          triggers, follow-ups, and retention communication.
+        </p>
+      </div>
+
+      <div class="topic">
+        <h3>List Building</h3>
+        <p>
+          Explore practical ideas for growing an email audience and
+          building meaningful subscriber relationships.
+        </p>
+      </div>
+
+      <div class="topic">
+        <h3>Customer Retention</h3>
+        <p>
+          Learn how useful email communication can support customer
+          engagement and long-term relationships.
+        </p>
+      </div>
+
+      <div class="topic">
+        <h3>Email Copywriting</h3>
+        <p>
+          Improve subject lines, email structure, calls to action,
+          personalization, and customer-focused messaging.
+        </p>
+      </div>
+
+      <div class="topic">
+        <h3>Audience Growth</h3>
+        <p>
+          Explore email marketing, blogging, and content strategies
+          that can help build a stronger online audience.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
+
+
+<!-- ABOUT -->
 
 <section>
 
-    <h2>We Do Not Accept</h2>
+  <div class="container">
 
-    <p>
-        We do not accept advertising or links involving:
-    </p>
+    <div class="about-box">
 
-    <ul>
-        <li>Illegal products or services</li>
-        <li>Malware or deceptive software</li>
-        <li>Adult or sexually explicit content</li>
-        <li>Gambling or betting services</li>
-        <li>Fraudulent or deceptive businesses</li>
-        <li>Spam or automated link schemes</li>
-        <li>Unrelated websites or topics</li>
-        <li>Content that we consider unsuitable for our readers</li>
-    </ul>
+      <h2>About Email Marketing Resource</h2>
 
-</section>
+      <p>
+        Email Marketing Resource is created by
+        <strong>Muhammad Nasir Uddin</strong>.
+      </p>
 
-<section>
+      <p>
+        The website focuses on practical email marketing,
+        list building, blogging for audience growth,
+        customer communication, and marketing automation.
+      </p>
 
-    <h2>How to Request an Advertising Opportunity</h2>
+      <a class="button" href="https://nasiremailmarketing.com/about.html">
+        Learn More About the Author
+      </a>
 
-    <p>
-        Please contact us with the following information:
-    </p>
+    </div>
 
-    <ol>
-        <li>Your name or company name</li>
-        <li>Your website URL</li>
-        <li>The page or resource you would like to promote</li>
-        <li>Your preferred anchor text, if applicable</li>
-        <li>Your proposed topic or article idea</li>
-        <li>The type of advertising or sponsored placement you are interested in</li>
-        <li>Your campaign requirements and preferred timeline</li>
-    </ol>
-
-    <p>
-        We will review your request and respond if the opportunity
-        is a good fit for our website and audience.
-    </p>
+  </div>
 
 </section>
 
-<section class="cta">
 
-    <h2>Interested in Advertising?</h2>
-
-    <p>
-        Send us your campaign details for consideration.
-    </p>
-
-    <a href="contact.html">Contact Us</a>
-
-    <p class="business-email">
-        Or email us directly:
-        <a href="mailto:nasir@nasiremailmarketing.com">
-            nasir@nasiremailmarketing.com
-        </a>
-    </p>
-
-</section>
-
-</main>
+<!-- FOOTER -->
 
 <footer>
 
+  <div class="container">
+
+    <div class="footer-links">
+
+      <a href="https://nasiremailmarketing.com/">
+        Home
+      </a>
+
+      <a href="https://nasiremailmarketing.com/about.html">
+        About
+      </a>
+
+      <a href="https://nasiremailmarketing.com/contact.html">
+        Contact
+      </a>
+
+      <a href="https://nasiremailmarketing.com/privacy-policy.html">
+        Privacy Policy
+      </a>
+
+      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">
+        Affiliate Disclosure
+      </a>
+
+      <a href="https://nasiremailmarketing.com/disclaimer.html">
+        Disclaimer
+      </a>
+
+      <a href="https://nasiremailmarketing.com/terms-and-conditions.html">
+        Terms & Conditions
+      </a>
+
+      <a href="https://nasiremailmarketing.com/advertise.html">
+        Advertise
+      </a>
+
+    </div>
+
     <p>
-        &copy; 2026 Email Marketing Resource. All rights reserved.
+      Email Marketing Resource
     </p>
 
     <p>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="disclaimer.html">Disclaimer</a>
-        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
-        <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+      Practical Email Marketing + List Building + Blogging for Audience Growth
     </p>
+
+    <p>
+      © 2026 Muhammad Nasir Uddin. All rights reserved.
+    </p>
+
+  </div>
 
 </footer>
 
