@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>How to Decide Between a Welcome Email Resend and a Follow-Up Email</title>
+
+  <meta name="description" content="Learn when to resend a lead magnet welcome email and when to send a new follow-up email, with practical decision rules, examples, workflow ideas, and best practices.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://nasiremailmarketing.com/articles/0358-lead-magnet-welcome-email-resend-vs-follow-up/">
+
+  <meta property="og:title" content="How to Decide Between a Welcome Email Resend and a Follow-Up Email">
+  <meta property="og:description" content="Learn when to resend a lead magnet welcome email and when to send a new follow-up email, with practical decision rules and examples.">
+  <meta property="og:url" content="https://nasiremailmarketing.com/articles/0358-lead-magnet-welcome-email-resend-vs-follow-up/">
+  <meta property="og:type" content="article">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734"
+       crossorigin="anonymous"></script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3ZDJCJWX5F');
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #1557b0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 20px;
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: #1557b0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    article {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    .article-number {
+      color: #1557b0;
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 38px;
+      line-height: 1.25;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #17324d;
+      font-size: 28px;
+    }
+
+    h3 {
+      margin-top: 28px;
+      color: #244b6b;
+      font-size: 21px;
+    }
+
+    p {
+      margin: 15px 0;
+    }
+
+    .intro {
+      font-size: 19px;
+      background: #f1f6ff;
+      border-left: 5px solid #1557b0;
+      padding: 20px;
+      border-radius: 6px;
+      margin: 25px 0;
+    }
+
+    .quick-answer {
+      background: #f8fafc;
+      border: 1px solid #dbe3ec;
+      padding: 22px;
+      border-radius: 8px;
+      margin: 25px 0;
+    }
+
+    .toc {
+      background: #f8fafc;
+      border: 1px solid #e1e7ef;
+      padding: 22px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+
+    .toc h2 {
+      margin-top: 0;
+      font-size: 23px;
+    }
+
+    .toc ul {
+      margin-bottom: 0;
+    }
+
+    .example-box {
+      background: #fffdf4;
+      border: 1px solid #eadf9b;
+      padding: 22px;
+      border-radius: 8px;
+      margin: 25px 0;
+    }
+
+    .tip-box {
+      background: #f0fdf4;
+      border-left: 5px solid #198754;
+      padding: 20px;
+      border-radius: 6px;
+      margin: 25px 0;
+    }
+
+    .warning-box {
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+      padding: 20px;
+      border-radius: 6px;
+      margin: 25px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #d9e0e7;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f5f9;
+    }
+
+    ul,
+    ol {
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .affiliate-box {
+      background: #eef6ff;
+      border: 1px solid #c9ddf5;
+      padding: 22px;
+      border-radius: 8px;
+      margin: 35px 0;
+    }
+
+    .author-box {
+      background: #f8fafc;
+      border-top: 1px solid #e1e7ef;
+      margin-top: 45px;
+      padding-top: 25px;
+    }
+
+    footer {
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 40px;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      article {
+        padding: 25px 20px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 0 12px;
+      }
+
+      article {
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .intro {
+        font-size: 17px;
+      }
+    }
+  </style>
+
+  <!-- Article Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Decide Between a Welcome Email Resend and a Follow-Up Email",
+    "description": "Learn when to resend a lead magnet welcome email and when to send a new follow-up email, with practical decision rules, examples, workflow ideas, and best practices.",
+    "url": "https://nasiremailmarketing.com/articles/0358-lead-magnet-welcome-email-resend-vs-follow-up/",
+    "datePublished": "2026-10-05",
+    "dateModified": "2026-10-05",
+    "author": {
+      "@type": "Person",
+      "name": "Muhammad Nasir Uddin",
+      "email": "nasir@nasiremailmarketing.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nasir Email Marketing",
+      "url": "https://nasiremailmarketing.com/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <a class="brand" href="https://nasiremailmarketing.com/">Nasir Email Marketing</a>
+
+    <nav>
+      <a href="https://nasiremailmarketing.com/">Home</a>
+      <a href="https://nasiremailmarketing.com/about.html">About</a>
+      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article>
+
+    <div class="article-number">ARTICLE 0358</div>
+
+    <h1>How to Decide Between a Welcome Email Resend and a Follow-Up Email</h1>
+
+    <div class="intro">
+      When a subscriber does not engage with a lead magnet welcome email, marketers have an important decision to make: should they resend the original message or move forward with a new follow-up email? The right choice depends on the purpose of the message, subscriber behavior, and where the person is in the welcome journey.
+    </div>
+
+    <div class="quick-answer">
+      <h2>Quick Answer</h2>
+
+      <p>
+        Resend a welcome email when the original message still contains important value that the subscriber may have missed, such as access to a requested lead magnet. Send a new follow-up when the subscriber is ready for additional information, education, or the next step in the relationship. The key is to avoid repeating the same message when a new message would provide more value.
+      </p>
+    </div>
+
+    <div class="toc">
+      <h2>Table of Contents</h2>
+
+      <ul>
+        <li><a href="#difference">Resend vs Follow-Up: What Is the Difference?</a></li>
+        <li><a href="#resend">When Should You Resend?</a></li>
+        <li><a href="#follow-up">When Should You Send a Follow-Up?</a></li>
+        <li><a href="#decision">A Simple Decision Framework</a></li>
+        <li><a href="#subscriber">Consider Subscriber Behavior</a></li>
+        <li><a href="#sequence">How This Fits Into a Welcome Sequence</a></li>
+        <li><a href="#examples">Practical Examples</a></li>
+        <li><a href="#mistakes">Common Mistakes</a></li>
+        <li><a href="#workflow">Example Automation Workflow</a></li>
+        <li><a href="#metrics">What to Measure</a></li>
+        <li><a href="#checklist">Decision Checklist</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="difference">Resend vs Follow-Up: What Is the Difference?</h2>
+
+    <p>
+      A resend gives the subscriber another opportunity to see essentially the same core message. A follow-up introduces a new message, idea, resource, or next step.
+    </p>
+
+    <p>
+      The distinction matters because subscribers should receive communications that have a clear purpose. Repeating a useful welcome message can make sense when the subscriber probably missed it. Continuing with a new follow-up can be better when the original message has already served its role.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Approach</th>
+          <th>Main purpose</th>
+          <th>Typical situation</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Resend</td>
+          <td>Give the original message another opportunity to be noticed.</td>
+          <td>The subscriber did not engage with the original welcome email.</td>
+        </tr>
+
+        <tr>
+          <td>Follow-up</td>
+          <td>Provide new information or move the subscriber forward.</td>
+          <td>The subscriber is ready for another useful message in the journey.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="resend">When Should You Resend?</h2>
+
+    <p>
+      A resend is most useful when the original message contains something the subscriber still needs or may reasonably want to access.
+    </p>
+
+    <p>
+      A lead magnet welcome email is a good example. Someone may have requested a checklist, guide, template, report, or other resource but failed to notice the delivery email.
+    </p>
+
+    <h3>Consider a resend when:</h3>
+
+    <ul>
+      <li>The subscriber did not engage with the original message.</li>
+      <li>The original email contains an important promised resource.</li>
+      <li>The message remains relevant.</li>
+      <li>A different presentation could make the message easier to notice.</li>
+      <li>The resend will not create unnecessary email pressure.</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>Important:</strong> A resend should have a reason. Do not resend simply because an open metric is lower than expected.
+    </div>
+
+    <h2 id="follow-up">When Should You Send a Follow-Up?</h2>
+
+    <p>
+      A follow-up is appropriate when you have something new and useful to say.
+    </p>
+
+    <p>
+      For example, after delivering a lead magnet, the next email might explain one practical lesson from the resource, show how to apply it, or introduce another relevant problem that the subscriber can solve.
+    </p>
+
+    <h3>A follow-up may be better when:</h3>
+
+    <ul>
+      <li>The subscriber has already engaged with the original message.</li>
+      <li>The lead magnet has already been delivered successfully.</li>
+      <li>You have a genuinely new educational point to share.</li>
+      <li>The next step in the customer journey is different from the original email.</li>
+      <li>Repeating the original message would add little value.</li>
+    </ul>
+
+    <h2 id="decision">A Simple Decision Framework</h2>
+
+    <p>
+      Before creating an automation branch, ask a few simple questions.
+    </p>
+
+    <ol>
+      <li>Did the subscriber receive the original email?</li>
+      <li>Did the subscriber engage with it?</li>
+      <li>Does the original message contain something the subscriber may still need?</li>
+      <li>Is there a meaningful reason to send the original value again?</li>
+      <li>Do you have a new piece of useful information to share?</li>
+      <li>Would another copy of the original email improve the subscriber experience?</li>
+    </ol>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Answer pattern</th>
+          <th>Likely choice</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Did not engage + important lead magnet still needs attention</td>
+          <td>Consider a resend.</td>
+        </tr>
+
+        <tr>
+          <td>Already engaged + new useful information available</td>
+          <td>Send a follow-up.</td>
+        </tr>
+
+        <tr>
+          <td>Did not engage + no reason to repeat the message</td>
+          <td>Consider moving to the next appropriate message.</td>
+        </tr>
+
+        <tr>
+          <td>Subscriber has already received the resource successfully</td>
+          <td>A new follow-up is usually more useful.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="subscriber">Consider Subscriber Behavior</h2>
+
+    <p>
+      Subscriber behavior provides useful context, but it should not be interpreted too narrowly.
+    </p>
+
+    <p>
+      Someone who does not register an open may not necessarily have ignored the message. Email privacy features and technical limitations can affect open tracking. Likewise, a subscriber who opens an email is not necessarily interested in every future message.
+    </p>
+
+    <h3>Useful signals include:</h3>
+
+    <ul>
+      <li>Clicks on the lead magnet.</li>
+      <li>Downloads or resource access.</li>
+      <li>Replies.</li>
+      <li>Visits to relevant pages.</li>
+      <li>Previous email engagement.</li>
+      <li>Recent subscription activity.</li>
+    </ul>
+
+    <p>
+      When your platform provides reliable behavioral data, these signals can help create more useful automation paths.
+    </p>
+
+    <h2 id="sequence">How This Fits Into a Welcome Sequence</h2>
+
+    <p>
+      A lead magnet welcome sequence does not need to treat every subscriber identically. The sequence can branch according to the subscriber's situation.
+    </p>
+
+    <p>
+      One possible structure is:
+    </p>
+
+    <ol>
+      <li>Subscriber requests the lead magnet.</li>
+      <li>Original welcome email delivers or explains access to the resource.</li>
+      <li>The system evaluates appropriate engagement signals.</li>
+      <li>Eligible non-openers may receive a carefully revised resend.</li>
+      <li>Engaged subscribers can move to a new educational follow-up.</li>
+      <li>The broader welcome sequence continues.</li>
+    </ol>
+
+    <p>
+      This structure helps separate the purpose of a resend from the purpose of a follow-up.
+    </p>
+
+    <h2 id="examples">Practical Examples</h2>
+
+    <h3>Example 1: Subscriber missed the lead magnet delivery</h3>
+
+    <div class="example-box">
+      <p>
+        A subscriber requested a free email marketing checklist. The delivery email was sent, but the subscriber did not engage with it.
+      </p>
+
+      <p>
+        Because the original message contains the resource the subscriber requested, a carefully planned resend may be appropriate.
+      </p>
+
+      <p>
+        The resend can use a different subject line while keeping the core promise of the original email.
+      </p>
+    </div>
+
+    <h3>Example 2: Subscriber already accessed the resource</h3>
+
+    <div class="example-box">
+      <p>
+        A subscriber clicked the lead magnet link and accessed the checklist.
+      </p>
+
+      <p>
+        Sending the same delivery message again adds little value. A better option is a follow-up explaining how to use the checklist.
+      </p>
+    </div>
+
+    <h3>Example 3: The next educational step is ready</h3>
+
+    <div class="example-box">
+      <p>
+        A subscriber received the lead magnet and the business has a useful tutorial related to it.
+      </p>
+
+      <p>
+        Instead of repeating the delivery email, the business can send a follow-up that teaches one practical way to apply the resource.
+      </p>
+    </div>
+
+    <h2 id="mistakes">Common Mistakes</h2>
+
+    <h3>1. Treating every non-opener as the same</h3>
+
+    <p>
+      A non-opener segment can be useful, but it does not reveal everything about a subscriber's interests or intent.
+    </p>
+
+    <h3>2. Resending when there is nothing new to gain</h3>
+
+    <p>
+      If the subscriber has already accessed the resource, repeating the delivery email may create unnecessary repetition.
+    </p>
+
+    <h3>3. Sending a follow-up too early</h3>
+
+    <p>
+      A new message should not prevent the subscriber from understanding or accessing the original lead magnet.
+    </p>
+
+    <h3>4. Confusing a resend with a new campaign</h3>
+
+    <p>
+      A resend is still connected to the original message. A follow-up should have its own clear purpose and value.
+    </p>
+
+    <h3>5. Measuring only opens</h3>
+
+    <p>
+      Clicks, conversions, replies, unsubscribes, and other meaningful outcomes can provide more useful context than an open metric alone.
+    </p>
+
+    <h2 id="workflow">Example Automation Workflow</h2>
+
+    <p>
+      A simple workflow can separate resend and follow-up paths.
+    </p>
+
+    <div class="example-box">
+      <h3>Example</h3>
+
+      <p><strong>Step 1:</strong> Subscriber requests the lead magnet.</p>
+
+      <p><strong>Step 2:</strong> Send the original welcome email.</p>
+
+      <p><strong>Step 3:</strong> Allow an appropriate evaluation period.</p>
+
+      <p><strong>Step 4:</strong> Review available engagement signals.</p>
+
+      <p><strong>Step 5:</strong> If the subscriber appears eligible for a resend, send a revised delivery message.</p>
+
+      <p><strong>Step 6:</strong> If the subscriber has already engaged, move toward a new educational follow-up.</p>
+
+      <p><strong>Step 7:</strong> Continue the appropriate welcome sequence.</p>
+    </div>
+
+    <p>
+      The exact conditions will depend on the email platform and the data available in the subscriber record.
+    </p>
+
+    <h2 id="metrics">What to Measure</h2>
+
+    <p>
+      The goal is not simply to make more emails get opened. The broader goal is to improve the subscriber experience and move people toward useful actions.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Why it matters</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Clicks</td>
+          <td>Shows whether subscribers interacted with the resource or next step.</td>
+        </tr>
+
+        <tr>
+          <td>Conversions</td>
+          <td>Shows whether the message contributed to the intended outcome.</td>
+        </tr>
+
+        <tr>
+          <td>Replies</td>
+          <td>Can indicate direct subscriber interest or questions.</td>
+        </tr>
+
+        <tr>
+          <td>Unsubscribes</td>
+          <td>Can reveal whether message frequency or relevance needs attention.</td>
+        </tr>
+
+        <tr>
+          <td>Spam complaints</td>
+          <td>Important signal of negative subscriber experience.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="checklist">Resend or Follow-Up Decision Checklist</h2>
+
+    <ul>
+      <li>What was the purpose of the original email?</li>
+      <li>Did the subscriber receive the promised resource?</li>
+      <li>Is there evidence that the original message still needs attention?</li>
+      <li>Would another copy provide meaningful value?</li>
+      <li>Is there a genuinely new message available?</li>
+      <li>Would a follow-up advance the subscriber journey more naturally?</li>
+      <li>Could either option create unnecessary email pressure?</li>
+      <li>Are unsubscribe and preference options respected?</li>
+      <li>Can the result be measured using meaningful engagement signals?</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>Best practice:</strong> Think about the subscriber's next useful action rather than automatically choosing another send. If repeating the original message helps the subscriber, consider a resend. If the subscriber is ready for new value, move forward with a follow-up.
+    </div>
+
+    <div class="affiliate-box">
+      <h2>Email Automation for Resends and Follow-Ups</h2>
+
+      <p>
+        Email automation platforms can help marketers create welcome sequences, segment subscribers, and build different workflow paths based on available engagement information.
+      </p>
+
+      <p>
+        If you are evaluating an email marketing platform for automated welcome emails and subscriber workflows, you can learn more about
+        <a href="https://try.getresponsetoday.com/en0hx2fmuc5z"
+           rel="sponsored nofollow"
+           target="_blank">GetResponse</a>.
+      </p>
+
+      <p>
+        <strong>Affiliate disclosure:</strong> This is an affiliate link. If you use it and complete a qualifying action, we may receive a commission at no additional cost to you.
+      </p>
+    </div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is the main difference between a resend and a follow-up email?</h3>
+
+    <p>
+      A resend gives the subscriber another opportunity to receive or notice the original message, while a follow-up provides new information, education, or another step in the subscriber journey.
+    </p>
+
+    <h3>Should I resend a lead magnet email if someone did not open it?</h3>
+
+    <p>
+      A resend can be appropriate when the original email contains an important resource the subscriber requested. It should be used selectively rather than repeatedly.
+    </p>
+
+    <h3>Should I send a follow-up after a subscriber accesses the lead magnet?</h3>
+
+    <p>
+      Yes, a useful follow-up can be a natural next step when the subscriber has already received or accessed the resource. The follow-up should provide new value rather than simply repeat the delivery message.
+    </p>
+
+    <h3>Can the resend and follow-up be part of the same automation?</h3>
+
+    <p>
+      Yes. A welcome workflow can use different branches for subscribers who need another opportunity to receive the original resource and subscribers who are ready for the next message.
+    </p>
+
+    <h3>Should every subscriber receive both a resend and a follow-up?</h3>
+
+    <p>
+      Not necessarily. The sequence should depend on the subscriber's situation and the purpose of each message. Sending both without a clear reason can create unnecessary email volume.
+    </p>
+
+    <h3>What should I prioritize when deciding?</h3>
+
+    <p>
+      Start with subscriber value. Ask whether the original message still needs to reach the subscriber or whether a genuinely new message would be more useful.
+    </p>
+
+    <h2>Conclusion</h2>
+
+    <p>
+      Choosing between a welcome email resend and a follow-up email is fundamentally a question of purpose.
+    </p>
+
+    <p>
+      If the subscriber may still need the original lead magnet or important information, a carefully planned resend can make sense. If the original purpose has already been fulfilled and you have something new and useful to share, a follow-up is usually the more natural next step.
+    </p>
+
+    <p>
+      By separating these two purposes, marketers can build welcome sequences that are more intentional, relevant, and respectful of subscriber attention.
+    </p>
+
+    <div class="author-box">
+      <h2>About the Author</h2>
+
+      <p>
+        <strong>Muhammad Nasir Uddin</strong><br>
+        Assistant Professor of English at Zirabo Dewan Idris College, Savar, Dhaka, Bangladesh.
+      </p>
+
+      <p>
+        Nasir Email Marketing provides educational resources about email marketing, email automation, CRM, and related digital marketing topics.
+      </p>
+
+      <p>
+        Business email:
+        <a href="mailto:nasir@nasiremailmarketing.com">nasir@nasiremailmarketing.com</a>
+      </p>
+    </div>
+
+    <div class="affiliate-box">
+      <strong>Affiliate Disclosure</strong>
+
+      <p>
+        This website participates in affiliate programs. We may receive a commission when visitors use qualifying affiliate links or complete qualifying actions, at no additional cost to the visitor.
+      </p>
+
+      <p>
+        <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">
+          Learn more about our Affiliate Disclosure
+        </a>
+      </p>
+    </div>
+
+  </article>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://nasiremailmarketing.com/">Home</a>
+    <a href="https://nasiremailmarketing.com/about.html">About</a>
+    <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+    <a href="https://nasiremailmarketing.com/privacy-policy.html">Privacy Policy</a>
+    <a href="https://nasiremailmarketing.com/disclaimer.html">Disclaimer</a>
+    <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+    <a href="https://nasiremailmarketing.com/advertise.html">Advertise With Us</a>
+  </div>
+
+  <p>
+    © 2026 Nasir Email Marketing. All rights reserved.
+  </p>
+</footer>
+
+</body>
+</html>
