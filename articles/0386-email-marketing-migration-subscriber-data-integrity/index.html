@@ -1,0 +1,631 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>How to Verify Subscriber Data Integrity After an Email Marketing Migration</title>
+  <meta name="description" content="Learn how to verify subscriber data integrity after an email marketing migration using record counts, field mapping, duplicate detection, status checks, and reconciliation.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nasiremailmarketing.com/articles/0386-email-marketing-migration-subscriber-data-integrity/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Verify Subscriber Data Integrity After an Email Marketing Migration">
+  <meta property="og:description" content="A practical framework for checking migrated subscriber records, identifying missing or duplicated data, validating fields, and resolving migration discrepancies.">
+  <meta property="og:url" content="https://nasiremailmarketing.com/articles/0386-email-marketing-migration-subscriber-data-integrity/">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734" crossorigin="anonymous"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3ZDJCJWX5F');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Verify Subscriber Data Integrity After an Email Marketing Migration",
+    "description": "A practical guide to validating migrated subscriber records through reconciliation, field checks, duplicate detection, subscription-status verification, and exception handling.",
+    "url": "https://nasiremailmarketing.com/articles/0386-email-marketing-migration-subscriber-data-integrity/",
+    "author": {
+      "@type": "Person",
+      "name": "Muhammad Nasir Uddin",
+      "email": "nasir@nasiremailmarketing.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nasir Email Marketing"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://nasiremailmarketing.com/articles/0386-email-marketing-migration-subscriber-data-integrity/"
+    }
+  }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.75;
+      color: #222;
+      background: #f7f9fc;
+    }
+
+    header, footer {
+      background: #fff;
+      padding: 22px 20px;
+    }
+
+    header {
+      border-bottom: 1px solid #e5eaf1;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: inline-block;
+      color: #1557b0;
+      font-size: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a, footer a {
+      color: #1557b0;
+      text-decoration: none;
+    }
+
+    nav a:hover, footer a:hover, article a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 18px;
+    }
+
+    article {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.05);
+      overflow-wrap: anywhere;
+    }
+
+    .article-number {
+      color: #1557b0;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.35;
+      color: #172b4d;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-top: 12px;
+    }
+
+    h2 {
+      margin-top: 35px;
+      font-size: 25px;
+    }
+
+    h3 {
+      margin-top: 24px;
+      font-size: 20px;
+    }
+
+    article a {
+      color: #1557b0;
+    }
+
+    ul, ol {
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0;
+    }
+
+    th, td {
+      border: 1px solid #dce3ed;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f5fb;
+    }
+
+    .example {
+      background: #f7f9fc;
+      border-left: 4px solid #1557b0;
+      padding: 16px 20px;
+      margin: 22px 0;
+    }
+
+    .author-box, .disclosure {
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 1px solid #e5eaf1;
+    }
+
+    footer {
+      margin-top: 30px;
+      border-top: 1px solid #e5eaf1;
+    }
+
+    footer p {
+      margin: 8px 0;
+    }
+
+    @media (max-width: 600px) {
+      header, footer {
+        padding: 18px 16px;
+      }
+
+      main {
+        margin: 18px auto;
+        padding: 0 12px;
+      }
+
+      article {
+        padding: 23px 18px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+      th, td {
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a class="brand" href="https://nasiremailmarketing.com/">Nasir Email Marketing</a>
+      <nav aria-label="Main navigation">
+        <a href="https://nasiremailmarketing.com/">Home</a>
+        <a href="https://nasiremailmarketing.com/about.html">About</a>
+        <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+        <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="article-number">ARTICLE 0386</div>
+
+      <h1>How to Verify Subscriber Data Integrity After an Email Marketing Migration</h1>
+
+      <p>Moving subscriber records from one email marketing platform to another does not guarantee that every record arrives accurately. Email addresses may be missing, custom fields may map incorrectly, tags may be lost, and subscription statuses may be represented differently in the destination system.</p>
+
+      <p>Subscriber data integrity means that the information retained after migration is sufficiently accurate, complete, consistent, and usable for its intended purpose. Verifying it requires more than comparing two contact totals. You must check individual fields, important subscriber statuses, duplicates, missing records, and discrepancies between the original and destination systems.</p>
+
+      <p>This guide provides a repeatable process for checking migrated data before relying on it for lead magnet delivery and email follow-up automation.</p>
+
+      <h2>1. Define What Data Integrity Means for Your Migration</h2>
+
+      <p>Start by identifying which information must remain accurate after the migration. Not every platform stores the same fields, so define the requirements according to your actual subscriber records and workflow.</p>
+
+      <p>Important data-integrity dimensions include:</p>
+
+      <ul>
+        <li><strong>Completeness:</strong> Required records and fields are present.</li>
+        <li><strong>Accuracy:</strong> Values match the source or an approved transformation.</li>
+        <li><strong>Consistency:</strong> Related fields and statuses do not contradict one another.</li>
+        <li><strong>Uniqueness:</strong> Unintended duplicate records have been identified.</li>
+        <li><strong>Usability:</strong> The destination system can use the fields required by forms and automations.</li>
+        <li><strong>Permission integrity:</strong> Unsubscribed and suppressed contacts remain appropriately excluded.</li>
+      </ul>
+
+      <p>Write down the checks that matter before inspecting the destination data. This prevents the review from becoming an informal search for obvious mistakes only.</p>
+
+      <h2>2. Establish a Reliable Source Baseline</h2>
+
+      <p>You need a reference point against which to compare the migrated records. Where possible, preserve an export or report from the source platform before the migration.</p>
+
+      <p>Record the following information:</p>
+
+      <ul>
+        <li>The date and time of the source export.</li>
+        <li>The filters used to select records.</li>
+        <li>The total number of records exported.</li>
+        <li>The fields included in the export.</li>
+        <li>Whether suppressed, unsubscribed, bounced, or archived records were included.</li>
+        <li>Any transformation or exclusion applied during migration.</li>
+      </ul>
+
+      <p>A source count is useful only when you know what it represents. For example, a total that includes unsubscribed contacts should not be compared directly with a destination count containing only active subscribers.</p>
+
+      <p>Protect source exports because they may contain personal information. Limit access and retain them only as long as necessary for the migration, verification, and legitimate recordkeeping requirements.</p>
+
+      <h2>3. Reconcile Record Counts Properly</h2>
+
+      <p>Compare source and destination records using the same definitions and equivalent filters. The goal is to explain differences, not simply to make the two totals identical.</p>
+
+      <p>Use this basic calculation:</p>
+
+      <div class="example">
+        <p><strong>Unexplained record difference = Source records expected to transfer − Destination records verified</strong></p>
+        <p>Count only records that should have transferred under the migration plan. Document exclusions, intentional merges, and other approved transformations separately.</p>
+      </div>
+
+      <p>For example, suppose 5,000 records were selected for migration. The destination contains 4,950 corresponding records, and 30 records were intentionally excluded under the documented rules. The remaining 20 records require investigation if no other explanation accounts for the difference.</p>
+
+      <p>This example is illustrative. The correct reconciliation depends on the source filters, destination behavior, and actual migration rules.</p>
+
+      <p>Do not assume that a matching total proves integrity. Two systems can contain the same number of records while having different contacts, missing fields, or incorrect subscriber statuses.</p>
+
+      <h2>4. Validate Email Addresses and Unique Records</h2>
+
+      <p>Email addresses often serve as the primary way to match subscriber records across platforms. However, matching should be performed carefully, particularly if the source or destination platform modifies, merges, or normalizes records.</p>
+
+      <p>Check for:</p>
+
+      <ul>
+        <li>Missing or empty email address fields.</li>
+        <li>Obvious formatting errors.</li>
+        <li>Unexpected whitespace or inconsistent capitalization.</li>
+        <li>Duplicate addresses in the source export.</li>
+        <li>Records that exist in the source but cannot be located in the destination.</li>
+        <li>Records that appear in the destination without an expected source match.</li>
+      </ul>
+
+      <p>Normalize values for comparison only where appropriate, and preserve the original information needed for accurate reconciliation. Do not treat every apparent duplicate as an error: some platforms deliberately merge records, and the handling of aliases or repeated addresses may differ.</p>
+
+      <p>Never send marketing messages to an address merely to test whether it is valid. Use appropriate data checks and platform-supported validation methods.</p>
+
+      <h2>5. Verify Custom Fields and Data Mapping</h2>
+
+      <p>A successful import can still leave important fields incorrect. A source field such as “Lead Magnet Name” might map to a different destination field, or a date might be interpreted using an unexpected format.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Data element</th>
+            <th scope="col">What to verify</th>
+            <th scope="col">Potential problem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Email address</td>
+            <td>Value and record matching</td>
+            <td>Missing or mismatched contacts</td>
+          </tr>
+          <tr>
+            <td>First name</td>
+            <td>Correct field and fallback behavior</td>
+            <td>Incorrect personalization</td>
+          </tr>
+          <tr>
+            <td>Lead magnet tag</td>
+            <td>Correct tag or equivalent field</td>
+            <td>Wrong automation entry</td>
+          </tr>
+          <tr>
+            <td>Signup date</td>
+            <td>Expected format and timezone handling</td>
+            <td>Incorrect sequence timing or reporting</td>
+          </tr>
+          <tr>
+            <td>Custom preferences</td>
+            <td>Correct values and supported destination fields</td>
+            <td>Wrong segmentation or content</td>
+          </tr>
+          <tr>
+            <td>Subscriber status</td>
+            <td>Correct permission and suppression representation</td>
+            <td>Unwanted or ineligible sending</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Compare representative values in both systems and test fields used by important automations. If a source field has no equivalent destination field, document the decision rather than silently discarding it.</p>
+
+      <h2>6. Check Subscriber Status and Suppression Integrity</h2>
+
+      <p>Subscriber status requires particular attention because a data migration can accidentally change who is eligible to receive marketing messages.</p>
+
+      <p>Verify the handling of:</p>
+
+      <ul>
+        <li>Subscribed contacts.</li>
+        <li>Unsubscribed contacts.</li>
+        <li>Suppressed contacts.</li>
+        <li>Hard-bounced or otherwise ineligible addresses.</li>
+        <li>Contacts whose permission status is unknown or ambiguous.</li>
+      </ul>
+
+      <p>Platform status labels may not correspond exactly. Document how each source status maps to the destination and verify that the destination's sending rules respect the intended exclusions.</p>
+
+      <p>Do not convert an unknown or unsubscribed contact into an active subscriber simply to simplify the import. When permission status cannot be established, investigate the source records and follow the applicable platform rules and legal requirements.</p>
+
+      <h2>7. Detect Duplicates Without Deleting Good Records</h2>
+
+      <p>Duplicate records may be created when contacts already exist in the destination, when imports use different matching rules, or when integrations create additional records during the migration.</p>
+
+      <p>Use a controlled process:</p>
+
+      <ol>
+        <li>Identify records that share a possible matching identifier.</li>
+        <li>Compare relevant fields and subscriber statuses.</li>
+        <li>Determine whether the duplicates are genuine or intentional.</li>
+        <li>Check whether merging records could overwrite useful data.</li>
+        <li>Apply the platform's supported deduplication procedure.</li>
+        <li>Recheck the affected records and important automations.</li>
+      </ol>
+
+      <p>A duplicate review should not automatically delete records. Two records with the same address may contain different tags, history, or permission information. Resolve those differences according to a documented rule before merging or removing records.</p>
+
+      <h2>8. Identify Missing Fields and Unexpected Values</h2>
+
+      <p>Missing data is not always a migration failure. Some fields may have been empty in the original system, may not have been included in the export, or may not be supported by the destination.</p>
+
+      <p>Classify each discrepancy into a useful category:</p>
+
+      <ul>
+        <li><strong>Source missing:</strong> The field was already empty before migration.</li>
+        <li><strong>Export omission:</strong> The field was not included in the source export.</li>
+        <li><strong>Mapping error:</strong> The field was mapped to the wrong destination location.</li>
+        <li><strong>Transformation issue:</strong> The value changed during conversion.</li>
+        <li><strong>Unsupported field:</strong> The destination does not provide an equivalent field.</li>
+        <li><strong>Unexplained difference:</strong> The available evidence does not explain the discrepancy.</li>
+      </ul>
+
+      <p>This classification makes remediation more accurate. It also prevents time being wasted trying to recover information that never existed in the source data.</p>
+
+      <h2>9. Test Whether the Data Works in Real Workflows</h2>
+
+      <p>Correct-looking records are not enough if the destination automations cannot use them as expected. Test the fields that determine subscriber entry, segmentation, personalization, timing, and exits.</p>
+
+      <p>Use controlled test contacts and check that:</p>
+
+      <ul>
+        <li>The intended signup event triggers the correct automation.</li>
+        <li>Lead magnet tags or equivalent fields are recognized.</li>
+        <li>Conditional branches evaluate the expected values.</li>
+        <li>Personalization fields display the correct information.</li>
+        <li>Missing optional fields use suitable fallback content.</li>
+        <li>Suppressed contacts remain excluded from marketing sends.</li>
+        <li>Existing subscribers are not unintentionally enrolled twice.</li>
+      </ul>
+
+      <p>Use the platform's preview, test, and automation-history features where available. Avoid sending live marketing messages to real subscribers merely to test a configuration.</p>
+
+      <h2>10. Use Sampling and Full Reconciliation Together</h2>
+
+      <p>Manual review of every field in every record may be impractical for a large list. A useful approach combines broad reconciliation with targeted record inspection.</p>
+
+      <p><strong>Broad checks</strong> can include total counts, missing-field counts, status totals, and duplicate counts.</p>
+
+      <p><strong>Targeted checks</strong> can include:</p>
+
+      <ul>
+        <li>Records with missing required fields.</li>
+        <li>Records that failed to match between systems.</li>
+        <li>Contacts with unusual or conflicting statuses.</li>
+        <li>Records from different signup forms or lead magnets.</li>
+        <li>Contacts with complex custom-field values.</li>
+      </ul>
+
+      <p>Sampling helps identify errors that may not appear in aggregate totals. However, a small sample cannot prove that every record is correct. Check all records or use systematic comparisons for critical fields and permission-related data whenever feasible.</p>
+
+      <h2>11. Maintain a Discrepancy Log</h2>
+
+      <p>Keep a record of each significant data-integrity issue so that findings can be resolved, retested, and reviewed.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Field</th>
+            <th scope="col">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Issue ID</td>
+            <td>Unique reference for the discrepancy</td>
+          </tr>
+          <tr>
+            <td>Issue category</td>
+            <td>Missing record, incorrect field, duplicate, status mismatch, or other issue</td>
+          </tr>
+          <tr>
+            <td>Expected result</td>
+            <td>What the migration plan requires</td>
+          </tr>
+          <tr>
+            <td>Observed result</td>
+            <td>What was found during verification</td>
+          </tr>
+          <tr>
+            <td>Likely cause</td>
+            <td>The explanation supported by available evidence</td>
+          </tr>
+          <tr>
+            <td>Corrective action</td>
+            <td>The change or investigation required</td>
+          </tr>
+          <tr>
+            <td>Retest result</td>
+            <td>Whether the issue was resolved</td>
+          </tr>
+          <tr>
+            <td>Resolution status</td>
+            <td>Open, under investigation, resolved, or accepted exception</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Use internal record identifiers where possible instead of copying full subscriber details into the discrepancy log. Store any necessary sensitive information securely and limit access to authorized personnel.</p>
+
+      <h2>12. Decide When the Data Is Ready for Use</h2>
+
+      <p>Data verification should end with a clear decision, not simply a statement that the import completed.</p>
+
+      <p>Before approving the migrated data, confirm that:</p>
+
+      <ul>
+        <li>Record-count differences are reconciled or explained.</li>
+        <li>Required fields are present and mapped correctly.</li>
+        <li>Duplicates have been reviewed and handled appropriately.</li>
+        <li>Subscriber permissions and suppression rules are preserved.</li>
+        <li>Important workflow conditions operate correctly.</li>
+        <li>Critical discrepancies are resolved or explicitly escalated.</li>
+        <li>The verification results are documented.</li>
+      </ul>
+
+      <p>Some discrepancies may be acceptable if they are understood, documented, and do not create unacceptable risks. Others, particularly those affecting subscriber permissions or widespread automation behavior, should be resolved before normal sending proceeds.</p>
+
+      <h2>Worked Example: Reconciling a Migrated Subscriber List</h2>
+
+      <div class="example">
+        <p><strong>Scenario:</strong> A business expects 2,000 selected subscriber records to transfer to a new email marketing platform.</p>
+
+        <p><strong>Initial finding:</strong> The destination contains 1,985 matching records. Fifteen expected records have not yet been located.</p>
+
+        <p><strong>Investigation:</strong> The migration team checks source filters, export contents, destination search results, and documented exclusions.</p>
+
+        <p><strong>Resolution:</strong> The team identifies the cause of each discrepancy, corrects any confirmed import or mapping problems, and documents records that were intentionally excluded.</p>
+
+        <p><strong>Final check:</strong> The team compares the reconciled record set, checks important fields, verifies suppression handling, and tests the lead magnet automation with controlled contacts.</p>
+      </div>
+
+      <p>The example illustrates the process rather than prescribing a universal acceptable error rate. The appropriate completion criteria depend on the migration scope, data requirements, and consequences of an error.</p>
+
+      <h2>Common Data-Integrity Mistakes</h2>
+
+      <ul>
+        <li>Assuming equal record counts prove that the data is accurate.</li>
+        <li>Comparing totals that use different filters or status definitions.</li>
+        <li>Ignoring custom-field mapping errors.</li>
+        <li>Deleting possible duplicates without checking their contents.</li>
+        <li>Overlooking unsubscribe and suppression records.</li>
+        <li>Using a small sample as proof that every record is correct.</li>
+        <li>Correcting missing values without understanding their origin.</li>
+        <li>Failing to retest automations after data corrections.</li>
+        <li>Keeping sensitive subscriber exports in unrestricted locations.</li>
+      </ul>
+
+      <h2>Subscriber Data Integrity Checklist</h2>
+
+      <ul>
+        <li>Define the required data-integrity checks.</li>
+        <li>Preserve a source baseline and document export filters.</li>
+        <li>Reconcile record counts using equivalent definitions.</li>
+        <li>Match records and investigate unexplained differences.</li>
+        <li>Validate email addresses and required fields.</li>
+        <li>Verify custom-field and tag mappings.</li>
+        <li>Confirm subscription and suppression status handling.</li>
+        <li>Review duplicates before merging or deleting records.</li>
+        <li>Test fields used by automations and personalization.</li>
+        <li>Record discrepancies and corrective actions.</li>
+        <li>Retest after significant corrections.</li>
+        <li>Approve the data only after critical issues are addressed.</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Does matching subscriber counts prove a successful migration?</h3>
+      <p>No. Matching counts do not prove that the same contacts were transferred or that their fields and statuses are accurate. Compare records, verify required fields, and investigate important discrepancies.</p>
+
+      <h3>Should every missing field be treated as a migration error?</h3>
+      <p>No. A field may have been empty in the source, excluded from the export, or unsupported by the destination. Identify the reason before deciding whether corrective action is necessary.</p>
+
+      <h3>How should I handle duplicate subscriber records?</h3>
+      <p>Compare the records and follow a documented deduplication rule. Check relevant fields, subscriber history, and permission status before merging or removing records.</p>
+
+      <h3>Why is suppression data important during migration?</h3>
+      <p>Suppression information helps prevent marketing messages from being sent to contacts who should be excluded. Verify that the destination system represents and enforces those exclusions correctly.</p>
+
+      <h3>Can sampling replace a full data comparison?</h3>
+      <p>Sampling is useful for inspecting record quality, but it cannot establish that every record is correct. Use systematic comparisons for critical fields and permission-related information whenever feasible.</p>
+
+      <h2>Conclusion</h2>
+
+      <p>Verifying subscriber data integrity after an email marketing migration requires more than confirming that contacts were imported. You must reconcile record counts, validate fields, investigate duplicates, check subscriber permissions, and test the data in the workflows that depend on it.</p>
+
+      <p>A documented verification process helps identify discrepancies before they affect personalization, segmentation, or automated emails. By recording the evidence, resolving critical issues, and retesting corrections, you can make a more informed decision about whether migrated subscriber data is ready for use.</p>
+
+      <div class="author-box">
+        <h2>About the Author</h2>
+        <p>Muhammad Nasir Uddin is an Assistant Professor of English at Zirabo Dewan Idris College, Savar, Dhaka, Bangladesh. He writes about email marketing, automation, subscriber management, and practical digital marketing workflows.</p>
+        <p>Email: <a href="mailto:nasir@nasiremailmarketing.com">nasir@nasiremailmarketing.com</a></p>
+      </div>
+
+      <div class="disclosure">
+        <h2>Affiliate Disclosure</h2>
+        <p>This website participates in affiliate programs. We may receive a commission when visitors use qualifying affiliate links or complete qualifying actions, at no additional cost to the visitor.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav aria-label="Footer navigation">
+        <a href="https://nasiremailmarketing.com/">Home</a>
+        <a href="https://nasiremailmarketing.com/about.html">About</a>
+        <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+        <a href="https://nasiremailmarketing.com/privacy-policy.html">Privacy Policy</a>
+        <a href="https://nasiremailmarketing.com/terms-and-conditions.html">Terms and Conditions</a>
+        <a href="https://nasiremailmarketing.com/disclaimer.html">Disclaimer</a>
+        <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+        <a href="https://nasiremailmarketing.com/advertise.html">Advertise With Us</a>
+      </nav>
+      <p>&copy; 2026 Nasir Email Marketing. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+```
