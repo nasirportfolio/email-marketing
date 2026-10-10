@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Rebuild Email Automation Holiday Exclusion Rules After Migration</title>
+  <meta name="description" content="Learn how to migrate email automation holiday exclusion rules, manage regional holiday calendars, prevent unwanted sends, and test date-based scheduling safely.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nasiremailmarketing.com/articles/0402-email-marketing-migration-automation-holiday-exclusion-rules/">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734" crossorigin="anonymous"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3ZDJCJWX5F');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Rebuild Email Automation Holiday Exclusion Rules After Migration",
+    "description": "A practical guide to migrating holiday exclusion rules for email automations, handling regional calendars, and validating date-based sending restrictions.",
+    "url": "https://nasiremailmarketing.com/articles/0402-email-marketing-migration-automation-holiday-exclusion-rules/",
+    "author": {
+      "@type": "Person",
+      "name": "Muhammad Nasir Uddin",
+      "email": "nasir@nasiremailmarketing.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nasir Email Marketing",
+      "url": "https://nasiremailmarketing.com/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://nasiremailmarketing.com/articles/0402-email-marketing-migration-automation-holiday-exclusion-rules/"
+    }
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      color: #222;
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header, footer {
+      background: #fff;
+      padding: 22px 40px;
+    }
+    header { border-bottom: 1px solid #e5eaf1; }
+    .brand {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: #1557b0;
+      font-size: 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+    }
+    nav a, footer a {
+      color: #1557b0;
+      text-decoration: none;
+    }
+    nav a:hover, footer a:hover { text-decoration: underline; }
+    main { padding: 28px 20px; }
+    article {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      overflow-wrap: anywhere;
+    }
+    .article-number {
+      color: #1557b0;
+      font-weight: 700;
+      letter-spacing: .4px;
+    }
+    h1, h2, h3 { color: #172b4d; line-height: 1.35; }
+    h1 { font-size: 32px; margin-top: 8px; }
+    h2 {
+      font-size: 24px;
+      margin-top: 38px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5eaf1;
+    }
+    h3 { font-size: 19px; margin-top: 25px; }
+    a { color: #1557b0; }
+    ul, ol { padding-left: 25px; }
+    li { margin-bottom: 8px; }
+    .intro, .note {
+      background: #f7f9fc;
+      border-left: 4px solid #1557b0;
+      padding: 16px 18px;
+      margin: 22px 0;
+    }
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+    th, td {
+      border: 1px solid #dbe2ec;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #f0f4fa; }
+    .author-box {
+      margin-top: 38px;
+      padding: 20px;
+      background: #f7f9fc;
+      border-radius: 8px;
+    }
+    footer {
+      border-top: 1px solid #e5eaf1;
+      font-size: 14px;
+    }
+    footer p { margin: 10px 0; }
+    @media (max-width: 650px) {
+      header, footer { padding: 20px; }
+      main { padding: 16px 10px; }
+      article { padding: 22px 18px; }
+      h1 { font-size: 27px; }
+      h2 { font-size: 22px; }
+      nav { gap: 10px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="https://nasiremailmarketing.com/">Nasir Email Marketing</a>
+    <nav aria-label="Main navigation">
+      <a href="https://nasiremailmarketing.com/">Home</a>
+      <a href="https://nasiremailmarketing.com/about.html">About</a>
+      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <div class="article-number">ARTICLE 0402</div>
+      <h1>How to Rebuild Email Automation Holiday Exclusion Rules After Migration</h1>
+
+      <div class="intro">
+        <p>An email automation may have the correct trigger, message, and business-hour window but still send on a date when the business intended to pause routine communication. This can happen when holiday exclusions are stored separately from the workflow, depend on an external calendar, or are not transferred during a platform migration.</p>
+        <p>This guide explains how to inventory holiday rules, rebuild supported date exclusions, handle regional calendars, and test the next eligible send date. It focuses on date-based exclusions rather than general time-zone configuration or ordinary weekday scheduling.</p>
+      </div>
+
+      <h2>1. Why Holiday Exclusions Need Their Own Migration Check</h2>
+
+      <p>A holiday exclusion prevents a scheduled action from occurring on specified dates. Depending on the business, the rule may apply to public holidays, company closure dates, regional observances, or a planned pause in promotional communication.</p>
+
+      <p>Holiday restrictions are easy to overlook because they may not appear directly inside the email automation. They might be configured in a campaign calendar, a shared date list, a scheduling integration, or a separate workflow condition.</p>
+
+      <p>After migration, the destination platform may have no equivalent calendar, may interpret dates differently, or may require the exclusions to be rebuilt. Copying the message sequence alone does not establish that the original holiday behavior has been preserved.</p>
+
+      <p>Before changing anything, answer these questions:</p>
+      <ul>
+        <li>Which dates must be excluded?</li>
+        <li>Which country, region, or business calendar determines those dates?</li>
+        <li>Does the exclusion apply to every automation or only selected message types?</li>
+        <li>Should an eligible message wait until a later date, be skipped, or follow another approved rule?</li>
+        <li>Who maintains the calendar when dates or business policies change?</li>
+      </ul>
+
+      <h2>2. Distinguish Holiday Exclusions from Business-Hour Rules</h2>
+
+      <p>A business-hour restriction and a holiday exclusion are related but different controls. One restricts sending by clock time or day of the week; the other excludes particular dates or calendar events.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Control</th>
+              <th>Example requirement</th>
+              <th>What to validate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Business-hour window</td>
+              <td>Allow routine messages during approved weekday hours</td>
+              <td>Confirm permitted days, hours, and governing time zone.</td>
+            </tr>
+            <tr>
+              <td>Holiday exclusion</td>
+              <td>Prevent routine sends on selected holiday dates</td>
+              <td>Confirm the date list, calendar, and exclusion behavior.</td>
+            </tr>
+            <tr>
+              <td>Time zone</td>
+              <td>Interpret a scheduled time using the intended clock</td>
+              <td>Confirm account-level or recipient-level time-zone behavior.</td>
+            </tr>
+            <tr>
+              <td>Wait condition</td>
+              <td>Delay a workflow until a defined condition is met</td>
+              <td>Confirm the actual wait behavior independently of calendar exclusions.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>For example, a message could be scheduled for 10:00 a.m. on a weekday and still fall on an excluded holiday. A weekday-only restriction would not necessarily prevent that send.</p>
+
+      <p>For the related scheduling controls, see <a href="https://nasiremailmarketing.com/articles/0401-email-marketing-migration-automation-business-hours-scheduling/">Article 0401: Business-Hour Scheduling</a> and <a href="https://nasiremailmarketing.com/articles/0400-email-marketing-migration-automation-time-zone-settings/">Article 0400: Time Zone Settings</a>.</p>
+
+      <h2>3. Build an Inventory of the Original Holiday Rules</h2>
+
+      <p>Before recreating a calendar, document what the old system actually did. Do not assume that every holiday exclusion was applied globally or that every date in an old campaign calendar is still required.</p>
+
+      <ol>
+        <li><strong>Locate existing rules:</strong> Review automation settings, campaign calendars, saved date lists, and any connected scheduling systems.</li>
+        <li><strong>Identify the affected messages:</strong> Determine whether the restriction applies to promotional emails, routine follow-ups, event reminders, or another message category.</li>
+        <li><strong>Record the source calendar:</strong> Note the country, region, organization, or business unit whose dates determine the exclusions.</li>
+        <li><strong>Record date logic:</strong> Distinguish fixed dates from holidays whose dates change each year.</li>
+        <li><strong>Document what happens next:</strong> Establish whether a blocked message waits for the next eligible window, is skipped, or follows another approved rule.</li>
+        <li><strong>Identify ownership:</strong> Record who is responsible for maintaining future holiday dates.</li>
+      </ol>
+
+      <p>If a rule cannot be found or its behavior is unclear, mark it as unverified. A migration record should distinguish confirmed behavior from assumptions.</p>
+
+      <h3>Illustrative holiday-rule inventory</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Rule field</th>
+              <th>Illustrative entry</th>
+              <th>Validation question</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Calendar</td>
+              <td>Approved business calendar</td>
+              <td>Is this the correct calendar for the audience?</td>
+            </tr>
+            <tr>
+              <td>Excluded date</td>
+              <td>A date confirmed by the calendar owner</td>
+              <td>Is the date correct for the intended year and region?</td>
+            </tr>
+            <tr>
+              <td>Covered workflow</td>
+              <td>Routine promotional follow-up</td>
+              <td>Does the rule apply to this message type?</td>
+            </tr>
+            <tr>
+              <td>Outside-date behavior</td>
+              <td>Hold until an approved future window, if supported</td>
+              <td>Does the destination actually implement this behavior?</td>
+            </tr>
+            <tr>
+              <td>Owner</td>
+              <td>Designated workflow or calendar administrator</td>
+              <td>Who updates the calendar and approves changes?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>This is a sample structure, not a real holiday calendar or a record of a completed migration.</p>
+
+      <h2>4. Choose the Correct Calendar for the Audience</h2>
+
+      <p>Not every subscriber follows the same public-holiday calendar. A business may serve customers in several countries or operate from one location while sending to recipients elsewhere.</p>
+
+      <p>Decide which calendar should control each automation based on its purpose and audience. Possible approaches include:</p>
+      <ul>
+        <li><strong>Business-location calendar:</strong> Appropriate when the restriction follows the organization's own operating schedule.</li>
+        <li><strong>Recipient-region calendar:</strong> Potentially appropriate when the communication should respect holidays in each recipient's region, provided the required location data and platform capabilities are available.</li>
+        <li><strong>Campaign-specific calendar:</strong> Useful when a particular campaign follows a distinct event or closure schedule.</li>
+        <li><strong>Explicit approved date list:</strong> An option when the required dates are known and maintained reliably.</li>
+      </ul>
+
+      <p>Do not select a calendar simply because it is the default in the destination platform. Confirm that it matches the business requirement and the people affected by the automation.</p>
+
+      <h3>Why country data may not be enough</h3>
+
+      <p>A country field can be insufficient when different regions observe different holidays or business closures. If the rule depends on a more specific location, the available contact data must support that distinction. When it does not, define a conservative, documented fallback instead of guessing.</p>
+
+      <h2>5. Handle Fixed-Date and Movable Holidays Differently</h2>
+
+      <p>Some holidays fall on the same calendar date each year. Others depend on a weekday pattern, a religious or lunisolar calendar, or an official annual announcement. A date list copied from one year should not automatically be treated as correct for the next year.</p>
+
+      <h3>Fixed-date exclusions</h3>
+      <p>Confirm the month, day, year, and applicable region. Check whether the rule is intended to repeat annually or apply only once. An annual rule and a one-time exclusion have different maintenance requirements.</p>
+
+      <h3>Movable-date exclusions</h3>
+      <p>Use an authoritative calendar or a confirmed annual schedule. Record the source and the year for which the date was verified. Do not calculate or infer a holiday date unless the method is reliable and appropriate for that calendar.</p>
+
+      <h3>Substitute and observed holidays</h3>
+      <p>Some jurisdictions observe a holiday on a different date when it falls on a weekend. Determine whether the business should exclude the actual holiday, the observed date, or both. The answer depends on the relevant calendar and the business policy.</p>
+
+      <div class="note">
+        <strong>Maintenance rule:</strong> Store the year and calendar source with date-based exclusions. Review the list before each new calendar year rather than assuming that last year's entries remain accurate.
+      </div>
+
+      <h2>6. Rebuild the Exclusion Logic in the Destination Platform</h2>
+
+      <p>Once the requirements are documented, identify how the destination platform can enforce them. Some platforms may support native date exclusions or calendar controls; others may require a supported condition or a separate scheduling process.</p>
+
+      <ol>
+        <li><strong>Check native capabilities:</strong> Review the current documentation for date exclusions, calendar features, and workflow scheduling conditions.</li>
+        <li><strong>Choose the appropriate scope:</strong> Determine whether the exclusion belongs at account, campaign, message, or workflow level.</li>
+        <li><strong>Enter or connect the approved dates:</strong> Use a verified source and ensure the date format is interpreted correctly.</li>
+        <li><strong>Define the result of a match:</strong> Specify whether the action is delayed, skipped, or routed through another approved path.</li>
+        <li><strong>Check the next eligible date:</strong> Ensure that the action does not simply resume at another excluded date.</li>
+        <li><strong>Document platform limitations:</strong> If the destination cannot reproduce the old behavior, record the difference and get approval for an alternative.</li>
+      </ol>
+
+      <p>Do not assume a native feature exists simply because a similar feature was available in the previous platform. Verify the actual controls before relying on them.</p>
+
+      <h2>7. Define What Happens to Messages Blocked by a Holiday</h2>
+
+      <p>Excluding a date is only part of the requirement. The workflow also needs a defined outcome for an action that becomes eligible on an excluded date.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Situation</th>
+              <th>Possible policy</th>
+              <th>What to verify</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Routine message is due on an excluded holiday</td>
+              <td>Hold until the next approved sending window, if supported</td>
+              <td>Confirm the actual next eligible date and time.</td>
+            </tr>
+            <tr>
+              <td>Message is tied to a date-sensitive event</td>
+              <td>Skip, reschedule, or use an approved alternative based on the event's purpose</td>
+              <td>Confirm that a delay will not make the message misleading or irrelevant.</td>
+            </tr>
+            <tr>
+              <td>Several excluded dates occur consecutively</td>
+              <td>Continue checking until an eligible date is found, if the platform supports that logic</td>
+              <td>Verify that the rule does not release the message on another excluded date.</td>
+            </tr>
+            <tr>
+              <td>Calendar data is missing or uncertain</td>
+              <td>Use an approved fallback or hold the action for review</td>
+              <td>Confirm that uncertainty does not silently bypass the exclusion.</td>
+            </tr>
+            <tr>
+              <td>The platform cannot apply the exclusion natively</td>
+              <td>Use a documented alternative or revise the workflow design</td>
+              <td>Test the alternative and obtain approval before launch.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Do not automatically move every blocked message to the next day. That day may also be excluded, may fall outside the permitted sending window, or may make the message inappropriate. The intended outcome should be defined for each type of automation.</p>
+
+      <h2>8. Test Holiday Exclusions Before Launch</h2>
+
+      <p>A calendar that looks correct in a settings screen is not sufficient evidence that the workflow behaves correctly. Test the exclusion and the action that follows it using the destination platform's available test or preview features.</p>
+
+      <ol>
+        <li><strong>Select a controlled test workflow:</strong> Avoid using the full production audience for initial validation.</li>
+        <li><strong>Choose a permitted date:</strong> Confirm that a message can proceed when no exclusion applies and all other conditions are met.</li>
+        <li><strong>Choose an excluded date:</strong> Verify that the date rule blocks or redirects the action as intended.</li>
+        <li><strong>Test the next eligible window:</strong> Confirm that the action does not resume on another excluded date or outside the approved hours.</li>
+        <li><strong>Test a year boundary:</strong> Where annual rules apply, confirm that the date list is valid for the intended year.</li>
+        <li><strong>Test regional differences:</strong> If different calendars are used, check a representative record for each relevant rule set.</li>
+        <li><strong>Review execution evidence:</strong> Record what the platform actually did, not merely what the configuration was expected to do.</li>
+        <li><strong>Document limitations:</strong> Mark any case that could not be tested as unresolved.</li>
+      </ol>
+
+      <h3>Illustrative test record</h3>
+
+      <p>The following example demonstrates how to record test cases. It is not a claim that these tests have been run.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Test case</th>
+              <th>Expected behavior</th>
+              <th>Result to record</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Action is due on a permitted date</td>
+              <td>Normal scheduling rules determine when it proceeds</td>
+              <td>Observed eligibility and execution result</td>
+            </tr>
+            <tr>
+              <td>Action is due on an excluded date</td>
+              <td>The holiday rule prevents the prohibited send</td>
+              <td>Whether the action was blocked or redirected</td>
+            </tr>
+            <tr>
+              <td>Next day is also excluded</td>
+              <td>The workflow continues to respect the applicable exclusions</td>
+              <td>Actual next eligible date, if supported</td>
+            </tr>
+            <tr>
+              <td>Annual holiday list changes</td>
+              <td>The current year's approved dates are used</td>
+              <td>Verified date source and observed behavior</td>
+            </tr>
+            <tr>
+              <td>Calendar or region cannot be determined</td>
+              <td>The documented fallback is applied</td>
+              <td>Fallback result and any unresolved issue</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>9. Avoid Duplicate Sends When Correcting Existing Workflows</h2>
+
+      <p>If a holiday rule was missing after migration, some contacts may already have received messages on excluded dates. Correcting the calendar does not necessarily repair past sends or safely reschedule every contact already waiting in the workflow.</p>
+
+      <p>Before making a correction:</p>
+      <ul>
+        <li>Identify affected workflows, contacts, and dates.</li>
+        <li>Check which messages have already been sent or which actions have completed.</li>
+        <li>Determine how the destination platform applies rule changes to contacts already enrolled.</li>
+        <li>Review whether re-enrollment or replay could produce duplicate messages.</li>
+        <li>Test the correction on a controlled record before applying it broadly.</li>
+        <li>Document whether affected contacts should continue, be rescheduled, or be excluded from replay.</li>
+      </ul>
+
+      <p>Avoid restarting an entire automation simply to add a holiday exclusion. Restarting completed steps may repeat actions or send messages that recipients have already received.</p>
+
+      <p>If the correction also involves a failed workflow step, see <a href="https://nasiremailmarketing.com/articles/0399-email-marketing-migration-automation-error-handling/">Article 0399: Automation Error Handling</a> for related recovery considerations.</p>
+
+      <h2>10. Establish a Repeatable Calendar Maintenance Process</h2>
+
+      <p>Holiday exclusions require ongoing maintenance. Without an owner and a review schedule, a carefully rebuilt calendar can become inaccurate over time.</p>
+
+      <p>A practical maintenance process should include:</p>
+      <ul>
+        <li><strong>Annual review:</strong> Verify dates that change each year before relying on the calendar.</li>
+        <li><strong>Source verification:</strong> Use the relevant official or otherwise authoritative calendar.</li>
+        <li><strong>Regional review:</strong> Confirm that the correct calendar is assigned to each workflow or audience.</li>
+        <li><strong>Change approval:</strong> Record who approved additions, removals, or changes to the exclusion policy.</li>
+        <li><strong>Pre-holiday testing:</strong> Check important automations before a major exclusion period.</li>
+        <li><strong>Post-change validation:</strong> Confirm that messages resume as intended after the excluded period.</li>
+      </ul>
+
+      <p>Keep the calendar's source, year, applicable region, and owner with the configuration record. That information makes it easier to explain why a date was excluded and who should review it when the business calendar changes.</p>
+
+      <h2>Holiday Exclusion Migration Checklist</h2>
+
+      <ul>
+        <li>Inventory the original holiday rules and their scope.</li>
+        <li>Identify the correct country, regional, or business calendar.</li>
+        <li>Separate fixed-date rules from movable and observed holidays.</li>
+        <li>Confirm whether each rule is one-time or recurring.</li>
+        <li>Verify the destination platform's actual exclusion capabilities.</li>
+        <li>Define what happens to messages due on excluded dates.</li>
+        <li>Check consecutive exclusions and the next eligible sending window.</li>
+        <li>Test permitted dates, excluded dates, and relevant regional cases.</li>
+        <li>Review already-enrolled contacts before correcting live workflows.</li>
+        <li>Assign calendar ownership and establish a recurring review process.</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Does excluding weekends automatically exclude public holidays?</h3>
+      <p>No. A weekday restriction and a holiday exclusion are separate rules. A public holiday can fall on a normal weekday, so the relevant date must be covered by the applicable holiday policy.</p>
+
+      <h3>Can one holiday calendar work for every subscriber?</h3>
+      <p>Only if it matches the business requirement for the entire audience. If subscribers or business operations follow different regional calendars, separate rules may be necessary, depending on the destination platform's capabilities.</p>
+
+      <h3>Should every message blocked by a holiday be sent the next day?</h3>
+      <p>Not automatically. The next day may also be excluded, may be outside permitted hours, or may make a date-sensitive message irrelevant. Define and test the correct outcome for each message type.</p>
+
+      <h3>How often should holiday exclusion rules be reviewed?</h3>
+      <p>Review annual calendars before the relevant year begins, and verify important dates before major holiday periods. Update the calendar when the underlying business policy changes.</p>
+
+      <h3>What if the destination platform does not support holiday exclusions?</h3>
+      <p>Document the limitation and evaluate a supported alternative. Test the alternative against the original requirements and obtain approval before activating it. Do not claim equivalent behavior until it has been validated.</p>
+
+      <h2>Conclusion</h2>
+
+      <p>Holiday exclusion rules are a distinct part of email automation migration. Copying a workflow does not guarantee that regional calendars, annual date changes, exception rules, or the handling of blocked messages will be preserved.</p>
+
+      <p>Document the original requirements, verify the destination platform's capabilities, define what should happen on excluded dates, and test the next eligible window. Assigning clear calendar ownership also helps prevent the same scheduling problem from returning in a future year.</p>
+
+      <div class="author-box">
+        <h2>About the Author</h2>
+        <p>Muhammad Nasir Uddin is an Assistant Professor of English at Zirabo Dewan Idris College, Savar, Dhaka, Bangladesh. Through Nasir Email Marketing, he publishes educational resources about email marketing, automation, and related digital marketing practices.</p>
+        <p>Contact: <a href="mailto:nasir@nasiremailmarketing.com">nasir@nasiremailmarketing.com</a></p>
+      </div>
+
+      <h2>Affiliate Disclosure</h2>
+      <p>This website participates in affiliate programs. We may receive a commission when visitors use qualifying affiliate links or complete qualifying actions, at no additional cost to the visitor.</p>
+      <p>This article contains no GetResponse affiliate link. Its purpose is to provide practical guidance on holiday exclusion rules and migration validation rather than promote a particular platform.</p>
+    </article>
+  </main>
+
+  <footer>
+    <nav aria-label="Footer navigation">
+      <a href="https://nasiremailmarketing.com/">Home</a>
+      <a href="https://nasiremailmarketing.com/about.html">About</a>
+      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+      <a href="https://nasiremailmarketing.com/privacy-policy.html">Privacy Policy</a>
+      <a href="https://nasiremailmarketing.com/disclaimer.html">Disclaimer</a>
+      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="https://nasiremailmarketing.com/advertise.html">Advertise With Us</a>
+      <a href="https://nasiremailmarketing.com/terms-and-conditions.html">Terms and Conditions</a>
+    </nav>
+    <p>© 2026 Nasir Email Marketing. All rights reserved.</p>
+  </footer>
+</body>
+</html>
