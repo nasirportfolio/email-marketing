@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Rebuild Email Automation Business-Hour Scheduling After Migration</title>
+  <meta name="description" content="Learn how to rebuild email automation business-hour schedules after migration, handle weekends and holidays, validate sending windows, and prevent out-of-hours emails.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nasiremailmarketing.com/articles/0401-email-marketing-migration-automation-business-hours-scheduling/">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734" crossorigin="anonymous"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3ZDJCJWX5F');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Rebuild Email Automation Business-Hour Scheduling After Migration",
+    "description": "A practical guide to migrating email automation business-hour rules, validating permitted sending windows, handling exceptions, and testing schedules.",
+    "url": "https://nasiremailmarketing.com/articles/0401-email-marketing-migration-automation-business-hours-scheduling/",
+    "author": {
+      "@type": "Person",
+      "name": "Muhammad Nasir Uddin",
+      "email": "nasir@nasiremailmarketing.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nasir Email Marketing",
+      "url": "https://nasiremailmarketing.com/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://nasiremailmarketing.com/articles/0401-email-marketing-migration-automation-business-hours-scheduling/"
+    }
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      color: #222;
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header, footer {
+      background: #fff;
+      padding: 22px 40px;
+    }
+    header { border-bottom: 1px solid #e5eaf1; }
+    .brand {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: #1557b0;
+      font-size: 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+    }
+    nav a, footer a {
+      color: #1557b0;
+      text-decoration: none;
+    }
+    nav a:hover, footer a:hover { text-decoration: underline; }
+    main { padding: 28px 20px; }
+    article {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      overflow-wrap: anywhere;
+    }
+    .article-number {
+      color: #1557b0;
+      font-weight: 700;
+      letter-spacing: .4px;
+    }
+    h1, h2, h3 { color: #172b4d; line-height: 1.35; }
+    h1 { font-size: 32px; margin-top: 8px; }
+    h2 {
+      font-size: 24px;
+      margin-top: 38px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5eaf1;
+    }
+    h3 { font-size: 19px; margin-top: 25px; }
+    a { color: #1557b0; }
+    ul, ol { padding-left: 25px; }
+    li { margin-bottom: 8px; }
+    .intro, .note {
+      background: #f7f9fc;
+      border-left: 4px solid #1557b0;
+      padding: 16px 18px;
+      margin: 22px 0;
+    }
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+    th, td {
+      border: 1px solid #dbe2ec;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #f0f4fa; }
+    .author-box {
+      margin-top: 38px;
+      padding: 20px;
+      background: #f7f9fc;
+      border-radius: 8px;
+    }
+    footer {
+      border-top: 1px solid #e5eaf1;
+      font-size: 14px;
+    }
+    footer p { margin: 10px 0; }
+    @media (max-width: 650px) {
+      header, footer { padding: 20px; }
+      main { padding: 16px 10px; }
+      article { padding: 22px 18px; }
+      h1 { font-size: 27px; }
+      h2 { font-size: 22px; }
+      nav { gap: 10px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="https://nasiremailmarketing.com/">Nasir Email Marketing</a>
+    <nav aria-label="Main navigation">
+      <a href="https://nasiremailmarketing.com/">Home</a>
+      <a href="https://nasiremailmarketing.com/about.html">About</a>
+      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <div class="article-number">ARTICLE 0401</div>
+      <h1>How to Rebuild Email Automation Business-Hour Scheduling After Migration</h1>
+
+      <div class="intro">
+        <p>An email automation can have the correct trigger, message, and recipient but still send at the wrong time. This can happen when a migrated workflow loses its permitted sending window, treats weekends differently, or applies a scheduling rule that the original platform handled automatically.</p>
+        <p>This guide explains how to document business-hour rules, rebuild supported scheduling controls, handle exceptions, and test the results before a workflow goes live. Its focus is the permitted sending window—not the time zone itself or the duration of an individual wait step.</p>
+      </div>
+
+      <h2>1. What Business-Hour Scheduling Actually Controls</h2>
+
+      <p>Business-hour scheduling defines when a particular automated action is allowed to occur. Depending on the platform, it may restrict a message to certain hours, selected days, or a configured delivery window.</p>
+
+      <p>For example, a business might want routine service follow-ups to be sent between 9:00 a.m. and 5:00 p.m. on weekdays. If a contact becomes eligible at 7:30 p.m., the business may prefer the message to wait until the next permitted window rather than send immediately.</p>
+
+      <p>That example describes a scheduling requirement, not a universal platform feature. Some systems offer native send windows; others may require a supported delay, condition, or alternative workflow design.</p>
+
+      <p>Before migration, clarify these four questions:</p>
+      <ul>
+        <li>Which automated messages are restricted to business hours?</li>
+        <li>Which days and clock times are permitted?</li>
+        <li>Which time zone governs the window?</li>
+        <li>What should happen when a contact becomes eligible outside the window?</li>
+      </ul>
+
+      <p>These answers form the requirements against which the rebuilt workflow should be tested.</p>
+
+      <h2>2. Separate Business Hours from Time Zones and Wait Conditions</h2>
+
+      <p>Three scheduling concepts can look similar in a workflow editor but produce different results.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Control</th>
+              <th>Question it answers</th>
+              <th>Migration check</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time zone</td>
+              <td>Which clock determines the scheduled time?</td>
+              <td>Confirm the intended account or recipient time zone.</td>
+            </tr>
+            <tr>
+              <td>Business-hour window</td>
+              <td>During which hours or days is an action permitted?</td>
+              <td>Rebuild the approved days, hours, and exception rules.</td>
+            </tr>
+            <tr>
+              <td>Wait condition</td>
+              <td>How long must a contact wait, or what event must occur before continuing?</td>
+              <td>Verify the delay or condition independently of the sending window.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Consider a contact who enters a workflow at 8:00 p.m. A 12-hour delay would ordinarily represent an elapsed duration of 12 hours. A business-hour rule, by contrast, may prevent a message from being sent at night. A time-zone setting determines how the relevant clock time is interpreted.</p>
+
+      <p>Combining these controls without documenting their order can create unexpected results. For background on the separate time-zone issue, see <a href="https://nasiremailmarketing.com/articles/0400-email-marketing-migration-automation-time-zone-settings/">Article 0400: Time Zone Settings After Migration</a>. For delay and wait-condition checks, see <a href="https://nasiremailmarketing.com/articles/0389-email-marketing-migration-automation-delays-wait-conditions/">Article 0389: Automation Delays and Wait Conditions</a>.</p>
+
+      <h2>3. Inventory the Existing Business-Hour Rules</h2>
+
+      <p>Do not begin by copying settings into the destination platform. First, identify where the original business-hour restrictions apply and why they exist.</p>
+
+      <ol>
+        <li><strong>List affected workflows:</strong> Identify the automations whose messages must be restricted to approved hours.</li>
+        <li><strong>Locate each restriction:</strong> Determine whether the rule applies to the whole workflow, an individual message, or a particular action.</li>
+        <li><strong>Record permitted days:</strong> Include weekdays, weekends, and any specifically excluded days.</li>
+        <li><strong>Record the time window:</strong> Write down the start time, end time, and governing time zone.</li>
+        <li><strong>Document the outside-window behavior:</strong> Establish whether the action waits, is skipped, or follows another documented rule.</li>
+        <li><strong>Record exceptions:</strong> Identify holidays, urgent notifications, and other message types that may require different handling.</li>
+      </ol>
+
+      <p>Where the old platform's behavior is unclear, mark it as unresolved. A migration should not turn an assumption into a production rule without validation.</p>
+
+      <h3>Illustrative scheduling specification</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Requirement</th>
+              <th>Example value</th>
+              <th>What must be confirmed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Workflow</td>
+              <td>Routine follow-up email</td>
+              <td>Correct workflow and message identified</td>
+            </tr>
+            <tr>
+              <td>Permitted days</td>
+              <td>Monday through Friday</td>
+              <td>Destination supports the intended day restrictions</td>
+            </tr>
+            <tr>
+              <td>Permitted hours</td>
+              <td>9:00 a.m. to 5:00 p.m.</td>
+              <td>Start and end boundaries behave as expected</td>
+            </tr>
+            <tr>
+              <td>Governing clock</td>
+              <td>Approved business time zone</td>
+              <td>Account or recipient time zone is explicitly identified</td>
+            </tr>
+            <tr>
+              <td>Outside-window action</td>
+              <td>Hold for the next permitted window, if supported</td>
+              <td>Actual platform behavior matches the requirement</td>
+            </tr>
+            <tr>
+              <td>Exceptions</td>
+              <td>Defined separately for special cases</td>
+              <td>Exceptions do not unintentionally bypass the restriction</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>These values are illustrative. They are not claimed to be the user's existing business rules or a tested configuration in a particular email platform.</p>
+
+      <h2>4. Rebuild the Permitted Sending Window</h2>
+
+      <p>After documenting the requirements, locate the destination platform's supported scheduling controls. Feature names and behavior vary, so consult the current documentation for the platform you use.</p>
+
+      <h3>Check the scheduling scope</h3>
+      <p>Determine whether the sending window applies to the entire automation or only to specific actions. If the restriction is required for three messages but not a fourth, a workflow-wide setting may be too broad unless the platform supports appropriate exceptions.</p>
+
+      <h3>Check start and end boundaries</h3>
+      <p>Confirm whether the start time is inclusive, how the end time is handled, and what happens when a contact becomes eligible exactly at a boundary. Do not assume that two platforms use identical rules.</p>
+
+      <h3>Check what happens outside the window</h3>
+      <p>The destination may offer a native waiting rule, a supported schedule condition, or no equivalent control. Establish the actual behavior rather than assuming that a restricted action automatically resumes at the next permitted time.</p>
+
+      <h3>Avoid unnecessary workflow complexity</h3>
+      <p>If a native scheduling control satisfies the requirement, a complicated set of branches may introduce unnecessary maintenance. If a workaround is required, document its logic and test each branch, including the fallback path.</p>
+
+      <div class="note">
+        <strong>Important:</strong> A sending window should control when an eligible action can occur. It should not silently change the message's audience, skip required steps, or restart contacts unless that behavior is explicitly intended and verified.
+      </div>
+
+      <h2>5. Decide How Weekends and Holidays Should Work</h2>
+
+      <p>Weekends and holidays are related but different scheduling cases. Excluding Saturday and Sunday does not automatically exclude public holidays or company closure days.</p>
+
+      <p>For each workflow, decide which of the following approaches fits the business requirement:</p>
+
+      <ul>
+        <li><strong>Weekday-only scheduling:</strong> Use when the message should be restricted to selected days regardless of public holidays.</li>
+        <li><strong>Explicit holiday exclusions:</strong> Use when specific dates must be excluded and the destination supports reliable date-based rules.</li>
+        <li><strong>Separate urgent-message handling:</strong> Use when a particular operational message genuinely needs a different schedule.</li>
+        <li><strong>Documented fallback:</strong> Define what should happen if the platform cannot apply a required holiday rule.</li>
+      </ul>
+
+      <p>Holiday calendars can vary by country, region, business location, and year. Do not assume a calendar applies to every subscriber or that a platform updates every relevant holiday automatically.</p>
+
+      <h3>What happens when a window crosses midnight?</h3>
+
+      <p>A schedule such as 10:00 p.m. to 2:00 a.m. crosses into the following calendar day. The destination platform may interpret this differently from a daytime window. If an existing workflow uses an overnight window, test the start day, end day, and transition across midnight separately.</p>
+
+      <h2>6. Use a Decision Table for Outside-Window Contacts</h2>
+
+      <p>The correct action depends on the message's purpose and the capabilities of the destination platform. Define the intended result before building the workflow.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Situation</th>
+              <th>Possible handling</th>
+              <th>Validation required</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Routine email becomes eligible after closing time</td>
+              <td>Hold until the next permitted window, if supported</td>
+              <td>Confirm the actual next eligible time</td>
+            </tr>
+            <tr>
+              <td>Contact becomes eligible during a weekend</td>
+              <td>Wait for the next approved day or use a documented alternative</td>
+              <td>Confirm that the weekend restriction is applied</td>
+            </tr>
+            <tr>
+              <td>Contact has no reliable time-zone information</td>
+              <td>Apply an approved fallback or hold for review</td>
+              <td>Confirm that the fallback does not create an out-of-hours send</td>
+            </tr>
+            <tr>
+              <td>Holiday exclusion is required</td>
+              <td>Apply a supported date rule or a verified alternative</td>
+              <td>Test the relevant date and the following eligible window</td>
+            </tr>
+            <tr>
+              <td>A time-sensitive operational message has a different requirement</td>
+              <td>Use a separately defined and approved scheduling policy</td>
+              <td>Ensure the exception is deliberate and limited to the intended message</td>
+            </tr>
+            <tr>
+              <td>The platform cannot reproduce the original restriction</td>
+              <td>Document the limitation and choose an acceptable alternative</td>
+              <td>Obtain approval before production activation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>These are design options, not guaranteed features of any specific platform. The final configuration must match the destination platform's documented capabilities.</p>
+
+      <h2>7. Test the Workflow Before Launch</h2>
+
+      <p>A schedule is not validated simply because the correct hours appear in the workflow editor. Test when a contact becomes eligible, how the scheduling rule is applied, and whether the action occurs at the expected time.</p>
+
+      <ol>
+        <li><strong>Choose a test workflow:</strong> Use a non-production workflow or a controlled test audience where available.</li>
+        <li><strong>Record the expected outcome:</strong> Write down the eligibility time, permitted window, and expected action.</li>
+        <li><strong>Test during permitted hours:</strong> Confirm that an eligible action can proceed according to the intended rule.</li>
+        <li><strong>Test outside permitted hours:</strong> Confirm whether the action is held, skipped, or handled according to the documented design.</li>
+        <li><strong>Test a weekend:</strong> Verify behavior when the next calendar day is not permitted.</li>
+        <li><strong>Test an exception:</strong> If holidays or overnight windows apply, test representative cases supported by the environment.</li>
+        <li><strong>Inspect execution history:</strong> Compare the actual result with the expected result using the platform's available logs or scheduling view.</li>
+        <li><strong>Record unresolved cases:</strong> Do not mark a behavior as verified if it could not be tested.</li>
+      </ol>
+
+      <h3>Example test record</h3>
+
+      <p>The following example illustrates how to document a result. It is not a report of a test that has actually been performed.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Test case</th>
+              <th>Expected behavior</th>
+              <th>Result to record</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Eligible at 10:00 a.m. on an allowed weekday</td>
+              <td>Action follows the approved schedule</td>
+              <td>Actual eligibility and execution times</td>
+            </tr>
+            <tr>
+              <td>Eligible at 7:00 p.m. on an allowed weekday</td>
+              <td>Action follows the documented outside-window rule</td>
+              <td>Whether it waits, skips, or follows another rule</td>
+            </tr>
+            <tr>
+              <td>Eligible on Saturday</td>
+              <td>Action follows the weekend policy</td>
+              <td>Actual behavior and next eligible window, if applicable</td>
+            </tr>
+            <tr>
+              <td>Eligible on an excluded holiday</td>
+              <td>Action follows the holiday policy</td>
+              <td>Whether the exclusion was applied correctly</td>
+            </tr>
+            <tr>
+              <td>Time zone is missing</td>
+              <td>Approved fallback is applied</td>
+              <td>Fallback outcome and any unresolved issue</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>8. Correct Scheduling Errors Without Creating Duplicate Messages</h2>
+
+      <p>If a migrated workflow has already sent messages outside the intended window, changing its schedule may not correct the timing of every contact already in progress.</p>
+
+      <p>Before editing or restarting the automation:</p>
+      <ul>
+        <li>Identify affected contacts and workflow steps.</li>
+        <li>Check which messages have already been sent.</li>
+        <li>Determine whether the platform applies schedule changes to contacts already waiting.</li>
+        <li>Check whether contacts could enter the same workflow again during the correction.</li>
+        <li>Test the change with a controlled record before applying it to a larger audience.</li>
+        <li>Record which contacts need corrective action and which should continue normally.</li>
+      </ul>
+
+      <p>Do not replay the entire workflow just to change a scheduling rule. Replaying completed actions may send duplicate messages or repeat other side effects. Follow the destination platform's documented procedure for editing active automations.</p>
+
+      <p>If the correction exposes a failed workflow step, review <a href="https://nasiremailmarketing.com/articles/0399-email-marketing-migration-automation-error-handling/">Article 0399: Automation Error Handling</a> for a separate troubleshooting approach.</p>
+
+      <h2>9. Document the Approved Scheduling Policy</h2>
+
+      <p>Business-hour settings often need to be maintained long after migration. Store the final policy somewhere accessible to the people who manage the automation.</p>
+
+      <p>Include the following information:</p>
+      <ul>
+        <li>Workflow name and business purpose.</li>
+        <li>Messages and actions covered by the restriction.</li>
+        <li>Permitted days, hours, and governing time zone.</li>
+        <li>Rules for weekends, holidays, and overnight windows.</li>
+        <li>Behavior for contacts eligible outside the window.</li>
+        <li>Fallback rules for missing time-zone data.</li>
+        <li>Test cases, observed results, and unresolved limitations.</li>
+        <li>Owner responsible for approving future schedule changes.</li>
+      </ul>
+
+      <p>When a policy changes, update both the workflow and its documentation. This reduces the chance that a future administrator will unintentionally remove a restriction or recreate an outdated rule.</p>
+
+      <h2>10. Business-Hour Migration Checklist</h2>
+
+      <ul>
+        <li>Identify all workflows with restricted sending hours.</li>
+        <li>Record the original scheduling behavior before making changes.</li>
+        <li>Separate time-zone settings, business-hour rules, and wait conditions.</li>
+        <li>Confirm the permitted days, hours, and applicable clock.</li>
+        <li>Review weekend, holiday, and overnight behavior.</li>
+        <li>Define the handling of contacts that become eligible outside the window.</li>
+        <li>Confirm how missing or invalid time-zone data is handled.</li>
+        <li>Test permitted-hour and outside-window scenarios.</li>
+        <li>Review already-enrolled contacts before changing an active workflow.</li>
+        <li>Document verified behavior, limitations, and ownership.</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Does every email marketing platform support business-hour restrictions?</h3>
+      <p>No. Features differ between platforms, and a destination may not provide an exact equivalent to the original scheduling control. Confirm available features and document any alternative design before migration is considered complete.</p>
+
+      <h3>Are business hours the same as recipient-local delivery?</h3>
+      <p>No. Business hours define an allowed window, while recipient-local delivery determines which local clock is used for a recipient. Both settings may matter, but they solve different problems.</p>
+
+      <h3>Do weekday rules automatically exclude public holidays?</h3>
+      <p>No. A weekday restriction and a holiday exclusion are different rules. Verify whether the destination supports the required holiday behavior and how the applicable calendar is maintained.</p>
+
+      <h3>What should happen when a contact becomes eligible outside business hours?</h3>
+      <p>The answer depends on the message's purpose and the platform's capabilities. Possible policies include holding the action until the next permitted window or using a documented alternative. Test the selected behavior rather than assuming it happens automatically.</p>
+
+      <h3>Should I rebuild the entire workflow if the schedule is wrong?</h3>
+      <p>Not necessarily. First determine which contacts and steps are affected and whether the schedule can be corrected safely. A full restart can repeat completed actions or create duplicate emails.</p>
+
+      <h2>Conclusion</h2>
+
+      <p>Rebuilding business-hour scheduling after an email platform migration requires a clear definition of when each automated action is allowed to occur. Weekends, holidays, overnight windows, missing time-zone information, and already-enrolled contacts can all affect the outcome.</p>
+
+      <p>Document the original behavior, rebuild only the controls the destination supports, and test representative scenarios before launch. Where the new platform cannot reproduce an original rule exactly, record the limitation and approve a practical alternative. This approach makes scheduling decisions easier to verify and maintain.</p>
+
+      <div class="author-box">
+        <h2>About the Author</h2>
+        <p>Muhammad Nasir Uddin is an Assistant Professor of English at Zirabo Dewan Idris College, Savar, Dhaka, Bangladesh. Through Nasir Email Marketing, he publishes educational resources about email marketing, automation, and related digital marketing practices.</p>
+        <p>Contact: <a href="mailto:nasir@nasiremailmarketing.com">nasir@nasiremailmarketing.com</a></p>
+      </div>
+
+      <h2>Affiliate Disclosure</h2>
+      <p>This website participates in affiliate programs. We may receive a commission when visitors use qualifying affiliate links or complete qualifying actions, at no additional cost to the visitor.</p>
+      <p>This article does not contain a GetResponse affiliate link. Its purpose is to explain business-hour scheduling and migration validation rather than promote a particular service.</p>
+    </article>
+  </main>
+
+  <footer>
+    <nav aria-label="Footer navigation">
+      <a href="https://nasiremailmarketing.com/">Home</a>
+      <a href="https://nasiremailmarketing.com/about.html">About</a>
+      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+      <a href="https://nasiremailmarketing.com/privacy-policy.html">Privacy Policy</a>
+      <a href="https://nasiremailmarketing.com/disclaimer.html">Disclaimer</a>
+      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="https://nasiremailmarketing.com/advertise.html">Advertise With Us</a>
+      <a href="https://nasiremailmarketing.com/terms-and-conditions.html">Terms and Conditions</a>
+    </nav>
+    <p>© 2026 Nasir Email Marketing. All rights reserved.</p>
+  </footer>
+</body>
+</html>
