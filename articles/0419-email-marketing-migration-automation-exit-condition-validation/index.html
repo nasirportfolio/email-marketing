@@ -1,0 +1,761 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How to Validate Email Marketing Automation Exit Conditions After Platform Migration</title>
+  <meta name="description" content="Learn how to validate automation exit conditions after an email marketing migration, including goal completion, purchases, unsubscribes, suppression, and workflow termination.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nasiremailmarketing.com/articles/0419-email-marketing-migration-automation-exit-condition-validation/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Validate Email Marketing Automation Exit Conditions After Platform Migration">
+  <meta property="og:description" content="A practical guide to testing automation exit conditions, preventing unwanted messages, and verifying workflow completion after migration.">
+  <meta property="og:url" content="https://nasiremailmarketing.com/articles/0419-email-marketing-migration-automation-exit-condition-validation/">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734" crossorigin="anonymous"></script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3ZDJCJWX5F');
+  </script>
+
+  <!-- Article structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Validate Email Marketing Automation Exit Conditions After Platform Migration",
+    "description": "A practical guide to validating automation exit conditions, goal completion, purchases, unsubscribes, suppression, and workflow termination after an email marketing migration.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://nasiremailmarketing.com/articles/0419-email-marketing-migration-automation-exit-condition-validation/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Muhammad Nasir Uddin"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nasir Email Marketing",
+      "url": "https://nasiremailmarketing.com/"
+    }
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #222;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    a {
+      color: #1557b0;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    header, main, footer {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 22px;
+    }
+
+    header, article, footer {
+      background: #fff;
+    }
+
+    header {
+      border-bottom: 1px solid #e5eaf1;
+    }
+
+    .brand {
+      margin: 0 0 12px;
+      color: #1557b0;
+      font-size: 1.65rem;
+      line-height: 1.3;
+    }
+
+    .main-nav, .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    .main-nav a, .footer-links a {
+      text-decoration: none;
+    }
+
+    article {
+      padding: 28px;
+      border: 1px solid #e5eaf1;
+      border-radius: 8px;
+    }
+
+    h1, h2, h3 {
+      color: #172b4d;
+      line-height: 1.35;
+    }
+
+    h1 { font-size: 2rem; }
+
+    h2 {
+      margin-top: 34px;
+      font-size: 1.45rem;
+    }
+
+    h3 {
+      margin-top: 24px;
+      font-size: 1.15rem;
+    }
+
+    .article-number {
+      color: #1557b0;
+      font-weight: bold;
+    }
+
+    .toc {
+      margin: 25px 0 30px;
+      padding: 20px 25px;
+      background: #f7f7f7;
+      border: 1px solid #dedede;
+    }
+
+    .toc h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: #222;
+      font-size: 1.5rem;
+    }
+
+    .toc ul {
+      padding-left: 26px;
+      margin-bottom: 0;
+    }
+
+    .toc li { margin: 8px 0; }
+
+    .note {
+      margin: 22px 0;
+      padding: 14px 16px;
+      background: #f2f6fc;
+      border-left: 4px solid #1557b0;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #dce3ec;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th { background: #f2f6fc; }
+
+    .checklist li { margin-bottom: 9px; }
+
+    .related-articles {
+      padding: 18px 22px;
+      background: #f7f9fc;
+      border: 1px solid #e5eaf1;
+      border-radius: 6px;
+    }
+
+    .author-box {
+      margin-top: 35px;
+      padding-top: 20px;
+      border-top: 1px solid #e5eaf1;
+    }
+
+    footer {
+      margin-top: 20px;
+      border-top: 1px solid #e5eaf1;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      header, main, footer { padding: 14px; }
+      article { padding: 18px; }
+      h1 { font-size: 1.65rem; }
+      h2 { font-size: 1.3rem; }
+      .toc { padding: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <p class="brand"><strong>Nasir Email Marketing</strong></p>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="https://nasiremailmarketing.com/">Home</a>
+    <a href="https://nasiremailmarketing.com/about.html">About</a>
+    <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+    <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+  </nav>
+</header>
+
+<main>
+<article>
+
+  <p class="article-number">ARTICLE 0419</p>
+
+  <h1>How to Validate Email Marketing Automation Exit Conditions After Platform Migration</h1>
+
+  <p>
+    An email marketing automation workflow needs a reliable way to determine
+    when a contact should stop progressing through it. After a platform
+    migration, exit conditions may be configured differently, connected to
+    different fields, or dependent on events that were not transferred
+    correctly.
+  </p>
+
+  <p>
+    If a workflow fails to recognize that a contact has completed a purchase,
+    reached a goal, unsubscribed, or become ineligible for marketing, it may
+    continue sending messages that are no longer relevant or permitted.
+    The opposite problem can also occur: a contact may leave a workflow
+    before completing an intended sequence.
+  </p>
+
+  <p>
+    This guide explains how to identify, test, document, and approve exit
+    conditions after migrating an email marketing automation workflow.
+    The exact available settings depend on the destination platform.
+  </p>
+
+  <div class="note">
+    <strong>Important:</strong> Use designated test contacts and controlled
+    conditions. Consent, unsubscribe, and suppression requirements must
+    remain respected throughout migration testing.
+  </div>
+
+  <nav class="toc" aria-label="Table of Contents">
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#exit-condition-basics">1. Understand Automation Exit Conditions</a></li>
+      <li><a href="#exit-vs-trigger">2. Distinguish Exit Conditions from Entry Triggers</a></li>
+      <li><a href="#inventory">3. Create an Exit-Condition Inventory</a></li>
+      <li><a href="#goal-completion">4. Validate Goal Completion</a></li>
+      <li><a href="#purchase-exits">5. Test Purchase and Conversion Exits</a></li>
+      <li><a href="#consent-exits">6. Validate Unsubscribe and Consent Changes</a></li>
+      <li><a href="#field-exits">7. Test Contact-Field and Segment-Based Exits</a></li>
+      <li><a href="#timing">8. Check Exit Timing and Waiting Steps</a></li>
+      <li><a href="#conflicts">9. Identify Conflicting Exit Conditions</a></li>
+      <li><a href="#test-cases">10. Build an Exit-Condition Test Matrix</a></li>
+      <li><a href="#troubleshooting">11. Troubleshoot Failed Exit Conditions</a></li>
+      <li><a href="#launch-checklist">12. Complete the Pre-Launch Checklist</a></li>
+      <li><a href="#related-articles">13. Related Migration Guides</a></li>
+      <li><a href="#conclusion">14. Conclusion</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="exit-condition-basics">1. Understand Automation Exit Conditions</h2>
+
+  <p>
+    An exit condition determines when a contact should leave an automation
+    or stop receiving its remaining actions. Depending on the platform,
+    this behavior may be controlled by a goal, completion event, status
+    change, workflow rule, or another supported mechanism.
+  </p>
+
+  <p>
+    For example, a prospect in a product-nurture workflow may need to exit
+    after purchasing the product. Continuing to send introductory sales
+    emails after the purchase could create a confusing customer experience.
+  </p>
+
+  <p>
+    Exit conditions should be defined according to the purpose of the
+    workflow. A welcome series, abandoned-cart workflow, onboarding sequence,
+    and re-engagement campaign may require different completion rules.
+  </p>
+
+  <h2 id="exit-vs-trigger">2. Distinguish Exit Conditions from Entry Triggers</h2>
+
+  <p>
+    Entry triggers determine when contacts qualify to enter a workflow.
+    Exit conditions determine when they should stop progressing through it.
+    They serve different purposes and must be tested independently.
+  </p>
+
+  <p>
+    Review
+    <a href="https://nasiremailmarketing.com/articles/0417-email-marketing-migration-automation-trigger-validation/">
+      Article 0417: Automation Trigger Validation
+    </a>
+    to check the entry side of the workflow before testing its exit behavior.
+  </p>
+
+  <p>
+    A contact entering correctly does not prove that the exit condition
+    works. Similarly, a valid exit rule cannot correct a workflow that
+    admits the wrong contacts in the first place.
+  </p>
+
+  <h2 id="inventory">3. Create an Exit-Condition Inventory</h2>
+
+  <p>
+    Record each original exit rule and identify its intended equivalent
+    in the destination platform. Document what event should cause a
+    contact to exit, where that event originates, and how the result
+    will be verified.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Exit condition</th>
+          <th>What to verify</th>
+          <th>Evidence to collect</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Goal completed</td>
+          <td>Completion event is recognized</td>
+          <td>Test event and workflow record</td>
+        </tr>
+        <tr>
+          <td>Purchase completed</td>
+          <td>Correct purchase event identifies the contact</td>
+          <td>Test order and associated contact record</td>
+        </tr>
+        <tr>
+          <td>Unsubscribe</td>
+          <td>Contact is no longer sent marketing messages where required</td>
+          <td>Subscription status and sending eligibility</td>
+        </tr>
+        <tr>
+          <td>Field changed</td>
+          <td>Correct field and value trigger the intended behavior</td>
+          <td>Before-and-after contact record</td>
+        </tr>
+        <tr>
+          <td>Segment condition</td>
+          <td>Contact eligibility is evaluated correctly</td>
+          <td>Segment membership and execution record</td>
+        </tr>
+        <tr>
+          <td>Workflow completion</td>
+          <td>Contact stops at the intended point</td>
+          <td>Workflow history or status</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    Do not assume that every platform supports the same exit mechanisms.
+    If the destination platform uses a different design, document the
+    difference and test the resulting behavior rather than relying on
+    similar setting names.
+  </p>
+
+  <h2 id="goal-completion">4. Validate Goal Completion</h2>
+
+  <p>
+    Some workflows should stop when a contact completes a defined goal,
+    such as finishing onboarding, submitting a required form, or completing
+    a registration.
+  </p>
+
+  <p>For each goal-based exit, check the following:</p>
+
+  <ul>
+    <li>Confirm that the goal is defined clearly and can be observed.</li>
+    <li>Verify that the correct event, field, or completion status is used.</li>
+    <li>Test a contact that completes the goal.</li>
+    <li>Test a contact that has not completed the goal.</li>
+    <li>Check when the platform evaluates the goal condition.</li>
+    <li>Confirm that the contact stops receiving actions that should no longer apply.</li>
+  </ul>
+
+  <p>
+    A goal may depend on an external event or an updated contact field.
+    If that dependency is missing after migration, the exit rule may never
+    be satisfied. Record the source of the completion data and test the
+    full sequence that produces it.
+  </p>
+
+  <h2 id="purchase-exits">5. Test Purchase and Conversion Exits</h2>
+
+  <p>
+    Sales and abandoned-cart workflows often need to respond to a purchase
+    or another conversion. If the migration breaks purchase-event tracking,
+    a customer may continue receiving messages intended for someone who
+    has not converted.
+  </p>
+
+  <p>Validate the purchase exit by checking:</p>
+
+  <ol>
+    <li>Which purchase or conversion event should end the workflow.</li>
+    <li>Whether the event can be linked to the correct contact.</li>
+    <li>Whether test transactions appear in the destination platform.</li>
+    <li>Whether the exit rule evaluates the intended product or order.</li>
+    <li>Whether the contact stops receiving subsequent sales messages as expected.</li>
+  </ol>
+
+  <p>
+    Use test transactions or a supported testing environment when available.
+    Do not create unnecessary real orders simply to test a workflow.
+  </p>
+
+  <p>
+    Where conversion tracking is part of the workflow, also review
+    <a href="https://nasiremailmarketing.com/articles/0411-email-marketing-migration-campaign-tracking-parameter-validation/">
+      Article 0411: Campaign Tracking Parameter Validation
+    </a>
+    and
+    <a href="https://nasiremailmarketing.com/articles/0413-email-marketing-migration-landing-page-validation/">
+      Article 0413: Landing Page Validation
+    </a>.
+  </p>
+
+  <h2 id="consent-exits">6. Validate Unsubscribe and Consent Changes</h2>
+
+  <p>
+    Unsubscribe and consent changes require special care. A migrated
+    workflow must not continue sending marketing messages in circumstances
+    where the contact is no longer eligible to receive them.
+  </p>
+
+  <p>Check the destination platform's handling of:</p>
+
+  <ul>
+    <li>Unsubscribe requests.</li>
+    <li>Suppression and marketing eligibility.</li>
+    <li>Consent or subscription-status changes.</li>
+    <li>Contact records that have conflicting status information.</li>
+    <li>Any delayed actions scheduled before the status changed.</li>
+  </ul>
+
+  <p>
+    Use test contacts and the platform's supported testing features to
+    verify suppression behavior. Never send a real marketing campaign
+    to an unsubscribed contact as a test.
+  </p>
+
+  <p>
+    Confirm that the workflow's exit logic and the platform's sending
+    eligibility controls both behave correctly. Do not rely on a workflow
+    exit condition as the only protection against sending to an ineligible
+    recipient.
+  </p>
+
+  <h2 id="field-exits">7. Test Contact-Field and Segment-Based Exits</h2>
+
+  <p>
+    Some workflows end when a field changes or when a contact no longer
+    meets a segment condition. Migration can affect these rules if field
+    names, data types, tag mappings, or segment definitions change.
+  </p>
+
+  <p>Test the following:</p>
+
+  <ul>
+    <li>Confirm that the destination field exists and represents the same information.</li>
+    <li>Verify the exact values that satisfy the exit rule.</li>
+    <li>Test changes from one relevant value to another.</li>
+    <li>Check missing, empty, or invalid values where applicable.</li>
+    <li>Confirm that segment membership updates as expected.</li>
+    <li>Record whether exit evaluation occurs immediately or at a later step.</li>
+  </ul>
+
+  <p>
+    Compare your results with
+    <a href="https://nasiremailmarketing.com/articles/0415-email-marketing-migration-subscriber-data-validation/">
+      Article 0415: Subscriber Data Validation
+    </a>
+    and
+    <a href="https://nasiremailmarketing.com/articles/0416-email-marketing-migration-subscriber-segment-validation/">
+      Article 0416: Subscriber Segment Validation
+    </a>.
+  </p>
+
+  <h2 id="timing">8. Check Exit Timing and Waiting Steps</h2>
+
+  <p>
+    A workflow may contain delays, scheduled messages, or waiting conditions.
+    The exit behavior must be checked in the context of those steps.
+    A contact might satisfy an exit condition while waiting for the next
+    action, depending on how the destination platform evaluates rules.
+  </p>
+
+  <p>Check whether:</p>
+
+  <ul>
+    <li>Exit conditions are evaluated continuously or at specific workflow steps.</li>
+    <li>Waiting periods delay the recognition of an exit event.</li>
+    <li>Messages scheduled before exit can still be sent.</li>
+    <li>Contacts who satisfy an exit condition during a delay are handled correctly.</li>
+    <li>Time-zone settings affect any time-based exit rules.</li>
+  </ul>
+
+  <p>
+    Do not assume that the destination platform handles waiting steps
+    exactly like the original platform. Verify the behavior using controlled
+    tests and the platform's available execution history.
+  </p>
+
+  <h2 id="conflicts">9. Identify Conflicting Exit Conditions</h2>
+
+  <p>
+    A workflow may contain more than one reason for a contact to exit.
+    For example, a contact might complete a purchase and unsubscribe
+    during the same sequence. The resulting behavior should be consistent
+    with the workflow's purpose and the platform's eligibility rules.
+  </p>
+
+  <p>Document how the workflow should behave when:</p>
+
+  <ul>
+    <li>Two exit conditions become true close together.</li>
+    <li>A field update and a conversion event occur during the same step.</li>
+    <li>A contact changes segment membership while waiting.</li>
+    <li>A contact becomes suppressed while a message is scheduled.</li>
+    <li>An exit condition is met more than once.</li>
+  </ul>
+
+  <p>
+    Test important combinations rather than checking every condition
+    only in isolation. Record any platform limitations and adjust the
+    workflow design when necessary.
+  </p>
+
+  <h2 id="test-cases">10. Build an Exit-Condition Test Matrix</h2>
+
+  <p>
+    A test matrix helps confirm that expected exits occur and that contacts
+    who have not met an exit condition do not leave the workflow prematurely.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Test scenario</th>
+          <th>Expected behavior</th>
+          <th>Observed result</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Goal completed</td>
+          <td>Contact exits according to the workflow design</td>
+          <td>Record test evidence</td>
+          <td>Not tested</td>
+        </tr>
+        <tr>
+          <td>Goal not completed</td>
+          <td>Contact follows the intended remaining path</td>
+          <td>Record test evidence</td>
+          <td>Not tested</td>
+        </tr>
+        <tr>
+          <td>Purchase completed</td>
+          <td>Purchase-related exit behavior is correct</td>
+          <td>Record test evidence</td>
+          <td>Not tested</td>
+        </tr>
+        <tr>
+          <td>Unsubscribe recorded</td>
+          <td>Marketing sending eligibility is respected</td>
+          <td>Record test evidence</td>
+          <td>Not tested</td>
+        </tr>
+        <tr>
+          <td>Field changes</td>
+          <td>Exit rule evaluates the correct field value</td>
+          <td>Record test evidence</td>
+          <td>Not tested</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    This is a reusable example, not a report of tests performed.
+    Replace the example statuses with actual test results and evidence.
+  </p>
+
+  <h2 id="troubleshooting">11. Troubleshoot Failed Exit Conditions</h2>
+
+  <p>
+    If a contact does not exit as expected, identify the exact condition
+    and trace the data or event it depends on. Check field mappings,
+    event delivery, segment membership, evaluation timing, and any
+    limitations of the destination platform.
+  </p>
+
+  <ol>
+    <li>Record the contact's expected and actual workflow behavior.</li>
+    <li>Verify that the required exit event or field value exists.</li>
+    <li>Inspect available execution records.</li>
+    <li>Check whether delays or conditions affect when the exit is evaluated.</li>
+    <li>Correct the configuration and repeat the relevant test.</li>
+    <li>Retest dependent workflow actions and document the outcome.</li>
+  </ol>
+
+  <p>
+    If contacts continue receiving inappropriate messages, pause the
+    affected workflow while investigating. Review scheduled actions and
+    sending eligibility before reactivating it.
+  </p>
+
+  <h2 id="launch-checklist">12. Complete the Pre-Launch Checklist</h2>
+
+  <p>Before activating the migrated workflow, confirm that:</p>
+
+  <ul class="checklist">
+    <li>Every original exit condition has been documented.</li>
+    <li>Destination-platform equivalents have been configured or differences recorded.</li>
+    <li>Goal-completion and purchase-related exits have been tested where applicable.</li>
+    <li>Unsubscribe and suppression requirements are respected.</li>
+    <li>Field-based and segment-based exits have been tested.</li>
+    <li>Exit timing during delays has been checked.</li>
+    <li>Important combinations of exit conditions have been tested.</li>
+    <li>Test results and unresolved issues have been documented.</li>
+    <li>Critical failures have been corrected and retested.</li>
+    <li>The workflow owner has approved activation.</li>
+  </ul>
+
+  <h2 id="related-articles">13. Related Email Marketing Migration Guides</h2>
+
+  <p>
+    These related guides cover triggers, actions, data, segmentation,
+    and campaign destinations that may influence exit-condition testing.
+    Verify that each page is published and accessible before relying on it.
+  </p>
+
+  <div class="related-articles">
+    <ul>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0411-email-marketing-migration-campaign-tracking-parameter-validation/">
+          Article 0411: Campaign Tracking Parameter Validation
+        </a>
+      </li>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0413-email-marketing-migration-landing-page-validation/">
+          Article 0413: Landing Page Validation
+        </a>
+      </li>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0414-email-marketing-migration-form-validation/">
+          Article 0414: Form Validation
+        </a>
+      </li>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0415-email-marketing-migration-subscriber-data-validation/">
+          Article 0415: Subscriber Data Validation
+        </a>
+      </li>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0416-email-marketing-migration-subscriber-segment-validation/">
+          Article 0416: Subscriber Segment Validation
+        </a>
+      </li>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0417-email-marketing-migration-automation-trigger-validation/">
+          Article 0417: Automation Trigger Validation
+        </a>
+      </li>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0418-email-marketing-migration-automation-action-validation/">
+          Article 0418: Automation Action Validation
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <h2 id="conclusion">14. Conclusion</h2>
+
+  <p>
+    Validating automation exit conditions after a platform migration
+    helps prevent contacts from remaining in workflows after their
+    intended goal has been reached or their marketing eligibility has
+    changed. It also helps prevent premature exits that interrupt
+    legitimate customer journeys.
+  </p>
+
+  <p>
+    Document the original rules, test relevant scenarios, correct
+    migration errors, and retain evidence of the results. After launch,
+    monitor workflow behavior and investigate unexpected exits or
+    continued messaging promptly.
+  </p>
+
+  <section class="author-box">
+    <h2>About the Author</h2>
+    <p>
+      Muhammad Nasir Uddin is an Assistant Professor of English at
+      Zirabo Dewan Idris College, Savar, Dhaka, Bangladesh. Through
+      Nasir Email Marketing, he publishes educational resources about
+      email marketing, automation, platform migration, and related
+      technical workflows.
+    </p>
+  </section>
+
+  <section>
+    <h2>Affiliate Disclosure</h2>
+    <p>
+      This website participates in affiliate programs. We may receive a
+      commission when visitors use qualifying affiliate links or complete
+      qualifying actions, at no additional cost to the visitor.
+    </p>
+  </section>
+
+</article>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://nasiremailmarketing.com/">Home</a>
+    <a href="https://nasiremailmarketing.com/about.html">About</a>
+    <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+    <a href="https://nasiremailmarketing.com/privacy-policy.html">Privacy Policy</a>
+    <a href="https://nasiremailmarketing.com/disclaimer.html">Disclaimer</a>
+    <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+    <a href="https://nasiremailmarketing.com/advertise.html">Advertise With Us</a>
+    <a href="https://nasiremailmarketing.com/terms-and-conditions.html">Terms and Conditions</a>
+  </div>
+
+  <p>&copy; Nasir Email Marketing. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+```
