@@ -1,0 +1,590 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How to Validate Email Marketing Attribution Models After Platform Migration</title>
+  <meta name="description" content="Learn how to validate email marketing attribution models after a platform migration, compare reporting methods, investigate discrepancies, and document reliable results.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nasiremailmarketing.com/articles/0409-email-marketing-migration-attribution-model-validation/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Validate Email Marketing Attribution Models After Platform Migration">
+  <meta property="og:description" content="A practical framework for checking attribution models, comparing conversion reports, and investigating differences after an email marketing migration.">
+  <meta property="og:url" content="https://nasiremailmarketing.com/articles/0409-email-marketing-migration-attribution-model-validation/">
+  <meta property="og:site_name" content="Nasir Email Marketing">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734" crossorigin="anonymous"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3ZDJCJWX5F');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Validate Email Marketing Attribution Models After Platform Migration",
+    "description": "A practical framework for validating email marketing attribution models and investigating reporting differences after a platform migration.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://nasiremailmarketing.com/articles/0409-email-marketing-migration-attribution-model-validation/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Muhammad Nasir Uddin"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nasir Email Marketing",
+      "url": "https://nasiremailmarketing.com/"
+    }
+  }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      color: #222;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    header, main, footer {
+      width: calc(100% - 32px);
+      max-width: 1100px;
+      margin: 20px auto;
+    }
+
+    header, article, footer {
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    header h2 {
+      margin: 0 0 10px;
+      color: #1557b0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    a {
+      color: #1557b0;
+      overflow-wrap: anywhere;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 38px);
+    }
+
+    h2 {
+      margin-top: 34px;
+    }
+
+    h3 {
+      margin-top: 24px;
+    }
+
+    .article-number {
+      color: #1557b0;
+      font-weight: bold;
+    }
+
+    .intro {
+      font-size: 18px;
+    }
+
+    .note {
+      background: #f2f6fc;
+      padding: 16px;
+      border-left: 4px solid #1557b0;
+      margin: 20px 0;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #d6dce5;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #eef3fa;
+    }
+
+    .checklist li {
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+
+      header, article, footer {
+        padding: 18px;
+      }
+
+      nav {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2>Nasir Email Marketing</h2>
+    <nav aria-label="Main navigation">
+      <a href="https://nasiremailmarketing.com/">Home</a>
+      <a href="https://nasiremailmarketing.com/about.html">About</a>
+      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <p class="article-number">ARTICLE 0409</p>
+
+      <h1>How to Validate Email Marketing Attribution Models After Platform Migration</h1>
+
+      <p class="intro">
+        Moving email campaigns to a new marketing platform can change how conversions
+        are recorded, assigned to channels, and presented in reports. A campaign may
+        appear to generate more or fewer conversions even when customer behavior has
+        not changed significantly. Before interpreting those results, marketers need
+        to determine whether the old and new platforms are measuring attribution in
+        comparable ways.
+      </p>
+
+      <p>
+        This guide explains how to inspect attribution settings, create controlled
+        comparisons, investigate reporting differences, and document the results.
+        It focuses on measurement validation rather than assuming that one platform's
+        figures are automatically more accurate than another's.
+      </p>
+
+      <h2>1. Understand What an Attribution Model Does</h2>
+
+      <p>
+        An attribution model determines how credit for a conversion is assigned to
+        one or more marketing interactions. Depending on the system, these
+        interactions may include email clicks, paid advertisements, organic search,
+        direct visits, and other recorded touchpoints.
+      </p>
+
+      <p>
+        Different models can assign different amounts of credit to the same customer
+        journey. Therefore, a difference between two reports does not necessarily
+        mean that a tracking system is broken.
+      </p>
+
+      <ul>
+        <li><strong>Last-click attribution:</strong> Assigns conversion credit to the last eligible click before the conversion, according to the system's rules.</li>
+        <li><strong>First-click attribution:</strong> Assigns credit to the first eligible click in the measured journey.</li>
+        <li><strong>Linear attribution:</strong> Distributes credit evenly across eligible interactions included in the model.</li>
+        <li><strong>Position-based attribution:</strong> Gives different weights to selected positions, such as the first and last interactions.</li>
+        <li><strong>Data-driven attribution:</strong> Uses a platform's methodology and available data to assign credit. Its availability and calculation rules vary.</li>
+      </ul>
+
+      <p>
+        Not every email marketing platform supports every model. Some report email
+        revenue using their own campaign attribution rules, while analytics systems
+        may use separate channel attribution settings.
+      </p>
+
+      <h2>2. Separate Attribution Models from Attribution Windows</h2>
+
+      <p>
+        An attribution model and an attribution window answer different questions.
+        The model determines how credit is distributed among eligible interactions.
+        The window determines which interactions can qualify based on how long
+        before a conversion they occurred.
+      </p>
+
+      <p>
+        For example, one system might credit an email click that occurred several
+        days before a purchase, while another system may exclude that click because
+        its configured window is shorter. Even if both systems use last-click
+        attribution, their reports may differ.
+      </p>
+
+      <div class="note">
+        <strong>Validation rule:</strong> Check the attribution model and the
+        attribution window separately. For a focused review of window settings,
+        see <a href="https://nasiremailmarketing.com/articles/0408-email-marketing-migration-attribution-window-validation/">Article 0408: Email Marketing Migration Attribution Window Validation</a>.
+      </div>
+
+      <h2>3. Record the Old and New Platform Settings</h2>
+
+      <p>
+        Before comparing totals, create a record of the settings used in each
+        platform. Use the actual configuration screens and documentation instead
+        of relying on memory or assumptions.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Setting</th>
+              <th>What to record</th>
+              <th>Why it matters</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Attribution model</td>
+              <td>The selected model and its documented rules</td>
+              <td>Different models may assign different credit.</td>
+            </tr>
+            <tr>
+              <td>Attribution window</td>
+              <td>Eligible time period and interaction types</td>
+              <td>Older interactions may be excluded.</td>
+            </tr>
+            <tr>
+              <td>Conversion definition</td>
+              <td>Purchase, completed form, subscription, or another goal</td>
+              <td>Different goals produce different totals.</td>
+            </tr>
+            <tr>
+              <td>Time zone</td>
+              <td>Reporting time zone in each system</td>
+              <td>Events may fall on different reporting dates.</td>
+            </tr>
+            <tr>
+              <td>Revenue rules</td>
+              <td>Currency, order value, refunds, and adjustments</td>
+              <td>Revenue totals may use different calculations.</td>
+            </tr>
+            <tr>
+              <td>Channel classification</td>
+              <td>Rules for email, direct, paid, and other traffic</td>
+              <td>The same visit may be grouped differently.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>4. Choose a Stable Comparison Period</h2>
+
+      <p>
+        Select a period for which the required source data is available in both
+        systems. Avoid comparing an incomplete current day with a fully processed
+        historical day. Also account for reporting delays, order processing,
+        cancellations, refunds, and delayed conversion events where applicable.
+      </p>
+
+      <p>
+        Record the start date, end date, reporting time zone, and extraction time.
+        If one platform updates historical attribution after additional interactions
+        are processed, note when the report was retrieved.
+      </p>
+
+      <p>
+        A useful comparison can include a historical period before migration and a
+        carefully selected period after migration. However, these periods answer
+        different questions: the first helps establish the old system's behavior,
+        while the second helps assess the new system after launch.
+      </p>
+
+      <h2>5. Test Known Customer Journeys</h2>
+
+      <p>
+        Aggregate totals can conceal problems. Where permitted and supported by the
+        available data, inspect a small set of test journeys or documented conversion
+        examples whose events and timestamps are known.
+      </p>
+
+      <ol>
+        <li>Record the initial marketing interaction.</li>
+        <li>Record subsequent eligible interactions, such as an email click or website visit.</li>
+        <li>Record the conversion event and its timestamp.</li>
+        <li>Check whether each platform received the expected events.</li>
+        <li>Apply each platform's documented attribution rules to the available journey.</li>
+        <li>Compare the assigned credit and explain any difference.</li>
+      </ol>
+
+      <p>
+        Use test transactions or approved test environments when possible. Do not
+        create artificial purchases, manipulate production analytics, or send
+        unsolicited campaigns simply to manufacture attribution data.
+      </p>
+
+      <h2>6. Compare Conversion Counts and Revenue Separately</h2>
+
+      <p>
+        Conversion counts and revenue totals are related but distinct measurements.
+        Two platforms may record the same number of purchases while reporting
+        different attributed revenue because of currency handling, order values,
+        refunds, or attribution rules.
+      </p>
+
+      <p>
+        Build a comparison table using clearly defined metrics. For example:
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Old platform</th>
+              <th>New platform</th>
+              <th>Follow-up</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Recorded conversions</td>
+              <td>Enter verified result</td>
+              <td>Enter verified result</td>
+              <td>Investigate missing or duplicate events.</td>
+            </tr>
+            <tr>
+              <td>Email-attributed conversions</td>
+              <td>Enter verified result</td>
+              <td>Enter verified result</td>
+              <td>Compare model and eligibility rules.</td>
+            </tr>
+            <tr>
+              <td>Total recorded revenue</td>
+              <td>Enter verified result</td>
+              <td>Enter verified result</td>
+              <td>Check order records and currency.</td>
+            </tr>
+            <tr>
+              <td>Email-attributed revenue</td>
+              <td>Enter verified result</td>
+              <td>Enter verified result</td>
+              <td>Check attribution and revenue rules.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        These are comparison fields, not actual performance results. Fill them with
+        verified figures from your own reports. Do not assume that email-attributed
+        conversions should equal all website conversions.
+      </p>
+
+      <h2>7. Investigate Differences Systematically</h2>
+
+      <p>
+        When a difference appears, investigate likely causes one at a time. Changing
+        multiple settings simultaneously makes it harder to identify the source.
+      </p>
+
+      <h3>Missing or duplicated events</h3>
+      <p>
+        Check whether purchase or lead events are missing, duplicated, or recorded
+        with inconsistent identifiers. Compare analytics events with the relevant
+        order or lead records where access and privacy rules permit.
+      </p>
+
+      <h3>Inconsistent campaign tagging</h3>
+      <p>
+        Review campaign URLs and tracking parameters. Inconsistent source, medium,
+        or campaign values can split traffic into unexpected reporting categories.
+        Standardize naming conventions for future campaigns and document historical
+        inconsistencies.
+      </p>
+
+      <h3>Different channel rules</h3>
+      <p>
+        An analytics system and an email platform may classify the same visit
+        differently. A customer could click an email and later return directly.
+        Which interaction receives credit depends on the reporting system's
+        attribution and channel rules.
+      </p>
+
+      <h3>Time-zone and processing differences</h3>
+      <p>
+        Confirm that reports use comparable time zones and sufficiently processed
+        data. Check whether one system includes refunds or late-arriving conversions
+        that the other has not yet incorporated.
+      </p>
+
+      <h3>Consent and tracking restrictions</h3>
+      <p>
+        Consent choices, browser restrictions, blocked tracking, and differences in
+        identity resolution may prevent some interactions from being connected.
+        Validate only the data you are authorized to process, and do not attempt to
+        bypass consent or privacy controls.
+      </p>
+
+      <h2>8. Establish a Practical Acceptance Rule</h2>
+
+      <p>
+        There is no universal percentage difference that proves attribution is
+        correct or incorrect. An appropriate tolerance depends on the business,
+        event volume, data quality, reporting delays, and the purpose of the
+        measurement.
+      </p>
+
+      <p>
+        Define acceptance rules before evaluating the results. For example, require
+        known test events to appear as expected, investigate unexplained duplicates,
+        verify that revenue uses the intended currency, and document any differences
+        caused by incompatible model definitions.
+      </p>
+
+      <p>
+        If the two systems use fundamentally different attribution methodologies,
+        their attributed totals may never match exactly. In that case, validate
+        each system against its own documented rules and use a consistent reporting
+        method for comparisons over time.
+      </p>
+
+      <h2>9. Document the Validation Results</h2>
+
+      <p>
+        Keep a migration validation record that another team member can understand
+        without repeating the entire investigation. Include:
+      </p>
+
+      <ul class="checklist">
+        <li>The old and new platform names and reporting dates.</li>
+        <li>The model, attribution window, conversion definition, and time zone in each system.</li>
+        <li>The source reports or exports used for comparison.</li>
+        <li>Known test journeys and their expected outcomes.</li>
+        <li>Conversion-count and revenue differences that remain unexplained.</li>
+        <li>Corrections made, their dates, and the person responsible.</li>
+        <li>Outstanding limitations and the next review date.</li>
+      </ul>
+
+      <p>
+        Keep records in an access-controlled location and retain only the personal
+        data needed for the documented purpose. Use aggregated or pseudonymized
+        information when individual-level details are unnecessary.
+      </p>
+
+      <h2>10. Use This Final Validation Checklist</h2>
+
+      <ul class="checklist">
+        <li>Attribution models have been identified and documented.</li>
+        <li>Attribution windows have been checked separately.</li>
+        <li>Conversion definitions and revenue rules are understood.</li>
+        <li>Reporting dates and time zones are comparable.</li>
+        <li>Known test journeys have been checked where feasible.</li>
+        <li>Missing and duplicated events have been investigated.</li>
+        <li>Campaign tagging and channel classification have been reviewed.</li>
+        <li>Conversion counts and revenue have been compared separately.</li>
+        <li>Remaining differences have documented explanations or follow-up actions.</li>
+        <li>Reports, settings, and decisions have been saved for future audits.</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+
+      <p>
+        Validating attribution after an email marketing platform migration requires
+        more than comparing two headline numbers. Marketers must understand how each
+        system defines eligible interactions, applies attribution rules, records
+        conversions, and calculates revenue.
+      </p>
+
+      <p>
+        A documented comparison of settings, known journeys, event records, and
+        reporting differences helps distinguish measurement problems from legitimate
+        differences between attribution methods. Once the limitations are understood,
+        teams can make more consistent decisions and evaluate future email campaigns
+        using a clearly defined measurement approach.
+      </p>
+
+      <h2>Related Articles</h2>
+      <ul>
+        <li>
+          <a href="https://nasiremailmarketing.com/articles/0408-email-marketing-migration-attribution-window-validation/">
+            Article 0408: Email Marketing Migration Attribution Window Validation
+          </a>
+        </li>
+        <li>
+          <a href="https://nasiremailmarketing.com/articles/0407-email-marketing-migration-campaign-attribution-validation/">
+            Article 0407: Email Marketing Migration Campaign Attribution Validation
+          </a>
+        </li>
+        <li>
+          <a href="https://nasiremailmarketing.com/articles/0406-email-marketing-migration-revenue-attribution-validation/">
+            Article 0406: Email Marketing Migration Revenue Attribution Validation
+          </a>
+        </li>
+      </ul>
+
+      <h2>About the Author</h2>
+      <p>
+        Muhammad Nasir Uddin is an Assistant Professor of English at Zirabo Dewan
+        Idris College, Savar, Dhaka, Bangladesh. Through Nasir Email Marketing, he
+        publishes educational resources about email marketing, campaign measurement,
+        automation, and related digital marketing practices.
+      </p>
+
+      <h2>Affiliate Disclosure</h2>
+      <p>
+        This website participates in affiliate programs. We may receive a commission
+        when visitors use qualifying affiliate links or complete qualifying actions,
+        at no additional cost to the visitor.
+      </p>
+      <p>
+        This article is educational and does not endorse a particular attribution
+        platform. Platform features and measurement rules may change; consult the
+        relevant provider's current documentation before making implementation
+        decisions.
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <p><strong>Nasir Email Marketing</strong></p>
+    <nav aria-label="Footer navigation">
+      <a href="https://nasiremailmarketing.com/">Home</a>
+      <a href="https://nasiremailmarketing.com/about.html">About</a>
+      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+      <a href="https://nasiremailmarketing.com/privacy-policy.html">Privacy Policy</a>
+      <a href="https://nasiremailmarketing.com/disclaimer.html">Disclaimer</a>
+      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="https://nasiremailmarketing.com/advertise.html">Advertise With Us</a>
+      <a href="https://nasiremailmarketing.com/terms-and-conditions.html">Terms and Conditions</a>
+    </nav>
+    <p>&copy; Nasir Email Marketing. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+```
