@@ -1,0 +1,445 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>How to Validate Email Marketing Conversion Tracking After Platform Migration</title>
+<meta name="description" content="Learn how to validate email marketing conversion tracking after migration, compare attribution settings, test conversion events, investigate reporting differences, and reconcile results.">
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://nasiremailmarketing.com/articles/0405-email-marketing-migration-conversion-tracking-validation/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Nasir Email Marketing">
+<meta property="og:title" content="How to Validate Email Marketing Conversion Tracking After Platform Migration">
+<meta property="og:description" content="A practical guide to validating conversion events, attribution settings, reporting consistency, and measurement after an email marketing migration.">
+<meta property="og:url" content="https://nasiremailmarketing.com/articles/0405-email-marketing-migration-conversion-tracking-validation/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Validate Email Marketing Conversion Tracking After Platform Migration">
+<meta name="twitter:description" content="Practical steps for testing and reconciling email marketing conversions after migration.">
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734" crossorigin="anonymous"></script>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-3ZDJCJWX5F');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Validate Email Marketing Conversion Tracking After Platform Migration",
+  "description": "Learn how to validate email marketing conversion tracking after migration, compare attribution settings, test conversion events, investigate reporting differences, and reconcile results.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nasiremailmarketing.com/articles/0405-email-marketing-migration-conversion-tracking-validation/"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Muhammad Nasir Uddin"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nasir Email Marketing",
+    "url": "https://nasiremailmarketing.com/"
+  },
+  "inLanguage": "en"
+}
+</script>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.75;
+  color: #222;
+  background: #f7f9fc;
+}
+
+header, main, footer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 22px 24px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.brand {
+  margin: 0 0 12px;
+  color: #1557b0;
+  font-size: 25px;
+}
+
+nav, .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+}
+
+a {
+  color: #1557b0;
+  overflow-wrap: anywhere;
+}
+
+nav a, footer a { text-decoration: none; }
+
+main { padding: 24px; }
+
+article, .author-box, .disclosure-box {
+  background: #fff;
+  padding: 28px;
+  margin-bottom: 22px;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+h1, h2, h3 { line-height: 1.35; }
+
+h1 { font-size: 32px; margin-top: 0; }
+h2 { font-size: 25px; margin-top: 36px; }
+h3 { font-size: 19px; margin-top: 26px; }
+
+.article-number {
+  color: #1557b0;
+  font-weight: bold;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #d7dce3;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: #eef3fa; }
+
+.callout {
+  margin: 20px 0;
+  padding: 14px 18px;
+  background: #f3f7fd;
+  border-left: 4px solid #1557b0;
+}
+
+article li { margin-bottom: 8px; }
+
+.author-box h2, .disclosure-box h2 { margin-top: 0; }
+
+.footer-links { justify-content: center; }
+
+footer {
+  padding: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.small { font-size: 14px; color: #555; }
+
+@media (max-width: 600px) {
+  header { padding: 18px; }
+  main { padding: 14px; }
+  article, .author-box, .disclosure-box { padding: 19px; }
+  h1 { font-size: 27px; }
+  h2 { font-size: 22px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <p class="brand"><strong>Nasir Email Marketing</strong></p>
+  <nav aria-label="Main navigation">
+    <a href="https://nasiremailmarketing.com/">Home</a>
+    <a href="https://nasiremailmarketing.com/about.html">About</a>
+    <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+    <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+  </nav>
+</header>
+
+<main>
+<article>
+  <p class="article-number">ARTICLE 0405</p>
+  <h1>How to Validate Email Marketing Conversion Tracking After Platform Migration</h1>
+
+  <p>Moving an email marketing program to a new platform can change how conversions are recorded, attributed, and reported. Even when campaigns and subscriber records have been transferred successfully, a conversion event may be missing, duplicated, mapped to the wrong action, or measured under different reporting rules.</p>
+
+  <p>These differences matter when a business evaluates campaign performance, measures revenue, or decides which customer journeys deserve further investment. A report from the old platform may not be directly comparable with a report from the new platform unless their conversion definitions and measurement settings are understood.</p>
+
+  <p>This guide explains how to define conversions, document attribution settings, test tracking from beginning to end, investigate discrepancies, and create a repeatable reconciliation process after migration.</p>
+
+  <div class="callout">
+    <strong>Key principle:</strong> A conversion recorded by an analytics system, an email platform, and an online store may represent related but different measurements. Verify each system independently before comparing its numbers with another system.
+  </div>
+
+  <h2>1. Define What Counts as a Conversion</h2>
+
+  <p>Before testing tracking, document the business outcome being measured. A conversion could be a completed purchase, a qualified lead submission, a completed registration, or another action that has a clear business purpose.</p>
+
+  <p>Do not use the word “conversion” without specifying the action. An email click is an engagement event; it is not necessarily a completed business outcome. Similarly, adding an item to a cart is not the same as completing a purchase.</p>
+
+  <p>Create a conversion definition that records:</p>
+
+  <ul>
+    <li>The exact action that qualifies as a conversion.</li>
+    <li>The event name or reporting metric used by each system.</li>
+    <li>The system that is considered the primary source for the outcome.</li>
+    <li>Any required event properties, such as transaction ID or value.</li>
+    <li>The reporting time zone and measurement period.</li>
+    <li>The attribution model and applicable attribution window.</li>
+    <li>Any exclusions, cancellation rules, or duplicate-handling requirements.</li>
+  </ul>
+
+  <p>This definition gives the migration team a stable reference point when platform reports use different labels or measurement methods.</p>
+
+  <h2>2. Inventory the Existing Conversion Setup</h2>
+
+  <p>Review the old email marketing platform, website, online store, analytics configuration, and relevant integrations. Identify every place where the conversion is generated, transmitted, processed, or displayed in a report.</p>
+
+  <p>For each conversion, record the source event, destination, event properties, relevant tags or parameters, and any automation or report that depends on it. Also document whether tracking is browser-based, server-based, integration-based, or a combination.</p>
+
+  <p>Do not assume that a conversion configured in the old platform will be recreated automatically when you migrate contacts and campaigns. Tracking configuration and historical reporting data may require separate treatment.</p>
+
+  <h2>3. Map Old Conversion Events to the New System</h2>
+
+  <p>Build an explicit mapping between the previous event and the new event. Similar labels do not guarantee identical definitions, required properties, or counting behavior.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Conversion type</th>
+          <th>What to compare</th>
+          <th>Example validation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Purchase</td>
+          <td>Transaction ID, value, currency, order status, and duplicate handling.</td>
+          <td>Compare a controlled test order with the event and order record.</td>
+        </tr>
+        <tr>
+          <td>Lead submission</td>
+          <td>Form identity, successful submission condition, and contact association.</td>
+          <td>Submit a test form and verify the intended conversion record.</td>
+        </tr>
+        <tr>
+          <td>Registration</td>
+          <td>Successful account creation versus merely opening or submitting a form.</td>
+          <td>Verify that the conversion occurs only when the defined registration succeeds.</td>
+        </tr>
+        <tr>
+          <td>Subscription</td>
+          <td>Subscription state, confirmation requirements, and consent rules.</td>
+          <td>Check the resulting subscription status using a permitted test workflow.</td>
+        </tr>
+        <tr>
+          <td>Qualified lead</td>
+          <td>Qualification criteria, source system, and the event that records qualification.</td>
+          <td>Verify that only records meeting the documented criteria are counted.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>These examples are illustrative. Use the event names, fields, and capabilities supported by your actual systems.</p>
+
+  <h2>4. Check Attribution Models and Windows</h2>
+
+  <p>Attribution determines how a conversion is credited to a marketing interaction. Different platforms can apply different attribution models, lookback windows, eligibility rules, and reporting logic. Consequently, two reports can show different conversion totals even when the underlying business transactions are the same.</p>
+
+  <p>Document the following settings before comparing old and new reports:</p>
+
+  <ul>
+    <li>Whether attribution is based on a click, a view, or another eligible interaction.</li>
+    <li>How long after an interaction a conversion can receive credit.</li>
+    <li>Whether the system uses first-touch, last-touch, data-driven, or another model.</li>
+    <li>How multiple eligible marketing interactions are treated.</li>
+    <li>Whether reporting uses the interaction date or the conversion date.</li>
+    <li>Whether the report includes all conversions or only selected conversion actions.</li>
+  </ul>
+
+  <p>Where possible, compare reports using equivalent settings. If the two systems do not support equivalent settings, document the difference rather than presenting their totals as directly interchangeable.</p>
+
+  <h2>5. Verify Tracking Parameters and Campaign Identification</h2>
+
+  <p>Email campaigns may use URL parameters to help identify campaign traffic in analytics reports. During migration, links can be rebuilt incorrectly, campaign naming conventions may change, or redirect behavior may remove parameters.</p>
+
+  <p>Inspect representative campaign links and confirm that:</p>
+
+  <ul>
+    <li>The destination URL is correct and loads successfully.</li>
+    <li>Campaign parameters are present where expected.</li>
+    <li>Redirects preserve the required parameters.</li>
+    <li>Campaign names and source values follow a documented convention.</li>
+    <li>The analytics system receives the expected traffic information.</li>
+  </ul>
+
+  <p>Do not rely on campaign parameters alone to prove that a conversion happened. They help identify traffic; a separate conversion event or trusted business record is needed to verify the outcome.</p>
+
+  <h2>6. Test Conversions From Start to Finish</h2>
+
+  <p>Use controlled test scenarios to check the complete journey from an eligible marketing interaction to the final business outcome and reporting record. Choose a test environment or test account whenever possible to avoid generating unnecessary live messages, payments, or customer records.</p>
+
+  <ol>
+    <li><strong>Write the test case.</strong> Specify the starting condition, conversion definition, expected event, and required properties.</li>
+    <li><strong>Generate the test interaction.</strong> Use an approved test link or other documented procedure.</li>
+    <li><strong>Complete the intended action.</strong> For example, complete a test registration or use an approved test-order process.</li>
+    <li><strong>Check the source record.</strong> Confirm that the business outcome actually occurred.</li>
+    <li><strong>Check the receiving systems.</strong> Inspect the event or conversion record in each relevant platform.</li>
+    <li><strong>Compare properties.</strong> Verify identifiers, value, currency, timestamp, and other required fields.</li>
+    <li><strong>Review attribution.</strong> Confirm whether the conversion is eligible for credit under the documented rules.</li>
+    <li><strong>Record the outcome.</strong> Mark the test as passed, failed, or blocked and retain appropriate evidence.</li>
+  </ol>
+
+  <p>Some systems process events asynchronously or update reports after a delay. Check the platform's documentation and allow for the expected processing time before deciding that a test failed.</p>
+
+  <h2>7. Prevent Duplicate Conversion Counting</h2>
+
+  <p>Duplicate conversions can occur when the same action is sent through multiple tracking paths, when a browser retries an event, or when a page refresh causes an event to fire again. Duplicate counting can make campaign performance and revenue appear higher than they are.</p>
+
+  <p>Review whether the website, store, browser tracking, server-side tracking, and third-party integrations report the same conversion. Where supported, use stable transaction or event identifiers and the receiving platform's documented deduplication mechanism.</p>
+
+  <p>Test duplicate handling deliberately in a safe environment. Do not assume that two events with the same name will automatically be treated as one conversion. Deduplication rules vary between systems and conversion types.</p>
+
+  <h2>8. Reconcile Conversion Counts and Revenue</h2>
+
+  <p>Choose a reporting period and define the metrics you intend to reconcile. For purchases, the order system may be the appropriate reference for completed transactions, while analytics and email platforms may provide different views of traffic and attribution.</p>
+
+  <p>Compare records using the closest available common identifiers and consistent definitions. Check the following before treating a discrepancy as an error:</p>
+
+  <ul>
+    <li>Whether the same dates and time zones are used.</li>
+    <li>Whether cancelled, refunded, or test transactions are included.</li>
+    <li>Whether event totals represent unique conversions or repeated events.</li>
+    <li>Whether one report attributes a conversion to email while another assigns credit elsewhere.</li>
+    <li>Whether processing delays affect the reporting period.</li>
+    <li>Whether the reports use the same currency and revenue definition.</li>
+  </ul>
+
+  <p>Do not force different reports to match by changing the conversion definition after seeing the results. Record the reason for each meaningful difference and keep the original evidence available for review.</p>
+
+  <h2>9. Troubleshoot Common Conversion Problems</h2>
+
+  <h3>Conversions are missing</h3>
+  <p>Confirm that the intended action completed, the event was generated, the integration delivered it, and the destination accepted it. Check event names, required fields, permissions, consent controls, and error logs.</p>
+
+  <h3>Conversion totals are unexpectedly high</h3>
+  <p>Investigate repeated event firing, duplicate integrations, page reloads, and the destination's counting rules. Compare event identifiers and underlying business records where available.</p>
+
+  <h3>Conversions appear under the wrong campaign</h3>
+  <p>Inspect campaign parameters, redirect behavior, campaign naming, attribution settings, and the reporting model. A conversion can be real even when the system assigns credit differently from another platform.</p>
+
+  <h3>Revenue does not match the store</h3>
+  <p>Check currency, transaction value, tax and shipping treatment, refunds, cancellations, transaction IDs, and whether the report counts orders or revenue events. Confirm the precise revenue definition used by each system.</p>
+
+  <h3>Conversions arrive late</h3>
+  <p>Review event-processing delays, integration queues, reporting refresh intervals, and timestamp handling. Separate the time the action occurred from the time the destination processed or displayed it.</p>
+
+  <h2>10. Document Results and Set Monitoring Rules</h2>
+
+  <p>Create a migration validation record for each important conversion. Include the event definition, source, destination, attribution settings, test method, result, unresolved differences, and the person responsible for follow-up.</p>
+
+  <p>After launch, monitor important conversion events and investigate meaningful changes in event volume, missing properties, integration errors, and unexplained reporting differences. Establish thresholds based on the business's normal activity and risk instead of using arbitrary limits.</p>
+
+  <p>Store evidence securely and avoid putting passwords, API secrets, access tokens, or unnecessary personal information in migration notes.</p>
+
+  <h2>11. Final Conversion-Tracking Checklist</h2>
+
+  <ul>
+    <li>Conversion definitions are documented and consistent with business goals.</li>
+    <li>Old and new event mappings have been reviewed.</li>
+    <li>Attribution models and windows are documented.</li>
+    <li>Campaign parameters and redirects have been checked.</li>
+    <li>Test conversions have been traced through the relevant systems.</li>
+    <li>Transaction identifiers and required properties have been validated.</li>
+    <li>Duplicate conversion handling has been tested.</li>
+    <li>Time zones, reporting periods, currencies, and revenue definitions have been compared.</li>
+    <li>Discrepancies have evidence-based explanations or assigned follow-up actions.</li>
+    <li>Post-launch monitoring and ownership are documented.</li>
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>Why can conversion totals change after an email marketing migration?</h3>
+  <p>Totals may change because of event mapping, attribution settings, reporting periods, duplicate handling, consent behavior, processing delays, or differences in how each platform defines a conversion.</p>
+
+  <h3>Should GA4 and an email marketing platform report identical conversions?</h3>
+  <p>Not necessarily. The systems may use different conversion definitions, attribution models, identity rules, and reporting logic. Compare equivalent metrics and document differences.</p>
+
+  <h3>What should be used as the source of truth for purchases?</h3>
+  <p>For completed orders, the order-management or commerce system is often the most direct source for transaction records. Analytics and email platforms remain useful for understanding marketing interactions and attributed performance. Choose the reference according to the question being answered.</p>
+
+  <h3>Can campaign tracking parameters verify a sale?</h3>
+  <p>No. Campaign parameters help identify traffic sources. A separate event or business transaction record is needed to confirm that the defined conversion occurred.</p>
+
+  <h3>When should conversion tracking be tested?</h3>
+  <p>Test before migration launch, after significant tracking or integration changes, and during ongoing monitoring. Prioritize conversions that affect revenue, consent, or critical customer journeys.</p>
+
+  <h2>Conclusion</h2>
+
+  <p>Validating conversion tracking after an email marketing migration requires more than checking whether a number appears in a dashboard. The team must verify conversion definitions, event delivery, attribution settings, duplicate handling, and the consistency of reporting periods and business records.</p>
+
+  <p>By documenting the measurement rules, testing representative journeys, investigating discrepancies, and monitoring the system after launch, businesses can make better-informed decisions from their migrated email marketing data.</p>
+
+  <h2>Related Articles</h2>
+  <ul>
+    <li><a href="https://nasiremailmarketing.com/articles/0404-email-marketing-migration-event-tracking-validation/">Article 0404: How to Validate Email Marketing Event Tracking After Platform Migration</a></li>
+    <li><a href="https://nasiremailmarketing.com/articles/0399-email-marketing-migration-automation-error-handling/">Article 0399: Email Marketing Migration Automation Error Handling</a></li>
+    <li><a href="https://nasiremailmarketing.com/articles/0403-email-marketing-migration-automation-entry-conditions/">Article 0403: How to Rebuild Email Automation Entry Conditions After Migration</a></li>
+  </ul>
+</article>
+
+<section class="author-box">
+  <h2>About the Author</h2>
+  <p>Muhammad Nasir Uddin is an Assistant Professor of English at Zirabo Dewan Idris College, Savar, Dhaka, Bangladesh. Through Nasir Email Marketing, he publishes educational resources about email marketing, subscriber management, marketing automation, and related digital marketing practices.</p>
+</section>
+
+<section class="disclosure-box">
+  <h2>Affiliate Disclosure</h2>
+  <p>This website participates in affiliate programs. We may receive a commission when visitors use qualifying affiliate links or complete qualifying actions, at no additional cost to the visitor.</p>
+  <p>This article contains no GetResponse affiliate link. The information is educational and does not claim that the author has tested any particular platform or integration.</p>
+</section>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://nasiremailmarketing.com/">Home</a>
+    <a href="https://nasiremailmarketing.com/about.html">About</a>
+    <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+    <a href="https://nasiremailmarketing.com/privacy-policy.html">Privacy Policy</a>
+    <a href="https://nasiremailmarketing.com/disclaimer.html">Disclaimer</a>
+    <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+    <a href="https://nasiremailmarketing.com/advertise.html">Advertise With Us</a>
+    <a href="https://nasiremailmarketing.com/terms-and-conditions.html">Terms and Conditions</a>
+  </div>
+  <p class="small">&copy; Nasir Email Marketing. All rights reserved.</p>
+</footer>
+</body>
+</html>
+```
