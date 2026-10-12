@@ -1,692 +1,603 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nasir Email Marketing | Practical Email Marketing Guides</title>
+  <meta name="description" content="Learn email marketing with practical guides to strategy, automation, list building, segmentation, personalization, and customer communication.">
+  <meta name="author" content="Muhammad Nasir Uddin">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="LviZ4BhfKcX1otA4BRb0jt0-qgJhL0Z7nDXqKQmO0II">
 
-<title>Email Marketing Resource | Practical Guides & Tutorials</title>
+  <link rel="canonical" href="https://nasiremailmarketing.com/">
 
-<meta name="description" content="Explore practical email marketing guides, tutorials, customer retention strategies, automation, list building, and email campaign resources.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nasir Email Marketing | Practical Email Marketing Guides">
+  <meta property="og:description" content="Practical learning resources for email marketing strategy, automation, list building, segmentation, and personalization.">
+  <meta property="og:url" content="https://nasiremailmarketing.com/">
+  <meta property="og:site_name" content="Nasir Email Marketing">
+  <meta name="twitter:card" content="summary">
 
-<meta name="author" content="Muhammad Nasir Uddin">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-<meta name="robots" content="index, follow">
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
 
-<!-- Google Search Console Verification -->
-<meta name="google-site-verification" content="LviZ4BhfKcX1otA4BRb0jt0-qgJhL0Z7nDXqKQmO0II">
+    gtag('js', new Date());
+    gtag('config', 'G-3ZDJCJWX5F');
+  </script>
 
-<!-- Canonical -->
-<link rel="canonical" href="https://nasiremailmarketing.com/">
+  <!-- Google AdSense publisher code -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-2215626158767734"
+    crossorigin="anonymous"></script>
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Email Marketing Resource | Practical Guides & Tutorials">
-<meta property="og:description" content="Practical email marketing guides, tutorials, automation, customer retention, list building, and audience growth resources.">
-<meta property="og:url" content="https://nasiremailmarketing.com/">
-<meta property="og:site_name" content="Email Marketing Resource">
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #123b63;
+      --blue: #0759a8;
+      --blue-dark: #063f78;
+      --text: #202833;
+      --muted: #4b5867;
+      --surface: #f4f7fa;
+      --border: #d9e1e8;
+      --white: #ffffff;
+      --max-width: 1100px;
+    }
 
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-<script>
-window.dataLayer = window.dataLayer || [];
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 1rem;
+    }
 
-function gtag(){
-  dataLayer.push(arguments);
-}
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-gtag('js', new Date());
-gtag('config', 'G-3ZDJCJWX5F');
-</script>
+    a {
+      color: var(--blue);
+      text-underline-offset: 0.18em;
+    }
 
-<style>
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    a:focus-visible {
+      outline: 3px solid #e3a008;
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    .skip-link {
+      position: absolute;
+      top: 0.5rem;
+      left: -9999px;
+      z-index: 10;
+      padding: 0.65rem 0.9rem;
+      background: var(--white);
+      color: var(--navy);
+      border: 2px solid var(--navy);
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.7;
-  color: #222;
-  background: #ffffff;
-}
+    .skip-link:focus {
+      left: 0.5rem;
+    }
 
-a {
-  color: #0759a8;
-  text-decoration: none;
-}
+    .container {
+      width: min(92%, var(--max-width));
+      margin-inline: auto;
+    }
 
-a:hover {
-  text-decoration: underline;
-}
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1.35rem 0 1.2rem;
+    }
 
-.container {
-  width: 92%;
-  max-width: 1100px;
-  margin: auto;
-}
+    .brand {
+      margin: 0;
+      font-size: clamp(1.6rem, 4vw, 2rem);
+      line-height: 1.25;
+    }
 
-/* HEADER */
+    .tagline {
+      max-width: 760px;
+      margin: 0.55rem 0 1rem;
+      color: #eaf2fa;
+    }
 
-header {
-  background: #123b63;
-  color: white;
-  padding: 20px 0;
-}
+    .main-nav,
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem 1.15rem;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 30px;
-}
+    .main-nav a,
+    .footer-nav a {
+      color: var(--white);
+      font-weight: 700;
+    }
 
-header p {
-  margin: 6px 0 15px;
-  font-size: 16px;
-}
+    .hero {
+      padding: clamp(2.5rem, 7vw, 4.5rem) 0;
+      background: var(--surface);
+      text-align: center;
+    }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-}
+    .hero h2 {
+      max-width: 850px;
+      margin: 0 auto 1rem;
+      color: var(--navy);
+      font-size: clamp(1.8rem, 4.6vw, 2.6rem);
+      line-height: 1.2;
+    }
 
-nav a {
-  color: white;
-  font-weight: bold;
-}
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 1.5rem;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
 
-/* HERO */
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.15rem;
+      border: 2px solid var(--blue);
+      border-radius: 5px;
+      background: var(--blue);
+      color: var(--white);
+      font-weight: 700;
+      text-decoration: none;
+    }
 
-.hero {
-  background: #f1f6fa;
-  padding: 55px 0;
-  text-align: center;
-}
+    .button:hover {
+      background: var(--blue-dark);
+      border-color: var(--blue-dark);
+      text-decoration: none;
+    }
 
-.hero h2 {
-  font-size: 34px;
-  margin: 0 0 15px;
-  color: #123b63;
-}
+    .section {
+      padding: clamp(2.2rem, 5vw, 3.3rem) 0;
+    }
 
-.hero p {
-  max-width: 760px;
-  margin: 0 auto 20px;
-  font-size: 18px;
-}
+    .section h2 {
+      margin: 0 0 0.8rem;
+      color: var(--navy);
+      font-size: clamp(1.55rem, 3.4vw, 2rem);
+      line-height: 1.3;
+    }
 
-/* BUTTON */
+    .section-intro {
+      max-width: 820px;
+      margin: 0 0 1.4rem;
+      color: var(--muted);
+    }
 
-.button {
-  display: inline-block;
-  background: #0759a8;
-  color: white;
-  padding: 11px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-}
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.15rem;
+      margin-top: 1.5rem;
+    }
 
-.button:hover {
-  background: #063f78;
-  text-decoration: none;
-}
+    .article-card {
+      min-width: 0;
+      padding: 1.3rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+    }
 
-/* SECTIONS */
+    .article-number {
+      margin: 0 0 0.45rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.025em;
+    }
 
-section {
-  padding: 45px 0;
-}
+    .article-card h3 {
+      margin: 0 0 0.55rem;
+      font-size: 1.15rem;
+      line-height: 1.4;
+    }
 
-section h2 {
-  color: #123b63;
-  margin-bottom: 15px;
-  font-size: 28px;
-}
+    .article-card p {
+      margin: 0 0 0.8rem;
+    }
 
-/* ARTICLE GRID */
+    .article-card .read-link {
+      font-weight: 700;
+    }
 
-.article-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-  margin-top: 25px;
-}
+    .learning-path {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.4rem;
+    }
 
-.article-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 22px;
-  background: #fff;
-  box-shadow: 0 2px 7px rgba(0,0,0,0.05);
-}
+    .path-step {
+      padding: 1.15rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #f8fafc;
+    }
 
-.article-card h3 {
-  margin-top: 0;
-  font-size: 20px;
-}
+    .path-step h3 {
+      margin: 0 0 0.45rem;
+      color: var(--navy);
+      font-size: 1.1rem;
+    }
 
-.article-number {
-  font-size: 13px;
-  font-weight: bold;
-  color: #777;
-  margin-bottom: 8px;
-}
+    .path-step p {
+      margin: 0;
+    }
 
-/* TOPICS */
+    .about-panel {
+      padding: clamp(1.25rem, 3vw, 1.8rem);
+      border-left: 5px solid var(--blue);
+      background: var(--surface);
+    }
 
-.topic-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
+    .about-panel p:last-child {
+      margin-bottom: 0;
+    }
 
-.topic {
-  background: #f7f9fb;
-  padding: 20px;
-  border-radius: 7px;
-  border: 1px solid #e1e5e8;
-}
+    .site-footer {
+      margin-top: 1.5rem;
+      padding: 2.2rem 0;
+      background: var(--navy);
+      color: var(--white);
+    }
 
-.topic h3 {
-  margin-top: 0;
-  color: #123b63;
-}
+    .site-footer p {
+      margin: 0.8rem 0 0;
+    }
 
-/* ABOUT */
+    .footer-note {
+      color: #eaf2fa;
+      font-size: 0.95rem;
+    }
 
-.about-box {
-  background: #f7f9fb;
-  padding: 25px;
-  border-left: 5px solid #0759a8;
-}
+    @media (max-width: 720px) {
+      .article-grid,
+      .learning-path {
+        grid-template-columns: 1fr;
+      }
 
-/* FOOTER */
+      .main-nav,
+      .footer-nav {
+        gap: 0.6rem 0.9rem;
+      }
+    }
 
-footer {
-  background: #123b63;
-  color: white;
-  margin-top: 35px;
-  padding: 35px 0;
-}
-
-footer a {
-  color: white;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 18px;
-}
-
-footer p {
-  margin: 7px 0;
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-  header h1 {
-    font-size: 25px;
-  }
-
-  .hero h2 {
-    font-size: 27px;
-  }
-
-  .article-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .topic-list {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    gap: 12px;
-  }
-
-}
-
-</style>
-
-<!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-2215626158767734"
- crossorigin="anonymous"></script>
-
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<!-- HEADER -->
-
-<header>
-  <div class="container">
-
-    <h1>Email Marketing Resource</h1>
-
-    <p>
-      Practical Email Marketing + List Building + Blogging for Audience Growth
-    </p>
-
-    <nav>
-      <a href="https://nasiremailmarketing.com/">Home</a>
-      <a href="https://nasiremailmarketing.com/about.html">About</a>
-      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
-    </nav>
-
-  </div>
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-  <div class="container">
-
-    <h2>Learn Email Marketing Step by Step</h2>
-
-    <p>
-      Explore practical guides and tutorials about email marketing,
-      customer communication, automation, list building, retention,
-      and audience growth.
-    </p>
-
-    <a class="button" href="#latest-articles">
-      Read Latest Articles
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- INTRODUCTION -->
-
-<section>
-
-  <div class="container">
-
-    <h2>Welcome to Email Marketing Resource</h2>
-
-    <p>
-      Email Marketing Resource is an educational website focused on
-      practical email marketing knowledge for marketers, creators,
-      businesses, and anyone who wants to build stronger relationships
-      with an email audience.
-    </p>
-
-    <p>
-      The goal is simple: provide useful, understandable, and practical
-      information that readers can apply to their own email marketing
-      activities.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- LATEST ARTICLES -->
-
-<section id="latest-articles">
-
-  <div class="container">
-
-    <h2>Latest Email Marketing Articles</h2>
-
-    <p>
-      Explore the latest articles in the Email Marketing Resource library.
-    </p>
-
-    <div class="article-grid">
-
-
-      <!-- ARTICLE 0359 -->
-
-      <article class="article-card">
-
-        <div class="article-number">
-          ARTICLE 0359
-        </div>
-
-        <h3>
-          <a href="https://nasiremailmarketing.com/articles/0359-lead-magnet-welcome-email-follow-up-after-resend/">
-            Lead Magnet Welcome Email Follow-Up After Resend
-          </a>
-        </h3>
-
-        <p>
-          Learn how to create a useful follow-up email after resending a message to subscribers who did not open the original email.
-        </p>
-
-        <a href="https://nasiremailmarketing.com/articles/0359-lead-magnet-welcome-email-follow-up-after-resend/">
-          Read Article →
-        </a>
-
-      </article>
-
-
-      <!-- ARTICLE 0360 -->
-
-      <article class="article-card">
-
-        <div class="article-number">
-          ARTICLE 0360
-        </div>
-
-        <h3>
-          <a href="https://nasiremailmarketing.com/articles/0360-lead-magnet-welcome-email-follow-up-content-ideas/">
-            Lead Magnet Welcome Email Follow-Up Content Ideas
-          </a>
-        </h3>
-
-        <p>
-          Explore practical content ideas for follow-up emails that keep subscribers engaged without repeating the same message.
-        </p>
-
-        <a href="https://nasiremailmarketing.com/articles/0360-lead-magnet-welcome-email-follow-up-content-ideas/">
-          Read Article →
-        </a>
-
-      </article>
-
-
-      <!-- ARTICLE 0361 -->
-
-      <article class="article-card">
-
-        <div class="article-number">
-          ARTICLE 0361
-        </div>
-
-        <h3>
-          <a href="https://nasiremailmarketing.com/articles/0361-lead-magnet-welcome-email-follow-up-timing/">
-            Lead Magnet Welcome Email Follow-Up Timing
-          </a>
-        </h3>
-
-        <p>
-          Learn how to choose effective timing for follow-up emails and give subscribers enough time to respond.
-        </p>
-
-        <a href="https://nasiremailmarketing.com/articles/0361-lead-magnet-welcome-email-follow-up-timing/">
-          Read Article →
-        </a>
-
-      </article>
-
-
-      <!-- ARTICLE 0362 -->
-
-      <article class="article-card">
-
-        <div class="article-number">
-          ARTICLE 0362
-        </div>
-
-        <h3>
-          <a href="https://nasiremailmarketing.com/articles/0362-lead-magnet-welcome-email-follow-up-frequency/">
-            Lead Magnet Welcome Email Follow-Up Frequency
-          </a>
-        </h3>
-
-        <p>
-          Discover how to manage follow-up email frequency while maintaining useful communication and avoiding message fatigue.
-        </p>
-
-        <a href="https://nasiremailmarketing.com/articles/0362-lead-magnet-welcome-email-follow-up-frequency/">
-          Read Article →
-        </a>
-
-      </article>
-
-
-      <!-- ARTICLE 0363 -->
-
-      <article class="article-card">
-
-        <div class="article-number">
-          ARTICLE 0363
-        </div>
-
-        <h3>
-          <a href="https://nasiremailmarketing.com/articles/0363-lead-magnet-welcome-email-follow-up-sequence-structure/">
-            Lead Magnet Welcome Email Follow-Up Sequence Structure
-          </a>
-        </h3>
-
-        <p>
-          Learn how to structure a follow-up email sequence so each message has a clear purpose and logical progression.
-        </p>
-
-        <a href="https://nasiremailmarketing.com/articles/0363-lead-magnet-welcome-email-follow-up-sequence-structure/">
-          Read Article →
-        </a>
-
-      </article>
-
-
-      <!-- ARTICLE 0364 -->
-
-      <article class="article-card">
-
-        <div class="article-number">
-          ARTICLE 0364
-        </div>
-
-        <h3>
-          <a href="https://nasiremailmarketing.com/articles/0364-lead-magnet-welcome-email-follow-up-sequence-content/">
-            Lead Magnet Welcome Email Follow-Up Sequence Content
-          </a>
-        </h3>
-
-        <p>
-          Explore how to plan useful content across a lead magnet welcome email follow-up sequence.
-        </p>
-
-        <a href="https://nasiremailmarketing.com/articles/0364-lead-magnet-welcome-email-follow-up-sequence-content/">
-          Read Article →
-        </a>
-
-      </article>
-
-
-      <!-- ARTICLE 0365 -->
-
-      <article class="article-card">
-
-        <div class="article-number">
-          ARTICLE 0365
-        </div>
-
-        <h3>
-          <a href="https://nasiremailmarketing.com/articles/0365-lead-magnet-welcome-email-follow-up-sequence-email-roles/">
-            Lead Magnet Welcome Email Follow-Up Sequence Email Roles
-          </a>
-        </h3>
-
-        <p>
-          Learn how different emails can serve distinct roles within a lead magnet welcome email follow-up sequence.
-        </p>
-
-        <a href="https://nasiremailmarketing.com/articles/0365-lead-magnet-welcome-email-follow-up-sequence-email-roles/">
-          Read Article →
-        </a>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- MAIN TOPICS -->
-
-<section>
-
-  <div class="container">
-
-    <h2>What You Can Learn</h2>
-
-    <div class="topic-list">
-
-      <div class="topic">
-        <h3>Email Marketing</h3>
-        <p>
-          Learn email campaign planning, customer communication,
-          email strategy, and practical campaign techniques.
-        </p>
-      </div>
-
-      <div class="topic">
-        <h3>Email Automation</h3>
-        <p>
-          Understand automated email sequences, customer journeys,
-          triggers, follow-ups, and retention communication.
-        </p>
-      </div>
-
-      <div class="topic">
-        <h3>List Building</h3>
-        <p>
-          Explore practical ideas for growing an email audience and
-          building meaningful subscriber relationships.
-        </p>
-      </div>
-
-      <div class="topic">
-        <h3>Customer Retention</h3>
-        <p>
-          Learn how useful email communication can support customer
-          engagement and long-term relationships.
-        </p>
-      </div>
-
-      <div class="topic">
-        <h3>Email Copywriting</h3>
-        <p>
-          Improve subject lines, email structure, calls to action,
-          personalization, and customer-focused messaging.
-        </p>
-      </div>
-
-      <div class="topic">
-        <h3>Audience Growth</h3>
-        <p>
-          Explore email marketing, blogging, and content strategies
-          that can help build a stronger online audience.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section>
-
-  <div class="container">
-
-    <div class="about-box">
-
-      <h2>About Email Marketing Resource</h2>
-
-      <p>
-        Email Marketing Resource is created by
-        <strong>Muhammad Nasir Uddin</strong>.
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Nasir Email Marketing</h1>
+
+      <p class="tagline">
+        Practical guides to email marketing strategy, automation, list building,
+        and customer communication.
       </p>
 
-      <p>
-        The website focuses on practical email marketing,
-        list building, blogging for audience growth,
-        customer communication, and marketing automation.
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="https://nasiremailmarketing.com/" aria-current="page">Home</a>
+        <a href="https://nasiremailmarketing.com/about.html">About</a>
+        <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+        <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <h2 id="hero-heading">Learn Email Marketing Step by Step</h2>
+
+        <p>
+          Build your understanding of email marketing with guides covering campaign
+          planning, subscriber growth, automation, segmentation, personalization,
+          and customer relationships. Start with the basics, then use the relevant
+          guides to develop your approach.
+        </p>
+
+        <a class="button" href="#start-here">Start Learning</a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="welcome-heading">
+      <div class="container">
+        <h2 id="welcome-heading">Welcome to Nasir Email Marketing</h2>
+
+        <p>
+          Email marketing involves sending relevant, permission-based messages to
+          people who have chosen to hear from a business, creator, or organization.
+          Effective work goes beyond sending campaigns: it includes understanding
+          the audience, setting a clear purpose, writing useful messages, and
+          reviewing results responsibly.
+        </p>
+
+        <p>
+          This website organizes educational guides around those tasks. Use the
+          starting articles below to learn foundational concepts, then explore the
+          topic that best matches the work you want to do. Recommendations and
+          examples are intended to support your own judgment; results will vary
+          with the audience, offer, timing, and implementation.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="start-here" aria-labelledby="start-heading">
+      <div class="container">
+        <h2 id="start-heading">Start Here: Essential Email Marketing Guides</h2>
+
+        <p class="section-intro">
+          New to email marketing? These introductory guides cover different
+          foundations, from the meaning of email marketing to strategy, automation,
+          list building, segmentation, and personalization.
+        </p>
+
+        <div class="article-grid">
+          <article class="article-card">
+            <p class="article-number">ARTICLE 0001</p>
+            <h3>
+              <a href="https://nasiremailmarketing.com/articles/0001-what-is-email-marketing/">
+                What Is Email Marketing?
+              </a>
+            </h3>
+            <p>
+              Understand what email marketing is, how it works, and the main
+              purposes of sending useful messages to subscribers.
+            </p>
+            <a class="read-link" href="https://nasiremailmarketing.com/articles/0001-what-is-email-marketing/">
+              Read the guide →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <p class="article-number">ARTICLE 0002</p>
+            <h3>
+              <a href="https://nasiremailmarketing.com/articles/0002-email-marketing-benefits/">
+                Email Marketing Benefits
+              </a>
+            </h3>
+            <p>
+              Explore common uses of email marketing and the practical limitations
+              to consider when evaluating its value.
+            </p>
+            <a class="read-link" href="https://nasiremailmarketing.com/articles/0002-email-marketing-benefits/">
+              Read the guide →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <p class="article-number">ARTICLE 0003</p>
+            <h3>
+              <a href="https://nasiremailmarketing.com/articles/0003-email-marketing-strategy/">
+                Email Marketing Strategy
+              </a>
+            </h3>
+            <p>
+              Learn how to connect audience needs, campaign goals, message planning,
+              and measurement in a coherent strategy.
+            </p>
+            <a class="read-link" href="https://nasiremailmarketing.com/articles/0003-email-marketing-strategy/">
+              Read the guide →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <p class="article-number">ARTICLE 0004</p>
+            <h3>
+              <a href="https://nasiremailmarketing.com/articles/0004-email-marketing-automation/">
+                Email Marketing Automation
+              </a>
+            </h3>
+            <p>
+              Learn the role of triggers and automated sequences, and where a
+              human review can improve the subscriber experience.
+            </p>
+            <a class="read-link" href="https://nasiremailmarketing.com/articles/0004-email-marketing-automation/">
+              Read the guide →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <p class="article-number">ARTICLE 0005</p>
+            <h3>
+              <a href="https://nasiremailmarketing.com/articles/0005-email-list-building/">
+                Email List Building
+              </a>
+            </h3>
+            <p>
+              Review permission-based ways to invite people to subscribe and set
+              clear expectations about future emails.
+            </p>
+            <a class="read-link" href="https://nasiremailmarketing.com/articles/0005-email-list-building/">
+              Read the guide →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <p class="article-number">ARTICLE 0006</p>
+            <h3>
+              <a href="https://nasiremailmarketing.com/articles/0006-email-marketing-segmentation/">
+                Email Marketing Segmentation
+              </a>
+            </h3>
+            <p>
+              Understand how to group subscribers using relevant information so
+              messages can better match their needs and interests.
+            </p>
+            <a class="read-link" href="https://nasiremailmarketing.com/articles/0006-email-marketing-segmentation/">
+              Read the guide →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <p class="article-number">ARTICLE 0007</p>
+            <h3>
+              <a href="https://nasiremailmarketing.com/articles/0007-email-personalization/">
+                Email Personalization
+              </a>
+            </h3>
+            <p>
+              Explore ways to make messages more relevant while respecting
+              subscriber privacy and avoiding misleading familiarity.
+            </p>
+            <a class="read-link" href="https://nasiremailmarketing.com/articles/0007-email-personalization/">
+              Read the guide →
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="learning-path-heading">
+      <div class="container">
+        <h2 id="learning-path-heading">A Practical Learning Path</h2>
+
+        <p class="section-intro">
+          Use this sequence to connect the concepts rather than treating each
+          email marketing task in isolation.
+        </p>
+
+        <div class="learning-path">
+          <article class="path-step">
+            <h3>1. Plan the purpose</h3>
+            <p>
+              Define who the message is for, what the reader needs, and what a
+              useful outcome would look like before drafting a campaign.
+            </p>
+          </article>
+
+          <article class="path-step">
+            <h3>2. Build and organize the audience</h3>
+            <p>
+              Invite subscribers with clear expectations, keep list practices
+              permission-based, and use relevant segmentation when it helps readers.
+            </p>
+          </article>
+
+          <article class="path-step">
+            <h3>3. Review and improve</h3>
+            <p>
+              Check message clarity, delivery, engagement, and business outcomes.
+              Use results as evidence for testing—not as a guarantee of future
+              performance.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="topics-heading">
+      <div class="container">
+        <h2 id="topics-heading">Topics Covered in This Library</h2>
+
+        <div class="learning-path">
+          <article class="path-step">
+            <h3>Campaign planning and copywriting</h3>
+            <p>
+              Explore campaign goals, email structure, subject lines, calls to
+              action, and reader-focused writing.
+            </p>
+          </article>
+
+          <article class="path-step">
+            <h3>Automation and subscriber journeys</h3>
+            <p>
+              Learn about welcome sequences, follow-ups, triggers, timing, and how
+              messages can support a customer journey.
+            </p>
+          </article>
+
+          <article class="path-step">
+            <h3>Measurement and retention</h3>
+            <p>
+              Review campaign metrics, customer communication, repeat engagement,
+              and ways to interpret results carefully.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="author-heading">
+      <div class="container">
+        <div class="about-panel">
+          <h2 id="author-heading">About the Publisher</h2>
+
+          <p>
+            <strong>Muhammad Nasir Uddin</strong> publishes Nasir Email Marketing,
+            an educational website focused on email marketing, list building,
+            automation, customer communication, and audience growth.
+          </p>
+
+          <p>
+            To learn more about the publisher and the purpose of this website,
+            visit the
+            <a href="https://nasiremailmarketing.com/about.html">About page</a>.
+            For questions or corrections, use the
+            <a href="https://nasiremailmarketing.com/contact.html">Contact page</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="https://nasiremailmarketing.com/">Home</a>
+        <a href="https://nasiremailmarketing.com/about.html">About</a>
+        <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+        <a href="https://nasiremailmarketing.com/privacy-policy.html">Privacy Policy</a>
+        <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+        <a href="https://nasiremailmarketing.com/disclaimer.html">Disclaimer</a>
+        <a href="https://nasiremailmarketing.com/terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="https://nasiremailmarketing.com/advertise.html">Advertise</a>
+      </nav>
+
+      <p><strong>Nasir Email Marketing</strong></p>
+      <p class="footer-note">
+        Practical educational resources for email marketing and subscriber communication.
       </p>
-
-      <a class="button" href="https://nasiremailmarketing.com/about.html">
-        Learn More About the Author
-      </a>
-
+      <p class="footer-note">
+        © 2026 Muhammad Nasir Uddin. All rights reserved.
+      </p>
     </div>
-
-  </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="container">
-
-    <div class="footer-links">
-
-      <a href="https://nasiremailmarketing.com/">
-        Home
-      </a>
-
-      <a href="https://nasiremailmarketing.com/about.html">
-        About
-      </a>
-
-      <a href="https://nasiremailmarketing.com/contact.html">
-        Contact
-      </a>
-
-      <a href="https://nasiremailmarketing.com/privacy-policy.html">
-        Privacy Policy
-      </a>
-
-      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">
-        Affiliate Disclosure
-      </a>
-
-      <a href="https://nasiremailmarketing.com/disclaimer.html">
-        Disclaimer
-      </a>
-
-      <a href="https://nasiremailmarketing.com/terms-and-conditions.html">
-        Terms & Conditions
-      </a>
-
-      <a href="https://nasiremailmarketing.com/advertise.html">
-        Advertise
-      </a>
-
-    </div>
-
-    <p>
-      Email Marketing Resource
-    </p>
-
-    <p>
-      Practical Email Marketing + List Building + Blogging for Audience Growth
-    </p>
-
-    <p>
-      © 2026 Muhammad Nasir Uddin. All rights reserved.
-    </p>
-
-  </div>
-
-</footer>
-
+  </footer>
 </body>
 </html>
