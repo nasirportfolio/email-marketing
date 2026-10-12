@@ -1,397 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>About Us | Email Marketing Resource</title>
+  <title>About Us | Nasir Email Marketing</title>
 
-<meta name="description" content="Learn about the purpose of this email marketing resource, who creates the content, and our commitment to practical and useful email marketing education.">
+  <meta name="description" content="Learn about Nasir Email Marketing, its publisher Muhammad Nasir Uddin, and its educational resources on email marketing strategy, automation, list building, and analytics.">
+  <meta name="author" content="Muhammad Nasir Uddin">
+  <meta name="robots" content="index, follow">
 
-<meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nasiremailmarketing.com/about.html">
 
-<link rel="canonical" href="https://nasiremailmarketing.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Us | Nasir Email Marketing">
+  <meta property="og:description" content="Discover the purpose, publisher, and educational focus of Nasir Email Marketing.">
+  <meta property="og:url" content="https://nasiremailmarketing.com/about.html">
+  <meta property="og:site_name" content="Nasir Email Marketing">
 
-<!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734"
-     crossorigin="anonymous"></script>
+  <!-- Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-2215626158767734"
+    crossorigin="anonymous"></script>
 
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-3ZDJCJWX5F');
-</script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-<style>
-*{
-box-sizing:border-box;
-}
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
 
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-line-height:1.7;
-color:#222;
-background:#f7f9fc;
-}
+    gtag('js', new Date());
+    gtag('config', 'G-3ZDJCJWX5F');
+  </script>
 
-header{
-background:#17365d;
-color:#fff;
-text-align:center;
-padding:60px 20px;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-header h1{
-margin:0 0 15px;
-font-size:2.6rem;
-}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
 
-header p{
-max-width:750px;
-margin:auto;
-font-size:1.1rem;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #f7f9fc;
+    }
 
-main{
-max-width:950px;
-margin:40px auto;
-padding:0 20px;
-}
+    a {
+      color: #1557b0;
+      text-underline-offset: 3px;
+    }
 
-section{
-background:#fff;
-padding:35px;
-margin-bottom:25px;
-border-radius:12px;
-box-shadow:0 2px 12px rgba(0,0,0,.06);
-}
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
 
-h2{
-color:#17365d;
-margin-top:0;
-}
+    a:focus-visible {
+      outline: 3px solid #e3a008;
+      outline-offset: 3px;
+    }
 
-h3{
-color:#234f7d;
-}
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 12px;
+      z-index: 10;
+      padding: 10px 14px;
+      background: #fff;
+      color: #17365d;
+      border: 2px solid #17365d;
+    }
 
-ul{
-padding-left:25px;
-}
+    .skip-link:focus {
+      top: 12px;
+    }
 
-li{
-margin-bottom:10px;
-}
+    .container {
+      width: min(100% - 32px, 1050px);
+      margin: 0 auto;
+    }
 
-.highlight{
-background:#eef6ff;
-border-left:4px solid #234f7d;
-padding:20px;
-margin:25px 0;
-border-radius:6px;
-}
+    .site-header {
+      background: #17365d;
+      color: #fff;
+      padding: 30px 0 22px;
+    }
 
-a{
-color:#17365d;
-font-weight:600;
-}
+    .brand {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      line-height: 1.25;
+    }
 
-.business-email{
-background:#eef6ff;
-padding:18px;
-border-radius:6px;
-margin-top:20px;
-}
+    .tagline {
+      max-width: 760px;
+      margin: 12px 0 22px;
+      color: #e8eff8;
+    }
 
-footer{
-background:#17365d;
-color:#fff;
-text-align:center;
-padding:30px 20px;
-margin-top:40px;
-}
+    .main-nav,
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+    }
 
-footer a{
-color:#fff;
-margin:0 8px;
-}
+    .main-nav a,
+    .footer-nav a {
+      color: #fff;
+      font-weight: 600;
+    }
 
-@media(max-width:600px){
+    .main-nav a[aria-current="page"] {
+      text-decoration-thickness: 3px;
+      text-underline-offset: 5px;
+    }
 
-header{
-padding:45px 18px;
-}
+    .page-intro {
+      background: #eaf1f9;
+      padding: 42px 0;
+    }
 
-header h1{
-font-size:2rem;
-}
+    .page-intro h2 {
+      margin: 0 0 12px;
+      color: #17365d;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.25;
+    }
 
-header p{
-font-size:1rem;
-}
+    .page-intro p {
+      max-width: 780px;
+      margin: 0;
+      font-size: 1.05rem;
+    }
 
-main{
-margin:20px auto;
-padding:0 12px;
-}
+    main {
+      padding: 35px 0;
+    }
 
-section{
-padding:24px;
-}
+    .content-section {
+      background: #fff;
+      padding: clamp(22px, 4vw, 35px);
+      margin-bottom: 24px;
+      border: 1px solid #e0e6ed;
+      border-radius: 10px;
+    }
 
-}
-</style>
+    h2 {
+      margin-top: 0;
+      color: #17365d;
+      line-height: 1.35;
+    }
+
+    h3 {
+      color: #234f7d;
+      line-height: 1.4;
+    }
+
+    ul {
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      background: #eef6ff;
+      border-left: 4px solid #1557b0;
+      padding: 18px 20px;
+      margin: 24px 0;
+      border-radius: 5px;
+    }
+
+    .highlight p:last-child {
+      margin-bottom: 0;
+    }
+
+    .business-email {
+      background: #eef6ff;
+      padding: 18px;
+      border-radius: 6px;
+      overflow-wrap: anywhere;
+    }
+
+    .site-footer {
+      background: #17365d;
+      color: #fff;
+      padding: 30px 0;
+      margin-top: 10px;
+    }
+
+    .site-footer p {
+      margin: 14px 0;
+    }
+
+    .footer-note {
+      color: #e8eff8;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      .site-header {
+        padding-top: 25px;
+      }
+
+      .main-nav,
+      .footer-nav {
+        gap: 12px 16px;
+      }
+
+      .page-intro {
+        padding: 32px 0;
+      }
+
+      main {
+        padding: 22px 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<header>
-
-<h1>About This Email Marketing Resource</h1>
-
-<p>
-Practical guides and educational resources to help beginners and
-business owners understand email marketing, automation, and
-digital marketing tools.
-</p>
-
-</header>
-
-<main>
-
-<section>
-
-<h2>Welcome</h2>
-
-<p>
-Welcome to this email marketing resource.
-</p>
-
-<p>
-This website was created to provide practical, easy-to-understand
-information about email marketing and the tools and strategies used
-to build effective email campaigns.
-</p>
-
-<p>
-Our goal is simple: help readers understand email marketing concepts
-and apply them in real-world situations without unnecessary
-complexity.
-</p>
-
-</section>
-
-<section>
-
-<h2>About the Author</h2>
-
-<p>
-My name is <strong>Muhammad Nasir Uddin</strong>.
-</p>
-
-<p>
-I am an <strong>Assistant Professor of English at Zirabo Dewan Idris College, Savar, Dhaka, Bangladesh.</strong>
-</p>
-
-<p>
-My background in education has influenced the way I create
-educational content. I believe complicated subjects should be
-explained clearly, step by step, so that readers can understand
-the concept and apply it themselves.
-</p>
-
-<p>
-I created this website as a learning and publishing resource focused
-on email marketing, automation, email campaigns, customer retention,
-analytics, and related digital marketing technologies.
-</p>
-
-</section>
-
-<section>
-
-<h2>What You Will Find Here</h2>
-
-<p>
-The website focuses on practical topics such as:
-</p>
-
-<ul>
-<li>Email marketing fundamentals</li>
-<li>Email newsletters</li>
-<li>Welcome emails and email sequences</li>
-<li>Email automation</li>
-<li>Customer retention</li>
-<li>Lead generation</li>
-<li>Re-engagement campaigns</li>
-<li>Email marketing analytics</li>
-<li>Email marketing platforms and tools</li>
-<li>Practical email marketing strategies</li>
-</ul>
-
-</section>
-
-<section>
-
-<h2>Our Approach to Content</h2>
-
-<p>
-The purpose of every article is to answer a real question or solve
-a real problem.
-</p>
-
-<p>
-We aim to create content that explains concepts clearly, provides
-practical examples, and helps readers make informed decisions.
-</p>
-
-<div class="highlight">
-
-<strong>Our principle:</strong>
-
-<p>
-Useful information comes first. Monetization comes second.
-</p>
-
-</div>
-
-<p>
-Articles may be updated over time as tools, features, best practices,
-and industry standards change.
-</p>
-
-</section>
-
-<section>
-
-<h2>Why This Website Exists</h2>
-
-<p>
-Email marketing is an important part of modern digital marketing,
-but beginners can easily become overwhelmed by terminology,
-platforms, automation systems, and technical concepts.
-</p>
-
-<p>
-This website exists to make those subjects easier to understand.
-Instead of assuming that the reader already has advanced marketing
-knowledge, we try to explain topics from the fundamentals and build
-toward practical applications.
-</p>
-
-</section>
-
-<section>
-
-<h2>Affiliate Disclosure</h2>
-
-<p>
-Some articles on this website may contain affiliate links to
-third-party products or services.
-</p>
-
-<p>
-If you click an affiliate link and make a purchase or sign up for a
-service, we may receive a commission at no additional cost to you.
-</p>
-
-<p>
-Affiliate relationships do not change our goal of providing useful
-and informative content.
-</p>
-
-<p>
-A separate affiliate disclosure page provides additional
-information about how affiliate links are used on this website.
-</p>
-
-</section>
-
-<section>
-
-<h2>Accuracy and Transparency</h2>
-
-<p>
-We aim to provide accurate and useful information based on research,
-practical learning, publicly available information, and experience
-with the topics covered.
-</p>
-
-<p>
-However, software platforms and their features can change over time.
-Readers should always check the official website of a service for
-the latest pricing, features, policies, and terms before making a
-business decision.
-</p>
-
-</section>
-
-<section>
-
-<h2>Our Long-Term Goal</h2>
-
-<p>
-The goal is to build a useful and trustworthy email marketing
-resource over time—not simply to publish as many articles as
-possible.
-</p>
-
-<p>
-As the website grows, we plan to expand the content with more
-practical guides, tutorials, comparisons, and resources that help
-readers learn email marketing and make better decisions about the
-tools they use.
-</p>
-
-<p>
-Thank you for visiting and being part of the journey.
-</p>
-
-</section>
-
-<section>
-
-<h2>Contact</h2>
-
-<p>
-For business, advertising, partnership, or website-related
-inquiries, you can contact us at:
-</p>
-
-<div class="business-email">
-<strong>nasir@nasiremailmarketing.com</strong>
-</div>
-
-</section>
-
-</main>
-
-<footer>
-
-<p>
-<strong>Email Marketing Resource</strong>
-</p>
-
-<p>
-&copy; 2026 Muhammad Nasir Uddin. All rights reserved.
-</p>
-
-<p>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a href="advertise.html">Advertise</a>
-<a href="privacy-policy.html">Privacy Policy</a>
-<a href="disclaimer.html">Disclaimer</a>
-<a href="terms-and-conditions.html">Terms &amp; Conditions</a>
-<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
-</p>
-
-</footer>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Nasir Email Marketing</h1>
+
+      <p class="tagline">
+        Practical educational resources for email marketing strategy,
+        automation, list building, and customer communication.
+      </p>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="https://nasiremailmarketing.com/">Home</a>
+        <a href="https://nasiremailmarketing.com/about.html"
+           aria-current="page">About</a>
+        <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+        <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">
+          Affiliate Disclosure
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-intro" aria-labelledby="page-heading">
+    <div class="container">
+      <h2 id="page-heading">About This Website</h2>
+
+      <p>
+        Nasir Email Marketing publishes educational guides intended to help
+        readers understand email marketing concepts, campaign planning,
+        automation, subscriber management, analytics, and related tools.
+      </p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+
+      <section class="content-section">
+        <h2>Welcome to Nasir Email Marketing</h2>
+
+        <p>
+          Email marketing includes more than sending messages. It can involve
+          understanding an audience, building a permission-based subscriber
+          list, planning campaigns, writing relevant content, organizing
+          automated sequences, and evaluating results.
+        </p>
+
+        <p>
+          This website aims to explain these subjects in clear language.
+          The guides are organized to help readers learn foundational
+          concepts and explore specific tasks as their knowledge develops.
+        </p>
+
+        <p>
+          Readers should consider their own audiences, goals, resources,
+          and applicable requirements when putting educational information
+          into practice.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>About the Publisher</h2>
+
+        <p>
+          My name is <strong>Muhammad Nasir Uddin</strong>.
+        </p>
+
+        <p>
+          I am an Assistant Professor of English at
+          <strong>Zirabo Dewan Idris College, Savar, Dhaka, Bangladesh.</strong>
+        </p>
+
+        <p>
+          My teaching background influences my approach to educational
+          publishing: explain concepts clearly, organize information
+          logically, and make the material easier to follow.
+        </p>
+
+        <p>
+          Through Nasir Email Marketing, I publish resources covering
+          email marketing, automation, email campaigns, customer retention,
+          analytics, and related digital marketing technologies.
+        </p>
+
+        <p>
+          This background describes my educational and publishing approach;
+          readers should evaluate individual guides according to their
+          content and supporting information.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>What You Will Find Here</h2>
+
+        <p>
+          The website covers a range of email marketing topics, including:
+        </p>
+
+        <ul>
+          <li>Email marketing fundamentals and strategy</li>
+          <li>Email newsletters and campaign planning</li>
+          <li>Welcome emails and automated sequences</li>
+          <li>Email automation triggers, actions, and workflows</li>
+          <li>Permission-based email list building</li>
+          <li>Subscriber segmentation and personalization</li>
+          <li>Customer retention and re-engagement campaigns</li>
+          <li>Lead generation and subscriber communication</li>
+          <li>Email marketing analytics and performance measurement</li>
+          <li>Email marketing platforms and tools</li>
+          <li>Email platform migration and validation</li>
+        </ul>
+
+        <p>
+          The aim is to help readers understand individual concepts and
+          how those concepts can relate to practical email marketing work.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Our Approach to Content</h2>
+
+        <p>
+          We aim to create educational content that addresses specific
+          questions, explains relevant concepts, and provides useful
+          examples where appropriate.
+        </p>
+
+        <p>
+          A guide may include step-by-step explanations, checklists,
+          comparisons, calculations, or examples when these help explain
+          the subject. Examples should be interpreted in context and
+          are not guarantees of business results.
+        </p>
+
+        <div class="highlight">
+          <strong>Our guiding principle</strong>
+          <p>
+            Useful, understandable information should come before
+            monetization.
+          </p>
+        </div>
+
+        <p>
+          Articles may be reviewed and updated when relevant information
+          changes or when an explanation needs improvement. Publication
+          alone does not mean that every article has been independently
+          verified or recently updated.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Why This Website Exists</h2>
+
+        <p>
+          Email marketing involves terminology, software features,
+          automation rules, subscriber data, and performance metrics.
+          These subjects can be difficult to navigate when a reader
+          is unfamiliar with them.
+        </p>
+
+        <p>
+          This website aims to make those topics easier to understand
+          by explaining foundational ideas and then exploring more
+          specific applications.
+        </p>
+
+        <p>
+          The information is educational. Readers should confirm
+          important technical, legal, pricing, and platform-specific
+          details with the relevant official sources before acting
+          on them.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Affiliate Relationships</h2>
+
+        <p>
+          Some pages on this website may contain affiliate links to
+          third-party products or services.
+        </p>
+
+        <p>
+          If you use an affiliate link and complete a qualifying
+          purchase or signup, this website may receive a commission.
+          Where applicable, the commission does not increase the price
+          you pay.
+        </p>
+
+        <p>
+          The presence of an affiliate link does not mean that every
+          product or service is suitable for every reader. Consider
+          your own requirements and review the provider's current
+          features, pricing, terms, and privacy practices before
+          making a decision.
+        </p>
+
+        <p>
+          For more information, read our
+          <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">
+            Affiliate Disclosure
+          </a>.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Accuracy and Transparency</h2>
+
+        <p>
+          We aim to make our explanations clear and useful. Information
+          may be informed by research, publicly available documentation,
+          and educational analysis of the topics covered.
+        </p>
+
+        <p>
+          Digital marketing platforms can change their features,
+          interfaces, prices, and policies. A guide may not reflect
+          every subsequent change.
+        </p>
+
+        <p>
+          Before making a business or technical decision, check the
+          relevant provider's official documentation and terms.
+          Examples and explanations on this website should not be
+          treated as a guarantee of a particular outcome.
+        </p>
+
+        <p>
+          If you identify an error or believe information needs
+          clarification, please contact us so it can be considered
+          for correction.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Our Long-Term Goal</h2>
+
+        <p>
+          Our goal is to build a useful educational resource by
+          publishing clear, relevant, and appropriately maintained
+          information—not simply by increasing the number of articles.
+        </p>
+
+        <p>
+          Future improvements may include clearer explanations,
+          practical tutorials, relevant examples, and better
+          organization of related topics.
+        </p>
+
+        <p>
+          Thank you for visiting Nasir Email Marketing.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Contact Us</h2>
+
+        <p>
+          For questions, corrections, business inquiries, advertising,
+          or partnership matters, contact the publisher by email.
+        </p>
+
+        <div class="business-email">
+          <strong>Email:</strong>
+          <a href="mailto:nasir@nasiremailmarketing.com">
+            nasir@nasiremailmarketing.com
+          </a>
+        </div>
+
+        <p>
+          You can also visit our
+          <a href="https://nasiremailmarketing.com/contact.html">
+            Contact page
+          </a>.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Nasir Email Marketing</strong></p>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="https://nasiremailmarketing.com/">Home</a>
+        <a href="https://nasiremailmarketing.com/about.html">About</a>
+        <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+        <a href="https://nasiremailmarketing.com/advertise.html">Advertise</a>
+        <a href="https://nasiremailmarketing.com/privacy-policy.html">
+          Privacy Policy
+        </a>
+        <a href="https://nasiremailmarketing.com/disclaimer.html">Disclaimer</a>
+        <a href="https://nasiremailmarketing.com/terms-and-conditions.html">
+          Terms &amp; Conditions
+        </a>
+        <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">
+          Affiliate Disclosure
+        </a>
+      </nav>
+
+      <p class="footer-note">
+        Educational resources about email marketing and subscriber communication.
+      </p>
+
+      <p class="footer-note">
+        &copy; 2026 Muhammad Nasir Uddin. All rights reserved.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
