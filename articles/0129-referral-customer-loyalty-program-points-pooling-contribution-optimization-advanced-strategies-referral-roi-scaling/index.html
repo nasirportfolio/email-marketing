@@ -24,6 +24,7 @@
     gtag('config', 'G-3ZDJCJWX5F');
   </script>
 
+  <!-- Article structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,7 +47,14 @@
   </script>
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
 
     body {
       margin: 0;
@@ -58,7 +66,7 @@
 
     header {
       background: #12304a;
-      color: #fff;
+      color: #ffffff;
       padding: 22px 18px;
     }
 
@@ -73,18 +81,21 @@
       margin-bottom: 12px;
     }
 
-    nav {
+    .main-nav {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
     }
 
-    nav a {
-      color: #fff;
+    .main-nav a {
+      color: #ffffff;
       text-decoration: none;
     }
 
-    nav a:hover { text-decoration: underline; }
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      text-decoration: underline;
+    }
 
     .container {
       max-width: 900px;
@@ -93,10 +104,10 @@
     }
 
     article {
-      background: #fff;
+      background: #ffffff;
       padding: 36px;
       border-radius: 10px;
-      box-shadow: 0 2px 12px rgba(0,0,0,.05);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
     }
 
     .article-number {
@@ -111,14 +122,33 @@
       line-height: 1.35;
     }
 
-    h1 { font-size: 34px; margin-top: 12px; }
-    h2 { font-size: 25px; margin-top: 38px; }
-    h3 { font-size: 19px; margin-top: 24px; }
+    h1 {
+      font-size: 34px;
+      margin-top: 12px;
+    }
 
-    p, li { font-size: 17px; }
-    a { color: #075eb5; }
+    h2 {
+      font-size: 25px;
+      margin-top: 38px;
+    }
 
-    .quick-answer, .example, .checklist, .author-box {
+    h3 {
+      font-size: 19px;
+      margin-top: 24px;
+    }
+
+    p, li {
+      font-size: 17px;
+    }
+
+    a {
+      color: #075eb5;
+    }
+
+    .quick-answer,
+    .example,
+    .checklist,
+    .author-box {
       padding: 20px;
       margin: 24px 0;
       border-radius: 8px;
@@ -139,22 +169,58 @@
       border: 1px solid #cfe4d1;
     }
 
+    /* Accessible Table of Contents */
     .toc {
       padding: 20px 24px;
       margin: 28px 0;
       background: #f7f9fb;
-      border: 1px solid #e0e6ec;
+      border: 1px solid #d5dee7;
       border-radius: 8px;
     }
 
-    .toc h2 { margin-top: 0; }
-    .toc li { margin: 7px 0; }
+    .toc h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
 
-    .author-box { background: #f1f3f5; }
+    .toc ul {
+      padding-left: 24px;
+      margin-bottom: 0;
+    }
+
+    .toc li {
+      margin: 7px 0;
+      color: #263238;
+    }
+
+    .toc a,
+    .toc a:visited {
+      color: #075eb5 !important;
+      background: transparent;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 500;
+    }
+
+    .toc a:hover {
+      color: #12304a !important;
+      text-decoration-thickness: 2px;
+    }
+
+    .toc a:focus-visible {
+      color: #12304a !important;
+      outline: 2px solid #1767a0;
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .author-box {
+      background: #f1f3f5;
+    }
 
     .disclosure {
       font-size: 14px;
-      color: #555;
+      color: #555555;
       margin-top: 28px;
     }
 
@@ -165,10 +231,26 @@
       font-size: 14px;
     }
 
+    footer a {
+      color: #075eb5;
+    }
+
     @media (max-width: 650px) {
-      article { padding: 22px; }
-      h1 { font-size: 28px; }
-      h2 { font-size: 23px; }
+      article {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 23px;
+      }
+
+      .toc {
+        padding: 18px;
+      }
     }
   </style>
 </head>
@@ -177,7 +259,8 @@
   <header>
     <div class="header-inner">
       <div class="site-title">Email Marketing &amp; Customer Loyalty Resources</div>
-      <nav aria-label="Main navigation">
+
+      <nav class="main-nav" aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/about.html">About</a>
         <a href="/contact.html">Contact</a>
@@ -268,21 +351,25 @@
       </p>
 
       <h3>Customer support</h3>
+
       <p>
         Estimate whether the team can respond to additional questions about referral eligibility, missing rewards, points balances, rejected transactions, and redemption. Establish a process for escalating unusual or disputed cases.
       </p>
 
       <h3>Order fulfillment and service delivery</h3>
+
       <p>
         If referred customers purchase products or services, check inventory, delivery, appointment availability, onboarding capacity, or other operational constraints. Avoid promoting a reward that depends on a service the business cannot reliably provide.
       </p>
 
       <h3>Technology and transaction processing</h3>
+
       <p>
         Confirm that referral links, tracking events, reward issuance, account balances, and redemption workflows remain accurate under higher activity. Test duplicate submissions, delayed events, failed requests, and transaction retries.
       </p>
 
       <h3>Fraud and abuse controls</h3>
+
       <p>
         Review safeguards for duplicate accounts, self-referrals where prohibited, suspicious referral patterns, and invalid purchases. Ensure that legitimate customers can challenge incorrect decisions through a clear review process.
       </p>
@@ -329,21 +416,25 @@
       </p>
 
       <h3>Stage 1: Validate the current program</h3>
+
       <p>
         Confirm that the current program has clear rules, reliable reporting, acceptable economics, and a manageable customer-service process. Resolve serious tracking or reward errors before adding more volume.
       </p>
 
       <h3>Stage 2: Run a limited expansion</h3>
+
       <p>
         Expand to a defined audience, channel, or customer group. Keep the change narrow enough to identify potential problems and ensure the team can monitor the results.
       </p>
 
       <h3>Stage 3: Review the evidence</h3>
+
       <p>
         Compare actual results with the predefined expectations. Check profitability, reward costs, support demand, conversion quality, complaints, and fraud indicators. Allow enough time for relevant purchases and redemptions to occur.
       </p>
 
       <h3>Stage 4: Expand, adjust, or pause</h3>
+
       <p>
         If the agreed conditions are met, move to the next stage. If results are mixed, correct the identified weakness or extend the observation period. If a critical limit is breached, pause the expansion and investigate before proceeding.
       </p>
@@ -435,21 +526,25 @@
       <h2 id="faq">Frequently Asked Questions</h2>
 
       <h3>When is a referral program ready to scale?</h3>
+
       <p>
         It is ready when the available evidence supports acceptable economics, reliable measurement, sufficient operating capacity, and manageable risks. There is no universal referral count or conversion rate that proves readiness for every business.
       </p>
 
       <h3>Should a business scale as soon as referral volume increases?</h3>
+
       <p>
         No. Higher volume can come with higher costs, lower-quality referrals, or additional service demands. Evaluate the financial and operational results before expanding.
       </p>
 
       <h3>How does scaling readiness differ from referral ROI scaling?</h3>
+
       <p>
         Referral ROI scaling concerns improving the financial return of a referral program as it grows. Scaling readiness focuses on whether the program is prepared to handle a proposed expansion safely and reliably.
       </p>
 
       <h3>What should happen if a pilot produces mixed results?</h3>
+
       <p>
         Identify which readiness conditions were met and which were not. Depending on the risk, adjust the program, collect more evidence, repeat a limited test, or pause expansion until the underlying problem is addressed.
       </p>
