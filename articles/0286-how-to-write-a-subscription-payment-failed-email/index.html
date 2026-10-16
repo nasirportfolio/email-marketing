@@ -1,1227 +1,314 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>How to Write a Subscription Payment Failed Email</title>
-
-  <meta name="description" content="Learn how to write a subscription payment failed email with clear subject lines, useful payment details, recovery steps, timing, templates, automation tips, and a practical checklist.">
-
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Learn how to write a subscription payment failed email with clear status, secure payment-update steps, grace-period information, subject lines, examples, and a reusable template.">
   <meta name="author" content="Muhammad Nasir Uddin">
-
-  <link rel="canonical" href="https://nasirportfolio.github.io/email-marketing/articles/0286-how-to-write-a-subscription-payment-failed-email/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="How to Write a Subscription Payment Failed Email">
-  <meta property="og:description" content="Learn how to write a subscription payment failed email with clear subject lines, useful payment details, recovery steps, timing, templates, automation tips, and a practical checklist.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nasiremailmarketing.com/articles/0286-how-to-write-a-subscription-payment-failed-email/">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://nasirportfolio.github.io/email-marketing/articles/0286-how-to-write-a-subscription-payment-failed-email/">
+  <meta property="og:title" content="How to Write a Subscription Payment Failed Email">
+  <meta property="og:description" content="A practical guide to notifying subscribers about a failed payment with clear next steps, secure account links, and respectful recovery messaging.">
+  <meta property="og:url" content="https://nasiremailmarketing.com/articles/0286-how-to-write-a-subscription-payment-failed-email/">
+  <meta name="twitter:card" content="summary">
 
-  <!-- Google Analytics 4 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-3ZDJCJWX5F');
   </script>
 
-  <!-- Article Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "How to Write a Subscription Payment Failed Email",
-    "description": "Learn how to write a subscription payment failed email with clear subject lines, useful payment details, recovery steps, timing, templates, automation tips, and a practical checklist.",
+    "description": "Learn how to write a subscription payment failed email with clear status, secure payment-update steps, grace-period information, subject lines, examples, and a reusable template.",
     "author": {
       "@type": "Person",
       "name": "Muhammad Nasir Uddin"
     },
     "publisher": {
-      "@type": "Person",
-      "name": "Muhammad Nasir Uddin"
+      "@type": "Organization",
+      "name": "Nasir Email Marketing",
+      "url": "https://nasiremailmarketing.com/"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://nasirportfolio.github.io/email-marketing/articles/0286-how-to-write-a-subscription-payment-failed-email/"
+      "@id": "https://nasiremailmarketing.com/articles/0286-how-to-write-a-subscription-payment-failed-email/"
     }
   }
   </script>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-      color: #222;
-      background: #ffffff;
-    }
-
-    header {
-      background: #f5f7fa;
-      border-bottom: 1px solid #ddd;
-      padding: 18px 20px;
-    }
-
-    .header-container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .site-title {
-      margin: 0 0 8px;
-      font-size: 24px;
-    }
-
-    nav a {
-      color: #0056b3;
-      text-decoration: none;
-      margin-right: 16px;
-      font-size: 15px;
-    }
-
-    nav a:hover,
-    nav a:focus {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 30px 20px 50px;
-    }
-
-    .article-label {
-      font-weight: 700;
-      color: #555;
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      font-size: 36px;
-      line-height: 1.25;
-      margin: 0 0 20px;
-    }
-
-    h2 {
-      margin-top: 38px;
-      font-size: 27px;
-      line-height: 1.3;
-    }
-
-    h3 {
-      margin-top: 28px;
-      font-size: 21px;
-    }
-
-    p {
-      margin: 0 0 18px;
-    }
-
-    ul,
-    ol {
-      margin-bottom: 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .quick-answer,
-    .example-box,
-    .checklist-box,
-    .tip-box {
-      background: #f7f9fc;
-      border: 1px solid #d9e0e8;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 25px 0;
-    }
-
-    .quick-answer strong,
-    .tip-box strong {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .toc {
-      background: #f5f7fa;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 30px 0;
-    }
-
-    .toc h2 {
-      margin-top: 0;
-      font-size: 23px;
-    }
-
-    .toc a,
-    .internal-link {
-      color: #0056b3;
-      text-decoration: none;
-    }
-
-    .toc a:hover,
-    .toc a:focus,
-    .internal-link:hover,
-    .internal-link:focus {
-      text-decoration: underline;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 25px 0;
-    }
-
-    th,
-    td {
-      border: 1px solid #d5dbe3;
-      padding: 12px;
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th {
-      background: #f5f7fa;
-    }
-
-    .author-box,
-    .disclosure-box {
-      border-top: 1px solid #ddd;
-      margin-top: 40px;
-      padding-top: 25px;
-    }
-
-    footer {
-      background: #f5f7fa;
-      border-top: 1px solid #ddd;
-      padding: 25px 20px;
-    }
-
-    .footer-container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    footer a {
-      color: #0056b3;
-      text-decoration: none;
-      margin-right: 14px;
-    }
-
-    footer a:hover,
-    footer a:focus {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 700px) {
-      main {
-        padding: 24px 16px 40px;
-      }
-
-      h1 {
-        font-size: 30px;
-      }
-
-      h2 {
-        font-size: 24px;
-      }
-
-      h3 {
-        font-size: 20px;
-      }
-
-      table {
-        display: block;
-        overflow-x: auto;
-      }
-
-      nav a {
-        display: inline-block;
-        margin-bottom: 8px;
-      }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: #20252b; background: #fff; font-family: Arial, Helvetica, sans-serif; line-height: 1.75; }
+    header { background: #f5f7fa; border-bottom: 1px solid #e2e6ea; padding: 18px 20px; }
+    .header-inner, .footer-inner { max-width: 1080px; margin: 0 auto; }
+    .brand { margin: 0 0 8px; color: #172b4d; font-size: 1.35rem; font-weight: 700; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px 20px; }
+    nav a, footer a { color: #0759a5; text-decoration: none; }
+    nav a { font-weight: 600; }
+    nav a:hover, nav a:focus, footer a:hover, footer a:focus { text-decoration: underline; }
+    main { max-width: 900px; margin: 0 auto; padding: 32px 20px 56px; }
+    .article-label { margin: 0 0 8px; color: #5c6673; font-size: .9rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    h1, h2, h3 { color: #172b4d; line-height: 1.3; }
+    h1 { margin: 0 0 18px; font-size: clamp(2rem, 5vw, 2.65rem); }
+    h2 { margin-top: 38px; font-size: 1.65rem; }
+    h3 { margin-top: 25px; font-size: 1.2rem; }
+    p { margin: 0 0 18px; }
+    li { margin: 0 0 9px; }
+    a { overflow-wrap: anywhere; }
+    .intro { font-size: 1.08rem; }
+    .quick-answer, .toc, .example, .template, .checklist, .note { margin: 24px 0; padding: 20px; border-radius: 9px; }
+    .quick-answer { background: #eef6ff; border-left: 4px solid #2473bd; }
+    .toc { background: #f7f9fc; border: 1px solid #dfe5ec; }
+    .toc h2 { margin: 0 0 10px; font-size: 1.25rem; }
+    .toc ul { margin-bottom: 0; }
+    .toc a { color: #0759a5; text-decoration: none; }
+    .toc a:hover, .toc a:focus { text-decoration: underline; }
+    .example { background: #fbfbfc; border: 1px solid #e1e5ea; }
+    .template { background: #f2f8f3; border: 1px solid #d3e7d7; }
+    .checklist { background: #f7f9fc; border: 1px solid #dfe5ec; }
+    .note { background: #fff8e8; border-left: 4px solid #d99a00; }
+    .author-box { margin-top: 42px; padding: 22px; background: #f5f7fa; border-top: 1px solid #dfe5ec; }
+    .disclosure { margin-top: 22px; color: #535d68; font-size: .95rem; }
+    footer { padding: 28px 20px; background: #f5f7fa; border-top: 1px solid #e2e6ea; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-bottom: 12px; }
+    .copyright { margin: 0; color: #59636f; font-size: .9rem; }
+    @media (max-width: 640px) {
+      header { padding: 16px; }
+      main { padding: 24px 16px 42px; }
+      h2 { font-size: 1.45rem; }
+      .quick-answer, .toc, .example, .template, .checklist, .note { padding: 16px; }
     }
   </style>
 </head>
-
 <body>
+<header>
+  <div class="header-inner">
+    <p class="brand">Nasir Email Marketing</p>
+    <nav aria-label="Main navigation">
+      <a href="https://nasiremailmarketing.com/">Home</a>
+      <a href="https://nasiremailmarketing.com/about.html">About</a>
+      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+    </nav>
+  </div>
+</header>
 
-  <header>
-    <div class="header-container">
-
-      <div class="site-title">
-        Email Marketing + List Building + Blogging for Audience Growth
-      </div>
-
-      <nav aria-label="Main navigation">
-        <a href="https://nasirportfolio.github.io/email-marketing/">Home</a>
-        <a href="https://nasirportfolio.github.io/email-marketing/about.html">About</a>
-        <a href="https://nasirportfolio.github.io/email-marketing/contact.html">Contact</a>
-      </nav>
-
-    </div>
-  </header>
-
-  <main>
-
-    <div class="article-label">ARTICLE 0286</div>
-
+<main>
+  <article>
+    <p class="article-label">Article 0286</p>
     <h1>How to Write a Subscription Payment Failed Email</h1>
+    <p class="intro">A subscription payment failed email tells a customer that a payment attempt for their recurring plan did not succeed. The purpose is to explain the current status, show the safest way to resolve the issue, and clarify what may happen next. A useful message is calm and specific: it does not blame the customer, expose sensitive payment details, or claim that service has ended unless that is true.</p>
 
-    <p>
-      A subscription payment failed email tells a customer that a recurring payment
-      could not be processed and explains what they can do next.
-    </p>
-
-    <p>
-      The goal is not to make the customer feel blamed. The goal is to make the
-      problem clear, provide a simple recovery step, and explain what happens if
-      the payment remains unresolved.
-    </p>
-
-    <div class="quick-answer">
-
-      <strong>Quick Answer</strong>
-
-      <p>
-        To write a subscription payment failed email, clearly state that the
-        recurring payment could not be processed, identify the subscription or
-        billing period when appropriate, provide a secure way to update the
-        payment method or retry the payment, explain the relevant next step,
-        and make customer support easy to reach. Keep the message short,
-        factual, and helpful.
-      </p>
-
-    </div>
-
-    <p>
-      This message is different from a subscription renewal reminder. A renewal
-      reminder is sent before or around an upcoming renewal to prepare the
-      customer. A payment failed email is sent after the billing attempt has
-      failed and the customer may need to take action.
-    </p>
-
-    <p>
-      For the earlier stage, see
-      <a class="internal-link"
-         href="https://nasirportfolio.github.io/email-marketing/articles/0285-how-to-write-a-subscription-renewal-reminder-email/">
-        How to Write a Subscription Renewal Reminder Email
-      </a>.
-    </p>
+    <div class="quick-answer"><strong>Quick answer:</strong> Notify the subscriber after the billing system confirms a failed payment. Identify the affected plan, give the date and amount only when verified, explain whether access is still active or a grace period applies, and link to a secure billing page to review or update payment details. Do not request card numbers or security codes by email.</div>
 
     <div class="toc">
-
       <h2>Table of Contents</h2>
-
       <ul>
         <li><a href="#what-is">What Is a Subscription Payment Failed Email?</a></li>
-        <li><a href="#why-important">Why Is This Email Important?</a></li>
-        <li><a href="#common-reasons">Common Reasons a Subscription Payment Fails</a></li>
-        <li><a href="#essential-details">Essential Details to Include</a></li>
-        <li><a href="#subject-lines">Subscription Payment Failed Subject Lines</a></li>
-        <li><a href="#email-structure">How to Structure the Email</a></li>
-        <li><a href="#failure-reason">How to Explain the Payment Problem</a></li>
-        <li><a href="#payment-action">How to Give the Customer a Clear Action</a></li>
-        <li><a href="#consequences">How to Explain What Happens Next</a></li>
-        <li><a href="#timing">When to Send the Email</a></li>
-        <li><a href="#follow-up">How to Handle Follow-Up Emails</a></li>
-        <li><a href="#personalization">Personalization Ideas</a></li>
-        <li><a href="#automation">Automating Failed Payment Emails</a></li>
+        <li><a href="#failure-causes">Why Can a Subscription Payment Fail?</a></li>
+        <li><a href="#include">What to Include in the Email</a></li>
+        <li><a href="#subject-lines">Subject Line Examples</a></li>
+        <li><a href="#write">How to Write the Message</a></li>
+        <li><a href="#examples">Practical Examples</a></li>
+        <li><a href="#template">Reusable Email Template</a></li>
+        <li><a href="#failed-vs-retry">Payment Failed vs. Payment Retry Email</a></li>
+        <li><a href="#automation">Automation and Billing Safeguards</a></li>
         <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
-        <li><a href="#template">Subscription Payment Failed Email Template</a></li>
-        <li><a href="#sequence">Example Failed Payment Sequence</a></li>
-        <li><a href="#metrics">How to Measure Performance</a></li>
-        <li><a href="#checklist">Subscription Payment Failed Email Checklist</a></li>
-        <li><a href="#final-thoughts">Final Thoughts</a></li>
+        <li><a href="#checklist">Pre-Send Checklist</a></li>
       </ul>
-
     </div>
 
     <h2 id="what-is">What Is a Subscription Payment Failed Email?</h2>
+    <p>This is a notification sent when the billing system reports that an attempted recurring payment did not complete successfully. It may relate to a monthly software plan, a membership, a paid online service, or another subscription with recurring charges.</p>
+    <p>The message should help the subscriber understand three things: what happened, whether it affects their current access, and what they can do next. It should not imply that the subscription has been cancelled automatically unless that status is confirmed by the account system and the applicable terms.</p>
+    <p>Payment failure is not proof that a customer intentionally refused to pay. The cause might be an expired card, insufficient available funds, a bank decline, an authentication requirement, a billing-address mismatch, or a temporary processor problem. Explain only what the payment provider reliably identifies.</p>
 
-    <p>
-      A subscription payment failed email is a customer communication sent when
-      a recurring payment attempt for a subscription does not complete successfully.
-    </p>
+    <h2 id="failure-causes">Why Can a Subscription Payment Fail?</h2>
+    <p>There are several possible causes, and not every payment provider returns enough information to identify the exact reason. Common cases include:</p>
+    <ul>
+      <li><strong>Expired or replaced card:</strong> The payment method on file may no longer be valid.</li>
+      <li><strong>Bank decline:</strong> The issuing bank may decline a charge without providing a customer-readable explanation.</li>
+      <li><strong>Insufficient available funds or credit:</strong> The account may not have enough available balance or credit at the time of the attempt.</li>
+      <li><strong>Authentication needed:</strong> The bank may require the customer to approve a transaction through a secure authentication flow.</li>
+      <li><strong>Billing details mismatch:</strong> The details entered or stored may not match the payment provider's requirements.</li>
+      <li><strong>Temporary processing issue:</strong> A technical or network problem can prevent a payment from completing.</li>
+    </ul>
+    <p>When the reason is uncertain, avoid guessing. “We could not complete the latest payment” is safer than telling the customer their card expired when your system does not confirm that.</p>
 
-    <p>
-      The message normally tells the subscriber what happened and provides a way
-      to resolve the billing problem. Depending on the billing system, the
-      customer may be asked to update a card, replace a payment method, retry
-      the payment, or contact support.
-    </p>
+    <h2 id="include">What to Include in the Email</h2>
+    <p>Make the message useful without including unnecessary private information.</p>
+    <ul>
+      <li><strong>Clear status:</strong> State that the latest payment attempt was unsuccessful.</li>
+      <li><strong>Subscription name:</strong> Identify the plan or service so the recipient can recognize it.</li>
+      <li><strong>Verified transaction details:</strong> Include the attempt date and amount only if the billing record confirms them and they help the customer.</li>
+      <li><strong>Current account status:</strong> Explain whether access remains active, a grace period applies, or action is needed by a particular date.</li>
+      <li><strong>Secure next step:</strong> Link to the official account billing page to update the payment method or review available payment options.</li>
+      <li><strong>Support route:</strong> Provide a real way to get help if the issue persists.</li>
+    </ul>
+    <div class="note"><strong>Security rule:</strong> Never ask a customer to email a full card number, password, card security code, or banking credentials. Send them to a secure payment page on your official domain or payment provider.</div>
 
-    <p>
-      The exact reason for a failed transaction may not always be available to
-      the email system. Therefore, the message should not invent a specific
-      decline reason.
-    </p>
+    <h2 id="subject-lines">Subscription Payment Failed Email Subject Line Examples</h2>
+    <ul>
+      <li>Action needed: We could not process your subscription payment</li>
+      <li>Payment update needed for your [Plan Name] subscription</li>
+      <li>Your latest payment did not go through</li>
+      <li>Please review the billing details for [Service Name]</li>
+      <li>An update is needed to keep your subscription current</li>
+      <li>We had a problem processing your subscription payment</li>
+      <li>Review your [Service Name] billing status</li>
+    </ul>
+    <p>Use clear wording without shame or threats. A preheader can add context, such as “Review your billing status and the available next steps in your secure account.” Avoid misleading subject lines that look like payment receipts, legal notices, or account-security alerts.</p>
 
-    <p>
-      For example, if the payment provider only reports a generic failure, it is
-      safer to say “We couldn't process your payment” than to claim that the
-      customer's card expired.
-    </p>
+    <h2 id="write">How to Write the Message</h2>
+    <h3>1. State the issue clearly</h3>
+    <p>Lead with the failed payment status. Avoid vague wording that makes customers wonder whether their account has been hacked or their subscription has already ended.</p>
+    <h3>2. Keep the explanation factual</h3>
+    <p>If the payment provider supplies a reliable and suitable reason, you can communicate it in plain language. If the reason is unknown or too technical, do not invent an explanation. The customer can review payment details securely in their account.</p>
+    <h3>3. Explain what happens to the subscription</h3>
+    <p>State the real account status and any verified grace period or deadline. If access is unaffected for now, say so. If the service may be paused after a specific date, explain that accurately and avoid implying immediate termination when no such action has occurred.</p>
+    <h3>4. Give one obvious next step</h3>
+    <p>Use a button or link such as “Review Billing Details.” The destination should take customers to the genuine account or payment-update page. Do not ask them to reply with payment credentials.</p>
+    <h3>5. Keep support easy to reach</h3>
+    <p>Some customers may have paid through another method or believe the attempt was incorrect. Offer a support route and avoid sending repeated messages while a confirmed payment or support case is still being reconciled.</p>
 
-    <h2 id="why-important">Why Is This Email Important?</h2>
-
-    <p>
-      A failed recurring payment can interrupt a subscription even when the
-      customer did not intentionally decide to cancel it.
-    </p>
-
-    <p>
-      A clear email gives the customer an opportunity to understand the problem
-      and resolve it before the subscription reaches the next stage of the
-      billing process.
-    </p>
-
-    <p>
-      The email also reduces uncertainty. Instead of leaving the customer
-      wondering why access, delivery, or another subscription benefit has changed,
-      the business can explain the billing status directly.
-    </p>
-
-    <p>
-      The message should therefore focus on three questions:
-    </p>
-
-    <ol>
-      <li>What happened?</li>
-      <li>What should I do?</li>
-      <li>What happens if I do nothing?</li>
-    </ol>
-
-    <p>
-      Answering those questions clearly is more useful than filling the message
-      with promotional content.
-    </p>
-
-    <h2 id="common-reasons">Common Reasons a Subscription Payment Fails</h2>
-
-    <p>
-      Recurring payments can fail for different reasons. The exact reason should
-      only be stated when the billing system provides reliable information.
-    </p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Possible issue</th>
-          <th>What the email may need to communicate</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Expired payment method</td>
-          <td>The customer may need to replace or update the payment method.</td>
-        </tr>
-        <tr>
-          <td>Insufficient funds</td>
-          <td>The customer may need to use another payment method or retry later.</td>
-        </tr>
-        <tr>
-          <td>Bank decline</td>
-          <td>The customer may need to contact the bank or use another payment method.</td>
-        </tr>
-        <tr>
-          <td>Payment method error</td>
-          <td>The customer may need to correct the stored billing information.</td>
-        </tr>
-        <tr>
-          <td>Temporary processing problem</td>
-          <td>The system may retry the payment automatically.</td>
-        </tr>
-        <tr>
-          <td>Unknown failure</td>
-          <td>Use neutral language and provide a safe recovery option.</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>
-      Do not tell the customer that a specific reason caused the failure unless
-      your payment system actually provides that information.
-    </p>
-
-    <h2 id="essential-details">Essential Details to Include</h2>
-
-    <p>
-      A useful payment failure email should contain enough information for the
-      customer to understand the issue without making the message unnecessarily long.
-    </p>
-
-    <h3>1. The Subscription or Product Name</h3>
-
-    <p>
-      Identify the subscription when it helps the customer recognize the account
-      or service involved.
-    </p>
-
-    <p>
-      For example:
-    </p>
-
-    <div class="example-box">
-
-      <p>
-        <strong>Subscription:</strong> Premium Monthly Plan
-      </p>
-
-      <p>
-        This is particularly useful for customers who have more than one
-        subscription with the same company.
-      </p>
-
+    <h2 id="examples">Practical Examples</h2>
+    <div class="example">
+      <h3>Example 1: General failed subscription payment</h3>
+      <p><strong>Subject:</strong> We could not process your subscription payment</p>
+      <p>Hello [First Name],</p>
+      <p>We were unable to complete the latest payment for your [Plan Name] subscription.</p>
+      <p>Please review your billing status and the available payment options in your secure account:</p>
+      <p><strong>[Review Billing Details]</strong></p>
+      <p>Your current subscription status is [Verified Status]. [Add a verified grace-period or deadline sentence here, if applicable.]</p>
+      <p>If you believe this is an error or need help, contact [Support Link]. Please do not send payment-card details by email.</p>
+      <p>Thank you,<br>[Service Name] Team</p>
+    </div>
+    <div class="example">
+      <h3>Example 2: Payment method may need updating</h3>
+      <p><strong>Subject:</strong> Please review the payment method for your subscription</p>
+      <p>Hello [First Name],</p>
+      <p>The latest payment attempt for [Service Name] did not complete. Your payment method may need attention, but we cannot confirm the reason from the information currently available.</p>
+      <p>Sign in through our official account page to review the billing status or update your payment method: [Secure Billing Link].</p>
+      <p>If you have already taken action, please check your account status before making another payment. For help, contact [Support Contact].</p>
+      <p>Regards,<br>[Service Name] Team</p>
+    </div>
+    <div class="example">
+      <h3>Example 3: A verified grace period applies</h3>
+      <p><strong>Subject:</strong> Action needed for your [Plan Name] subscription</p>
+      <p>Hello [First Name],</p>
+      <p>We could not complete the latest payment for your [Plan Name] subscription. According to your current account status, access is scheduled to remain available until [Verified Date] while the payment issue is resolved.</p>
+      <p>Please review the available options in your secure account: [Billing Link]. If the payment has already been completed, contact [Support Link] so the status can be checked.</p>
+      <p>Thank you,<br>[Service Name] Team</p>
     </div>
 
-    <h3>2. The Payment Status</h3>
-
-    <p>
-      Say clearly that the payment could not be processed.
-    </p>
-
-    <p>
-      Avoid vague phrases such as “There is an issue with your account” when you
-      can state the actual billing problem more directly.
-    </p>
-
-    <h3>3. The Amount</h3>
-
-    <p>
-      If the amount is appropriate and available, show the amount that the
-      business attempted to charge.
-    </p>
-
-    <p>
-      For example:
-    </p>
-
-    <p>
-      <strong>Amount:</strong> $29.00
-    </p>
-
-    <p>
-      Showing the amount can help the customer identify the transaction.
-    </p>
-
-    <h3>4. The Billing Date</h3>
-
-    <p>
-      When useful, show the date of the failed payment attempt.
-    </p>
-
-    <h3>5. The Required Action</h3>
-
-    <p>
-      Tell the customer exactly what they can do next. Examples include updating
-      the payment method, retrying the payment, or contacting support.
-    </p>
-
-    <h3>6. The Relevant Deadline</h3>
-
-    <p>
-      If the subscription system has a real deadline for payment, communicate it
-      accurately.
-    </p>
-
-    <p>
-      Never invent a deadline simply to make the email sound urgent.
-    </p>
-
-    <h2 id="subject-lines">Subscription Payment Failed Subject Lines</h2>
-
-    <p>
-      The subject line should make the billing problem understandable without
-      sounding threatening or misleading.
-    </p>
-
-    <h3>Clear Subject Lines</h3>
-
-    <ul>
-      <li>Your subscription payment didn't go through</li>
-      <li>We couldn't process your subscription payment</li>
-      <li>Payment update needed for your subscription</li>
-      <li>Your [Plan Name] payment needs attention</li>
-      <li>We couldn't renew your [Plan Name] subscription</li>
-    </ul>
-
-    <h3>Subject Lines With a Clear Action</h3>
-
-    <ul>
-      <li>Please update your payment method</li>
-      <li>Update your payment method to keep your subscription active</li>
-      <li>Please review your payment information</li>
-      <li>Payment failed — please review your billing details</li>
-    </ul>
-
-    <p>
-      Choose the subject line according to the actual account status. If the
-      subscription remains active during a grace period, do not imply that it
-      has already been cancelled.
-    </p>
-
-    <h2 id="email-structure">How to Structure the Email</h2>
-
-    <p>
-      A simple structure keeps the message useful and easy to scan.
-    </p>
-
-    <ol>
-      <li>Greet the customer.</li>
-      <li>State that the payment did not go through.</li>
-      <li>Identify the relevant subscription or payment.</li>
-      <li>Explain what the customer should do.</li>
-      <li>Explain what happens next.</li>
-      <li>Provide support information.</li>
-      <li>Close politely.</li>
-    </ol>
-
-    <div class="example-box">
-
-      <h3>Simple Structure Example</h3>
-
-      <p>
-        <strong>Subject:</strong> Your subscription payment didn't go through
-      </p>
-
-      <p>
-        Hi [First Name],
-      </p>
-
-      <p>
-        We couldn't process the $29.00 payment for your [Plan Name] subscription.
-      </p>
-
-      <p>
-        Please review or update your payment method here:
-        [Update Payment]
-      </p>
-
-      <p>
-        Your subscription will remain [active/during the grace period] until
-        [accurate date or status].
-      </p>
-
-      <p>
-        If you need help, please contact [Support Contact].
-      </p>
-
-      <p>
-        Thanks,<br>
-        [Brand Name]
-      </p>
-
+    <h2 id="template">Reusable Subscription Payment Failed Email Template</h2>
+    <div class="template">
+      <p><strong>Subject:</strong> We could not process your [Plan Name] payment</p>
+      <p><strong>Preheader:</strong> Review the current billing status and next steps in your account.</p>
+      <p>Hello [First Name],</p>
+      <p>We were unable to complete the latest payment for your <strong>[Plan Name]</strong> subscription.</p>
+      <p><strong>Payment summary</strong><br>
+      Subscription: [Plan Name]<br>
+      Attempt date: [Verified Date, if useful]<br>
+      Amount: [Verified Amount and Currency, if useful]<br>
+      Current subscription status: [Verified Status]</p>
+      <p>Please review the billing details and available options through your secure account:</p>
+      <p><strong>[Review Billing Details]</strong></p>
+      <p>[Explain the verified deadline, grace period, or service impact here. Remove this sentence if it does not apply.]</p>
+      <p>If you believe the payment has already been completed or need help, contact [Support Link]. For your security, do not send full card details or account passwords by email.</p>
+      <p>Thank you,<br>[Sender Name]<br>[Service Name]</p>
     </div>
+    <p>Replace all bracketed fields before sending. Remove details that your billing system cannot verify. The button should lead to a secure and legitimate account destination, and the message should reflect the customer's current status at the time it is sent.</p>
 
-    <h2 id="failure-reason">How to Explain the Payment Problem</h2>
-
-    <p>
-      The first sentence should be factual and easy to understand.
-    </p>
-
-    <p>
-      Good examples include:
-    </p>
-
+    <h2 id="failed-vs-retry">Payment Failed vs. Payment Retry Email</h2>
+    <p>A payment-failed email reports that a billing attempt did not complete and explains the customer's current status and available resolution. A payment-retry email focuses on a subsequent attempt or an upcoming retry, including its schedule and any action that might be needed.</p>
     <ul>
-      <li>“We couldn't process your subscription payment.”</li>
-      <li>“Your latest subscription payment did not go through.”</li>
-      <li>“We were unable to process the payment for your [Plan Name] subscription.”</li>
+      <li><strong>Payment failed:</strong> Explain the result of the failed attempt, how to review billing, and what the current subscription status means.</li>
+      <li><strong>Payment retry:</strong> Explain whether another attempt is scheduled, when it is expected, and what the customer can do if a payment method needs attention.</li>
     </ul>
+    <p>Do not promise that the system will retry automatically unless the billing system confirms that behavior. For the next-step message about a subsequent attempt, see <a href="https://nasiremailmarketing.com/articles/0287-how-to-write-a-subscription-payment-retry-email/">Article 0287: How to Write a Subscription Payment Retry Email</a>. If a renewal is approaching before any payment fails, see <a href="https://nasiremailmarketing.com/articles/0285-how-to-write-a-subscription-renewal-reminder-email/">Article 0285: Subscription Renewal Reminder Email</a>.</p>
 
-    <p>
-      If your payment processor gives you a verified reason, you can make the
-      explanation more specific.
-    </p>
-
-    <p>
-      For example, if the billing system confirms that the payment method has
-      expired, the email can explain that an updated payment method is needed.
-    </p>
-
-    <div class="tip-box">
-
-      <strong>Writing Tip</strong>
-
-      <p>
-        Do not blame the customer. A failed payment can result from many factors,
-        including bank decisions, expired payment information, temporary processing
-        problems, or other issues outside the customer's immediate control.
-      </p>
-
-    </div>
-
-    <h2 id="payment-action">How to Give the Customer a Clear Action</h2>
-
-    <p>
-      The email should make the recovery step obvious.
-    </p>
-
-    <p>
-      Instead of writing:
-    </p>
-
-    <p>
-      “Please visit your account and check your billing information.”
-    </p>
-
-    <p>
-      use a more direct instruction when your system supports it:
-    </p>
-
-    <p>
-      “Update your payment method to retry the subscription payment.”
-    </p>
-
-    <p>
-      The action link should lead to the appropriate secure billing or payment
-      page. Do not send customers to an unrelated marketing page.
-    </p>
-
-    <p>
-      If there is more than one legitimate solution, explain the options clearly.
-      For example, the customer may be able to update the existing payment method
-      or select another supported method.
-    </p>
-
-    <h2 id="consequences">How to Explain What Happens Next</h2>
-
-    <p>
-      Customers need to know what the failed payment means for their subscription.
-    </p>
-
-    <p>
-      Depending on the billing system, the account may remain active temporarily,
-      enter a grace period, retry the payment automatically, become restricted,
-      or eventually be cancelled.
-    </p>
-
-    <p>
-      Explain only the status that actually applies.
-    </p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Actual account status</th>
-          <th>Possible wording</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Subscription remains active</td>
-          <td>Your subscription is currently active while we retry the payment.</td>
-        </tr>
-        <tr>
-          <td>Grace period</td>
-          <td>Your subscription remains active during the current grace period.</td>
-        </tr>
-        <tr>
-          <td>Automatic retry</td>
-          <td>We'll retry the payment according to your billing schedule.</td>
-        </tr>
-        <tr>
-          <td>Service interruption possible</td>
-          <td>If the payment is not resolved by [Date], access may be interrupted.</td>
-        </tr>
-        <tr>
-          <td>Cancellation scheduled</td>
-          <td>Your subscription is scheduled to end on [Date] if the payment remains unresolved.</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>
-      This information should come from the actual subscription and billing system.
-      Avoid making promises about retries, access, or cancellation unless the
-      system supports them.
-    </p>
-
-    <h2 id="timing">When to Send the Email</h2>
-
-    <p>
-      The first payment failure message is generally most useful while the failed
-      transaction is still recent.
-    </p>
-
-    <p>
-      The exact timing depends on the billing platform, retry rules, subscription
-      type, and customer experience.
-    </p>
-
-    <p>
-      A practical workflow may look like this:
-    </p>
-
+    <h2 id="automation">Automation and Billing Safeguards</h2>
+    <p>Payment-failure messages should be triggered by a reliable billing event. A stale export or a simple time delay can send an incorrect notice after a payment has already succeeded or a subscription has been cancelled.</p>
     <ol>
-      <li>Detect the failed payment.</li>
-      <li>Check whether another payment attempt has already succeeded.</li>
-      <li>Send the first notification if the failure remains unresolved.</li>
-      <li>Allow the billing system to retry when applicable.</li>
-      <li>Send another reminder only if the payment remains unresolved.</li>
+      <li><strong>Use a verified failed-payment event:</strong> Trigger from the billing provider or subscription platform, not from a guessed status.</li>
+      <li><strong>Refresh the account status:</strong> Before sending, check whether a later attempt succeeded or the customer updated their payment method.</li>
+      <li><strong>Use safe, minimal data:</strong> Include only the details necessary to identify the subscription and explain the next step.</li>
+      <li><strong>Link to a secure destination:</strong> Use a verified account URL and avoid exposing sensitive billing information in query strings.</li>
+      <li><strong>Prevent duplicates:</strong> Use the billing event identifier or another idempotency key when workflows retry.</li>
+      <li><strong>Respect the recovery policy:</strong> Match the message to the real retry, grace-period, and suspension rules of the subscription.</li>
+      <li><strong>Suppress after resolution:</strong> Stop further failed-payment notices once the system records a successful payment or the issue is otherwise resolved.</li>
     </ol>
-
-    <p>
-      The sequence should stop immediately when the payment succeeds or the
-      subscription is otherwise resolved.
-    </p>
-
-    <p>
-      This prevents customers from receiving a payment failure message after
-      they have already corrected the problem.
-    </p>
-
-    <h2 id="follow-up">How to Handle Follow-Up Emails</h2>
-
-    <p>
-      A single failed-payment email may not be enough. Customers may miss the
-      first message, need time to update their payment method, or expect the
-      billing system to retry automatically.
-    </p>
-
-    <p>
-      A follow-up sequence should therefore become more direct as the unresolved
-      payment approaches a real account consequence.
-    </p>
-
-    <h3>First Email</h3>
-
-    <p>
-      Keep the first message calm and informative. Explain the failure and give
-      the customer an easy way to resolve it.
-    </p>
-
-    <h3>Second Email</h3>
-
-    <p>
-      If the payment remains unresolved, remind the customer that the issue is
-      still open and repeat the appropriate recovery action.
-    </p>
-
-    <h3>Final Email</h3>
-
-    <p>
-      If the subscription is genuinely approaching suspension or cancellation,
-      clearly explain the actual deadline and consequence.
-    </p>
-
-    <p>
-      Do not use increasingly aggressive language simply because the customer has
-      not responded.
-    </p>
-
-    <h2 id="personalization">Personalization Ideas</h2>
-
-    <p>
-      Personalization can make a billing message easier to understand, but it
-      should be based on reliable account information.
-    </p>
-
-    <ul>
-      <li>Customer first name</li>
-      <li>Subscription or plan name</li>
-      <li>Payment amount</li>
-      <li>Billing date</li>
-      <li>Invoice or transaction reference</li>
-      <li>Current subscription status</li>
-      <li>Actual payment failure reason, when available</li>
-      <li>Accurate payment or update deadline</li>
-    </ul>
-
-    <p>
-      Avoid unnecessary personalization. The customer does not need a long
-      marketing message when the immediate problem is a failed payment.
-    </p>
-
-    <h2 id="automation">Automating Failed Payment Emails</h2>
-
-    <p>
-      Subscription payment failure emails are usually well suited to automation
-      because the billing event itself can trigger the communication.
-    </p>
-
-    <p>
-      A basic automation can follow this logic:
-    </p>
-
-    <ol>
-      <li><strong>Trigger:</strong> A recurring subscription payment fails.</li>
-      <li><strong>Verify:</strong> Confirm that the payment is still unresolved.</li>
-      <li><strong>Identify:</strong> Retrieve the relevant customer and subscription information.</li>
-      <li><strong>Send:</strong> Send the appropriate payment failure email.</li>
-      <li><strong>Wait:</strong> Allow the billing system to retry when applicable.</li>
-      <li><strong>Check again:</strong> Determine whether the payment succeeded.</li>
-      <li><strong>Stop:</strong> End the sequence immediately after successful resolution.</li>
-    </ol>
-
-    <p>
-      The most important automation rule is to check the current payment status
-      before every follow-up message.
-    </p>
-
-    <p>
-      This is especially important when payment processors automatically retry
-      failed transactions.
-    </p>
-
-    <p>
-      For broader automation concepts, see
-      <a class="internal-link"
-         href="https://nasirportfolio.github.io/email-marketing/articles/0004-email-marketing-automation/">
-        Email Marketing Automation
-      </a>.
-    </p>
+    <p>Test card expiry, bank decline, authentication-required, delayed payment confirmation, duplicate webhooks, cancelled accounts, and cases where the subscriber has already contacted support. Keep payment processing in your billing provider; the email should not collect card details.</p>
 
     <h2 id="mistakes">Common Mistakes to Avoid</h2>
+    <ul>
+      <li><strong>Guessing the failure reason:</strong> State only what the payment system actually confirms.</li>
+      <li><strong>Threatening immediate cancellation:</strong> Explain the real current status and applicable deadline.</li>
+      <li><strong>Showing stale payment status:</strong> Recheck for successful retries or account changes before sending.</li>
+      <li><strong>Requesting sensitive information by email:</strong> Direct customers to the secure billing portal.</li>
+      <li><strong>Using a confusing link:</strong> Make the payment-update destination identifiable and verify it works.</li>
+      <li><strong>Repeating notices after resolution:</strong> Suppress messages once the billing issue is cleared.</li>
+      <li><strong>Confusing failure notices with retry notices:</strong> Keep the content aligned with the event and the next action.</li>
+      <li><strong>Ignoring support cases:</strong> Avoid continuing an automated series without checking whether a customer is already receiving help.</li>
+    </ul>
 
-    <h3>1. Blaming the Customer</h3>
+    <h2>What to Measure</h2>
+    <p>Measure successful delivery, bounces, visits to the secure billing page, successful payment recovery, unresolved failure rate, duplicate messages, complaints, and support contacts caused by confusing instructions. Where appropriate, compare results by failure category only when that category is supplied reliably by the billing system.</p>
+    <p>Do not judge the message solely by click rate. A useful email should get the right information to the customer and help resolve the billing issue safely. If many customers click but payments remain unresolved, investigate the billing-page experience, payment options, authentication flow, and clarity of the message.</p>
 
-    <p>
-      Avoid language that suggests the customer intentionally failed to pay.
-      A neutral explanation is more appropriate.
-    </p>
-
-    <h3>2. Inventing the Failure Reason</h3>
-
-    <p>
-      Do not claim that a card expired, a bank rejected the transaction, or
-      insufficient funds caused the problem unless the available payment data
-      supports that statement.
-    </p>
-
-    <h3>3. Hiding the Main Problem</h3>
-
-    <p>
-      Do not make customers read several paragraphs before discovering that their
-      subscription payment failed.
-    </p>
-
-    <h3>4. Using Too Many Calls to Action</h3>
-
-    <p>
-      The primary action should be obvious. If the goal is to update a payment
-      method, do not surround that action with unrelated promotional links.
-    </p>
-
-    <h3>5. Sending the Wrong Status</h3>
-
-    <p>
-      Do not tell customers that their subscription has been cancelled when it is
-      still active during a grace period.
-    </p>
-
-    <h3>6. Forgetting to Stop the Automation</h3>
-
-    <p>
-      Once the payment succeeds, the failed-payment sequence should stop.
-    </p>
-
-    <h3>7. Making Unsupported Promises</h3>
-
-    <p>
-      Do not promise automatic retries, uninterrupted access, refunds, or specific
-      cancellation dates unless those outcomes are actually supported by the
-      billing system.
-    </p>
-
-    <h3>8. Turning a Billing Notice Into a Sales Email</h3>
-
-    <p>
-      The customer's immediate concern is the payment problem. Keep promotional
-      content secondary.
-    </p>
-
-    <h2 id="template">Subscription Payment Failed Email Template</h2>
-
-    <div class="example-box">
-
-      <p>
-        <strong>Subject:</strong> Your [Plan Name] payment didn't go through
-      </p>
-
-      <p>
-        Hi [First Name],
-      </p>
-
-      <p>
-        We couldn't process the [Amount] payment for your [Plan Name] subscription.
-      </p>
-
-      <p>
-        Please review or update your payment method here:
-        <strong>[Update Payment Method]</strong>
-      </p>
-
-      <p>
-        Your subscription is currently [active / in a grace period / scheduled
-        for cancellation on Date].
-      </p>
-
-      <p>
-        If you believe this payment failure is incorrect or need help updating
-        your billing information, please contact [Support Contact].
-      </p>
-
-      <p>
-        Thanks,<br>
-        [Brand Name]
-      </p>
-
-    </div>
-
-    <p>
-      Replace every placeholder with information from your actual billing system.
-      In particular, confirm the amount, subscription status, payment link, and
-      deadline before sending the message.
-    </p>
-
-    <h2 id="sequence">Example Failed Payment Sequence</h2>
-
-    <p>
-      A subscription business can organize its communication into stages rather
-      than sending the same message repeatedly.
-    </p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Stage</th>
-          <th>Purpose</th>
-          <th>Main message</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Payment failure</td>
-          <td>Inform</td>
-          <td>Your payment could not be processed.</td>
-        </tr>
-        <tr>
-          <td>First follow-up</td>
-          <td>Remind</td>
-          <td>Your payment is still unresolved.</td>
-        </tr>
-        <tr>
-          <td>Approaching deadline</td>
-          <td>Explain consequence</td>
-          <td>Please resolve the payment before [accurate date].</td>
-        </tr>
-        <tr>
-          <td>Resolved</td>
-          <td>Stop recovery sequence</td>
-          <td>Payment succeeded; no further failed-payment reminders should be sent.</td>
-        </tr>
-        <tr>
-          <td>Cancelled or suspended</td>
-          <td>Confirm status</td>
-          <td>Explain the actual subscription status and available next steps.</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>
-      The exact number and spacing of messages should depend on the billing
-      platform and the business's actual subscription policy.
-    </p>
-
-    <h2 id="metrics">How to Measure Performance</h2>
-
-    <p>
-      The main purpose of this workflow is payment resolution, so email metrics
-      should be considered together with billing outcomes.
-    </p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Metric</th>
-          <th>What It Can Tell You</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Delivery rate</td>
-          <td>Whether the messages are reaching intended recipients.</td>
-        </tr>
-        <tr>
-          <td>Open rate</td>
-          <td>Whether recipients are opening the notification.</td>
-        </tr>
-        <tr>
-          <td>Click rate</td>
-          <td>Whether recipients are using the payment recovery link.</td>
-        </tr>
-        <tr>
-          <td>Payment recovery rate</td>
-          <td>How many failed payments are subsequently resolved.</td>
-        </tr>
-        <tr>
-          <td>Time to recovery</td>
-          <td>How long it takes for a failed payment to become successful.</td>
-        </tr>
-        <tr>
-          <td>Subscription retention</td>
-          <td>Whether resolved billing issues remain connected to active subscriptions.</td>
-        </tr>
-        <tr>
-          <td>Support contacts</td>
-          <td>Whether customers need additional help resolving billing problems.</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>
-      If you already track email performance through your email platform or
-      analytics system, connect those measurements with the actual billing
-      outcome whenever possible.
-    </p>
-
-    <p>
-      For broader email measurement, see
-      <a class="internal-link"
-         href="https://nasirportfolio.github.io/email-marketing/articles/0011-email-marketing-analytics/">
-        Email Marketing Analytics
-      </a>.
-    </p>
-
-    <h2 id="checklist">Subscription Payment Failed Email Checklist</h2>
-
-    <div class="checklist-box">
-
+    <div class="checklist" id="checklist">
+      <h2>Pre-Send Checklist</h2>
       <ul>
-        <li>☐ The email clearly states that the payment failed.</li>
-        <li>☐ The subscription or plan is identified when useful.</li>
-        <li>☐ The payment amount is accurate when displayed.</li>
-        <li>☐ The billing date is accurate when displayed.</li>
-        <li>☐ The customer receives a clear recovery action.</li>
-        <li>☐ The payment link leads to the correct secure billing destination.</li>
-        <li>☐ The current subscription status is accurate.</li>
-        <li>☐ Any deadline is based on the actual billing policy.</li>
-        <li>☐ The message does not invent a failure reason.</li>
-        <li>☐ The tone is helpful rather than blaming.</li>
-        <li>☐ Promotional content does not distract from the billing issue.</li>
-        <li>☐ The automation checks whether payment has already succeeded.</li>
-        <li>☐ Follow-up messages stop after successful payment.</li>
-        <li>☐ Customer support information is easy to find.</li>
+        <li>The billing system confirmed that the payment attempt failed.</li>
+        <li>The subscription and payment details are accurate.</li>
+        <li>Any stated failure reason comes from verified information.</li>
+        <li>The current account status and grace period are correct.</li>
+        <li>The secure billing link works and belongs to the official service.</li>
+        <li>The email does not request card numbers, security codes, or passwords.</li>
+        <li>Successful subsequent payments suppress further failure notices.</li>
+        <li>Duplicate events and workflow retries are handled safely.</li>
+        <li>Support information is accurate and easy to locate.</li>
+        <li>The message is readable on mobile devices.</li>
       </ul>
-
     </div>
 
-    <h2 id="final-thoughts">Final Thoughts</h2>
-
-    <p>
-      A subscription payment failed email should make a potentially confusing
-      billing problem simple to understand.
-    </p>
-
-    <p>
-      State what happened, provide a clear recovery action, explain the actual
-      subscription status, and make support available. Keep the language calm
-      and factual rather than blaming the customer or creating artificial urgency.
-    </p>
-
-    <p>
-      Most importantly, connect the email to the real billing status. If the
-      payment succeeds, stop the recovery sequence. If the subscription is
-      approaching suspension or cancellation, communicate the actual consequence
-      and deadline clearly.
-    </p>
-
-    <p>
-      A well-designed failed-payment workflow is not just an email-writing task.
-      It is part of the broader customer experience, billing automation, and
-      subscription retention process.
-    </p>
+    <h2>Final Recommendation</h2>
+    <p>A subscription payment failed email should be factual, secure, and respectful. Explain the unsuccessful attempt, give the subscriber a clear way to review billing, state only verified details about access or deadlines, and stop follow-up notices when the issue is resolved. Clear communication and a safe payment flow are more valuable than pressure or alarming language.</p>
 
     <div class="author-box">
-
       <h2>About the Author</h2>
-
-      <p>
-        Muhammad Nasir Uddin is an Assistant Professor of English and a digital
-        marketing practitioner focused on email marketing, audience growth,
-        SEO content, customer acquisition, and marketing automation.
-      </p>
-
-      <p>
-        This article is part of an ongoing Email Marketing + List Building +
-        Blogging for Audience Growth content series.
-      </p>
-
+      <p><strong>Muhammad Nasir Uddin</strong> creates practical educational resources about email marketing, automation, customer communication, and digital marketing workflows at Nasir Email Marketing.</p>
     </div>
 
-    <div class="disclosure-box">
+    <p class="disclosure"><strong>Affiliate Disclosure:</strong> This website may contain affiliate links in some articles. If a reader purchases through an affiliate link, the site may earn a commission at no additional cost to the reader. Recommendations are included only when relevant and should be evaluated independently.</p>
+  </article>
+</main>
 
-      <h2>Affiliate Disclosure</h2>
-
-      <p>
-        Some articles on this website may contain affiliate links. If you use
-        an affiliate link and make a purchase or sign up for a service, the
-        website owner may receive a commission at no additional cost to you.
-      </p>
-
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="https://nasiremailmarketing.com/">Home</a>
+      <a href="https://nasiremailmarketing.com/about.html">About</a>
+      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+      <a href="https://nasiremailmarketing.com/privacy-policy.html">Privacy Policy</a>
+      <a href="https://nasiremailmarketing.com/terms-and-conditions.html">Terms and Conditions</a>
+      <a href="https://nasiremailmarketing.com/disclaimer.html">Disclaimer</a>
+      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
     </div>
-
-  </main>
-
-  <footer>
-
-    <div class="footer-container">
-
-      <nav aria-label="Footer navigation">
-
-        <a href="https://nasirportfolio.github.io/email-marketing/">Home</a>
-
-        <a href="https://nasirportfolio.github.io/email-marketing/about.html">
-          About
-        </a>
-
-        <a href="https://nasirportfolio.github.io/email-marketing/contact.html">
-          Contact
-        </a>
-
-        <a href="https://nasirportfolio.github.io/email-marketing/privacy-policy.html">
-          Privacy Policy
-        </a>
-
-        <a href="https://nasirportfolio.github.io/email-marketing/disclaimer.html">
-          Disclaimer
-        </a>
-
-        <a href="https://nasirportfolio.github.io/email-marketing/terms-and-conditions.html">
-          Terms &amp; Conditions
-        </a>
-
-        <a href="https://nasirportfolio.github.io/email-marketing/affiliate-disclosure.html">
-          Affiliate Disclosure
-        </a>
-
-      </nav>
-
-      <p>
-        &copy; 2026 Email Marketing + List Building + Blogging for Audience Growth.
-        All rights reserved.
-      </p>
-
-    </div>
-
-  </footer>
-
+    <p class="copyright">© 2026 Nasir Email Marketing. All rights reserved.</p>
+  </div>
+</footer>
 </body>
 </html>
