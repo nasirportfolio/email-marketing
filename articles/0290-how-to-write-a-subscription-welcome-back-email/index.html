@@ -1,1048 +1,350 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>How to Write a Subscription Welcome Back Email</title>
-
-  <meta name="description" content="Learn how to write a subscription welcome back email after a customer reactivates. Includes timing, structure, subject lines, examples, templates, personalization, and automation tips.">
-
-  <meta name="robots" content="index, follow">
-
+  <meta name="description" content="Learn how to write a subscription welcome back email after reactivation, with account-status checks, useful next steps, subject lines, examples, and a reusable template.">
   <meta name="author" content="Muhammad Nasir Uddin">
-
-  <link rel="canonical" href="https://nasirportfolio.github.io/email-marketing/articles/0290-how-to-write-a-subscription-welcome-back-email/">
-
-  <!-- Open Graph -->
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nasiremailmarketing.com/articles/0290-how-to-write-a-subscription-welcome-back-email/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="How to Write a Subscription Welcome Back Email">
-  <meta property="og:description" content="Learn how to write a subscription welcome back email after a customer reactivates, with practical examples, templates, timing, personalization, and automation tips.">
-  <meta property="og:url" content="https://nasirportfolio.github.io/email-marketing/articles/0290-how-to-write-a-subscription-welcome-back-email/">
-
-  <!-- Twitter -->
+  <meta property="og:description" content="A practical guide to welcoming subscribers back after reactivation, confirming current account details, and helping them get started again.">
+  <meta property="og:url" content="https://nasiremailmarketing.com/articles/0290-how-to-write-a-subscription-welcome-back-email/">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="How to Write a Subscription Welcome Back Email">
-  <meta name="twitter:description" content="A practical guide to writing a subscription welcome back email after a customer reactivates their subscription.">
 
-  <!-- Google Analytics 4 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-3ZDJCJWX5F');
   </script>
 
-  <!-- Article Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "How to Write a Subscription Welcome Back Email",
-    "description": "Learn how to write a subscription welcome back email after a customer reactivates, including timing, structure, subject lines, examples, templates, personalization, and automation.",
+    "description": "Learn how to write a subscription welcome back email after reactivation, with account-status checks, useful next steps, subject lines, examples, and a reusable template.",
     "author": {
       "@type": "Person",
       "name": "Muhammad Nasir Uddin"
     },
     "publisher": {
-      "@type": "Person",
-      "name": "Muhammad Nasir Uddin"
+      "@type": "Organization",
+      "name": "Nasir Email Marketing",
+      "url": "https://nasiremailmarketing.com/"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://nasirportfolio.github.io/email-marketing/articles/0290-how-to-write-a-subscription-welcome-back-email/"
+      "@id": "https://nasiremailmarketing.com/articles/0290-how-to-write-a-subscription-welcome-back-email/"
     }
   }
   </script>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
+      color: #20252b;
+      background: #fff;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-      color: #222;
-      background: #ffffff;
+      line-height: 1.75;
     }
-
     header {
       background: #f5f7fa;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #e2e6ea;
       padding: 18px 20px;
     }
-
-    nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    nav a {
-      color: #0056b3;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    nav a:hover,
-    nav a:focus {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 30px 20px 50px;
-    }
-
-    .article-number {
-      font-size: 14px;
+    .header-inner, .footer-inner { max-width: 1080px; margin: 0 auto; }
+    .brand {
+      margin: 0 0 8px;
+      color: #172b4d;
+      font-size: 1.35rem;
       font-weight: 700;
-      color: #666;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
     }
-
-    h1 {
-      font-size: 38px;
-      line-height: 1.2;
-      margin: 0 0 18px;
-      color: #111;
+    nav { display: flex; flex-wrap: wrap; gap: 10px 20px; }
+    nav a, footer a { color: #0759a5; text-decoration: none; }
+    nav a { font-weight: 600; }
+    nav a:hover, nav a:focus, footer a:hover, footer a:focus { text-decoration: underline; }
+    main { max-width: 900px; margin: 0 auto; padding: 32px 20px 56px; }
+    .article-label {
+      margin: 0 0 8px;
+      color: #5c6673;
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
     }
-
-    h2 {
+    h1, h2, h3 { color: #172b4d; line-height: 1.3; }
+    h1 { margin: 0 0 18px; font-size: clamp(2rem, 5vw, 2.65rem); }
+    h2 { margin-top: 38px; font-size: 1.65rem; }
+    h3 { margin-top: 25px; font-size: 1.2rem; }
+    p { margin: 0 0 18px; }
+    li { margin: 0 0 9px; }
+    a { overflow-wrap: anywhere; }
+    .intro { font-size: 1.08rem; }
+    .quick-answer, .toc, .example, .template, .checklist, .note {
+      margin: 24px 0;
+      padding: 20px;
+      border-radius: 9px;
+    }
+    .quick-answer { background: #eef6ff; border-left: 4px solid #2473bd; }
+    .toc { background: #f7f9fc; border: 1px solid #dfe5ec; }
+    .toc h2 { margin: 0 0 10px; font-size: 1.25rem; }
+    .toc ul { margin-bottom: 0; }
+    .toc a { color: #0759a5; text-decoration: none; }
+    .toc a:hover, .toc a:focus { text-decoration: underline; }
+    .example { background: #fbfbfc; border: 1px solid #e1e5ea; }
+    .template { background: #f2f8f3; border: 1px solid #d3e7d7; }
+    .checklist { background: #f7f9fc; border: 1px solid #dfe5ec; }
+    .note { background: #fff8e8; border-left: 4px solid #d99a00; }
+    .author-box {
       margin-top: 42px;
-      font-size: 28px;
-      line-height: 1.3;
-      color: #111;
-    }
-
-    h3 {
-      margin-top: 28px;
-      font-size: 21px;
-      line-height: 1.4;
-      color: #222;
-    }
-
-    p {
-      margin: 0 0 18px;
-    }
-
-    ul,
-    ol {
-      margin-bottom: 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: #0056b3;
-    }
-
-    .quick-answer {
-      background: #f5f8fc;
-      border-left: 4px solid #0056b3;
-      padding: 18px 20px;
-      margin: 25px 0;
-    }
-
-    .toc {
-      background: #fafafa;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 30px 0;
-    }
-
-    .toc h2 {
-      margin-top: 0;
-      font-size: 22px;
-    }
-
-    .toc ul {
-      margin-bottom: 0;
-      padding-left: 22px;
-    }
-
-    .toc a {
-      color: #0056b3;
-      text-decoration: none;
-    }
-
-    .toc a:hover,
-    .toc a:focus {
-      text-decoration: underline;
-    }
-
-    .example-box {
-      background: #f8f8f8;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 22px 0;
-    }
-
-    .template-box {
-      background: #f7fbff;
-      border: 1px solid #cbdff2;
-      border-radius: 8px;
       padding: 22px;
-      margin: 22px 0;
-    }
-
-    .checklist {
-      background: #fafafa;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 22px 0;
-      display: block;
-      overflow-x: auto;
-    }
-
-    th,
-    td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th {
-      background: #f3f3f3;
-    }
-
-    .author-box,
-    .affiliate-box {
-      margin-top: 40px;
-      padding: 20px;
-      border-top: 1px solid #ddd;
-    }
-
-    footer {
       background: #f5f7fa;
-      border-top: 1px solid #ddd;
-      padding: 25px 20px;
-      text-align: center;
+      border-top: 1px solid #dfe5ec;
     }
-
-    footer a {
-      margin: 0 8px;
-      color: #0056b3;
-      text-decoration: none;
-    }
-
-    footer a:hover,
-    footer a:focus {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 700px) {
-      main {
-        padding: 22px 16px 40px;
-      }
-
-      h1 {
-        font-size: 30px;
-      }
-
-      h2 {
-        font-size: 24px;
-      }
-
-      h3 {
-        font-size: 19px;
-      }
-
-      nav {
-        gap: 12px;
-      }
-
-      footer a {
-        display: inline-block;
-        margin: 5px 6px;
-      }
+    .disclosure { margin-top: 22px; color: #535d68; font-size: .95rem; }
+    footer { padding: 28px 20px; background: #f5f7fa; border-top: 1px solid #e2e6ea; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-bottom: 12px; }
+    .copyright { margin: 0; color: #59636f; font-size: .9rem; }
+    @media (max-width: 640px) {
+      header { padding: 16px; }
+      main { padding: 24px 16px 42px; }
+      h2 { font-size: 1.45rem; }
+      .quick-answer, .toc, .example, .template, .checklist, .note { padding: 16px; }
     }
   </style>
 </head>
-
 <body>
-
 <header>
-  <nav aria-label="Main navigation">
-    <a href="https://nasirportfolio.github.io/email-marketing/">Home</a>
-    <a href="https://nasirportfolio.github.io/email-marketing/about.html">About</a>
-    <a href="https://nasirportfolio.github.io/email-marketing/contact.html">Contact</a>
-  </nav>
+  <div class="header-inner">
+    <p class="brand">Nasir Email Marketing</p>
+    <nav aria-label="Main navigation">
+      <a href="https://nasiremailmarketing.com/">Home</a>
+      <a href="https://nasiremailmarketing.com/about.html">About</a>
+      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+    </nav>
+  </div>
 </header>
 
 <main>
+  <article>
+    <p class="article-label">Article 0290</p>
+    <h1>How to Write a Subscription Welcome Back Email</h1>
+    <p class="intro">A subscription welcome back email is sent after a former subscriber has successfully returned. It acknowledges the renewed relationship, confirms the current subscription status when appropriate, and helps the customer take the next useful step. It should not be confused with a reactivation email, which invites someone to return before they have restarted their subscription.</p>
 
-  <div class="article-number">ARTICLE 0290</div>
+    <div class="quick-answer">
+      <strong>Quick answer:</strong> Send a welcome back email after the subscription system confirms reactivation. Thank the customer for returning, provide accurate information about their current plan and access, highlight one or two useful next steps, and link to the account or getting-started page. Do not claim that payment, access, or renewal is active unless the system confirms it.
+    </div>
 
-  <h1>How to Write a Subscription Welcome Back Email</h1>
+    <div class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#what-is">What Is a Subscription Welcome Back Email?</a></li>
+        <li><a href="#reactivation-vs-welcome">Welcome Back vs. Reactivation Email</a></li>
+        <li><a href="#purpose">What Should the Email Achieve?</a></li>
+        <li><a href="#timing">When to Send It</a></li>
+        <li><a href="#include">What to Include</a></li>
+        <li><a href="#subject-lines">Subject Line Examples</a></li>
+        <li><a href="#examples">Practical Examples</a></li>
+        <li><a href="#template">Reusable Email Template</a></li>
+        <li><a href="#personalization">Personalization and Next Steps</a></li>
+        <li><a href="#automation">Automation and Account Checks</a></li>
+        <li><a href="#mistakes">Mistakes to Avoid</a></li>
+        <li><a href="#checklist">Pre-Send Checklist</a></li>
+      </ul>
+    </div>
 
-  <div class="quick-answer">
-    <strong>Quick Answer:</strong>
-    A subscription welcome back email is a message sent after a former subscriber successfully returns to an active subscription. Its job is to confirm that the subscription is active, explain what happens next, restore confidence, and make it easy for the customer to manage the renewed relationship.
-  </div>
+    <h2 id="what-is">What Is a Subscription Welcome Back Email?</h2>
+    <p>A subscription welcome back email greets a customer after they have successfully reactivated a subscription or rejoined a service. It can apply to software, memberships, digital publications, online courses, paid services, and other recurring plans.</p>
+    <p>The email's role is to make the return feel clear and straightforward. Depending on the service, it may point the subscriber to account settings, explain how to resume using key features, identify where to find billing information, or link to a concise getting-started guide.</p>
+    <p>Keep the message grounded in the customer's actual account. If the reactivation request is pending, payment has not cleared, or service access has not yet resumed, send a status update that explains the current state instead of calling the person an active subscriber prematurely.</p>
 
-  <p>
-    A customer who returns to a subscription should not have to guess what happens next.
-    After reactivation, a short and useful welcome back email can confirm the new subscription status,
-    explain the next billing or delivery event, and provide a clear path to account management or support.
-  </p>
-
-  <p>
-    This article focuses specifically on the <strong>post-reactivation welcome back email</strong>.
-    It is different from a win-back campaign, which tries to persuade inactive customers to return,
-    and different from a reactivation email, which asks or enables a former subscriber to restart.
-  </p>
-
-  <p>
-    Your earlier
-    <a href="https://nasirportfolio.github.io/email-marketing/articles/0289-how-to-write-a-subscription-reactivation-email/">Subscription Reactivation Email</a>
-    article covers the return decision itself. This article covers the communication that follows once the customer has actually returned.
-  </p>
-
-  <div class="toc">
-    <h2>Table of Contents</h2>
+    <h2 id="reactivation-vs-welcome">Welcome Back vs. Reactivation Email</h2>
+    <p>These emails happen at different points in the customer journey.</p>
     <ul>
-      <li><a href="#what-is">What Is a Subscription Welcome Back Email?</a></li>
-      <li><a href="#why-it-matters">Why the Welcome Back Email Matters</a></li>
-      <li><a href="#what-to-confirm">What to Confirm in the Email</a></li>
-      <li><a href="#timing">When to Send It</a></li>
-      <li><a href="#subject-lines">Subscription Welcome Back Subject Lines</a></li>
-      <li><a href="#structure">How to Structure the Email</a></li>
-      <li><a href="#next-steps">Explain What Happens Next</a></li>
-      <li><a href="#billing">Explain Billing and Renewal Information</a></li>
-      <li><a href="#manage">Give Customers Control</a></li>
-      <li><a href="#personalization">Personalize the Message</a></li>
-      <li><a href="#offers">Should You Include a Welcome Back Offer?</a></li>
-      <li><a href="#automation">Automate the Welcome Back Email</a></li>
-      <li><a href="#mistakes">Common Mistakes</a></li>
-      <li><a href="#template">Subscription Welcome Back Email Template</a></li>
-      <li><a href="#examples">Practical Examples</a></li>
-      <li><a href="#metrics">What to Measure</a></li>
-      <li><a href="#checklist">Welcome Back Email Checklist</a></li>
-      <li><a href="#final-thoughts">Final Thoughts</a></li>
+      <li><strong>Reactivation email:</strong> Invites a former subscriber to review the service and decide whether to return. The subscription is still inactive at the time of the invitation.</li>
+      <li><strong>Welcome back email:</strong> Acknowledges a completed return and helps the reactivated subscriber get oriented again.</li>
+      <li><strong>Subscription confirmation:</strong> Records the plan, billing, or account status after the system processes the relevant event.</li>
+      <li><strong>Onboarding email:</strong> Helps a subscriber understand how to begin or make effective use of the service. It may follow a welcome back message, but its central purpose is activation and learning.</li>
     </ul>
-  </div>
+    <p>For the invitation sent before a subscriber returns, see <a href="https://nasiremailmarketing.com/articles/0289-how-to-write-a-subscription-reactivation-email/">Article 0289: Subscription Reactivation Email</a>. For structured guidance to help a subscriber begin using a service, see <a href="https://nasiremailmarketing.com/articles/0291-how-to-write-a-subscription-onboarding-email/">Article 0291: Subscription Onboarding Email</a>.</p>
 
-  <h2 id="what-is">What Is a Subscription Welcome Back Email?</h2>
-
-  <p>
-    A subscription welcome back email is a confirmation and onboarding message sent after
-    a customer successfully restarts a subscription.
-  </p>
-
-  <p>
-    The customer may have previously canceled, paused, or otherwise ended the subscription.
-    Once the subscription becomes active again, the email should make the new status clear.
-  </p>
-
-  <p>
-    Depending on the business model, the message may confirm:
-  </p>
-
-  <ul>
-    <li>That the subscription is active again.</li>
-    <li>The selected plan or subscription type.</li>
-    <li>The next billing date.</li>
-    <li>The next delivery date, when applicable.</li>
-    <li>The selected products or services.</li>
-    <li>Where the customer can manage the subscription.</li>
-    <li>How to contact customer support.</li>
-  </ul>
-
-  <p>
-    A useful subscription welcome message should reduce uncertainty rather than immediately
-    turning the customer's return into another promotional opportunity.
-  </p>
-
-  <h2 id="why-it-matters">Why the Welcome Back Email Matters</h2>
-
-  <p>
-    Reactivation changes the customer's status. A customer who was previously inactive is now
-    active again, so the communication should reflect that new stage of the relationship.
-  </p>
-
-  <p>
-    A welcome back email can help the customer understand the result of the reactivation action.
-    It can also provide practical information that may be needed before the next billing,
-    shipment, or service event.
-  </p>
-
-  <p>
-    Subscription lifecycle guidance commonly recommends matching the email to the subscriber's
-    actual lifecycle state and clearly explaining important subscription information.
-    :contentReference[oaicite:2]{index=2}
-  </p>
-
-  <h3>What the Email Should Accomplish</h3>
-
-  <ul>
-    <li>Confirm the successful return.</li>
-    <li>Set clear expectations.</li>
-    <li>Explain the next important event.</li>
-    <li>Provide account or subscription controls.</li>
-    <li>Make support easy to find.</li>
-    <li>Re-establish a useful customer relationship.</li>
-  </ul>
-
-  <h2 id="what-to-confirm">What to Confirm in the Email</h2>
-
-  <p>
-    The exact information depends on the subscription business, but the customer should be able
-    to understand the most important details without searching through several pages.
-  </p>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Information</th>
-        <th>Why It Matters</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Subscription status</td>
-        <td>Confirms that the subscription is active again.</td>
-      </tr>
-      <tr>
-        <td>Plan or product</td>
-        <td>Helps the customer verify what they restarted.</td>
-      </tr>
-      <tr>
-        <td>Next billing date</td>
-        <td>Sets a clear expectation about the next charge.</td>
-      </tr>
-      <tr>
-        <td>Next delivery date</td>
-        <td>Useful for physical subscription products.</td>
-      </tr>
-      <tr>
-        <td>Account management</td>
-        <td>Lets customers review or change their subscription.</td>
-      </tr>
-      <tr>
-        <td>Support information</td>
-        <td>Provides a clear path for questions or problems.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p>
-    Avoid including information that is not relevant to the customer's actual subscription.
-    Accuracy is more important than adding more details.
-  </p>
-
-  <h2 id="timing">When to Send It</h2>
-
-  <p>
-    The welcome back email should normally be triggered after the subscription has successfully
-    returned to an active state.
-  </p>
-
-  <p>
-    Do not send a confirmation message simply because a customer clicked a reactivation button.
-    If the billing or account system has not confirmed the subscription status, the customer could
-    receive an inaccurate message.
-  </p>
-
-  <h3>Recommended Trigger Logic</h3>
-
-  <ol>
-    <li>Customer requests reactivation.</li>
-    <li>The subscription system processes the request.</li>
-    <li>The subscription becomes active.</li>
-    <li>The automation detects the active status.</li>
-    <li>The welcome back email is sent.</li>
-  </ol>
-
-  <p>
-    If the reactivation attempt fails, the customer should receive an appropriate payment or
-    account message instead of a false welcome back confirmation.
-  </p>
-
-  <h2 id="subject-lines">Subscription Welcome Back Subject Lines</h2>
-
-  <p>
-    A good subject line should accurately describe the message. Avoid pretending that a
-    subscription is active when the system has not confirmed it.
-  </p>
-
-  <ul>
-    <li>Welcome back — your subscription is active</li>
-    <li>Welcome back to [Brand Name]</li>
-    <li>Your subscription is active again</li>
-    <li>You're back — here's what's next</li>
-    <li>Welcome back, [First Name]</li>
-    <li>Your [Plan Name] subscription has restarted</li>
-    <li>You're all set — your subscription is active</li>
-    <li>Welcome back — your next delivery is on the way</li>
-  </ul>
-
-  <p>
-    Choose the subject line that best matches the actual customer event.
-    If the email contains important billing information, clarity should take priority over clever wording.
-  </p>
-
-  <h2 id="structure">How to Structure the Email</h2>
-
-  <p>
-    A practical welcome back email can follow a simple structure:
-  </p>
-
-  <ol>
-    <li>Welcome the customer back.</li>
-    <li>Confirm the subscription is active.</li>
-    <li>Show the most important subscription details.</li>
-    <li>Explain what happens next.</li>
-    <li>Provide a subscription-management option.</li>
-    <li>Offer customer support information.</li>
-    <li>Close with a friendly message.</li>
-  </ol>
-
-  <h3>Keep the Opening Direct</h3>
-
-  <p>
-    The first sentence should make the result obvious.
-  </p>
-
-  <div class="example-box">
-    <strong>Example:</strong>
-    <p>
-      Welcome back! Your monthly subscription is active again, and your next renewal is scheduled
-      for October 15.
-    </p>
-  </div>
-
-  <p>
-    This is more useful than starting with several paragraphs of promotional copy.
-  </p>
-
-  <h2 id="next-steps">Explain What Happens Next</h2>
-
-  <p>
-    Returning customers should know what to expect after reactivation.
-  </p>
-
-  <p>
-    Depending on the business, explain:
-  </p>
-
-  <ul>
-    <li>When the next order will be processed.</li>
-    <li>When the next shipment is expected.</li>
-    <li>When the next service period begins.</li>
-    <li>When the next renewal will occur.</li>
-    <li>How the customer can change their subscription.</li>
-  </ul>
-
-  <p>
-    For example:
-  </p>
-
-  <div class="example-box">
-    <p>
-      Your subscription is active again. Your next order will be processed on October 10,
-      and your next renewal is scheduled for November 10.
-    </p>
-  </div>
-
-  <p>
-    Only include dates that are actually generated or confirmed by the business system.
-  </p>
-
-  <h2 id="billing">Explain Billing and Renewal Information</h2>
-
-  <p>
-    Subscription customers need clear information about recurring charges.
-    If the customer's subscription has resumed, explain the relevant billing date and plan
-    without hiding important information inside promotional copy.
-  </p>
-
-  <p>
-    Depending on the business, the email may include:
-  </p>
-
-  <ul>
-    <li>Current subscription plan.</li>
-    <li>Current recurring price.</li>
-    <li>Next billing date.</li>
-    <li>Billing frequency.</li>
-    <li>Applicable taxes or fees when relevant.</li>
-    <li>Payment method information in a privacy-conscious format.</li>
-    <li>A link to manage billing details.</li>
-  </ul>
-
-  <p>
-    Never expose sensitive payment information unnecessarily. If the customer needs to update
-    payment details, direct them to the secure account-management area.
-  </p>
-
-  <h2 id="manage">Give Customers Control</h2>
-
-  <p>
-    A welcome back message should not make the customer feel trapped in the subscription.
-    Make it easy to manage the relationship.
-  </p>
-
-  <p>
-    Depending on the platform, useful account controls may include:
-  </p>
-
-  <ul>
-    <li>Manage subscription.</li>
-    <li>Change subscription frequency.</li>
-    <li>Change products or plan.</li>
-    <li>Update billing information.</li>
-    <li>Skip an eligible delivery.</li>
-    <li>Pause the subscription when available.</li>
-    <li>Contact customer support.</li>
-  </ul>
-
-  <p>
-    Use real destination URLs in your published email. Do not send customers to a generic
-    homepage when a direct subscription-management page is available.
-  </p>
-
-  <h2 id="personalization">Personalize the Message</h2>
-
-  <p>
-    Personalization can make a welcome back email more relevant when the business has accurate
-    customer information.
-  </p>
-
-  <p>
-    Useful personalization can include:
-  </p>
-
-  <ul>
-    <li>The customer's first name.</li>
-    <li>The subscription plan.</li>
-    <li>The product or service selected.</li>
-    <li>The next delivery date.</li>
-    <li>The customer's preferred communication information.</li>
-    <li>Relevant account-management information.</li>
-  </ul>
-
-  <p>
-    Personalization should be accurate. Incorrect names, plans, prices, dates, or product
-    information can damage trust.
-  </p>
-
-  <p>
-    For broader customer-retention strategies, see
-    <a href="https://nasirportfolio.github.io/email-marketing/articles/0015-email-marketing-customer-retention/">Email Marketing Customer Retention</a>.
-  </p>
-
-  <h2 id="offers">Should You Include a Welcome Back Offer?</h2>
-
-  <p>
-    Not every returning subscriber needs a discount.
-  </p>
-
-  <p>
-    If the customer has already completed reactivation, the primary purpose of the welcome back
-    email is confirmation and orientation. Adding another promotion may distract from important
-    subscription information.
-  </p>
-
-  <p>
-    An offer can be appropriate when it is genuinely part of the business's reactivation or
-    retention strategy and the terms are clear.
-  </p>
-
-  <h3>When an Offer May Make Sense</h3>
-
-  <ul>
-    <li>A promised incentive was part of the reactivation process.</li>
-    <li>The business has a legitimate returning-customer benefit.</li>
-    <li>The offer does not obscure billing or subscription details.</li>
-    <li>The terms and expiration date are clearly explained.</li>
-  </ul>
-
-  <h3>When to Keep It Simple</h3>
-
-  <p>
-    If the customer has already returned and the main purpose is to confirm the subscription,
-    a straightforward welcome message may be more useful than another sales promotion.
-  </p>
-
-  <h2 id="automation">Automate the Welcome Back Email</h2>
-
-  <p>
-    Subscription welcome back emails are well suited to automation because the trigger can be
-    based on a confirmed customer status.
-  </p>
-
-  <p>
-    A simple workflow might look like this:
-  </p>
-
-  <div class="example-box">
-    <p>
-      Customer reactivates subscription
-      → system confirms active status
-      → welcome back email
-      → customer receives next-step information
-      → normal subscription lifecycle continues
-    </p>
-  </div>
-
-  <p>
-    Email automation can connect customer actions and account conditions with appropriate
-    follow-up communication. Your
-    <a href="https://nasirportfolio.github.io/email-marketing/articles/0004-email-marketing-automation/">Email Marketing Automation</a>
-    guide explains the broader role of automated workflows.
-  </p>
-
-  <h3>Use an Exit or Status Condition</h3>
-
-  <p>
-    The automation should use the customer's current subscription state.
-    A customer whose reactivation failed should not receive a successful welcome back message.
-  </p>
-
-  <p>
-    Similarly, if a customer cancels again before a scheduled follow-up message is sent,
-    the workflow should account for the new status.
-  </p>
-
-  <h2 id="mistakes">Common Subscription Welcome Back Email Mistakes</h2>
-
-  <h3>1. Sending the Email Before Reactivation Is Confirmed</h3>
-
-  <p>
-    This can create confusion if the payment or subscription update fails.
-  </p>
-
-  <h3>2. Repeating the Entire Reactivation Pitch</h3>
-
-  <p>
-    Once the customer has returned, the message should move from persuasion to confirmation
-    and useful next steps.
-  </p>
-
-  <h3>3. Hiding Important Billing Information</h3>
-
-  <p>
-    Customers should not have to search through promotional content to discover when they will
-    be charged again.
-  </p>
-
-  <h3>4. Using Outdated Subscription Details</h3>
-
-  <p>
-    Check the active plan, price, billing date, delivery schedule, and account status before
-    generating the message.
-  </p>
-
-  <h3>5. Adding Too Many Promotions</h3>
-
-  <p>
-    A welcome back email should have a clear primary purpose.
-  </p>
-
-  <h3>6. Providing No Account-Management Path</h3>
-
-  <p>
-    Customers should have a practical way to review or manage their subscription.
-  </p>
-
-  <h3>7. Using Generic Personalization</h3>
-
-  <p>
-    Only use customer information that is accurate and genuinely useful.
-  </p>
-
-  <h3>8. Forgetting Support Information</h3>
-
-  <p>
-    A returning customer may have questions about billing, delivery, products, or their account.
-    Make support easy to find.
-  </p>
-
-  <h2 id="template">Subscription Welcome Back Email Template</h2>
-
-  <div class="template-box">
-
-    <p><strong>Subject:</strong> Welcome back — your subscription is active</p>
-
-    <p>Hi [First Name],</p>
-
-    <p>
-      Welcome back to [Brand Name].
-      Your [Plan/Product Name] subscription is active again.
-    </p>
-
-    <p>
-      Here are your current subscription details:
-    </p>
-
+    <h2 id="purpose">What Should the Email Achieve?</h2>
+    <p>A welcome back message should support the customer's return rather than fill the inbox with broad promotion.</p>
     <ul>
-      <li><strong>Plan:</strong> [Plan Name]</li>
-      <li><strong>Billing frequency:</strong> [Monthly/Quarterly/Annual]</li>
-      <li><strong>Next billing date:</strong> [Date]</li>
-      <li><strong>Next delivery date:</strong> [Date, if applicable]</li>
+      <li><strong>Recognize the return:</strong> Thank the subscriber in a natural way without exaggerating the relationship.</li>
+      <li><strong>Clarify current status:</strong> Where useful, confirm the plan or access status using data from the subscription system.</li>
+      <li><strong>Reduce friction:</strong> Point to the account page, service dashboard, or a short guide that helps the person continue.</li>
+      <li><strong>Surface relevant changes:</strong> Mention a meaningful change since the customer left only if it is accurate and relevant.</li>
+      <li><strong>Set expectations:</strong> Explain a next step if access, data restoration, or service setup requires it.</li>
+    </ul>
+    <p>Do not assume why the subscriber originally left or claim that the product has changed unless you can support that statement. The customer may simply want to continue where they stopped.</p>
+
+    <h2 id="timing">When to Send It</h2>
+    <p>Send the welcome back email after the system confirms the event that makes the subscriber eligible for it. The right trigger depends on the service's billing, access, and reactivation process.</p>
+    <ul>
+      <li><strong>After reactivation is confirmed:</strong> Avoid sending before the system has updated the subscription record.</li>
+      <li><strong>After payment is verified where required:</strong> If access depends on a successful payment, do not describe access as active until the relevant system confirms it.</li>
+      <li><strong>After access is restored:</strong> If provisioning takes time, send a separate clear status message or wait until the service is available.</li>
+      <li><strong>Coordinate with onboarding:</strong> Avoid duplicating the first onboarding email; decide whether the welcome back message is the first step in the sequence or a separate acknowledgment.</li>
+      <li><strong>Suppress if the state changes:</strong> Do not send if the customer immediately cancels again or the reactivation was reversed.</li>
     </ul>
 
-    <p>
-      You can review or manage your subscription from your account whenever you need to.
-    </p>
-
-    <p>
-      <strong>[Manage My Subscription]</strong>
-    </p>
-
-    <p>
-      If you have any questions, please contact us at [Support Email or Support Page].
-    </p>
-
-    <p>
-      Thanks for coming back. We're glad to have you with us again.
-    </p>
-
-    <p>
-      Best,<br>
-      [Sender Name]<br>
-      [Brand Name]
-    </p>
-
-  </div>
-
-  <p>
-    <strong>Important:</strong> Replace every bracketed placeholder with the customer's actual
-    information and the business's real URLs before using the template.
-  </p>
-
-  <h2 id="examples">Practical Examples</h2>
-
-  <h3>Example 1: Subscription Box</h3>
-
-  <div class="example-box">
-    <p><strong>Subject:</strong> Welcome back — your subscription is active</p>
-
-    <p>Hi Jamie,</p>
-
-    <p>
-      Welcome back! Your monthly coffee subscription is active again.
-    </p>
-
-    <p>
-      Your next box is scheduled for October 12, and your next renewal is October 12.
-    </p>
-
-    <p>
-      You can review your coffee selection, delivery schedule, and subscription settings
-      from your account.
-    </p>
-
-    <p>
-      We're glad to have you back.
-    </p>
-  </div>
-
-  <h3>Example 2: Software Subscription</h3>
-
-  <div class="example-box">
-    <p><strong>Subject:</strong> You're back — your Pro plan is active</p>
-
-    <p>Hi Alex,</p>
-
-    <p>
-      Welcome back. Your Pro subscription has been successfully reactivated.
-    </p>
-
-    <p>
-      Your account is ready to use, and your next renewal is scheduled for October 20.
-    </p>
-
-    <p>
-      You can review your plan and billing settings from your account.
-    </p>
-
-    <p>
-      If you need help getting started again, our support team is available to help.
-    </p>
-  </div>
-
-  <h3>Example 3: Membership</h3>
-
-  <div class="example-box">
-    <p><strong>Subject:</strong> Welcome back to [Membership Name]</p>
-
-    <p>Hi Taylor,</p>
-
-    <p>
-      Your membership is active again. Welcome back!
-    </p>
-
-    <p>
-      You can now access your member benefits and manage your membership from your account.
-    </p>
-
-    <p>
-      If you need help with your membership, please contact our support team.
-    </p>
-  </div>
-
-  <h2 id="metrics">What to Measure</h2>
-
-  <p>
-    The welcome back email should be evaluated according to its purpose.
-    Because this is primarily a post-reactivation communication, the most useful measurements
-    are not necessarily the same as those used for a promotional campaign.
-  </p>
-
-  <h3>Useful Metrics</h3>
-
-  <ul>
-    <li>Email delivery rate.</li>
-    <li>Open rate, where reliable measurement is available.</li>
-    <li>Click-through rate on account-management links.</li>
-    <li>Subscription-management activity.</li>
-    <li>Support requests related to the reactivation.</li>
-    <li>Subsequent cancellation or churn behavior.</li>
-    <li>Renewal behavior after the customer returns.</li>
-  </ul>
-
-  <p>
-    Metrics should be interpreted according to the business model and the purpose of the email.
-    Your
-    <a href="https://nasirportfolio.github.io/email-marketing/articles/0011-email-marketing-analytics/">Email Marketing Analytics</a>
-    guide covers the broader measurement process.
-  </p>
-
-  <h3>Measure the Customer Journey, Not Just the Email</h3>
-
-  <p>
-    A customer may open the message but never interact with it because the email already
-    answered the customer's question.
-  </p>
-
-  <p>
-    Therefore, do not judge the entire welcome-back experience from one metric alone.
-    Consider whether the customer successfully returned, understood the subscription status,
-    received the expected service, and continued the relationship.
-  </p>
-
-  <h2 id="checklist">Subscription Welcome Back Email Checklist</h2>
-
-  <div class="checklist">
-
+    <h2 id="include">What to Include in the Email</h2>
+    <p>The exact details depend on whether returning subscribers immediately regain access or need to complete another step.</p>
     <ul>
-      <li>☐ The subscription has been confirmed as active.</li>
-      <li>☐ The email is sent after successful reactivation.</li>
-      <li>☐ The customer's name is accurate, if used.</li>
-      <li>☐ The correct subscription plan is shown.</li>
-      <li>☐ The billing frequency is correct.</li>
-      <li>☐ The next billing date is correct.</li>
-      <li>☐ The next delivery date is correct, if applicable.</li>
-      <li>☐ Account-management information is provided.</li>
-      <li>☐ Customer support information is easy to find.</li>
-      <li>☐ The primary message is clear.</li>
-      <li>☐ Promotional content does not obscure important information.</li>
-      <li>☐ All links lead to real destinations.</li>
-      <li>☐ Personalization fields have been tested.</li>
-      <li>☐ The automation handles failed reactivation correctly.</li>
-      <li>☐ The message has been tested on mobile.</li>
-      <li>☐ Billing and subscription information has been verified.</li>
+      <li><strong>A warm, direct welcome:</strong> Thank the customer for returning.</li>
+      <li><strong>Current plan information:</strong> Name the plan or service accurately if this helps the subscriber identify the account.</li>
+      <li><strong>Confirmed account state:</strong> Explain whether the subscription and access are active, pending, or awaiting an action.</li>
+      <li><strong>One useful next step:</strong> Link to the dashboard, account settings, or an appropriate getting-started resource.</li>
+      <li><strong>Relevant changes:</strong> Mention a verified product update only if it helps the returning subscriber.</li>
+      <li><strong>Support access:</strong> Provide a working path for billing, access, or account questions.</li>
+    </ul>
+    <div class="note"><strong>Important:</strong> A welcome back email is not a substitute for a required payment receipt, plan confirmation, or service-status notice. If those are necessary, make sure the appropriate transactional message is also handled correctly.</div>
+
+    <h2 id="subject-lines">Subscription Welcome Back Email Subject Line Examples</h2>
+    <ul>
+      <li>Welcome back to [Service Name]</li>
+      <li>You're back — here's how to get started</li>
+      <li>Welcome back to your [Plan Name] subscription</li>
+      <li>Good to have you back at [Service Name]</li>
+      <li>Your next steps at [Service Name]</li>
+      <li>Welcome back: review your account and plan</li>
+      <li>Ready to continue with [Service Name]?</li>
+    </ul>
+    <p>Use a preheader to explain the value, such as “Find your account, review your plan, and pick up where you left off.” Keep the language consistent with the account's real status and avoid implying that a pending request is already complete.</p>
+
+    <h2 id="examples">Practical Examples</h2>
+    <div class="example">
+      <h3>Example 1: General welcome back</h3>
+      <p><strong>Subject:</strong> Welcome back to [Service Name]</p>
+      <p>Hello [First Name],</p>
+      <p>Welcome back to [Service Name], and thank you for returning.</p>
+      <p>You can review your current subscription and continue from your account here:</p>
+      <p><strong>[Open Your Account]</strong></p>
+      <p>If you need help getting started again or have a question about your account, visit [Support Link].</p>
+      <p>We're glad you're back,<br>[Service Name] Team</p>
+    </div>
+    <div class="example">
+      <h3>Example 2: Service access has been restored</h3>
+      <p><strong>Subject:</strong> Welcome back — your [Service Name] access is ready</p>
+      <p>Hello [First Name],</p>
+      <p>Your return to [Service Name] has been completed, and our system confirms that your access is active.</p>
+      <p>Visit your dashboard to review your current plan and continue using the service: [Dashboard Link]. If you need a refresher, the getting-started guide is available here: [Guide Link].</p>
+      <p>If anything does not look right, contact [Support Link] so we can help.</p>
+      <p>Thank you,<br>[Service Name] Team</p>
+    </div>
+    <div class="example">
+      <h3>Example 3: Another setup step is still required</h3>
+      <p><strong>Subject:</strong> Welcome back — one step remains</p>
+      <p>Hello [First Name],</p>
+      <p>Thank you for choosing to return to [Service Name]. Your reactivation request is recorded, but [Verified Required Step] still needs to be completed before [Verified Access or Billing Result].</p>
+      <p>Use this secure page to review the status and complete the required step: [Account Link].</p>
+      <p>If you have already completed it, please check the current account status or contact [Support Link] if it has not updated.</p>
+      <p>Regards,<br>[Service Name] Team</p>
+    </div>
+    <p>Use the second example only when access is actually confirmed as active. Use the third when the reactivation is not yet complete, and change the subject if “welcome back” would wrongly imply completion.</p>
+
+    <h2 id="template">Reusable Subscription Welcome Back Email Template</h2>
+    <div class="template">
+      <p><strong>Subject:</strong> Welcome back to [Service Name]</p>
+      <p><strong>Preheader:</strong> Your next steps for returning to the service.</p>
+      <p>Hello [First Name],</p>
+      <p>Welcome back to <strong>[Service Name]</strong>. Thank you for choosing to return.</p>
+      <p>Your current subscription status is [Verified Status]. [If access is active, explain how to continue. If another step is required, state that step clearly instead.]</p>
+      <p><strong>[Open Your Account]</strong></p>
+      <p>You can review your current plan and account settings from your dashboard. If you need help getting started again, visit [Getting-Started or Support Link].</p>
+      <p>Thank you,<br>[Sender Name]<br>[Service Name] Team</p>
+    </div>
+    <p>Replace every bracketed field before using the template. Remove instructions that do not apply to the service, verify the subscription status at send time, and test every link.</p>
+
+    <h2 id="personalization">Personalization and Next Steps</h2>
+    <p>Useful personalization should help returning subscribers navigate the service. It might include the verified plan name, a route to the customer's dashboard, or an appropriate reminder of where key settings are located. Avoid over-personalizing based on assumptions about why the customer left.</p>
+    <ul>
+      <li>Use a first name only when the account data is reliable.</li>
+      <li>Explain only those product changes that are verified and relevant.</li>
+      <li>Link to the correct account rather than a generic page when a secure, user-specific route is available.</li>
+      <li>Do not expose billing or subscription history unnecessarily in the subject line.</li>
+      <li>Keep one primary next step prominent and make support easy to find.</li>
     </ul>
 
-  </div>
+    <h2 id="automation">Automation and Account Checks</h2>
+    <p>A welcome back workflow should respond to the actual reactivation event and coordinate with billing and onboarding systems.</p>
+    <ol>
+      <li><strong>Use a confirmed event:</strong> Trigger from the subscription system's successful reactivation event rather than an email click alone.</li>
+      <li><strong>Check the active status:</strong> Confirm that the subscription is not still pending, cancelled, or reversed before using completed-status wording.</li>
+      <li><strong>Verify access:</strong> If account provisioning or payment verification is required, check that condition before saying the service is ready.</li>
+      <li><strong>Coordinate onboarding:</strong> Decide whether the welcome back email replaces or precedes a general onboarding message so the customer is not sent duplicate introductions.</li>
+      <li><strong>Prevent duplicate events:</strong> Use an event identifier or deduplication rule to prevent repeat messages if the workflow retries.</li>
+      <li><strong>Stop when the state changes:</strong> Suppress scheduled follow-ups if the subscription is cancelled again or the account becomes ineligible.</li>
+    </ol>
+    <p>Test customers who reactivate through different channels, delayed billing updates, payment failures, immediate cancellations, and cases where a returning customer already knows how to use the service. Keep the message aligned with the current account data.</p>
 
-  <h2 id="final-thoughts">Final Thoughts</h2>
+    <h2 id="mistakes">Common Mistakes to Avoid</h2>
+    <ul>
+      <li><strong>Sending before reactivation is complete:</strong> Verify the status before welcoming someone as an active subscriber.</li>
+      <li><strong>Repeating the reactivation campaign:</strong> A welcome back message should follow a completed return, not keep asking the person to come back.</li>
+      <li><strong>Duplicating onboarding:</strong> Coordinate the welcome message with the getting-started sequence.</li>
+      <li><strong>Claiming access is ready too early:</strong> Check payment and provisioning state where relevant.</li>
+      <li><strong>Assuming why the customer returned:</strong> Thank them without guessing their motives.</li>
+      <li><strong>Using too many calls to action:</strong> Make the next useful step clear.</li>
+      <li><strong>Forgetting the support route:</strong> Give the customer a clear way to report account problems.</li>
+      <li><strong>Sending duplicate emails:</strong> Deduplicate events and refresh the account state before sending.</li>
+    </ul>
 
-  <p>
-    A subscription welcome back email should make the customer's return feel clear and
-    well organized.
-  </p>
+    <h2>How to Measure the Email</h2>
+    <p>Assess delivery success, duplicate-send rate, clicks to the account or getting-started page, support contacts about account access, and whether returning subscribers successfully resume the service. Email opens can be affected by privacy features, so do not use them as the sole signal of engagement.</p>
+    <p>Compare results with the welcome back email's purpose. If many readers ask for help, improve the next-step instructions. If account links are clicked but users cannot access the service, investigate the billing or provisioning flow rather than adding more promotional copy.</p>
 
-  <p>
-    The most important job is not to sell another product. It is to confirm the new
-    subscription state, explain what happens next, provide useful account information,
-    and make support or subscription management easy to access.
-  </p>
+    <div class="checklist" id="checklist">
+      <h2>Pre-Send Checklist</h2>
+      <ul>
+        <li>Reactivation is confirmed by the subscription system.</li>
+        <li>Plan and account status are accurate.</li>
+        <li>Any statement about payment or access is verified.</li>
+        <li>The primary account link works and is secure.</li>
+        <li>Getting-started or support resources are relevant.</li>
+        <li>The email does not repeat an identical confirmation or onboarding message.</li>
+        <li>Duplicate sends and reversed activations are handled.</li>
+        <li>The subject line does not overstate the current account status.</li>
+        <li>The email is readable on mobile devices.</li>
+      </ul>
+    </div>
 
-  <p>
-    This also makes the message different from a win-back campaign and from a reactivation email.
-    A win-back campaign tries to reconnect with an inactive customer, while a reactivation email
-    helps encourage or facilitate the return. The welcome back email comes after that successful
-    return and helps the customer understand the new subscription state.
-  </p>
+    <h2>Final Recommendation</h2>
+    <p>A subscription welcome back email should make it easy for a returning customer to resume their relationship with the service. Acknowledge the return, verify the account state, provide one useful next step, and keep support accessible. Coordinate the message with billing and onboarding so it feels timely and helpful instead of repetitive.</p>
 
-  <p>
-    When combined with accurate customer data, appropriate automation, clear billing information,
-    and useful customer support, the welcome back email can become a practical part of the
-    subscription lifecycle.
-  </p>
+    <div class="author-box">
+      <h2>About the Author</h2>
+      <p><strong>Muhammad Nasir Uddin</strong> creates practical educational resources about email marketing, automation, customer communication, and digital marketing workflows at Nasir Email Marketing.</p>
+    </div>
 
-  <p>
-    For the preceding lifecycle step, read
-    <a href="https://nasirportfolio.github.io/email-marketing/articles/0289-how-to-write-a-subscription-reactivation-email/">How to Write a Subscription Reactivation Email</a>.
-  </p>
-
-  <div class="author-box">
-    <h2>About the Author</h2>
-
-    <p>
-      Muhammad Nasir Uddin is an Assistant Professor of English and a digital marketing
-      practitioner focused on email marketing, audience growth, SEO content, customer
-      acquisition, and marketing automation.
-    </p>
-
-    <p>
-      This article is part of an ongoing Email Marketing + List Building + Blogging for
-      Audience Growth content series.
-    </p>
-  </div>
-
-  <div class="affiliate-box">
-    <h2>Affiliate Disclosure</h2>
-
-    <p>
-      Some articles on this website may contain affiliate links. If you use an affiliate link
-      and make a purchase or sign up for a service, the website owner may receive a commission
-      at no additional cost to you.
-    </p>
-  </div>
-
+    <p class="disclosure"><strong>Affiliate Disclosure:</strong> This website may contain affiliate links in some articles. If a reader purchases through an affiliate link, the site may earn a commission at no additional cost to the reader. Recommendations are included only when relevant and should be evaluated independently.</p>
+  </article>
 </main>
 
 <footer>
-
-  <p>
-    <a href="https://nasirportfolio.github.io/email-marketing/">Home</a>
-    <a href="https://nasirportfolio.github.io/email-marketing/about.html">About</a>
-    <a href="https://nasirportfolio.github.io/email-marketing/contact.html">Contact</a>
-    <a href="https://nasirportfolio.github.io/email-marketing/privacy-policy.html">Privacy Policy</a>
-    <a href="https://nasirportfolio.github.io/email-marketing/disclaimer.html">Disclaimer</a>
-    <a href="https://nasirportfolio.github.io/email-marketing/terms-and-conditions.html">Terms &amp; Conditions</a>
-    <a href="https://nasirportfolio.github.io/email-marketing/affiliate-disclosure.html">Affiliate Disclosure</a>
-  </p>
-
-  <p>
-    &copy; 2026 Email Marketing Resources. All rights reserved.
-  </p>
-
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="https://nasiremailmarketing.com/">Home</a>
+      <a href="https://nasiremailmarketing.com/about.html">About</a>
+      <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+      <a href="https://nasiremailmarketing.com/privacy-policy.html">Privacy Policy</a>
+      <a href="https://nasiremailmarketing.com/terms-and-conditions.html">Terms and Conditions</a>
+      <a href="https://nasiremailmarketing.com/disclaimer.html">Disclaimer</a>
+      <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+    </div>
+    <p class="copyright">© 2026 Nasir Email Marketing. All rights reserved.</p>
+  </div>
 </footer>
-
 </body>
 </html>
