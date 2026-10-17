@@ -1,0 +1,771 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How to Validate Email Marketing Automation Re-Entry Rules After Platform Migration</title>
+  <meta name="description" content="Learn how to validate email marketing automation re-entry rules after migration, including repeat enrollment, duplicate messages, cooldowns, eligibility, and workflow testing.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nasiremailmarketing.com/articles/0420-email-marketing-migration-automation-reentry-rule-validation/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Validate Email Marketing Automation Re-Entry Rules After Platform Migration">
+  <meta property="og:description" content="A practical guide to testing repeat enrollment, re-entry conditions, cooldowns, and duplicate-action risks after an email marketing migration.">
+  <meta property="og:url" content="https://nasiremailmarketing.com/articles/0420-email-marketing-migration-automation-reentry-rule-validation/">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2215626158767734" crossorigin="anonymous"></script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3ZDJCJWX5F');
+  </script>
+
+  <!-- Article structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Validate Email Marketing Automation Re-Entry Rules After Platform Migration",
+    "description": "A practical guide to validating automation re-entry rules, repeat enrollment, cooldowns, eligibility, and duplicate-action risks after an email marketing migration.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://nasiremailmarketing.com/articles/0420-email-marketing-migration-automation-reentry-rule-validation/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Muhammad Nasir Uddin"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nasir Email Marketing",
+      "url": "https://nasiremailmarketing.com/"
+    }
+  }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #222;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    a {
+      color: #1557b0;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header, main, footer {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 22px;
+    }
+
+    header, article, footer {
+      background: #fff;
+    }
+
+    header {
+      border-bottom: 1px solid #e5eaf1;
+    }
+
+    .brand {
+      margin: 0 0 12px;
+      color: #1557b0;
+      font-size: 1.65rem;
+      line-height: 1.3;
+    }
+
+    .main-nav, .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    .main-nav a, .footer-links a {
+      text-decoration: none;
+    }
+
+    article {
+      padding: 28px;
+      border: 1px solid #e5eaf1;
+      border-radius: 8px;
+    }
+
+    h1, h2, h3 {
+      color: #172b4d;
+      line-height: 1.35;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      margin-top: 34px;
+      font-size: 1.45rem;
+    }
+
+    h3 {
+      margin-top: 24px;
+      font-size: 1.15rem;
+    }
+
+    .article-number {
+      color: #1557b0;
+      font-weight: bold;
+    }
+
+    .toc {
+      margin: 25px 0 30px;
+      padding: 20px 25px;
+      background: #f7f7f7;
+      border: 1px solid #dedede;
+    }
+
+    .toc h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: #222;
+      font-size: 1.5rem;
+    }
+
+    .toc ul {
+      padding-left: 26px;
+      margin-bottom: 0;
+    }
+
+    .toc li {
+      margin: 8px 0;
+    }
+
+    .note {
+      margin: 22px 0;
+      padding: 14px 16px;
+      background: #f2f6fc;
+      border-left: 4px solid #1557b0;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #dce3ec;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f2f6fc;
+    }
+
+    .checklist li {
+      margin-bottom: 9px;
+    }
+
+    .related-articles {
+      padding: 18px 22px;
+      background: #f7f9fc;
+      border: 1px solid #e5eaf1;
+      border-radius: 6px;
+    }
+
+    .author-box {
+      margin-top: 35px;
+      padding-top: 20px;
+      border-top: 1px solid #e5eaf1;
+    }
+
+    footer {
+      margin-top: 20px;
+      border-top: 1px solid #e5eaf1;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      header, main, footer {
+        padding: 14px;
+      }
+
+      article {
+        padding: 18px;
+      }
+
+      h1 {
+        font-size: 1.65rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .toc {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <p class="brand"><strong>Nasir Email Marketing</strong></p>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="https://nasiremailmarketing.com/">Home</a>
+    <a href="https://nasiremailmarketing.com/about.html">About</a>
+    <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+    <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+  </nav>
+</header>
+
+<main>
+<article>
+
+  <p class="article-number">ARTICLE 0420</p>
+
+  <h1>How to Validate Email Marketing Automation Re-Entry Rules After Platform Migration</h1>
+
+  <p>
+    Re-entry rules determine whether a contact who has already participated
+    in an automation can enter that workflow again. After migrating to a
+    new email marketing platform, these rules may behave differently
+    because enrollment settings, contact eligibility, and workflow controls
+    are not always equivalent between platforms.
+  </p>
+
+  <p>
+    Incorrect re-entry settings can cause duplicate welcome messages,
+    repeated onboarding sequences, conflicting follow-ups, or contacts
+    being prevented from entering a workflow when they should qualify.
+    Testing these rules helps protect the subscriber experience and
+    preserves the intended behavior of the original automation.
+  </p>
+
+  <p>
+    This guide explains how to document, test, and verify re-entry behavior
+    before activating a migrated workflow.
+  </p>
+
+  <div class="note">
+    <strong>Important:</strong> Use designated test contacts and controlled
+    conditions. Do not trigger unnecessary messages to real subscribers
+    merely to test repeat enrollment.
+  </div>
+
+  <nav class="toc" aria-label="Table of Contents">
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#reentry-basics">1. Understand Automation Re-Entry Rules</a></li>
+      <li><a href="#entry-exit-difference">2. Distinguish Entry, Exit, and Re-Entry</a></li>
+      <li><a href="#inventory">3. Document Existing Re-Entry Settings</a></li>
+      <li><a href="#repeat-enrollment">4. Test Repeat Enrollment</a></li>
+      <li><a href="#duplicate-messages">5. Prevent Duplicate Messages and Actions</a></li>
+      <li><a href="#cooldown">6. Validate Cooldown Periods</a></li>
+      <li><a href="#eligibility">7. Recheck Contact Eligibility</a></li>
+      <li><a href="#event-testing">8. Test Repeat Forms and Purchase Events</a></li>
+      <li><a href="#workflow-conflicts">9. Check Conflicting Workflows</a></li>
+      <li><a href="#test-matrix">10. Create a Re-Entry Test Matrix</a></li>
+      <li><a href="#troubleshooting">11. Troubleshoot Re-Entry Problems</a></li>
+      <li><a href="#prelaunch">12. Complete the Pre-Launch Checklist</a></li>
+      <li><a href="#related">13. Related Migration Guides</a></li>
+      <li><a href="#conclusion">14. Conclusion</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="reentry-basics">1. Understand Automation Re-Entry Rules</h2>
+
+  <p>
+    Re-entry rules define whether a contact may enroll in the same
+    automation more than once. Depending on the platform, a workflow may
+    allow one-time enrollment, repeated enrollment, or repeat enrollment
+    only after specific conditions have been satisfied.
+  </p>
+
+  <p>
+    Consider a welcome series triggered by a signup form. If a contact
+    submits the form again, the intended result might be no new enrollment.
+    By contrast, a workflow designed to follow up on a separate purchase
+    may need to process each qualifying purchase independently.
+  </p>
+
+  <p>
+    The correct rule depends on the purpose of the workflow. Do not
+    automatically enable repeat enrollment just because the destination
+    platform offers that option.
+  </p>
+
+  <h2 id="entry-exit-difference">2. Distinguish Entry, Exit, and Re-Entry</h2>
+
+  <p>
+    Entry triggers determine when contacts first qualify for an automation.
+    Exit conditions determine when contacts stop progressing through it.
+    Re-entry rules determine whether a contact who previously participated
+    can enroll again.
+  </p>
+
+  <p>
+    Review
+    <a href="https://nasiremailmarketing.com/articles/0417-email-marketing-migration-automation-trigger-validation/">
+      Article 0417: Automation Trigger Validation
+    </a>
+    for entry testing and
+    <a href="https://nasiremailmarketing.com/articles/0419-email-marketing-migration-automation-exit-condition-validation/">
+      Article 0419: Automation Exit Condition Validation
+    </a>
+    for exit testing.
+  </p>
+
+  <p>
+    These checks are related but not interchangeable. A contact may
+    qualify for entry and exit correctly while still being enrolled
+    too often or being prevented from returning when permitted.
+  </p>
+
+  <h2 id="inventory">3. Document Existing Re-Entry Settings</h2>
+
+  <p>
+    Before changing the migrated workflow, document its original enrollment
+    behavior. Record the trigger, repeat-enrollment policy, any waiting
+    period, eligibility requirements, and the intended result of a second
+    qualifying event.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Setting</th>
+          <th>Question to answer</th>
+          <th>Evidence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Enrollment frequency</td>
+          <td>Can a contact enroll more than once?</td>
+          <td>Original configuration or documentation</td>
+        </tr>
+        <tr>
+          <td>Repeat trigger</td>
+          <td>What event may qualify a previous contact again?</td>
+          <td>Trigger definition and test record</td>
+        </tr>
+        <tr>
+          <td>Cooldown</td>
+          <td>Must a minimum period pass before re-entry?</td>
+          <td>Configured interval and timing test</td>
+        </tr>
+        <tr>
+          <td>Eligibility</td>
+          <td>Must the contact meet additional conditions?</td>
+          <td>Conditions and contact test data</td>
+        </tr>
+        <tr>
+          <td>Previous enrollment</td>
+          <td>Does earlier participation affect eligibility?</td>
+          <td>Enrollment history or available logs</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    If the original platform and destination platform use different
+    controls, record the differences before choosing an alternative.
+    Verify behavior through testing rather than assuming similarly
+    named settings are equivalent.
+  </p>
+
+  <h2 id="repeat-enrollment">4. Test Repeat Enrollment</h2>
+
+  <p>
+    Repeat enrollment should be tested against the workflow's intended
+    purpose. A one-time welcome sequence should usually behave differently
+    from a workflow intended to respond to separate qualifying events.
+  </p>
+
+  <ol>
+    <li>Enroll a designated test contact using the normal trigger.</li>
+    <li>Record the initial enrollment and expected actions.</li>
+    <li>Complete or exit the first enrollment according to the test plan.</li>
+    <li>Trigger the same event again under controlled conditions.</li>
+    <li>Check whether the contact is admitted, rejected, or held by a rule.</li>
+    <li>Compare the observed behavior with the documented requirement.</li>
+  </ol>
+
+  <p>
+    If the platform does not support re-entry in the way the original
+    workflow did, document the limitation and assess whether an alternative
+    workflow design is needed.
+  </p>
+
+  <h2 id="duplicate-messages">5. Prevent Duplicate Messages and Actions</h2>
+
+  <p>
+    Re-entry can repeat actions such as sending welcome emails, applying
+    tags, updating contact fields, or notifying a team. Duplicate execution
+    may be appropriate in some event-based workflows but harmful in others.
+  </p>
+
+  <p>Review each action that could repeat:</p>
+
+  <ul>
+    <li>Does a second enrollment send a message that should be sent only once?</li>
+    <li>Can a field update overwrite newer or more accurate information?</li>
+    <li>Can repeated tag actions change segment membership unexpectedly?</li>
+    <li>Can an integration create duplicate records or notifications?</li>
+    <li>Does the workflow distinguish a new qualifying event from an old event?</li>
+  </ul>
+
+  <p>
+    Compare these findings with
+    <a href="https://nasiremailmarketing.com/articles/0418-email-marketing-migration-automation-action-validation/">
+      Article 0418: Automation Action Validation
+    </a>.
+    Test the complete workflow to verify that repeated enrollment does
+    not cause unintended side effects.
+  </p>
+
+  <h2 id="cooldown">6. Validate Cooldown Periods</h2>
+
+  <p>
+    Some workflows require a minimum interval between enrollments.
+    A cooldown can help prevent repeated messages when contacts submit
+    a form multiple times or generate several similar events in a short
+    period.
+  </p>
+
+  <p>When a cooldown is part of the intended design, verify:</p>
+
+  <ul>
+    <li>The configured interval matches the documented requirement.</li>
+    <li>A repeat event during the cooldown is handled as intended.</li>
+    <li>A qualifying event after the cooldown is evaluated correctly.</li>
+    <li>Time zones and timestamps do not change the intended timing.</li>
+    <li>The platform's behavior at the boundary of the interval is understood.</li>
+  </ul>
+
+  <p>
+    Do not invent a cooldown duration. Use the requirement established
+    for the specific workflow and record how the destination platform
+    interprets the interval.
+  </p>
+
+  <h2 id="eligibility">7. Recheck Contact Eligibility</h2>
+
+  <p>
+    A previous participant should not necessarily qualify for re-entry
+    merely because the trigger occurs again. The contact may also need
+    to meet conditions relating to consent, subscription status, contact
+    fields, segment membership, or the purpose of the workflow.
+  </p>
+
+  <p>Test relevant eligibility conditions, including:</p>
+
+  <ul>
+    <li>Whether the contact is currently eligible to receive the intended messages.</li>
+    <li>Whether required contact fields contain valid values.</li>
+    <li>Whether the contact still belongs to the qualifying segment.</li>
+    <li>Whether the original enrollment has completed or reached the required state.</li>
+    <li>Whether the repeat event meets the workflow's actual entry criteria.</li>
+  </ul>
+
+  <p>
+    Unsubscribe and suppression requirements must continue to be respected.
+    A re-entry setting must not be treated as permission to send marketing
+    messages to an ineligible contact.
+  </p>
+
+  <h2 id="event-testing">8. Test Repeat Forms and Purchase Events</h2>
+
+  <p>
+    Forms and purchase events are common enrollment sources. Migration
+    can change event names, contact matching, field mapping, or how
+    repeated events are recorded.
+  </p>
+
+  <p>For form-triggered workflows:</p>
+
+  <ul>
+    <li>Submit the designated test form once and record the result.</li>
+    <li>Submit it again and check the re-entry behavior.</li>
+    <li>Check whether the same contact is matched consistently.</li>
+    <li>Verify that required fields and consent information are handled correctly.</li>
+  </ul>
+
+  <p>For purchase-triggered workflows:</p>
+
+  <ul>
+    <li>Use a supported test environment or designated test transaction where possible.</li>
+    <li>Confirm that the event is associated with the intended contact.</li>
+    <li>Test a second qualifying event if repeat enrollment is required.</li>
+    <li>Check that one event does not create unintended duplicate enrollments.</li>
+  </ul>
+
+  <p>
+    For form migration checks, see
+    <a href="https://nasiremailmarketing.com/articles/0414-email-marketing-migration-form-validation/">
+      Article 0414: Form Validation
+    </a>.
+    For contact-data checks, see
+    <a href="https://nasiremailmarketing.com/articles/0415-email-marketing-migration-subscriber-data-validation/">
+      Article 0415: Subscriber Data Validation
+    </a>.
+  </p>
+
+  <h2 id="workflow-conflicts">9. Check Conflicting Workflows</h2>
+
+  <p>
+    A contact may qualify for more than one automation after a repeat event.
+    If these workflows send similar messages or update the same fields,
+    the result can be confusing or inconsistent.
+  </p>
+
+  <p>Check whether:</p>
+
+  <ul>
+    <li>A repeat event enrolls the contact in multiple overlapping workflows.</li>
+    <li>One workflow changes a field used by another workflow's conditions.</li>
+    <li>Repeated tags cause a contact to qualify for unrelated sequences.</li>
+    <li>Enrollment in a new workflow should stop or affect an earlier one.</li>
+    <li>Messages from different workflows could arrive too close together.</li>
+  </ul>
+
+  <p>
+    Document the intended priority and eligibility rules. Test overlapping
+    scenarios with designated contacts before enabling the migrated
+    workflows for the full subscriber list.
+  </p>
+
+  <h2 id="test-matrix">10. Create a Re-Entry Test Matrix</h2>
+
+  <p>
+    A test matrix helps compare the expected result with observed behavior.
+    Adapt the cases to the actual requirements of the workflow rather
+    than assuming every workflow needs the same enrollment policy.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Test scenario</th>
+          <th>Expected result</th>
+          <th>Observed result</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>First qualifying event</td>
+          <td>Contact enters if eligible</td>
+          <td>Record test evidence</td>
+          <td>Not tested</td>
+        </tr>
+        <tr>
+          <td>Repeat event before cooldown ends</td>
+          <td>Follows the documented cooldown rule</td>
+          <td>Record test evidence</td>
+          <td>Not tested</td>
+        </tr>
+        <tr>
+          <td>Repeat event after cooldown</td>
+          <td>Follows the documented re-entry rule</td>
+          <td>Record test evidence</td>
+          <td>Not tested</td>
+        </tr>
+        <tr>
+          <td>Contact is ineligible</td>
+          <td>Ineligible enrollment is prevented</td>
+          <td>Record test evidence</td>
+          <td>Not tested</td>
+        </tr>
+        <tr>
+          <td>Repeat event with overlapping workflow</td>
+          <td>Enrollment and actions follow the intended design</td>
+          <td>Record test evidence</td>
+          <td>Not tested</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    This is an illustrative test template, not a report of tests performed.
+    Replace the example statuses with actual evidence from the destination
+    platform.
+  </p>
+
+  <h2 id="troubleshooting">11. Troubleshoot Re-Entry Problems</h2>
+
+  <p>
+    If a contact cannot re-enter when expected, or enters more often than
+    intended, review the trigger, enrollment policy, eligibility rules,
+    cooldown settings, and previous enrollment history.
+  </p>
+
+  <ol>
+    <li>Record the test event and the contact's enrollment history.</li>
+    <li>Confirm that the event meets the current entry conditions.</li>
+    <li>Check whether previous participation prevents re-entry.</li>
+    <li>Review cooldowns, waiting periods, and contact eligibility.</li>
+    <li>Inspect available execution records for the reason enrollment was accepted or rejected.</li>
+    <li>Correct the configuration and repeat the relevant tests.</li>
+  </ol>
+
+  <p>
+    If duplicate messages or conflicting actions occur, pause the affected
+    workflow when necessary and review the consequences before reactivating
+    it. Document the correction and its test result.
+  </p>
+
+  <h2 id="prelaunch">12. Complete the Pre-Launch Checklist</h2>
+
+  <p>Before activating the migrated workflow, confirm that:</p>
+
+  <ul class="checklist">
+    <li>The original re-entry policy has been documented.</li>
+    <li>The destination settings match the intended enrollment behavior.</li>
+    <li>First-time and repeat enrollment have been tested.</li>
+    <li>Cooldowns and timing behavior have been checked where applicable.</li>
+    <li>Duplicate messages and repeated actions have been reviewed.</li>
+    <li>Contact eligibility and suppression requirements are respected.</li>
+    <li>Form and purchase-event enrollment has been tested where applicable.</li>
+    <li>Overlapping workflows have been reviewed.</li>
+    <li>Test results and unresolved issues have been recorded.</li>
+    <li>Critical failures have been corrected and retested.</li>
+    <li>The responsible workflow owner has approved activation.</li>
+  </ul>
+
+  <h2 id="related">13. Related Email Marketing Migration Guides</h2>
+
+  <p>
+    These guides cover related migration checks. Verify that each article
+    is published and accessible before relying on its link.
+  </p>
+
+  <div class="related-articles">
+    <ul>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0414-email-marketing-migration-form-validation/">
+          Article 0414: Form Validation
+        </a>
+      </li>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0415-email-marketing-migration-subscriber-data-validation/">
+          Article 0415: Subscriber Data Validation
+        </a>
+      </li>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0416-email-marketing-migration-subscriber-segment-validation/">
+          Article 0416: Subscriber Segment Validation
+        </a>
+      </li>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0417-email-marketing-migration-automation-trigger-validation/">
+          Article 0417: Automation Trigger Validation
+        </a>
+      </li>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0418-email-marketing-migration-automation-action-validation/">
+          Article 0418: Automation Action Validation
+        </a>
+      </li>
+      <li>
+        <a href="https://nasiremailmarketing.com/articles/0419-email-marketing-migration-automation-exit-condition-validation/">
+          Article 0419: Automation Exit Condition Validation
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <h2 id="conclusion">14. Conclusion</h2>
+
+  <p>
+    Re-entry rules determine whether contacts can participate in an
+    automation again after an earlier enrollment. Validating these rules
+    after migration helps prevent unwanted duplicate messages, missed
+    enrollment opportunities, and conflicting workflow actions.
+  </p>
+
+  <p>
+    Document the original requirements, test repeat events and eligibility,
+    verify cooldown behavior where applicable, and retain evidence of the
+    results. Monitor the workflow after launch so unexpected enrollment
+    patterns can be identified and corrected.
+  </p>
+
+  <section class="author-box">
+    <h2>About the Author</h2>
+    <p>
+      Muhammad Nasir Uddin is an Assistant Professor of English at
+      Zirabo Dewan Idris College, Savar, Dhaka, Bangladesh. Through
+      Nasir Email Marketing, he publishes educational resources about
+      email marketing, automation, platform migration, and related
+      technical workflows.
+    </p>
+  </section>
+
+  <section>
+    <h2>Affiliate Disclosure</h2>
+    <p>
+      This website participates in affiliate programs. We may receive a
+      commission when visitors use qualifying affiliate links or complete
+      qualifying actions, at no additional cost to the visitor.
+    </p>
+  </section>
+
+</article>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://nasiremailmarketing.com/">Home</a>
+    <a href="https://nasiremailmarketing.com/about.html">About</a>
+    <a href="https://nasiremailmarketing.com/contact.html">Contact</a>
+    <a href="https://nasiremailmarketing.com/privacy-policy.html">Privacy Policy</a>
+    <a href="https://nasiremailmarketing.com/disclaimer.html">Disclaimer</a>
+    <a href="https://nasiremailmarketing.com/affiliate-disclosure.html">Affiliate Disclosure</a>
+    <a href="https://nasiremailmarketing.com/advertise.html">Advertise With Us</a>
+    <a href="https://nasiremailmarketing.com/terms-and-conditions.html">Terms and Conditions</a>
+  </div>
+
+  <p>&copy; Nasir Email Marketing. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+```
